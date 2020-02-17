@@ -10,6 +10,7 @@ namespace SMSTestProject
         [TestMethod]
         public void InstanceOK()
         {
+            // instance of class Order
             clsOrder AnOrder = new clsOrder();
             Assert.IsNotNull(AnOrder);
         }
