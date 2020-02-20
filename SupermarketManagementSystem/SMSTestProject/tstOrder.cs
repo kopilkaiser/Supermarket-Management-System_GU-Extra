@@ -75,7 +75,7 @@ namespace SMSTestProject
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
             // test to see that result is ok , e, g - There shold be an error message 
-            Assert.AreEqual(Error, "");
+            Assert.AreNotEqual(Error, "");
 
         }
         [TestMethod]
@@ -91,7 +91,7 @@ namespace SMSTestProject
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
             // test to see that result is ok , e, g - There should be an error message 
-            Assert.AreEqual(Error, "");
+            Assert.AreNotEqual(Error, "");
 
         }
         [TestMethod]
@@ -139,7 +139,7 @@ namespace SMSTestProject
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
             // test to see that result is ok , e, g - There should be an error message 
-            Assert.AreEqual(Error, "");
+            Assert.AreNotEqual(Error, "");
 
         }
         [TestMethod]
@@ -171,7 +171,7 @@ namespace SMSTestProject
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
             // test to see that result is ok , e, g - There should be an error message 
-            Assert.AreEqual(Error, "");
+            Assert.AreNotEqual(Error, "");
 
         }
         ///////////////////////////////////////////////////////////
@@ -188,7 +188,7 @@ namespace SMSTestProject
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
             // test to see that result is ok , e, g - There shold be an error message 
-            Assert.AreEqual(Error, "");
+            Assert.AreNotEqual(Error, "");
 
         }
         [TestMethod]
@@ -204,7 +204,7 @@ namespace SMSTestProject
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
             // test to see that result is ok , e, g - There should be an error message 
-            Assert.AreEqual(Error, "");
+            Assert.AreNotEqual(Error, "");
 
         }
         [TestMethod]
@@ -252,7 +252,7 @@ namespace SMSTestProject
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
             // test to see that result is ok , e, g - There should be an error message 
-            Assert.AreEqual(Error, "");
+            Assert.AreNotEqual(Error, "");
 
         }
         [TestMethod]
@@ -284,7 +284,7 @@ namespace SMSTestProject
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
             // test to see that result is ok , e, g - There should be an error message 
-            Assert.AreEqual(Error, "");
+            Assert.AreNotEqual(Error, "");
 
         }
 
