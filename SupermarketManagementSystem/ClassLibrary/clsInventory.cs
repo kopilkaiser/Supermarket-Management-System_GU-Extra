@@ -55,6 +55,32 @@ namespace ClassLibrary
                 Error = Error + "The name for inventory category cannot exceed 100 characters";
             }
 
+            //if date entered is a valid date
+            try
+            {
+                // convert the string value to DateTime
+                //& then copy the value of dateAdded to DateTemp variable
+                DateTemp = Convert.ToDateTime(dateAdded);
+                //if date value is less than today's date
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "Date cannot be in the past : ";
+                }
+                //if date value is more than today's date
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "Date cannot be in the future : ";
+                }
+            }
+            //if date entered is an invalid date
+            catch
+            {
+                //record the error
+                Error = Error + "The date entered was not a valid date : ";
+            }
+
             return Error;
         }
     }

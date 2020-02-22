@@ -76,6 +76,17 @@ namespace SMSTestProject
             Assert.AreEqual(Error, "");
         }
 
-
+        [TestMethod]
+        public void DateAddedExtremeMin()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = DateTime.Now.AddYears(-100);
+            string DateAdded = TestDate.ToString();
+            Error = AnInventory.Valid(Name,Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
     }
 }
