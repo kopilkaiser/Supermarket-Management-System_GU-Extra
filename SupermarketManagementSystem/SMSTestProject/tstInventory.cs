@@ -76,6 +76,8 @@ namespace SMSTestProject
             Assert.AreEqual(Error, "");
         }
 
+        //TestMethods for DateAdded property by different test types and test data
+
         [TestMethod]
         public void DateAddedExtremeMin()
         {
@@ -85,8 +87,437 @@ namespace SMSTestProject
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(-100);
             string DateAdded = TestDate.ToString();
-            Error = AnInventory.Valid(Name,Price, Quantity, Category, DateAdded);
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void DateAddedMinMinusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = DateTime.Now.AddDays(-1);
+            string DateAdded = TestDate.ToString();
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void DateAddedMinBoundary()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string DateAdded = DateTime.Now.Date.ToString();
+            string Error = "";
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
             Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void DateAddedExtremeMax()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = DateTime.Now.AddYears(100);
+            string DateAdded = TestDate.ToString();
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void DateAddedInvalidDataType()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string DateAdded = "A";
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        //TestMethods for Name property by different test types and test data
+
+        [TestMethod]
+        public void NameExtremeMin()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Name = "";
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMinMinusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Name = "";
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void NameMinBoundary()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Name = "a";
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void NameMinPlusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Name = "aa";
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void NameMaxMinusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Name = "";
+            Name = Name.PadRight(79, 'a');
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMaxBoundary()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Name = "";
+            Name = Name.PadRight(80, 'a');
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMaxPlusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Name = "";
+            Name = Name.PadRight(81, 'a');
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMid()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Name = "";
+            Name = Name.PadRight(40, 'a');
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameExtremeMax()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Name = "";
+            Name = Name.PadRight(500, 'a');
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        //TestMethods for Category property by different test types and test data
+
+        [TestMethod]
+        public void CategoryExtremeMin()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Category = "";
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMinMinusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Category = "";
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void CategoryMinBoundary()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Category = "a";
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void CategoryMinPlusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Category = "aa";
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void CategoryMaxMinusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Category = "";
+            Category = Category.PadRight(99, 'a');
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMaxBoundary()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Category = "";
+            Category = Category.PadRight(100, 'a');
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMaxPlusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Category = "";
+            Category = Category.PadRight(101, 'a');
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMid()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Category = "";
+            Category = Category.PadRight(50, 'a');
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryExtremeMax()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            string Category = "";
+            Category = Category.PadRight(500, 'a');
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        //TestMethods for Price property by different Test Types and Test Data
+
+        [TestMethod]
+        public void PriceExtremeMin()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            decimal Price = -1m;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PriceMinMinusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            decimal Price = -1m;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void PriceMinBoundary()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            decimal Price = 0m;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PriceMinPlusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            decimal Price = 2m;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PriceMaxMinusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            decimal Price = 99999m;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PriceMaxBoundary()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            decimal Price = 100000m;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PriceMaxPlusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            decimal Price = 100001m;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PriceMid()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            decimal Price = 50000m;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PriceExtremeMax()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            decimal Price = 1000000m;          
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        //TestMethods for Quantity property with different test types and test data
+
+        [TestMethod]
+        public void QuantityExtremeMin()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            int Quantity = -1;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void QuantityMinMinusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            int Quantity = -1;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void QuantityMinBoundary()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            int Quantity = 0;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void QuantityMinPlusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            int Quantity = 1;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void QuantityMaxMinusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            int Quantity = 999;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void QuantityMaxBoundary()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            int Quantity = 1000;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void QuantityMaxPlusOne()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            int Quantity = 1001;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void QuantityMid()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            int Quantity = 500;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void QuantityExtremeMax()
+        {
+            clsInventory AnInventory = new clsInventory();
+            string Error = "";
+            int Quantity = 5000;
+            Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
+            Assert.AreNotEqual(Error, "");
         }
     }
 }

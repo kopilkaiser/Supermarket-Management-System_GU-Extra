@@ -20,7 +20,7 @@ namespace ClassLibrary
                 Error = Error + "The inventory name cannot be blank";
             }
 
-            if (name.Length > 100)
+            if (name.Length > 80)
             {
                 Error = Error + "The inventory name cannot exceed 100 characters";
             }
@@ -30,7 +30,7 @@ namespace ClassLibrary
                 Error = Error + "The price of inventory cannot exceed 100000";
             }
 
-            if(price<100000m)
+            if(price<0m)
             {
                 Error = Error + "The price of inventory cannot be less than zero";
             }
