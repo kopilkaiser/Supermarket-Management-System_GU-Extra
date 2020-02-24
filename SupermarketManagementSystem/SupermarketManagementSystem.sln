@@ -29,7 +29,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FrontEnd", "FrontEnd\", "{0
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSTestProject", "SMSTestProject\SMSTestProject.csproj", "{5D2C8BE1-AF33-474A-83E7-CF6EC3F82748}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Framework", "SMSTestProject\Test Framework.csproj", "{5D2C8BE1-AF33-474A-83E7-CF6EC3F82748}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

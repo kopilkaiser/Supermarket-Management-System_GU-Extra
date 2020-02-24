@@ -9,6 +9,7 @@ namespace ClassLibrary
         public int Quantity { get; set; }
         public string Category { get; set; }
         public string DateAdded { get; set; }
+        public bool Active { get; set; }
 
         public string Valid(string name, decimal price, int quantity, string category, string dateAdded)
         {

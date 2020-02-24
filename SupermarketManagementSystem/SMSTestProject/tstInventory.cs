@@ -23,6 +23,19 @@ namespace SMSTestProject
         }
 
         [TestMethod]
+        public void ActivePropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsInventory AnInventory = new clsInventory();
+            //create some test data to assign to the property
+            Boolean TestData = true;
+            //assign the data to the property
+            AnInventory.Active = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AnInventory.Active, TestData);
+        }
+
+        [TestMethod]
         public void NamePropertyOK()
         {
             clsInventory AnInventory = new clsInventory();
