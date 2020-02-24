@@ -26,6 +26,7 @@ namespace ClassLibrary
                 //create a blank address
                 clsInventory AnInventory = new clsInventory();
                 //read in the fields from the current record
+                AnInventory.InventoryId = Convert.ToInt32(DB.DataTable.Rows[Index]["InventoryId"]);
                 AnInventory.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
                 AnInventory.Name = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
                 AnInventory.Price = Convert.ToDecimal(DB.DataTable.Rows[Index]["Price"]);

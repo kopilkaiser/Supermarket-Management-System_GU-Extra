@@ -10,8 +10,9 @@ namespace ClassLibrary
         public string Category { get; set; }
         public string DateAdded { get; set; }
         public bool Active { get; set; }
+        public int InventoryId { get; set; }
 
-        public string Valid(string name, decimal price, int quantity, string category, string dateAdded)
+        public string Valid(int inventoryId, string name, decimal price, int quantity, string category, string dateAdded)
         {
             string Error = "";
             DateTime DateTemp;

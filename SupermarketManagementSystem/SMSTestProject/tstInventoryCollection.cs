@@ -64,6 +64,7 @@ namespace SMSTestProject
             //create some test data to assign to the property
             clsInventory TestInventory = new clsInventory();
             //set the properties of the test object
+            TestInventory.InventoryId = 1;
             TestInventory.Active = true;
             TestInventory.Name = "Samsung OLED TV";
             TestInventory.Price = 2999.99m;
@@ -88,6 +89,7 @@ namespace SMSTestProject
             //create the item of test data
             clsInventory TestItem = new clsInventory();
             //set it's properties
+            TestItem.InventoryId = 1;
             TestItem.Active = true;
             TestItem.Name = "Samsung OLED TV";
             TestItem.Price = 2999.99m;
