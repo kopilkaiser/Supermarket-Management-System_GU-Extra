@@ -9,6 +9,7 @@ namespace ClassLibrary
         List<clsInventory> mInventoryList = new List<clsInventory>();
         //private data member thisInventory
         clsInventory mThisInventory = new clsInventory();
+        clsDataConnection dBConnection;
 
         public clsInventoryCollection()
         {
@@ -25,7 +26,7 @@ namespace ClassLibrary
         //public property for the address list
         public List<clsInventory> InventoryList
         {
-            get
+            /*get
             {
                 //return the private data
                 return mInventoryList;
@@ -34,6 +35,31 @@ namespace ClassLibrary
             {
                 //set the private data
                 mInventoryList = value;
+            }*/
+
+            get
+            {
+                List<clsInventory> mInventoryList = new List<clsInventory>();
+                Int32 Index = 0;
+                while (Index < dBConnection.Count)
+                {
+                    clsInventory NewInventory = new clsInventory();
+                    //get the house no from the query results
+                    NewInventory.Name = Convert.ToString(dBConnection.DataTable.Rows[Index]["Name"]);
+                    //get the street from the query results
+                    NewInventory.Price = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["Price"]);
+                    //get the post code from the query results
+                    NewInventory.Quantity = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["Quantity"]);
+                    //get the address no from the query results
+                    NewInventory.Category = Convert.ToString(dBConnection.DataTable.Rows[Index]["Category"]);
+                    NewInventory.InventoryId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["InventoryId"]);
+                    //increment the index
+                    Index++;
+                    //add the address to the list
+                    mInventoryList.Add(NewInventory);
+                }
+                //return the list of addresses
+                return mInventoryList;
             }
         }
 
@@ -43,7 +69,7 @@ namespace ClassLibrary
             get
             {
                 //return the count of the list
-                return mInventoryList.Count;
+                return dBConnection.Count;
             }
             set
             {
@@ -68,60 +94,61 @@ namespace ClassLibrary
         {
             //add a new record to the database based on the values of ThisInventory
             //connect to the database
-            clsDataConnection DB = new clsDataConnection();
+            //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
-            DB.AddParameter("@Name", mThisInventory.Name);
-            DB.AddParameter("@Price", mThisInventory.Price);
-            DB.AddParameter("@Quantity", mThisInventory.Quantity);
-            DB.AddParameter("@Category", mThisInventory.Category);
-            DB.AddParameter("@DateAdded", mThisInventory.DateAdded);
-            DB.AddParameter("@Active", mThisInventory.Active);
+            dBConnection.AddParameter("@Name", mThisInventory.Name);
+            dBConnection.AddParameter("@Price", mThisInventory.Price);
+            dBConnection.AddParameter("@Quantity", mThisInventory.Quantity);
+            dBConnection.AddParameter("@Category", mThisInventory.Category);
+            dBConnection.AddParameter("@DateAdded", mThisInventory.DateAdded);
+            dBConnection.AddParameter("@Active", mThisInventory.Active);
             //execute the query returning the primary key value
-            return DB.Execute("sproc_tblInventory_Insert");
+            return dBConnection.Execute("sproc_tblInventory_Insert");
         }
 
         public void Delete()
         {
             //delete the record pointed to by thisAddress();
             //connect to the database
-            clsDataConnection DB = new clsDataConnection();
+            //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
-            DB.AddParameter("@InventoryId", mThisInventory.InventoryId);
+            dBConnection.AddParameter("@InventoryId", mThisInventory.InventoryId);
             //execute the stored procedure
-            DB.Execute("sproc_tblInventory_Delete");
+            dBConnection.Execute("sproc_tblInventory_Delete");
         }
 
         public void Update()
         {
             //update an existing record based on the values of thisInventory
             //connect to the database
-            clsDataConnection DB = new clsDataConnection();
+            //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
-            DB.AddParameter("@InventoryId", mThisInventory.InventoryId);
-            DB.AddParameter("@Name", mThisInventory.Name);
-            DB.AddParameter("@Price", mThisInventory.Price);
-            DB.AddParameter("@Quantity", mThisInventory.Quantity);
-            DB.AddParameter("@Category", mThisInventory.Category);
-            DB.AddParameter("@DateAdded", mThisInventory.DateAdded);
-            DB.AddParameter("@Active", mThisInventory.Active);
+            dBConnection.AddParameter("@InventoryId", mThisInventory.InventoryId);
+            dBConnection.AddParameter("@Name", mThisInventory.Name);
+            dBConnection.AddParameter("@Price", mThisInventory.Price);
+            dBConnection.AddParameter("@Quantity", mThisInventory.Quantity);
+            dBConnection.AddParameter("@Category", mThisInventory.Category);
+            dBConnection.AddParameter("@DateAdded", mThisInventory.DateAdded);
+            dBConnection.AddParameter("@Active", mThisInventory.Active);
             //execute the stored procedure
-            DB.Execute("sproc_tblInventory_Update");
+            dBConnection.Execute("sproc_tblInventory_Update");
         }
 
         public void ReportByCategory(string Category)
         {
             //filters the records based on a full or partial post code
             //connect to the database
-            clsDataConnection DB = new clsDataConnection();
+            //clsDataConnection DB = new clsDataConnection();
             //send the Category parameter to the database
-            DB.AddParameter("@Category", Category);
+            dBConnection = new clsDataConnection();
+            dBConnection.AddParameter("@Category", Category);
             //execute the stored procedure
-            DB.Execute("sproc_tblInventory_FilterByCategory");
+            dBConnection.Execute("sproc_tblInventory_FilterByCategory");
             //populate the array list with the data table
-            PopulateArray(DB);
+            PopulateArray(dBConnection);
         }
 
-        void PopulateArray(clsDataConnection DB)
+        void PopulateArray(clsDataConnection dBConnection)
         {
             //populates the array list based on the data table in the parameter DB
             //var for the index
@@ -129,7 +156,7 @@ namespace ClassLibrary
             //var to store the record count
             Int32 RecordCount = 0;
             //get the count of records
-            RecordCount = DB.Count;
+            RecordCount = dBConnection.Count;
             //clear the private array list
             mInventoryList = new List<clsInventory>();
             //while there are records to process
@@ -138,13 +165,13 @@ namespace ClassLibrary
                 //create a blank address
                 clsInventory AnInventory = new clsInventory();
                 //read in the fields from the current record
-                AnInventory.InventoryId = Convert.ToInt32(DB.DataTable.Rows[Index]["InventoryId"]);
-                AnInventory.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
-                AnInventory.Name = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
-                AnInventory.Price = Convert.ToDecimal(DB.DataTable.Rows[Index]["Price"]);
-                AnInventory.Quantity = Convert.ToInt32(DB.DataTable.Rows[Index]["Quantity"]);
-                AnInventory.Category = Convert.ToString(DB.DataTable.Rows[Index]["Category"]);
-                AnInventory.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAdded"]);
+                AnInventory.InventoryId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["InventoryId"]);
+                AnInventory.Active = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["Active"]);
+                AnInventory.Name = Convert.ToString(dBConnection.DataTable.Rows[Index]["Name"]);
+                AnInventory.Price = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["Price"]);
+                AnInventory.Quantity = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["Quantity"]);
+                AnInventory.Category = Convert.ToString(dBConnection.DataTable.Rows[Index]["Category"]);
+                AnInventory.DateAdded = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DateAdded"]);
                 //add the record to the private data member
                 mInventoryList.Add(AnInventory);
                 //point at the next record

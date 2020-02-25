@@ -23,6 +23,10 @@ public partial class AnInventory : System.Web.UI.Page
                 //display the current data for the record
                 DisplayInventory();
             }
+            else
+            {
+                txtDateAdded.Text = DateTime.Today.Date.ToString("dd/MM/yyyy");
+            }
         }
     }
 

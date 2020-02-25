@@ -11,8 +11,8 @@
         <div>
             <br />
             <br />
-            <asp:Panel ID="Panel1" runat="server" BackColor="Aqua" Height="575px">
-                <asp:ListBox ID="lstInventories" runat="server" Height="312px" Width="759px"></asp:ListBox>
+            <asp:Panel ID="Panel1" runat="server" BackColor="Aqua" Height="575px" Width="1092px">
+                <asp:ListBox ID="lstInventories" runat="server" Height="312px" Width="449px" DataTextField="InventoryId" DataValueField="InventoryId"></asp:ListBox>
                 <br />
                 <asp:Label ID="lblError" runat="server"></asp:Label>
                 <br />
@@ -21,8 +21,8 @@
                 <asp:TextBox ID="txtCategory" runat="server"></asp:TextBox>
                 <br />
                 <br />
-                <asp:Button ID="btnApply" runat="server" Text="Apply" Width="126px" />
-                <asp:Button ID="btnDisplayAll" runat="server" Text="Display All" Width="108px" />
+                <asp:Button ID="btnApply" runat="server" Text="Apply" Width="126px" OnClick="btnApply_Click" />
+                <asp:Button ID="btnDisplayAll" runat="server" Text="Display All" Width="108px" OnClick="btnDisplayAll_Click" />
                 <br />
                 <br />
                 <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="Add" Width="74px" />
