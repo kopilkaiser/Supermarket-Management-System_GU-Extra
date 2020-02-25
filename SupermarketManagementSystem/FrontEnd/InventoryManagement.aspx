@@ -26,7 +26,7 @@
                 <br />
                 <br />
                 <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="Add" Width="74px" />
-                &nbsp;<asp:Button ID="btnEdit" runat="server" Text="Edit" Width="68px" />
+                &nbsp;<asp:Button ID="btnEdit" runat="server" Text="Edit" Width="68px" OnClick="btnEdit_Click" />
                 &nbsp;<asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete" Width="78px" />
             </asp:Panel>
             <br />

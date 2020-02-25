@@ -104,7 +104,7 @@
             <asp:Button ID="btnOK" runat="server" Text="OK" OnClick="btnOK_Click" Width="99px" />
                     </td>
                     <td class="auto-style3">
-            <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnOK_Click" Width="99px" />
+            <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" Width="99px" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
