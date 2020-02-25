@@ -7,6 +7,8 @@ namespace ClassLibrary
     {
         //private data member for the list
         List<clsInventory> mInventoryList = new List<clsInventory>();
+        //private data member thisInventory
+        clsInventory mThisInventory = new clsInventory();
 
         public clsInventoryCollection()
         {
@@ -32,7 +34,7 @@ namespace ClassLibrary
                 AnInventory.Price = Convert.ToDecimal(DB.DataTable.Rows[Index]["Price"]);
                 AnInventory.Quantity = Convert.ToInt32(DB.DataTable.Rows[Index]["Quantity"]);
                 AnInventory.Category = Convert.ToString(DB.DataTable.Rows[Index]["Category"]);
-                AnInventory.DateAdded = Convert.ToString(DB.DataTable.Rows[Index]["DateAdded"]);
+                AnInventory.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAdded"]);
                 //add the record to the private data member
                 mInventoryList.Add(AnInventory);
                 //point at the next record
@@ -69,6 +71,45 @@ namespace ClassLibrary
                 //we shall worry about this later
             }
         }
-        public clsInventory ThisInventory { get; set; }
+        public clsInventory ThisInventory
+        {
+            get
+            {
+                //return this private data
+                return mThisInventory;
+            }
+            set
+            {
+                //set the private data
+                mThisInventory = value;
+            }
+        }
+
+        public int Add()
+        {
+            //add a new record to the database based on the values of ThisInventory
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@Name", mThisInventory.Name);
+            DB.AddParameter("@Price", mThisInventory.Price);
+            DB.AddParameter("@Quantity", mThisInventory.Quantity);
+            DB.AddParameter("@Category", mThisInventory.Category);
+            DB.AddParameter("@DateAdded", mThisInventory.DateAdded);
+            DB.AddParameter("@Active", mThisInventory.Active);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblInventory_Insert");
+        }
+
+        public void Delete()
+        {
+            //delete the record pointed to by thisAddress();
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@InventoryId", mThisInventory.InventoryId);
+            //execute the stored procedure
+            DB.Execute("sproc_tblInventory_Delete");
+        }
     }
 }
