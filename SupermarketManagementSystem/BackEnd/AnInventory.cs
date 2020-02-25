@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BackEnd
 {
-    public partial class Form1 : Form
+    public partial class AnInventory : Form
     {
-        public Form1()
+        public AnInventory()
         {
             InitializeComponent();
         }
