@@ -106,7 +106,7 @@ public partial class InventoryManagement : System.Web.UI.Page
             //store the data in the session object
             Session["InventoryId"] = InventoryId;
             //redirect to the delete page
-            Response.Redirect("InventoryDelete.aspx");
+            Response.Redirect("InventoryConfirmDelete.aspx");
         }
         else //if no record has been selected
         {

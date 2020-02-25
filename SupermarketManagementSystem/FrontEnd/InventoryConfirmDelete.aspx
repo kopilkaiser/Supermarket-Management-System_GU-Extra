@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="InventoryDelete.aspx.cs" Inherits="InventoryDelete" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="InventoryConfirmDelete.aspx.cs" Inherits="InventoryDelete" %>
 
 <!DOCTYPE html>
 

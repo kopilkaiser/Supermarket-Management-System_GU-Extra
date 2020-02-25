@@ -111,6 +111,7 @@ namespace ClassLibrary
             //delete the record pointed to by thisAddress();
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
+            dBConnection = new clsDataConnection();
             //set the parameters for the stored procedure
             dBConnection.AddParameter("@InventoryId", mThisInventory.InventoryId);
             //execute the stored procedure
