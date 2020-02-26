@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using ClassLibrary;
+using ListBox = System.Windows.Forms.ListBox;
 
 namespace BackEnd
 {
-    public partial class InventoryManagement : Form
+    public partial class InventoryManageForm : Form
     {
-        public InventoryManagement()
+        int InventoryId;
+        clsDataConnection dBConnection;
+        public InventoryManageForm()
         {
             InitializeComponent();
         }
@@ -84,14 +87,25 @@ namespace BackEnd
 
                 InventoryId = Convert.ToString(AllInventories.InventoryList[Index].InventoryId);
                 //set up a new object of class list item 
-                ListItem NewItem = new ListItem(Name + " " + Price + " " + Quantity + " " + " " + Category, InventoryId);
+                // ListItem NewItem = new ListItem(Name + " " + Price + " " + Quantity + " " + " " + Category, InventoryId);
                 //add the new item to the list
+                ListItem NewItem = new ListItem("Name:"+Name+ "_" + "Price:"+ Price + "_"+"Quantity:" + Quantity + "_" +"Category:" + Category, InventoryId);
                 lstInventories.Items.Add(NewItem);
                 //increment the index
                 Index++;
             }
             //return the number of records found
             return RecordCount;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            clsInventory AnInventory = new clsInventory();
+            AnInventory.InventoryId = -1;
+            AnInventoryForm ZX = new AnInventoryForm();
+            this.Hide();
+            ZX.Show();
+            
         }
     }
 }

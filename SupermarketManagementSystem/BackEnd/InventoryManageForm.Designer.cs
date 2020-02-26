@@ -1,6 +1,6 @@
 ﻿namespace BackEnd
 {
-    partial class InventoryManagement
+    partial class InventoryManageForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstInventories = new System.Windows.Forms.ListView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.lstInventories = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // lstInventories
-            // 
-            this.lstInventories.Location = new System.Drawing.Point(66, 37);
-            this.lstInventories.Name = "lstInventories";
-            this.lstInventories.Size = new System.Drawing.Size(342, 229);
-            this.lstInventories.TabIndex = 0;
-            this.lstInventories.UseCompatibleStateImageBehavior = false;
             // 
             // btnAdd
             // 
@@ -49,6 +41,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add ";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblError
             // 
@@ -59,14 +52,22 @@
             this.lblError.TabIndex = 2;
             this.lblError.Text = "lblError";
             // 
+            // lstInventories
+            // 
+            this.lstInventories.FormattingEnabled = true;
+            this.lstInventories.Location = new System.Drawing.Point(49, 33);
+            this.lstInventories.Name = "lstInventories";
+            this.lstInventories.Size = new System.Drawing.Size(374, 238);
+            this.lstInventories.TabIndex = 3;
+            // 
             // InventoryManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lstInventories);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.lstInventories);
             this.Name = "InventoryManagement";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.InventoryManagement_Load);
@@ -76,10 +77,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView lstInventories;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.ListBox lstInventories;
     }
 }
 

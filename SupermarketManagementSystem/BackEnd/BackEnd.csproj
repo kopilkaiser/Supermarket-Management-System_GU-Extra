@@ -47,25 +47,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnInventory.cs">
+    <Compile Include="AnInventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnInventory.Designer.cs">
-      <DependentUpon>AnInventory.cs</DependentUpon>
+    <Compile Include="AnInventoryForm.Designer.cs">
+      <DependentUpon>AnInventoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventoryManagement.cs">
+    <Compile Include="InventoryManageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InventoryManagement.Designer.cs">
-      <DependentUpon>InventoryManagement.cs</DependentUpon>
+    <Compile Include="InventoryManageForm.Designer.cs">
+      <DependentUpon>InventoryManageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AnInventory.resx">
-      <DependentUpon>AnInventory.cs</DependentUpon>
+    <EmbeddedResource Include="AnInventoryForm.resx">
+      <DependentUpon>AnInventoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InventoryManagement.resx">
-      <DependentUpon>InventoryManagement.cs</DependentUpon>
+    <EmbeddedResource Include="InventoryManageForm.resx">
+      <DependentUpon>InventoryManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
