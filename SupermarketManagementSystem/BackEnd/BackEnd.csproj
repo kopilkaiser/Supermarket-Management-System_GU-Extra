@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnInventoryForm.cs">
+    <Compile Include="AddInventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnInventoryForm.Designer.cs">
-      <DependentUpon>AnInventoryForm.cs</DependentUpon>
+    <Compile Include="AddInventoryForm.Designer.cs">
+      <DependentUpon>AddInventoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="InventoryManageForm.cs">
       <SubType>Form</SubType>
@@ -61,8 +61,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AnInventoryForm.resx">
-      <DependentUpon>AnInventoryForm.cs</DependentUpon>
+    <Compile Include="UpdateInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInventoryForm.Designer.cs">
+      <DependentUpon>UpdateInventoryForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddInventoryForm.resx">
+      <DependentUpon>AddInventoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryManageForm.resx">
       <DependentUpon>InventoryManageForm.cs</DependentUpon>
@@ -76,6 +82,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpdateInventoryForm.resx">
+      <DependentUpon>UpdateInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

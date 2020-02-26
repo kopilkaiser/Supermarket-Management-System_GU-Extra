@@ -7,61 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Web.UI.WebControls;
 using ClassLibrary;
-using System.Data.SqlClient;
+
 namespace BackEnd
 {
-    public partial class AnInventoryForm : Form
+    
+    public partial class UpdateInventoryForm : Form
     {
         int InventoryId;
-        clsInventory AnInventory = new clsInventory();
-        public AnInventoryForm()
+        public UpdateInventoryForm()
         {
             InitializeComponent();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void UpdateInventoryForm_Load(object sender, EventArgs e)
         {
-            InventoryManageForm IM = new InventoryManageForm();
-            
-            this.Hide();
-            IM.Show();
-            this.Close();
-        }
-
-        private void AnInventoryForm_Load(object sender, EventArgs e)
-        {
-            //InventoryId = Convert.ToInt32(InventoryId);
-
-           
             DisplayInventory();
-            txtDateAdded.Text = DateTime.Today.Date.ToString("dd/MM/yyyy");
-            txtName.Text = "";
-            txtPrice.Text = "";
-            txtQuantity.Text = "";
-            
-            chkActive.Checked=false;
         }
 
-        void DisplayInventory()
+        private void btnOK_Click(object sender, EventArgs e)
         {
-            //create an instance of the inventory collection
-            clsInventoryCollection AllInventories = new clsInventoryCollection();
-            //find the record to update
-            AllInventories.ThisInventory.Find(InventoryId);
-            //display the data for this record
-            txtName.Text = AllInventories.ThisInventory.Name;
-            txtPrice.Text = AllInventories.ThisInventory.Price.ToString();
-            txtQuantity.Text = AllInventories.ThisInventory.Quantity.ToString();
-            txtDateAdded.Text = AllInventories.ThisInventory.DateAdded.ToString();
-            txtCategory.Text = AllInventories.ThisInventory.Category;
-            chkActive.Checked = AllInventories.ThisInventory.Active;
-
+            Update();
         }
 
-        void Add()
+        public void Update()
         {
+           
             //create an instance of the Inventory Collenction
             clsInventoryCollection AllInventories = new clsInventoryCollection();
             //validate the data on the web form
@@ -69,6 +40,8 @@ namespace BackEnd
             //if the data is OK then add it to the object
             if (Error == "")
             {
+                //find the record to update
+                AllInventories.ThisInventory.Find(InventoryId);
                 //get the data entered by the user
                 AllInventories.ThisInventory.Name = txtName.Text;
                 AllInventories.ThisInventory.Price = Convert.ToDecimal(txtPrice.Text);
@@ -77,7 +50,7 @@ namespace BackEnd
                 AllInventories.ThisInventory.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
                 AllInventories.ThisInventory.Active = chkActive.Checked;
                 //add the record
-                AllInventories.Add();
+                AllInventories.Update();
                 //all done so redirect back to the main page
                 InventoryManageForm IM = new InventoryManageForm();
                 this.Hide();
@@ -91,13 +64,29 @@ namespace BackEnd
             }
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-    
-                //add the new record
-                Add();
-            
-        
+            InventoryManageForm IM = new InventoryManageForm();
+
+            this.Hide();
+            IM.Show();
+            this.Close();
+        }
+
+        public void DisplayInventory()
+        {
+            //create an instance of the inventory collection
+            clsInventoryCollection AllInventories = new clsInventoryCollection();
+            //find the record to update
+            AllInventories.ThisInventory.Find(InventoryId);
+            //display the data for this record
+            txtName.Text = AllInventories.ThisInventory.Name;
+            txtPrice.Text = AllInventories.ThisInventory.Price.ToString();
+            txtQuantity.Text = AllInventories.ThisInventory.Quantity.ToString();
+            txtDateAdded.Text = AllInventories.ThisInventory.DateAdded.ToString();
+            txtCategory.Text = AllInventories.ThisInventory.Category;
+            chkActive.Checked = AllInventories.ThisInventory.Active;
+
         }
     }
 }

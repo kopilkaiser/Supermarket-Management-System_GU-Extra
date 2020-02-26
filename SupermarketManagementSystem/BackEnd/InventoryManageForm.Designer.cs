@@ -31,6 +31,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.lstInventories = new System.Windows.Forms.ListBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -60,15 +61,26 @@
             this.lstInventories.Size = new System.Drawing.Size(374, 238);
             this.lstInventories.TabIndex = 3;
             // 
-            // InventoryManagement
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(182, 342);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // InventoryManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lstInventories);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnAdd);
-            this.Name = "InventoryManagement";
+            this.Name = "InventoryManageForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.InventoryManagement_Load);
             this.ResumeLayout(false);
@@ -80,6 +92,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.ListBox lstInventories;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
 

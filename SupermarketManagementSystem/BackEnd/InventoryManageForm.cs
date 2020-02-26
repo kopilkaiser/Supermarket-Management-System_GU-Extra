@@ -102,10 +102,33 @@ namespace BackEnd
         {
             clsInventory AnInventory = new clsInventory();
             AnInventory.InventoryId = -1;
-            AnInventoryForm ZX = new AnInventoryForm();
+            AddInventoryForm ZX = new AddInventoryForm();
             this.Hide();
             ZX.Show();
             
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            //var to store the primary key value of the record to be edited
+            Int32 InventoryId;
+            //if a record has been selected from the list
+            if (lstInventories.SelectedIndex != -1)
+            {
+                //get the primary key value of the record to delete
+                InventoryId = Convert.ToInt32(lstInventories.SelectedValue);
+                //store the data in the session object
+                Session["InventoryId"] = InventoryId;
+                //redirect to the delete page
+                UpdateInventoryForm ZX = new UpdateInventoryForm();
+                this.Hide();
+                ZX.Show();
+            }
+            else //if no record has been selected
+            {
+                //display an error
+                lblError.Text = "Please select a record to edit from the list";
+            }
         }
     }
 }
