@@ -15,6 +15,8 @@ namespace BackEnd
     public partial class UpdateInventoryForm : Form
     {
         int InventoryId;
+        public static int tempInv { get; set; }
+
         public UpdateInventoryForm()
         {
             InitializeComponent();
@@ -22,7 +24,13 @@ namespace BackEnd
 
         private void UpdateInventoryForm_Load(object sender, EventArgs e)
         {
+            //textBox1.Text = tempInv.ToString();
+            //textBox1.Text = InventoryManageForm.quantity.ToString();
+            //InventoryId = Convert.ToInt32(InventoryManageForm.quantity);
+
+            //display the current data for the record
             DisplayInventory();
+           
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -32,7 +40,7 @@ namespace BackEnd
 
         public void Update()
         {
-           
+            
             //create an instance of the Inventory Collenction
             clsInventoryCollection AllInventories = new clsInventoryCollection();
             //validate the data on the web form
@@ -40,6 +48,7 @@ namespace BackEnd
             //if the data is OK then add it to the object
             if (Error == "")
             {
+                
                 //find the record to update
                 AllInventories.ThisInventory.Find(InventoryId);
                 //get the data entered by the user
@@ -86,7 +95,6 @@ namespace BackEnd
             txtDateAdded.Text = AllInventories.ThisInventory.DateAdded.ToString();
             txtCategory.Text = AllInventories.ThisInventory.Category;
             chkActive.Checked = AllInventories.ThisInventory.Active;
-
         }
     }
 }

@@ -9,17 +9,20 @@ using ClassLibrary;
 public partial class AnInventory : System.Web.UI.Page
 {
     Int32 InventoryId;
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        //get the number of the address to be processed
+        
+        //get the number of the Inventory to be processed
         InventoryId = Convert.ToInt32(Session["InventoryId"]);
+        
         if (IsPostBack == false)
         {
             //populate the list of inventories
            //DisplayInventories();
             //if this is not a new record
             if (InventoryId != -1)
-            {
+            {                
                 //display the current data for the record
                 DisplayInventory();
             }

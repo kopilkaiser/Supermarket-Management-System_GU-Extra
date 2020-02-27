@@ -123,6 +123,7 @@ namespace ClassLibrary
         {
             //update an existing record based on the values of thisInventory
             //connect to the database
+            dBConnection = new clsDataConnection();
             //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
             dBConnection.AddParameter("@InventoryId", mThisInventory.InventoryId);

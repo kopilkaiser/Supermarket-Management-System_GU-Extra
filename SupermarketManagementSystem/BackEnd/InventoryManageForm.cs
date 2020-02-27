@@ -15,7 +15,9 @@ namespace BackEnd
 {
     public partial class InventoryManageForm : Form
     {
-        int InventoryId;
+        public static int quantity;
+        
+        Int32 InventoryId ;
         clsDataConnection dBConnection;
         public InventoryManageForm()
         {
@@ -118,11 +120,12 @@ namespace BackEnd
                 //get the primary key value of the record to delete
                 InventoryId = Convert.ToInt32(lstInventories.SelectedValue);
                 //store the data in the session object
-                Session["InventoryId"] = InventoryId;
+                UpdateInventoryForm.tempInv = InventoryId;
+               
                 //redirect to the delete page
-                UpdateInventoryForm ZX = new UpdateInventoryForm();
+                UpdateInventoryForm UpdateInv = new UpdateInventoryForm();
                 this.Hide();
-                ZX.Show();
+                UpdateInv.Show();
             }
             else //if no record has been selected
             {
@@ -130,5 +133,6 @@ namespace BackEnd
                 lblError.Text = "Please select a record to edit from the list";
             }
         }
+
     }
 }

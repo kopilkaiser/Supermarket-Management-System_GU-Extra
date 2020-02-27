@@ -36,9 +36,10 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(66, 342);
+            this.btnAdd.Location = new System.Drawing.Point(88, 421);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(100, 28);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add ";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -47,25 +48,29 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(66, 284);
+            this.lblError.Location = new System.Drawing.Point(88, 350);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(39, 13);
+            this.lblError.Size = new System.Drawing.Size(54, 17);
             this.lblError.TabIndex = 2;
             this.lblError.Text = "lblError";
             // 
             // lstInventories
             // 
             this.lstInventories.FormattingEnabled = true;
-            this.lstInventories.Location = new System.Drawing.Point(49, 33);
+            this.lstInventories.ItemHeight = 16;
+            this.lstInventories.Location = new System.Drawing.Point(65, 41);
+            this.lstInventories.Margin = new System.Windows.Forms.Padding(4);
             this.lstInventories.Name = "lstInventories";
-            this.lstInventories.Size = new System.Drawing.Size(374, 238);
+            this.lstInventories.Size = new System.Drawing.Size(497, 292);
             this.lstInventories.TabIndex = 3;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(182, 342);
+            this.btnUpdate.Location = new System.Drawing.Point(243, 421);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(100, 28);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -73,13 +78,14 @@
             // 
             // InventoryManageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lstInventories);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnAdd);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InventoryManageForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.InventoryManagement_Load);
