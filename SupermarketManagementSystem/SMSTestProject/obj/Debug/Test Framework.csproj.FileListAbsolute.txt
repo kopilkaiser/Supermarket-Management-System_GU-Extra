@@ -1,0 +1,2 @@
+D:\DMU 2nd Year\Project Management & Development\PMD_GU-Extra\SupermarketManagementSystem\SMSTestProject\obj\Debug\Test Framework.csprojAssemblyReference.cache
+D:\DMU 2nd Year\Project Management & Development\PMD_GU-Extra\SupermarketManagementSystem\SMSTestProject\obj\Debug\Test Framework.csproj.CoreCompileInputs.cache

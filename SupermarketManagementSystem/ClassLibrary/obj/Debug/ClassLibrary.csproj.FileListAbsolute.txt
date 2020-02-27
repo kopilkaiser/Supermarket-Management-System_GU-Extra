@@ -1,0 +1,5 @@
+D:\DMU 2nd Year\Project Management & Development\PMD_GU-Extra\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+D:\DMU 2nd Year\Project Management & Development\PMD_GU-Extra\SupermarketManagementSystem\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\DMU 2nd Year\Project Management & Development\PMD_GU-Extra\SupermarketManagementSystem\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\DMU 2nd Year\Project Management & Development\PMD_GU-Extra\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\DMU 2nd Year\Project Management & Development\PMD_GU-Extra\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.pdb
