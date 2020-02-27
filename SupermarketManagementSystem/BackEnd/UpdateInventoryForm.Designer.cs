@@ -179,9 +179,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(384, 182);
+            this.textBox1.Location = new System.Drawing.Point(613, 182);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(617, 22);
+            this.textBox1.Size = new System.Drawing.Size(388, 22);
             this.textBox1.TabIndex = 20;
             // 
             // UpdateInventoryForm
