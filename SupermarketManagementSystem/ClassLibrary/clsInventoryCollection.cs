@@ -5,12 +5,13 @@ namespace ClassLibrary
 {
     public class clsInventoryCollection
     {
+        
         //private data member for the list
         List<clsInventory> mInventoryList = new List<clsInventory>();
         //private data member thisInventory
         clsInventory mThisInventory = new clsInventory();
-        clsDataConnection dBConnection;
-
+        clsDataConnection dBConnection = new clsDataConnection();
+        //dBConnection = new clsDataConnection();
         public clsInventoryCollection()
         {
             //object for data connection
@@ -61,6 +62,11 @@ namespace ClassLibrary
                 //return the list of addresses
                 return mInventoryList;
             }
+
+            set
+            {
+                mInventoryList = value;
+            }
         }
 
         //public property for Count
@@ -92,6 +98,7 @@ namespace ClassLibrary
 
         public int Add()
         {
+            dBConnection = new clsDataConnection();
             //add a new record to the database based on the values of ThisInventory
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
@@ -120,6 +127,7 @@ namespace ClassLibrary
 
         public void Update()
         {
+            dBConnection = new clsDataConnection();
             //update an existing record based on the values of thisInventory
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
