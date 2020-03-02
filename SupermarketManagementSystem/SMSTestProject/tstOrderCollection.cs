@@ -20,6 +20,7 @@ namespace SMSTestProject
         {
             // create an instance for the class we want to create
             clsOrderCollection AllOrders = new clsOrderCollection();
+           
             // create some test data to assign the property 
             // in this case the dat needto be a list of objects
             List<clsOrder> TestList = new List<clsOrder>();
@@ -31,7 +32,7 @@ namespace SMSTestProject
             TestItem.OrderId = 1;
             TestItem.InventoryId = 1;
             TestItem.Quantity = 1;
-            TestItem.Price = 1.99;
+            TestItem.Price = 1.99m;
             TestItem.PurchasedDate = DateTime.Now.Date;
             // add the item to the test
             TestList.Add(TestItem);
@@ -47,7 +48,7 @@ namespace SMSTestProject
             // create an instance of the class we want to create 
             clsOrderCollection AllOrders = new clsOrderCollection();
             //create some test data to assign the property 
-            Int32 SomeCount = 0;
+            Int32 SomeCount = 2;
             // assign the data to the property
             AllOrders.Count = SomeCount;
             //test to see that the two values are the same 
@@ -66,7 +67,7 @@ namespace SMSTestProject
             TestOrder.OrderId = 1;
             TestOrder.InventoryId = 1;
             TestOrder.Quantity = 1;
-            TestOrder.Price = 1.99;
+            TestOrder.Price = 1.99m;
             TestOrder.PurchasedDate = DateTime.Now.Date;
             // assign the data to the property
             AllOrders.ThisOrder = TestOrder;
@@ -90,7 +91,7 @@ namespace SMSTestProject
             TestItem.OrderId = 1;
             TestItem.InventoryId = 1;
             TestItem.Quantity = 1;
-            TestItem.Price = 1.99;
+            TestItem.Price = 1.99m;
             TestItem.PurchasedDate = DateTime.Now.Date;
             //add the item to the test list 
             TestList.Add(TestItem);
@@ -100,8 +101,8 @@ namespace SMSTestProject
             Assert.AreEqual(AllOrders.Count, TestList.Count);
         }
 
-        //////////////till page 12///////////////////
-
+        
+      
 
     }
 }

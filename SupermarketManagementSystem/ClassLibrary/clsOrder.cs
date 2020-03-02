@@ -5,13 +5,13 @@ namespace ClassLibrary
     public class clsOrder
     {
         public int Quantity { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         public int OrderId { get; set; }
         public int InventoryId { get; set; }
         public DateTime PurchasedDate { get; set; }
         public bool Active { get; set; }
 
-        public string Valid(int quantity, double price)
+        public string Valid(int quantity, decimal price)
         {
             // create a variable to store any error message 
             String Error = "";
@@ -29,7 +29,7 @@ namespace ClassLibrary
 
             }
             // if the oder price is less than 0.20 
-            if (price <= 0.20)
+            if (price <= 0.20m)
             {
                 Error = Error + " The price for the order cannot be less than 0.20 ";
             }

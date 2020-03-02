@@ -9,7 +9,7 @@ namespace SMSTestProject
     {
         // some good data to pass the method 
         Int32  Quantity = 1;
-        double Price = 10.99;
+        decimal Price = 10.99m;
 
         [TestMethod]
         public void InstanceOK()
@@ -38,7 +38,7 @@ namespace SMSTestProject
             //create an instance of class Order
             clsOrder AnOrder = new clsOrder();
             // create some test dat to assign the property
-            double Price = 10.99;
+            decimal Price = 10.99m;
             // assign the data to the property
             AnOrder.Price = Price;
             //test to see that it exist
@@ -55,7 +55,7 @@ namespace SMSTestProject
             // create some test data to the test method
             Int32 Quantity = 1;
             // create some test data to asign the property
-            double Price = 10.99;
+            decimal Price = 10.99m;
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
             // test to see that result is ok , e, g - There are no error message 
@@ -183,7 +183,7 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-            double Price = 0;
+            decimal Price = 0;
 
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
@@ -199,7 +199,7 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-            double Price = 0.20;
+            decimal Price = 0.20m;
 
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
@@ -215,7 +215,7 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-            double Price = 1.20;
+            decimal Price = 1.20m;
 
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
@@ -231,7 +231,7 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-           double Price = 10000;
+           decimal Price = 10000m;
 
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
@@ -247,7 +247,7 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-            double Price = 10001;
+            decimal Price = 10001m;
 
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
@@ -263,7 +263,7 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-            double Price = 5000;
+            decimal Price = 5000m;
 
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
@@ -279,7 +279,7 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-            double Price = 100000;
+            decimal Price = 100000m;
 
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price);
