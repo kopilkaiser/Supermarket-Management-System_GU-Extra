@@ -98,7 +98,7 @@ namespace SMSTestProject
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 InventoryId = 20;
+            Int32 InventoryId = 3;
             //invoke the method
             Found = AnInventory.Find(InventoryId);
             //test to see that the result is correct
