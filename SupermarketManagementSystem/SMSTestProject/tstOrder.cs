@@ -46,6 +46,18 @@ namespace SMSTestProject
 
         }
         [TestMethod]
+        public void ActivePropertyOK()
+        {
+            //create an instance of the class 
+            clsOrder AnOrder = new clsOrder();
+            //create some test data to assign to the property
+            Boolean TestData = true;
+            //assign the data to the property
+            AnOrder.Active = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AnOrder.Active, TestData);
+        }
+        [TestMethod]
         public void ValidMethodOK()
         {
             //create an instance of class Order
@@ -62,6 +74,76 @@ namespace SMSTestProject
             Assert.AreEqual(Error, "");
 
         }
+        [TestMethod]
+        public void PurchasedDatePropertyOK()
+        {
+            // create an instance for class Order
+           clsOrder AnOrder = new clsOrder();
+            DateTime PurchasedDate = DateTime.Now.Date;
+            AnOrder.PurchasedDate = PurchasedDate;
+            Assert.AreEqual(PurchasedDate,AnOrder.PurchasedDate);
+        }
+        /////////////////////////////
+
+        public void PurchasedDateExtremeMin()
+        {
+            // create an instance for class Order
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = DateTime.Now.AddYears(-100);
+            string PurchasedDate = TestDate.ToString();
+            Error = AnOrder.Valid(Price, Quantity,PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PurchasedDateMinMinusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = DateTime.Now.AddDays(-1);
+            string PurchasedDate = TestDate.ToString();
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
+
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void PurchasedDateMinBoundary()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string PurchasedDate = DateTime.Now.Date.ToString();
+            string Error = "";
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void PurchasedDateExtremeMax()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = DateTime.Now.AddYears(100);
+            string PurchasedDate  = TestDate.ToString();
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void PurchasedDateInvalidDataType()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string PurchasedDate = "a";
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+      /// ////////////////////////////////////////
+        /// </summary>
         [TestMethod]
         public void QuantityMinLessOne()
         {
