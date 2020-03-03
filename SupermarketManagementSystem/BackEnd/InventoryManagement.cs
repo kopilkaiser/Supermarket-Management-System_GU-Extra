@@ -86,7 +86,7 @@ namespace BackEnd
                 //set up a new object of class list item 
                 ListItem NewItem = new ListItem(Name + " " + Price + " " + Quantity + " " + " " + Category, InventoryId);
                 //add the new item to the list
-                lstInventories.Items.Add(NewItem);
+                //lstInventories.Items.Add(NewItem);
                 //increment the index
                 Index++;
             }
