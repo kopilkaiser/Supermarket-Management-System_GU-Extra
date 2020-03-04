@@ -26,11 +26,12 @@ namespace BackEnd
 
         private void InventoryManagement_Load(object sender, EventArgs e)
         {
-            //if this is the first time the page is displayed
-
-            //update the list box
+            
+            //update the list box with Inventory database list
             lblError.Text = DisplayInventories("") + " records in the database";
-            //DisplayInventories();
+
+            // Clear all selections in the ListBox.
+            lstInventories.ClearSelected();
         }
 
         Int32 DisplayInventories(string CategoryFilter)
@@ -136,6 +137,56 @@ namespace BackEnd
                 //display an error
                 lblError.Text = "Please select a record to edit from the list";
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //var to store the primary key value of the record to be edited
+            Int32 InventoryId;
+            //if a record has been selected from the list
+            if (lstInventories.SelectedIndex != -1)
+            {
+                //get the primary key value of the record to delete
+                InventoryId = Convert.ToInt32(lstInventories.SelectedValue);
+                //store the data in the session object
+                UpdateInventoryForm.tempInv = InventoryId;
+
+                //redirect to the delete page
+                ConfirmDelete ConfirmDelete = new ConfirmDelete();
+                ConfirmDelete.InventoryID = InventoryId;
+                this.Hide();
+                ConfirmDelete.Show();
+            }
+            else //if no record has been selected
+            {
+                //display an error
+                lblError.Text = "Please select a record to edit from the list";
+            }
+
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            //declare var to storee the record count
+            Int32 RecordCount;
+            //assign the results of the DisplayAddress function to the record count var
+            RecordCount = DisplayInventories(txtCategory.Text);
+            //display the number oof records fount
+            lblError.Text = RecordCount + " records found";
+        }
+
+        private void btnDisplayAll_Click(object sender, EventArgs e)
+        {
+            //declare var to storee the record count
+            Int32 RecordCount;
+            //assign the results of the DisplayAddress function to the record count var
+            RecordCount = DisplayInventories("");
+            //display the number oof records fount
+            lblError.Text = RecordCount + " records found";
+            //clear the Category filter text box
+            txtCategory.Text = "";
+
+            lstInventories.ClearSelected();
         }
 
         //private void lstInventories_SelectedIndexChanged(object sender, EventArgs e)

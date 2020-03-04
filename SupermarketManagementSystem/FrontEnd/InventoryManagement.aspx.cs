@@ -75,7 +75,7 @@ public partial class InventoryManagement : System.Web.UI.Page
 
             InventoryId = Convert.ToString(AllInventories.InventoryList[Index].InventoryId);
             //set up a new object of class list item 
-            ListItem NewItem = new ListItem(Name + " "+ Price + " " + Quantity + " "+ " " + Category, InventoryId);
+            ListItem NewItem = new ListItem("Name:" + Name + "_" + "Price:" + Price + "_" + "Quantity:" + Quantity + "_" + "Category:" + Category, InventoryId);
             //add the new item to the list
             lstInventories.Items.Add(NewItem);
             //increment the index
