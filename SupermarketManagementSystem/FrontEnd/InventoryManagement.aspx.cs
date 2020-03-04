@@ -155,7 +155,9 @@ public partial class InventoryManagement : System.Web.UI.Page
         RecordCount = DisplayInventories("");
         //display the number of records found
         lblError.Text = RecordCount + " records in the database";
-        //clear the post code filter text box
+        //clear the Category filter text box
         txtCategory.Text = "";
+
+        lstInventories.ClearSelection();
     }
 }
