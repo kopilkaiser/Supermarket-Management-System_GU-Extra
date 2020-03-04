@@ -9,10 +9,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ListBox ID="lstOrders" runat="server" Height="155px" Width="319px"></asp:ListBox>
+            <asp:ListBox ID="lstOrders" runat="server" Height="155px" Width="688px"></asp:ListBox>
         </div>
         <p>
-            <asp:Label ID="lblError" runat="server" Text="[lblError]"></asp:Label>
+            <asp:Label ID="lblError" runat="server"></asp:Label>
         </p>
         <p>
             Please Enter a OrderId&nbsp; <asp:TextBox ID="TextBox1" runat="server" Height="16px"></asp:TextBox>
