@@ -43,6 +43,11 @@ namespace ClassLibrary
             return Error;
         }
 
+        public void Find(int primaryKey)
+        {
+            
+        }
+
         public string Valid(decimal price, int quantity, string purchasedDate)
         {
             DateTime DateTemp;
