@@ -73,7 +73,7 @@ namespace SMSTestProject
             string Method = "Visa Debit";
             //invoke the method
             Error = AnPayment.Valid(Method, Amount, PaymentDate);
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -116,7 +116,7 @@ namespace SMSTestProject
             //test to see the result is ok i.e. there should be no error method
             Assert.AreEqual(Error, "");
         }
-        /*[TestMethod]
+        [TestMethod]
         public void PaymentMethodMaxBoundary()
         {
             //create an instance of cls payment
@@ -125,7 +125,68 @@ namespace SMSTestProject
             string Error = "";
             //create some test data to the test method
             string Method = "";
-        }*/
+            //oad the string with 30 characters
+            //this should pass
+            Method = Method.PadRight(30, 'a');
+            //invok the method
+            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            //test to see teh result is OK i.e. there should be no error message
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void MethodMaxPlusOne()
+        {
+            //create an instance of cls payment 
+            clsPayment AnPayment = new clsPayment();
+            //create a string variable to store teh result of the validation
+            string Error = "qwertyuiopasdfghklzxcvbnm01234";
+            //invok the method
+            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            //the result is OK;
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void MethodMid()
+        {
+            //create an instance of cls payment
+            clsPayment AnPayment = new clsPayment();
+            //create a string to store the result of the validation
+            string Error = "";
+            //create some test data to the test method
+            string Method = "qwertyuiopasd12";
+            //invok the method
+            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            //test to see the result is ok
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void AmountExtremeMax()
+        {
+            //create an instance of cls payment 
+            clsPayment AnPayment = new clsPayment();
+            //create a string variable to store the result of validation
+            string Error = "";
+            //create some test data to test the method
+            string Amount = 10000000m.ToString();
+            //invoke the method
+            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            //the result is NOT OK, in example there should be an error message
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void AmountMaxPlusOne()
+        {
+            //create an instance of class payment
+            clsPayment AnPayment = new clsPayment();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to the test method
+            string Amount = 10000001m.ToString();
+            //invok the method
+            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            //the  result is NOT OK; in example there should be an error message
+            Assert.AreNotEqual(Error, "");
+        }
     }
 }
 

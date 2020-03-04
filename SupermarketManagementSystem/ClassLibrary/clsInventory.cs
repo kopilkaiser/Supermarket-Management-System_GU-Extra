@@ -238,5 +238,13 @@ namespace ClassLibrary
                 return false;
             }
         }
+
+        public string AllDetails
+        {
+            get
+            {
+                return "Name:" + Name + "_" + "Price:" + Price + "_" + "Quantity:" + Quantity + "_" + "Category:" + Category;
+            }
+        }
     }
 }
