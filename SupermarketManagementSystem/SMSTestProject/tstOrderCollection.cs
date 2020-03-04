@@ -16,6 +16,116 @@ namespace SMSTestProject
             Assert.IsNotNull(AllOrders);
         }
         [TestMethod]
+        public void AddMethodOK()
+        {
+            // create an instance for the class we want to create
+            clsOrderCollection AllOrders = new clsOrderCollection();
+
+            // create the item of the test data 
+            clsOrder TestItem = new clsOrder();
+            // var to store the primary key 
+            Int32 PrimaryKey = 0;
+            // set it properties
+            TestItem.Active = true;
+            TestItem.OrderId = 05;
+            TestItem.InventoryId = 1;
+            TestItem.Quantity = 1;
+            TestItem.Price = 1.99m;
+            TestItem.PurchasedDate = DateTime.Now.Date;
+            
+            // set thisAdress to the test data
+            AllOrders.ThisOrder = TestItem;
+            // add the record 
+            PrimaryKey = AllOrders.Add();
+            // set the primary key TestI data
+            TestItem.OrderId = PrimaryKey;
+            // find the record 
+            AllOrders.ThisOrder.Find(PrimaryKey);
+            
+            // test to see that the two values are the same 
+            Assert.AreEqual(AllOrders.ThisOrder, TestItem);
+
+        }
+
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+            // create an instance for the class we want to create
+            clsOrderCollection AllOrders = new clsOrderCollection();
+
+            // create the item of the test data 
+            clsOrder TestItem = new clsOrder();
+            // var to store the primary key 
+            Int32 PrimaryKey = 0;
+            // set it properties
+            TestItem.Active = true;
+            TestItem.OrderId = 05;
+            TestItem.InventoryId = 1;
+            TestItem.Quantity = 1;
+            TestItem.Price = 1.99m;
+            TestItem.PurchasedDate = DateTime.Now.Date;
+
+            // set thisAdress to the test data
+            AllOrders.ThisOrder = TestItem;
+            // add the record 
+            PrimaryKey = AllOrders.Add();
+            // set the primary key TestI data
+            TestItem.OrderId = PrimaryKey;
+            // find the record 
+            AllOrders.ThisOrder.Find(PrimaryKey);
+            // delete the record 
+            AllOrders.Delete();
+            //now find the record 
+            Boolean Found = AllOrders.ThisOrder.Find(PrimaryKey);
+
+            // test to see that the record was not found
+            Assert.IsFalse(Found);
+
+        }
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            // create an instance for the class we want to create
+            clsOrderCollection AllOrders = new clsOrderCollection();
+
+            // create the item of the test data 
+            clsOrder TestItem = new clsOrder();
+            // var to store the primary key 
+            Int32 PrimaryKey = 0;
+            // set it properties
+            TestItem.Active = true;
+            TestItem.OrderId = 05;
+            TestItem.InventoryId = 1;
+            TestItem.Quantity = 1;
+            TestItem.Price = 1.99m;
+            TestItem.PurchasedDate = DateTime.Now.Date;
+
+            // set thisAdress to the test data
+            AllOrders.ThisOrder = TestItem;
+            // add the record 
+            PrimaryKey = AllOrders.Add();
+            // set the primary key TestI data
+            TestItem.OrderId = PrimaryKey;
+            // modify the test data 
+            TestItem.Active = false;
+            TestItem.OrderId = 06;
+            TestItem.InventoryId = 5;
+            TestItem.Quantity = 4;
+            TestItem.Price = 20.99m;
+            TestItem.PurchasedDate = DateTime.Now.Date;
+            // set the record based on the new test data 
+            AllOrders.ThisOrder = TestItem;
+            // Update the record 
+            AllOrders.Update();
+           // find the record 
+            AllOrders.ThisOrder.Find(PrimaryKey);
+            // test to see that the record was not found
+            Assert.AreEqual(AllOrders.ThisOrder,TestItem);
+
+        }
+
+
+        [TestMethod]
         public void OrderListOK()
         {
             // create an instance for the class we want to create
