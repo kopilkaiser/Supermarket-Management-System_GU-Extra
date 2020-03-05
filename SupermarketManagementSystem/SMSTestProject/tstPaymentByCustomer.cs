@@ -9,11 +9,16 @@ namespace SMSTestProject
     {
         //good test data
         //testdata to pass the method
+
         int PaymentId = 1;
+        string Name = "Cadbury";
+        string Category = "Electronics";
         string Amount = 20.00m.ToString();
         string Method = "Debit Card";
         string PaymentDate = DateTime.Now.Date.ToString();
         int StaffId = 1;
+        int CardNumber = 9999999999999999;
+        
 
         [TestMethod]
         public void InstanceOK()
@@ -22,6 +27,14 @@ namespace SMSTestProject
             clsPayment AnPayment = new clsPayment();
             //test to see that exist
             Assert.IsNotNull(AnPayment);
+        }
+        [TestMethod]
+        public void SuccessPropertyOK()
+        {
+            clsPayment AnPayment = new clsPayment();
+            Boolean TestData = true;
+            AnPayment.Success = TestData;
+            Assert.AreEqual(AnPayment.Success, TestData);
         }
         [TestMethod]
         public void PaymentMethodProperty()
@@ -37,7 +50,42 @@ namespace SMSTestProject
         }
 
         [TestMethod]
-        public void PaymentDatePropertyOK()
+        public void NamePropertyOK()
+        {
+            //create an instance of cls payment
+            clsPayment AnPayment = new clsPayment();
+            string Name = "Cadbury";
+            AnPayment.Name = Name;
+            Assert.AreEqual(AnPayment.Name,Name);
+        }
+        [TestMethod]
+        public void CategoryPropertyOK()
+        {
+            clsPayment AnPayment = new clsPayment();
+            string Category = "Electronics";
+            AnPayment.Category = Category;
+            Assert.AreEqual(AnPayment.Category,Category);
+        }
+        [TestMethod]
+        public void CardNumberPropertyOK()
+        {
+            clsPayment AnPayment = new clsPayment();
+            Int64 CardNumber = 450456012578;
+            AnPayment.CardNumber = CardNumber;
+            Assert.AreEqual(AnPayment.CardNumber,CardNumber);
+        }
+        [TestMethod]
+        public void AmountPropertyOK()
+        {
+            //create an instance of class payment 
+            clsPayment AnPayment = new clsPayment();
+            decimal Amount = 20.00m;
+            AnPayment.Amount = Amount;
+            //test to see that exist
+            Assert.AreEqual(AnPayment.Amount, Amount);
+        }
+        [TestMethod]
+        public void DatePropertyOK()
         {
             //create an instance of class payment
             clsPayment AnPayment = new clsPayment();
@@ -47,17 +95,6 @@ namespace SMSTestProject
             AnPayment.PaymentDate = PaymentDate;
             //test to see that exist
             Assert.AreEqual(AnPayment.PaymentDate, PaymentDate);
-        }
-
-        [TestMethod]
-        public void PaymentAmountPropertyOK()
-        {
-            //create an instance of class payment 
-            clsPayment AnPayment = new clsPayment();
-            decimal Amount = 20.00m;
-            AnPayment.Amount = Amount;
-            //test to see that exist
-            Assert.AreEqual(AnPayment.Amount, Amount);
         }
 
         [TestMethod]
@@ -75,9 +112,9 @@ namespace SMSTestProject
             Error = AnPayment.Valid(Method, Amount, PaymentDate);
             Assert.AreEqual(Error, "");
         }
-
+        
         [TestMethod]
-        public void PaymentMethodMinLessone()
+        public void MethodMinLessone()
         {
             //create an instance of cls payment 
             clsPayment AnPayment = new clsPayment();
@@ -91,7 +128,7 @@ namespace SMSTestProject
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
-        public void PaymentMethodMiniBoundary()
+        public void MethodMiniBoundary()
         {
             //create an instance of cls payment
             clsPayment AnPayment = new clsPayment();
@@ -105,7 +142,7 @@ namespace SMSTestProject
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
-        public void PaymentMethodMiniPlusOne()
+        public void MethodMiniPlusOne()
         {
             //create an instance of cls payment
             clsPayment AnPayment = new clsPayment();
@@ -117,7 +154,7 @@ namespace SMSTestProject
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
-        public void PaymentMethodMaxBoundary()
+        public void MethodMaxBoundary()
         {
             //create an instance of cls payment
             clsPayment AnPayment = new clsPayment();
