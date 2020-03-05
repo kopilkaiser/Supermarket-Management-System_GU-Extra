@@ -1,40 +1,31 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="InventoryManagement.aspx.cs" Inherits="InventoryManagement" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SuperMarket.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <br />
-            <br />
-            <asp:Panel ID="Panel1" runat="server" BackColor="Aqua" Height="575px" Width="1092px">
-                <br />
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <p>
+        WELCOME TO THE BEST MARKET GU-EXTRA</p>
+    <p>
+        WE WILL FulFill your needs &amp; desire!</p>
+    <p>
+        &nbsp;</p>
+    <p>
                 <asp:ListBox ID="lstInventories" runat="server" Height="312px" Width="823px" DataTextField="InventoryId" DataValueField="InventoryId"></asp:ListBox>
-                <br />
+                <br __designer:mapid="1" />
                 <asp:Label ID="lblError" runat="server"></asp:Label>
-                <br />
-                <br />
-                Please Enter a Category<br />
+                <br __designer:mapid="3" />
+                <br __designer:mapid="4" />
+                Please Enter a Category<br __designer:mapid="5" />
                 <asp:TextBox ID="txtCategory" runat="server"></asp:TextBox>
-                <br />
-                <br />
+                <br __designer:mapid="7" />
+                <br __designer:mapid="8" />
                 <asp:Button ID="btnApply" runat="server" Text="Apply" Width="126px" OnClick="btnApply_Click" />
                 <asp:Button ID="btnDisplayAll" runat="server" Text="Display All" Width="108px" OnClick="btnDisplayAll_Click" />
-                <br />
-                <br />
+                <br __designer:mapid="b" />
+                <br __designer:mapid="c" />
                 <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="Add" Width="74px" />
                 &nbsp;<asp:Button ID="btnEdit" runat="server" Text="Edit" Width="68px" OnClick="btnEdit_Click" />
                 &nbsp;<asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete" Width="78px" />
-            </asp:Panel>
-            <br />
-            <br />
-            <br />
-            <br />
-        </div>
-    </form>
-</body>
-</html>
+            </p>
+</asp:Content>
+
