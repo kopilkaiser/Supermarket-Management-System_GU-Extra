@@ -8,8 +8,9 @@ namespace SMSTestProject
     public class tstOrder
     {
         // some good data to pass the method 
-        Int32  Quantity = 1;
-        decimal Price = 10.99m;
+        string  Quantity = 1.ToString();
+        string Price = 10.99m.ToString();
+        string PurchasedDate = DateTime.Now.Date.ToString();
 
         [TestMethod]
         public void InstanceOK()
@@ -65,11 +66,12 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-            Int32 Quantity = 1;
+            string Quantity = 1.ToString();
             // create some test data to asign the property
-            decimal Price = 10.99m;
+            string Price = 10.99m.ToString();
+            string PurchasedDate = DateTime.Now.Date.ToString();
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Quantity, Price, PurchasedDate);
             // test to see that result is ok , e, g - There are no error message 
             Assert.AreEqual(Error, "");
 

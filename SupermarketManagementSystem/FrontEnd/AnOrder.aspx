@@ -28,11 +28,11 @@
         </p>
         <p>
             <asp:Label ID="Label5" runat="server" Text="PurchasedDate"></asp:Label>
-&nbsp;<asp:TextBox ID="txtPurchaseDate" runat="server"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtPurchasedDate" runat="server"></asp:TextBox>
         </p>
         <asp:CheckBox ID="ChkboxActive" runat="server" Text="Active" />
         <br />
-        <asp:Label ID="lblError" runat="server" Text="[lblError]"></asp:Label>
+        <asp:Label ID="lblError" runat="server"></asp:Label>
         <br />
         <br />
         <asp:Button ID="btnOK1" runat="server" OnClick="btnOK1_Click" Text="OK" />

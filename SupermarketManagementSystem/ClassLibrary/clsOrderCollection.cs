@@ -90,13 +90,13 @@ namespace ClassLibrary
         }
 
         public int Add()
-        {
+        { 
             // adds a new record  to the database on the values of mThisOrder
             // set the primary key value of the new record
             // mThisOrder.OrderId = 12;
             clsDataConnection DB = new clsDataConnection();
             // set the parameter for the stored procedure 
-            DB.AddParameter("OrderId", mThisOrder.OrderId);
+            //DB.AddParameter("OrderId", mThisOrder.OrderId);
             DB.AddParameter("InventoryId", mThisOrder.InventoryId);
             DB.AddParameter("Quantity", mThisOrder.Quantity);
             DB.AddParameter("Price", mThisOrder.Price);
@@ -127,6 +127,10 @@ namespace ClassLibrary
            //execute the stored procedure
             DB.Execute("sproc_tblOrder_Update");
 
+        }
+        private clsOrderCollection FilterByOrderId (string v)
+        {
+            throw new NotImplementedException();
         }
 
         // public property for ThisOrder

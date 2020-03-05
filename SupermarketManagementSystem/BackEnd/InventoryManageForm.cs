@@ -165,6 +165,30 @@ namespace BackEnd
 
         }
 
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            //declare var to storee the record count
+            Int32 RecordCount;
+            //assign the results of the DisplayAddress function to the record count var
+            RecordCount = DisplayInventories(txtCategory.Text);
+            //display the number oof records fount
+            lblError.Text = RecordCount + " records found";
+        }
+
+        private void btnDisplayAll_Click(object sender, EventArgs e)
+        {
+            //declare var to storee the record count
+            Int32 RecordCount;
+            //assign the results of the DisplayAddress function to the record count var
+            RecordCount = DisplayInventories("");
+            //display the number oof records fount
+            lblError.Text = RecordCount + " records found";
+            //clear the Category filter text box
+            txtCategory.Text = "";
+
+            lstInventories.ClearSelected();
+        }
+
         //private void lstInventories_SelectedIndexChanged(object sender, EventArgs e)
         //{
         //    lblError.Text = lstInventories.SelectedValue.ToString();
