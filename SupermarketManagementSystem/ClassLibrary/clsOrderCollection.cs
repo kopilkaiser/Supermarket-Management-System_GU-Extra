@@ -27,6 +27,8 @@ namespace ClassLibrary
             clsDataConnection DB = new clsDataConnection();
             // execute the stored procedure
             DB.Execute("sproc_tblOrder_SelectAll");
+            //populate the array list with the data table 
+            PopulateArray(DB);
             // get the count of records 
             RecordCount = DB.Count;
             // while there are records are process
@@ -183,9 +185,54 @@ namespace ClassLibrary
             }
         }
 
+        public void FilterByOrderId(string OrderId)
+        {
+            //filter the records based on a full or partial OrderId
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            // send  the OrderId Parameter to the database 
+            DB.AddParameter("@OrderId", OrderId);
+            // execute the stored procedure 
+            DB.Execute("sproc_tblOrder_FilterByOrderId");
+            //populate the array list with the data table 
+            PopulateArray(DB);
+
+        }
+        void PopulateArray(clsDataConnection DB)
+        {
+            //populates the array list based on the data table in the parameter DB
+            //var for the index
+            Int32 Index = 0;
+            //var to store the record count
+            Int32 RecordCount = 0;
+            //get the count of records
+            RecordCount = DB.Count;
+            //clear the private array list
+            mOrderList = new List<clsOrder>();
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //create a blank address
+                clsOrder AnOrder = new clsOrder();
+                //read in the fields from the current record
+                AnOrder.OrderId = Convert.ToInt32(DB.DataTable.Rows[Index]["InventoryId"]);
+                AnOrder.InventoryId = Convert.ToInt32(DB.DataTable.Rows[Index]["InventoryId"]);
+                AnOrder.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
+
+                AnOrder.Price = Convert.ToDecimal(DB.DataTable.Rows[Index]["Price"]);
+                AnOrder.Quantity = Convert.ToInt32(DB.DataTable.Rows[Index]["Quantity"]);
+
+                AnOrder.PurchasedDate = Convert.ToDateTime(DB.DataTable.Rows[Index]["PurchasedDate"]);
+                //add the record to the private data member
+                mOrderList.Add(AnOrder);
+                //point at the next record
+                Index++;
+            }
+        }
+
         //public List<clsOrder> OrderList { get; set; }
         //public int Count { get; set; }
-       // public clsOrder ThisOrder { get; set; }
+        // public clsOrder ThisOrder { get; set; }
     }
 
    

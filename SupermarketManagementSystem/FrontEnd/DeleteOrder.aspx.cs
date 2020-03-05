@@ -34,11 +34,13 @@ public partial class DeleteOrder : System.Web.UI.Page
         AllOrders.Delete();
     }
 
-    protected void btnYes_Click(object sender, EventArgs e)
+
+    protected void btnYes_Click1(object sender, EventArgs e)
     {
         //delete the record
         DeleteORDER();
         //redirect back to the main page
         Response.Redirect("OrderManagementStaff.aspx");
+
     }
 }

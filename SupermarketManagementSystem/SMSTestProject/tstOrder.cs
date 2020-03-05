@@ -8,8 +8,9 @@ namespace SMSTestProject
     public class tstOrder
     {
         // some good data to pass the method 
-        string  Quantity = 1.ToString();
-        string Price = 10.99m.ToString();
+        int OrderId = 1;
+        string Quantity = "22";
+        string Price = "20.20";              ////10.99m.ToString();
         string PurchasedDate = DateTime.Now.Date.ToString();
 
         [TestMethod]
@@ -157,7 +158,7 @@ namespace SMSTestProject
             Int32 Quantity = 0;
             
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There shold be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -173,7 +174,7 @@ namespace SMSTestProject
             Int32 Quantity = 0;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -189,7 +190,7 @@ namespace SMSTestProject
             Int32 Quantity = 2;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid( Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be NO error message 
             Assert.AreEqual(Error, "");
 
@@ -205,7 +206,7 @@ namespace SMSTestProject
             Int32 Quantity = 100;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be NO error message 
             Assert.AreEqual(Error, "");
 
@@ -221,7 +222,7 @@ namespace SMSTestProject
             Int32 Quantity = 101;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -237,7 +238,7 @@ namespace SMSTestProject
             Int32 Quantity = 50;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price,Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be no error message 
             Assert.AreEqual(Error, "");
 
@@ -253,7 +254,7 @@ namespace SMSTestProject
             Int32 Quantity = 10000;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price,Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -270,7 +271,7 @@ namespace SMSTestProject
             decimal Price = 0;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid( Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There shold be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -286,7 +287,7 @@ namespace SMSTestProject
             decimal Price = 0.20m;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -302,7 +303,7 @@ namespace SMSTestProject
             decimal Price = 1.20m;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be NO error message 
             Assert.AreEqual(Error, "");
 
@@ -318,7 +319,7 @@ namespace SMSTestProject
            decimal Price = 10000m;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be NO error message 
             Assert.AreEqual(Error, "");
 
@@ -334,7 +335,7 @@ namespace SMSTestProject
             decimal Price = 10001m;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -350,7 +351,7 @@ namespace SMSTestProject
             decimal Price = 5000m;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be no error message 
             Assert.AreEqual(Error, "");
 
@@ -366,7 +367,7 @@ namespace SMSTestProject
             decimal Price = 100000m;
 
             // invoke the method 
-            Error = AnOrder.Valid(Quantity, Price);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate);
             // test to see that result is ok , e, g - There should be an error message 
             Assert.AreNotEqual(Error, "");
 
