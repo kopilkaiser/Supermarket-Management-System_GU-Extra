@@ -32,7 +32,7 @@ namespace SMSTestProject
             TestItem.Quantity = 1;
             TestItem.Price = 1.99m;
             TestItem.PurchasedDate = DateTime.Now.Date;
-            
+
             // set thisAdress to the test data
             AllOrders.ThisOrder = TestItem;
             // add the record 
@@ -41,7 +41,7 @@ namespace SMSTestProject
             TestItem.OrderId = PrimaryKey;
             // find the record 
             AllOrders.ThisOrder.Find(PrimaryKey);
-            
+
             // test to see that the two values are the same 
             Assert.AreEqual(AllOrders.ThisOrder, TestItem);
 
@@ -117,20 +117,20 @@ namespace SMSTestProject
             AllOrders.ThisOrder = TestItem;
             // Update the record 
             AllOrders.Update();
-           // find the record 
+            // find the record 
             AllOrders.ThisOrder.Find(PrimaryKey);
             // test to see that the record was not found
-            Assert.AreEqual(AllOrders.ThisOrder,TestItem);
+            Assert.AreEqual(AllOrders.ThisOrder, TestItem);
 
         }
-       
+
 
         [TestMethod]
         public void OrderListOK()
         {
             // create an instance for the class we want to create
             clsOrderCollection AllOrders = new clsOrderCollection();
-           
+
             // create some test data to assign the property 
             // in this case the dat needto be a list of objects
             List<clsOrder> TestList = new List<clsOrder>();
@@ -210,10 +210,52 @@ namespace SMSTestProject
             // test to see that two values are the same 
             Assert.AreEqual(AllOrders.Count, TestList.Count);
         }
+        [TestMethod]
+        public void FilterByOrderId()
+        {
+            // create an instance of the class we want to create 
+            clsOrderCollection AllOrders = new clsOrderCollection();
+            // create an instance of the filtered data
+            clsOrderCollection FilteredOrders = new clsOrderCollection();
+            // apply the blank string 
+            FilteredOrders.FilterByOrderId("");
 
-        
-      
+            //test to see that the two values are the same 
+            Assert.AreEqual(AllOrders.Count, FilteredOrders.Count);
+
+        }
+        [TestMethod]
+        public void FilterByOrderIdTestDataFound()
+        {
+            // create an instance of the class we want to create 
+            clsOrderCollection AllOrders = new clsOrderCollection();
+            // var to store outcome 
+            Boolean OK = true;
+            // apply a post code that doesnt exist 
+            FilteredOrders.FilterByOrderId(" ");
+            // check that the correct number of records are found
+            if (FilteredOrders.Count == 2)
+            {
+                // check that the correct number of records is Order ID 5
+                if (FilteredOrders.OrderList[0].OrderID != 5)
+                {
+                    OK = false;
+                }
+                if (FilteredOrders.OrderList[1].OrderID != 6)
+                {
+                    OK = false;
+                }
+            }
+            else
+            {
+                OK = false;
+            }
+            // test to see that there are no records
+            Assert.IsTrue(OK);
+
+        }
 
     }
 }
+
 
