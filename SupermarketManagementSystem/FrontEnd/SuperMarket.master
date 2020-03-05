@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SuperMarket.master.cs" Inherits="SuperMarket" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="SuperMarket.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        Supermarket Management System (GU-Extra)<br />
+        <br />
+        <asp:HyperLink ID="hypSignIn" runat="server" NavigateUrl="~/SignIn.aspx">Sign In-</asp:HyperLink>
+&nbsp;-
+        <asp:HyperLink ID="hypSignUp" runat="server" NavigateUrl="~/SignUp.aspx">Sign Up-</asp:HyperLink>
+&nbsp;-
+        <asp:HyperLink ID="hypChangePassword" runat="server" NavigateUrl="~/ChangePassword.aspx">Change Password-</asp:HyperLink>
+&nbsp;-
+        <asp:HyperLink ID="hypSignOut" runat="server" NavigateUrl="~/SignOut.aspx">Sign Out-</asp:HyperLink>
+&nbsp;-
+        <asp:HyperLink ID="hypReSet" runat="server" NavigateUrl="~/ReSet.aspx">ReSet Password</asp:HyperLink>
+&nbsp;<br />
+        <br />
+        <br />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
