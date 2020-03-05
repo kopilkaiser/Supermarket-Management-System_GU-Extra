@@ -108,6 +108,7 @@ namespace ClassLibrary
         public string Valid(string name, string price, string quantity, string category, string dateAdded)
         {
             string Error = "";
+
             DateTime DateTemp;
             decimal PriceTemp;
             Int32 QuantityTemp;
