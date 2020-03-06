@@ -19,13 +19,13 @@
         <tr>
             <td class="auto-style2">EMail Address</td>
             <td>
-                <asp:TextBox ID="txtEMail" runat="server" Width="283px"></asp:TextBox>
+                <asp:TextBox ID="txtEMail" runat="server" Width="202px"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Password</td>
             <td>
-                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Width="283px"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" runat="server" Width="207px"></asp:TextBox>
             </td>
         </tr>
     </table>

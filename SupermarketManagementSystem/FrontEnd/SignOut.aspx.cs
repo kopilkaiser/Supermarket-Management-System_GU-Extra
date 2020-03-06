@@ -18,7 +18,7 @@ public partial class SignOut : System.Web.UI.Page
         //update the copy in the session
         Session["Sec"] = Sec;
         //re-direct to the main page
-        Response.Redirect("InventoryManagement.aspx");
+        Response.Redirect("Default.aspx");
     }
 
     protected void btnAdd_Click(object sender, EventArgs e)

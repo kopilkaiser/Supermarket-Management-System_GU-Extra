@@ -15,8 +15,9 @@
                 <asp:Label ID="lblError" runat="server"></asp:Label>
                 <br __designer:mapid="3" />
                 <br __designer:mapid="4" />
-                Please Enter a Category<br __designer:mapid="5" />
-                <asp:TextBox ID="txtCategory" runat="server"></asp:TextBox>
+                <asp:Label ID="lblCategory" runat="server" Text="Enter Category to FilterList"></asp:Label>
+                <br __designer:mapid="5" />
+                <asp:TextBox ID="txtCategory" runat="server" Width="184px"></asp:TextBox>
                 <br __designer:mapid="7" />
                 <br __designer:mapid="8" />
                 <asp:Button ID="btnApply" runat="server" Text="Apply" Width="126px" OnClick="btnApply_Click" />
