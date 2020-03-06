@@ -10,7 +10,20 @@ namespace ClassLibrary
         private decimal mPrice;
         private DateTime mPurchasedDate;
         private bool mActive;
+        private string mOrderCode;
 
+        public string OrderCode
+        {
+            get
+            {
+                return mOrderCode;
+            }
+
+            set
+            {
+                mOrderCode = value;
+            }
+        }
         public int OrderId
         {
             get
@@ -103,13 +116,14 @@ namespace ClassLibrary
 
        
 
-        public string Valid(string quantity, string price, string purchasedDate, string InventoryId)
+        public string Valid(string quantity, string price, string purchasedDate, string inventoryId)
         {
             // create a variable to store any error message 
             String Error = "";
             DateTime DateTemp;
             decimal PriceTemp;
             Int32 QuantityTemp;
+            Int32 InventoryIdTemp;
             //if price entered is a valid price
             try
             {

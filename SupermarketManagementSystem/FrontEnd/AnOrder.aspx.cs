@@ -23,12 +23,27 @@ public partial class AnOrder : System.Web.UI.Page
             {
                
                 DisplayOrder();
+               
             }
             else
             {
                 txtPurchasedDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
             }
 
+        }
+
+        Random random = new Random();
+        int length = 5;
+        for (int i = 0; i < length; i++)
+        {
+            if (random.Next(0, 3) == 0) //if random.Next() == 0 then we generate a random character
+            {
+                txtOrderCode.Text += ((char)random.Next(65, 91)).ToString();
+            }
+            else //if random.Next() == 0 then we generate a random digit
+            {
+                txtOrderCode.Text += random.Next(0, 9);
+            }
         }
 
     }
@@ -50,6 +65,7 @@ public partial class AnOrder : System.Web.UI.Page
             AllOrders.ThisOrder.Quantity = Convert.ToInt32(txtQuantity.Text);
             AllOrders.ThisOrder.Price = Convert.ToDecimal(txtPrice.Text);
             AllOrders.ThisOrder.PurchasedDate = Convert.ToDateTime(txtPurchasedDate.Text);
+            AllOrders.ThisOrder.OrderCode = Convert.ToString(txtOrderCode.Text);
             AllOrders.ThisOrder.Active = ChkboxActive.Checked;
             //add the record
             AllOrders.Add();
@@ -135,7 +151,7 @@ public partial class AnOrder : System.Web.UI.Page
         txtPrice.Text = AllOrders.ThisOrder.Price.ToString();
         txtQuantity.Text = AllOrders.ThisOrder.Quantity.ToString();
         txtPurchasedDate.Text = AllOrders.ThisOrder.PurchasedDate.ToString();
-        
+        txtOrderCode.Text = AllOrders.ThisOrder.OrderCode.ToString();
         ChkboxActive.Checked = AllOrders.ThisOrder.Active;
 
     }
