@@ -73,7 +73,7 @@ namespace ClassLibrary
             // mThisOrder.OrderId = 12;
             clsDataConnection DB = new clsDataConnection();
             // set the parameter for the stored procedure 
-            DB.AddParameter("OrderId", mThisOrder.OrderId);
+            //DB.AddParameter("OrderId", mThisOrder.OrderId);
             DB.AddParameter("OrderCode", mThisOrder.OrderCode);
             DB.AddParameter("InventoryId", mThisOrder.InventoryId);
             DB.AddParameter("Quantity", mThisOrder.Quantity);

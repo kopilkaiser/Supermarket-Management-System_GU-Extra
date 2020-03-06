@@ -23,11 +23,12 @@ public partial class AnOrder : System.Web.UI.Page
             {
                
                 DisplayOrder();
-               
+                lblAU.Text = "Updating Order Page";
             }
             else
             {
                 txtPurchasedDate.Text = DateTime.Now.Date.ToString("MM/dd/yyyy");
+                lblAU.Text = "Adding Order Page";
             }
 
         }
@@ -127,7 +128,7 @@ public partial class AnOrder : System.Web.UI.Page
         //find the record to update
         AllOrders.ThisOrder.Find(OrderId);
         //display the data for this record
-        txtOrderId.Text = AllOrders.ThisOrder.OrderId.ToString();
+        //txtOrderId.Text = AllOrders.ThisOrder.OrderId.ToString();
         txtInventoryId.Text = AllOrders.ThisOrder.InventoryId.ToString();
         txtPrice.Text = AllOrders.ThisOrder.Price.ToString();
         txtQuantity.Text = AllOrders.ThisOrder.Quantity.ToString();

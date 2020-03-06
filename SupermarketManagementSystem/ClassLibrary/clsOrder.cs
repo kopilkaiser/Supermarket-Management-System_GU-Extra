@@ -114,7 +114,36 @@ namespace ClassLibrary
          public string Error { get; private set; }*/
 
 
-       
+        public bool Find(int OrderId)
+        {
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the Inventory id to search for
+            DB.AddParameter("@OrderId", OrderId);
+            //execute the stored procedure
+            DB.Execute("sproc_tblOrder_FilterByOrderId");
+            //if one record is found (there should be either one or zero!)
+            if (DB.Count == 1)
+            {
+                //copy the data from the database from the private data members
+                mOrderId = Convert.ToInt32(DB.DataTable.Rows[0]["OrderId"]);
+                mOrderCode = Convert.ToString(DB.DataTable.Rows[0]["OrderCode"]);
+                mPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["Price"]);
+                mQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["Quantity"]);
+                mPurchasedDate = Convert.ToDateTime(DB.DataTable.Rows[0]["PurchasedDate"]);
+                mInventoryId = Convert.ToInt32(DB.DataTable.Rows[0]["InventoryId"]);
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                //return that everything worked ok
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
+
+        }
 
         public string Valid(string quantity, string price, string purchasedDate, string inventoryId)
         {
@@ -194,13 +223,6 @@ namespace ClassLibrary
             }
 
             return Error;
-
         }
-        public void Find(int primaryKey)
-        {
-
-
-        }
-
     }
 }
