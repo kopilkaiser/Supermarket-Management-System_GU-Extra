@@ -219,7 +219,7 @@ namespace SMSTestProject
             // create an instance of the filtered data
             clsOrderCollection FilteredOrders = new clsOrderCollection();
             // apply the blank string 
-            FilteredOrders.ReportByOrderId("");
+            FilteredOrders.ReportByOrderCode("");
 
             //test to see that the two values are the same 
             Assert.AreEqual(AllOrders.Count, FilteredOrders.Count);

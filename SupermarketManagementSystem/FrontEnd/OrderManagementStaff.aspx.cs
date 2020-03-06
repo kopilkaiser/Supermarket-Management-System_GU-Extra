@@ -62,7 +62,7 @@ public partial class OrderManagementStaff : System.Web.UI.Page
         lstOrders.Items.Clear();
         //call the filter by post code method
 
-        AllOrders.ReportByOrderId(OrderCodeFilter);
+        AllOrders.ReportByOrderCode(OrderCodeFilter);
 
         //get the count of records found
         RecordCount = AllOrders.Count;
@@ -83,7 +83,7 @@ public partial class OrderManagementStaff : System.Web.UI.Page
 
 
             //set up a new object of class list item 
-            ListItem NewItem = new ListItem("OrderId:" + OrderId + "_" + "InventoryId:" + InventoryId + "_" + "Price:" + Price + "_" + "Quantity:" + Quantity + "_" + "PurchasedDate: " + PurchasedDate + "_" + "OrderCode:" + OrderCode);
+            ListItem NewItem = new ListItem("OrderId:" + OrderId + "_" + "InventoryId:" + InventoryId + "_" + "Price:" + Price + "_" + "Quantity:" + Quantity + "_" + "PurchasedDate: " + PurchasedDate + "_" + "OrderCode:" + OrderCode, OrderId);
             //add the new item to the list
             lstOrders.Items.Add(NewItem);
             //increment the index

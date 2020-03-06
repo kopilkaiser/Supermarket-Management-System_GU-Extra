@@ -25,7 +25,7 @@ public partial class AnInventory : System.Web.UI.Page
             }
             else
             {
-                txtDateAdded.Text = DateTime.Today.Date.ToString("dd/MM/yyyy");
+                txtDateAdded.Text = DateTime.Today.Date.ToString("MM/dd/yyyy");
             }
         }
     }

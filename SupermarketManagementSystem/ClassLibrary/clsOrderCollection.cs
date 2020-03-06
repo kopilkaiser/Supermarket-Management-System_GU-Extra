@@ -73,13 +73,14 @@ namespace ClassLibrary
             // mThisOrder.OrderId = 12;
             clsDataConnection DB = new clsDataConnection();
             // set the parameter for the stored procedure 
-            //DB.AddParameter("OrderId", mThisOrder.OrderId);
+            DB.AddParameter("OrderId", mThisOrder.OrderId);
+            DB.AddParameter("OrderCode", mThisOrder.OrderCode);
             DB.AddParameter("InventoryId", mThisOrder.InventoryId);
             DB.AddParameter("Quantity", mThisOrder.Quantity);
             DB.AddParameter("Price", mThisOrder.Price);
             DB.AddParameter("PurchasedDate", mThisOrder.PurchasedDate);
             DB.AddParameter("Active", mThisOrder.Active);
-            DB.AddParameter("OrderCode", mThisOrder.OrderCode);
+            
 
             // return the primary key of the new record 
             //return mThisOrder.OrderId;
@@ -106,7 +107,7 @@ namespace ClassLibrary
 
         }
 
-        public void ReportByOrderId(string OrderCode)
+        public void ReportByOrderCode(string OrderCode)
         {
             //filters the records based on a full or partial post code
             //connect to the database
@@ -115,7 +116,7 @@ namespace ClassLibrary
             DB = new clsDataConnection();
             DB.AddParameter("@OrderCode", OrderCode);
             //execute the stored procedure
-            DB.Execute("sproc_tblOrder_FilterByOrderId");
+            DB.Execute("sproc_tblOrder_FilterByOrderCode");
             //populate the array list with the data table
             PopulateArray(DB);
         }
@@ -159,7 +160,7 @@ namespace ClassLibrary
             get
             {
                 // return the count of the list 
-                return mOrderList.Count;
+                return DB.Count;
             }
             set
             {

@@ -27,7 +27,7 @@ public partial class AnOrder : System.Web.UI.Page
             }
             else
             {
-                txtPurchasedDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                txtPurchasedDate.Text = DateTime.Now.Date.ToString("MM/dd/yyyy");
             }
 
         }
@@ -65,7 +65,7 @@ public partial class AnOrder : System.Web.UI.Page
             AllOrders.ThisOrder.Quantity = Convert.ToInt32(txtQuantity.Text);
             AllOrders.ThisOrder.Price = Convert.ToDecimal(txtPrice.Text);
             AllOrders.ThisOrder.PurchasedDate = Convert.ToDateTime(txtPurchasedDate.Text);
-            AllOrders.ThisOrder.OrderCode = Convert.ToString(txtOrderCode.Text);
+            AllOrders.ThisOrder.OrderCode = txtOrderCode.Text;
             AllOrders.ThisOrder.Active = ChkboxActive.Checked;
             //add the record
             AllOrders.Add();
@@ -77,25 +77,6 @@ public partial class AnOrder : System.Web.UI.Page
             //report an error
             lblError.Text = "There were problems with the data entered : " + Error;
         }
-    }
-
-    protected void btnOK1_Click(object sender, EventArgs e)
-    {
-        if (OrderId == -1)
-        {
-            // add twhe new record
-            Add();
-
-        }
-        else
-        {
-            // update the record 
-            Update();
-
-        }
-        
-        // all  done so redirect back to the main page 
-        Response.Redirect("OrderManagementStaff.aspx");
     }
 
     void Update()
@@ -157,7 +138,22 @@ public partial class AnOrder : System.Web.UI.Page
     }
 
 
+    protected void btnOK_Click(object sender, EventArgs e)
+    {
+        if (OrderId == -1)
+        {
+            // add twhe new record
+            Add();
 
+        }
+        else
+        {
+            // update the record 
+            Update();
 
+        }
 
+        // all  done so redirect back to the main page 
+        Response.Redirect("OrderManagementStaff.aspx");
+    }
 }
