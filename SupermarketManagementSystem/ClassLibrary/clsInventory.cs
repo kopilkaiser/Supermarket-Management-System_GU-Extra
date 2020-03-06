@@ -119,7 +119,7 @@ namespace ClassLibrary
             {
                 Error = Error + "The inventory name cannot be blank : ";
             }
-
+           
             if (name.Length > 80)
             {
                 Error = Error + "The inventory name cannot exceed 100 characters : ";
