@@ -100,6 +100,7 @@ namespace ClassLibrary
             DB.AddParameter("Price", mThisOrder.Price);
             DB.AddParameter("PurchasedDate", mThisOrder.PurchasedDate);
             DB.AddParameter("Active", mThisOrder.Active);
+            DB.AddParameter("OrderCode", mThisOrder.OrderCode);
 
 
            //execute the stored procedure

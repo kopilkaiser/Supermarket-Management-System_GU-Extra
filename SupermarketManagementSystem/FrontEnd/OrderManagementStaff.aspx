@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ListBox ID="lstOrders" runat="server" Height="155px" Width="688px"></asp:ListBox>
+            <asp:ListBox ID="lstOrders" runat="server" Height="381px" Width="884px"></asp:ListBox>
         </div>
         <p>
             <asp:Label ID="lblError" runat="server"></asp:Label>

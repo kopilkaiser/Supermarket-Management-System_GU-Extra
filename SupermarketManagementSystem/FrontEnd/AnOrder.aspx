@@ -12,6 +12,10 @@
             <asp:Label ID="lblAU" runat="server"></asp:Label>
         </p>
         <p>
+            <asp:Label ID="Label6" runat="server" Text="OrderCode"></asp:Label>
+            <asp:TextBox ID="txtOrderCode" runat="server" ReadOnly="True"></asp:TextBox>
+        </p>
+        <p>
             <asp:Label ID="Label2" runat="server" Text="InventoryId"></asp:Label>
 &nbsp;<asp:TextBox ID="txtInventoryId" runat="server"></asp:TextBox>
         </p>
@@ -28,11 +32,8 @@
             <asp:Label ID="Label5" runat="server" Text="PurchasedDate"></asp:Label>
 &nbsp;<asp:TextBox ID="txtPurchasedDate" runat="server"></asp:TextBox>
         </p>
-        <p>
-            <asp:Label ID="Label6" runat="server" Text="OrderCode"></asp:Label>
-            <asp:TextBox ID="txtOrderCode" runat="server"></asp:TextBox>
-        </p>
         <asp:CheckBox ID="ChkboxActive" runat="server" Text="Active" />
+        <br />
         <br />
         <asp:Label ID="lblError" runat="server"></asp:Label>
         <br />

@@ -34,7 +34,7 @@ public partial class AnOrder : System.Web.UI.Page
         }
 
         Random random = new Random();
-        int length = 5;
+        int length = 4;
         for (int i = 0; i < length; i++)
         {
             if (random.Next(0, 3) == 0) //if random.Next() == 0 then we generate a random character
@@ -93,6 +93,7 @@ public partial class AnOrder : System.Web.UI.Page
             AllOrders.ThisOrder.Find(OrderId);
 
             // get the data entered by the user 
+            AllOrders.ThisOrder.OrderCode = txtOrderCode.Text;
             AllOrders.ThisOrder.InventoryId = Convert.ToInt32(txtInventoryId.Text);
             AllOrders.ThisOrder.Quantity = Convert.ToInt32(txtQuantity.Text);
             AllOrders.ThisOrder.Price = Convert.ToDecimal(txtPrice.Text);
