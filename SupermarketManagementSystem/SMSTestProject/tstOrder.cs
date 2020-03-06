@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SMSTestProject
 {
-    [TestClass]
+  /*  [TestClass]
     public class tstOrder
     {
         // some good data to pass the method 
