@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -34,3 +35,26 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+namespace ClassLibrary.Properties
+{
+    public class clsStaff
+    {
+        public bool Active;
+        public string Name;
+        public string UserName;
+        public string Password;
+        public string Department;
+        public DateTime StartingDate;
+
+        public string Valid(string name, string userName, string password, string department, string startingDate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Find(int staffID)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
