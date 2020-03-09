@@ -17,7 +17,7 @@ namespace SMSTestProject
         string Method = "Debit Card";
         string PaymentDate = DateTime.Now.Date.ToString();
         int StaffId = 1;
-        int CardNumber = 9999999999999999;
+        Int64 CardNumber = 9999999999999999;
         
 
         [TestMethod]
