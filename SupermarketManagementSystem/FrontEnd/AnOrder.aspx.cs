@@ -27,23 +27,24 @@ public partial class AnOrder : System.Web.UI.Page
             }
             else
             {
-                txtPurchasedDate.Text = DateTime.Now.Date.ToString("MM/dd/yyyy");
+                //txtPurchasedDate.Text = DateTime.Now.Date.ToString("MM/dd/yyyy");
+                txtPurchasedDate.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
                 lblAU.Text = "Adding Order Page";
             }
 
         }
 
         Random random = new Random();
-        int length = 4;
+        int length = 1;
         for (int i = 0; i < length; i++)
         {
-            if (random.Next(0, 3) == 0) //if random.Next() == 0 then we generate a random character
+            if (random.Next(0, 2) == 0) //if random.Next() == 0 then we generate a random character
             {
                 txtOrderCode.Text += ((char)random.Next(65, 91)).ToString();
             }
             else //if random.Next() == 0 then we generate a random digit
             {
-                txtOrderCode.Text += random.Next(0, 9);
+                txtOrderCode.Text += random.Next(0, 3);
             }
         }
 

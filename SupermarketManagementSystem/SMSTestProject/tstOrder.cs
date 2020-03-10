@@ -34,7 +34,7 @@ namespace SMSTestProject
             AnOrder.Quantity = Quantity;
             //test to see that it exist
             Assert.AreEqual(AnOrder.Quantity, Quantity);
-            
+
         }
         [TestMethod]
         public void PricePropertyOK()
@@ -71,7 +71,7 @@ namespace SMSTestProject
             // create some test data to the test method
             string Quantity = 1.ToString();
             // create some test data to asign the property
-            string Price = 10.99m.ToString(); 
+            string Price = 10.99m.ToString();
             string PurchasedDate = DateTime.Now.Date.ToString();
             // invoke the method 
             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
@@ -83,12 +83,12 @@ namespace SMSTestProject
         public void PurchasedDatePropertyOK()
         {
             // create an instance for class Order
-           clsOrder AnOrder = new clsOrder();
+            clsOrder AnOrder = new clsOrder();
             DateTime PurchasedDate = DateTime.Now.Date;
             AnOrder.PurchasedDate = PurchasedDate;
-            Assert.AreEqual(PurchasedDate,AnOrder.PurchasedDate);
+            Assert.AreEqual(PurchasedDate, AnOrder.PurchasedDate);
         }
-        /////////////////////////////
+        
 
         public void PurchasedDateExtremeMin()
         {
@@ -133,7 +133,7 @@ namespace SMSTestProject
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(100);
-            string PurchasedDate  = TestDate.ToString();
+            string PurchasedDate = TestDate.ToString();
             Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
             Assert.AreNotEqual(Error, "");
         }
@@ -147,8 +147,7 @@ namespace SMSTestProject
             Assert.AreNotEqual(Error, "");
         }
 
-      /// ////////////////////////////////////////
-        /// </summary>
+        
         [TestMethod]
         public void QuantityMinLessOne()
         {
@@ -158,7 +157,7 @@ namespace SMSTestProject
             String Error = "";
             // create some test data to the test method
             string Quantity = "0";
-            
+
             // invoke the method 
             Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There shold be an error message 
@@ -192,7 +191,7 @@ namespace SMSTestProject
             string Quantity = "2";
 
             // invoke the method 
-            Error = AnOrder.Valid( Price, Quantity, PurchasedDate, InventoryId);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be NO error message 
             Assert.AreEqual(Error, "");
 
@@ -261,7 +260,7 @@ namespace SMSTestProject
             Assert.AreNotEqual(Error, "");
 
         }
-        ///////////////////////////////////////////////////////////
+        
         [TestMethod]
         public void PriceMinLessOne()
         {
@@ -273,7 +272,7 @@ namespace SMSTestProject
             string Price = 0.ToString();
 
             // invoke the method 
-            Error = AnOrder.Valid( Price, Quantity, PurchasedDate, InventoryId);
+            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There shold be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -318,7 +317,7 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-           string Price = 10000m.ToString();
+            string Price = 10000m.ToString();
 
             // invoke the method 
             Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
