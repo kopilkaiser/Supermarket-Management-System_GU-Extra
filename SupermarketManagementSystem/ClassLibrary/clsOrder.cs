@@ -159,14 +159,14 @@ namespace ClassLibrary
 
                 PriceTemp = Convert.ToDecimal(price);
 
-                if (PriceTemp > 10000m)
+                if (PriceTemp > 20000m)
                 {
                     Error = Error + "The price of the full ordrer cannot exceed 10000 : ";
                 }
 
                 if (PriceTemp < 0m)
                 {
-                    Error = Error + "The price of Order  cannot be less than or equsl to zero : ";
+                    Error = Error + "The price of Order  cannot be less than or equal to zero : ";
                 }
             }
             catch
@@ -180,7 +180,7 @@ namespace ClassLibrary
             {
                 QuantityTemp = Convert.ToInt32(quantity);
 
-                if (QuantityTemp > 101)
+                if (QuantityTemp > 1000)
                 {
                     Error = Error + "The quantity of Order cannot exceed 100 : ";
                 }
