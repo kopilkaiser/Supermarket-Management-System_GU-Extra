@@ -38,23 +38,5 @@ using System.Runtime.InteropServices;
 
 namespace ClassLibrary.Properties
 {
-    public class clsStaff
-    {
-        public bool Active;
-        public string Name;
-        public string UserName;
-        public string Password;
-        public string Department;
-        public DateTime StartingDate;
-
-        public string Valid(string name, string userName, string password, string department, string startingDate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Find(int staffID)
-        {
-            throw new NotImplementedException();
-        }
-    }
+    
 }
