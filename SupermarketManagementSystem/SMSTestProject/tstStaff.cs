@@ -235,7 +235,7 @@ namespace SMSTestProject
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Name = "a";
+            string UserName = "a";
             Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
             Assert.AreEqual(Error, "");
 
@@ -246,7 +246,7 @@ namespace SMSTestProject
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Name = "aa";
+            string UserName = "aa";
             Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
             Assert.AreEqual(Error, "");
 
@@ -306,6 +306,266 @@ namespace SMSTestProject
             Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
             Assert.AreNotEqual(Error, "");
         }
+
+        ///////////////////////////////
+        //TestMethods for Password property
+
+        [TestMethod]
+        public void PasswordExtremeMin()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Password = "";
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PasswordMinMinusOne()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Password = "";
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void PasswordMinBoundary()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            string Password = "a";
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PasswordMinPlusOne()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            string Password = "aa";
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PasswordMaxMinusOne()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Password = "";
+            Password = Password.PadRight(79, 'a');
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PasswordMaxBoundary()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Password = "";
+            Password = Password.PadRight(80, 'a');
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PasswordMaxPlusOne()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Password = "";
+            Password = Password.PadRight(81, 'a');
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PasswordMid()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Password = "";
+            Password = Password.PadRight(40, 'a');
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PasswordExtremeMax()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Password = "";
+            Password = Password.PadRight(500, 'a');
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        ///////////////////////////////
+        //TestMethods for Department property
+
+        [TestMethod]
+        public void DepartmentExtremeMin()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Department = "";
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void DepartmentMinMinusOne()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Department = "";
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void DepartmentMinBoundary()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            string Department = "a";
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void DepartmentMinPlusOne()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            string Department = "aa";
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void DepartmentMaxMinusOne()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Department = "";
+            Department = Department.PadRight(79, 'a');
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void DepartmentMaxBoundary()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Department = "";
+            Department = Department.PadRight(80, 'a');
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void DepartmentMaxPlusOne()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Department = "";
+            Department = Department.PadRight(81, 'a');
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void DepartmentMid()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Department = "";
+            Department = Department.PadRight(40, 'a');
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void DepartmentExtremeMax()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            String Department = "";
+            Department = Department.PadRight(500, 'a');
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        //TestMethods for StartingDate property
+
+        [TestMethod]
+        public void StartingDateExtremeMin()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = DateTime.Now.AddYears(-100);
+            string StartingDate = TestDate.ToString();
+            Error = AnStaff.Valid(Name, UserName, Password, Department, this.StartingDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StartingDateMinMinusOne()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = DateTime.Now.AddDays(-1);
+            string StartingDate = TestDate.ToString();
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void StartingDateMinBoundary()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string StartingDate = DateTime.Now.Date.ToString();
+            string Error = "";
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void StartingDateExtremeMax()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = DateTime.Now.AddYears(100);
+            string StartingDate = TestDate.ToString();
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void StartingDateInvalidDataType()
+        {
+            clsStaff AnStaff = new clsStaff();
+            string Error = "";
+            string StartingDate = "a";
+            Error = AnStaff.Valid(Name, UserName, Password, Department, StartingDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+
 
     }
 }
