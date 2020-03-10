@@ -19,7 +19,7 @@ public partial class InventoryDelete : System.Web.UI.Page
 
     protected void btnNo_Click(object sender, EventArgs e)
     {
-        Response.Redirect("InventoryManagement.aspx");
+        Response.Redirect("Default.aspx");
     }
 
     void DeleteInventory()
@@ -39,6 +39,6 @@ public partial class InventoryDelete : System.Web.UI.Page
         //delete the record
         DeleteInventory();
         //redirect back to the main page
-        Response.Redirect("InventoryManagement.aspx");
+        Response.Redirect("Default.aspx");
     }
 }
