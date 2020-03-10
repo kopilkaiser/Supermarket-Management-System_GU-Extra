@@ -5,38 +5,42 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ClassLibrary;
+
 public partial class OrderManagementStaff : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        
+
         //if this is the first time the page is displayed
         if (IsPostBack == false)
         {
             //update the list box
-            lblError.Text = DisplayInventories() + " records in the database";
+            lblError.Text = DisplayOrders("") + " records in the database";
         }
+
+        //string temp;
+        //temp = Guid.NewGuid().ToString();
+        //TextBox1.Text = temp;
+
+
+         /*Random random = new Random();
+         int length = 8;
+         for (int i = 0; i < length; i++)
+         {
+             if (random.Next(0, 3) == 0) //if random.Next() == 0 then we generate a random character
+             {
+                 TextBox1.Text += ((char)random.Next(65, 91)).ToString();
+             }
+             else //if random.Next() == 0 then we generate a random digit
+             {
+                 TextBox1.Text += random.Next(0, 9);
+             }
+         }*/
     }
-    Int32 DisplayInventories()//(OrderIdFilter)
+    Int32 DisplayOrders(string OrderCodeFilter)
     {
-        /*  //create an instance of the Inventory collection
-          clsInventoryCollection Inventories = new clsInventoryCollection();
-          //set the data source to the list of inventories in the collection
-          lstInventories.DataSource = Inventories.InventoryList;
-          //set the name of the primary Key
-          lstInventories.DataValueField = "InventoryId";
-          //set the data field to display
-
-          lstInventories.DataTextField = "Category";
-
-
-          //bind the data to the list
-          lstInventories.DataBind();
-         */
-
-        ///this function accepts one parameter - the post code to filter the list on
-        ///it populates the list box with data from the middle layer class
-        ///it returns a single value, the number of records found
-
+        
         //create a new instance of the clsAddress
         clsOrderCollection AllOrders = new clsOrderCollection();
         //var to store the count of records
@@ -51,14 +55,14 @@ public partial class OrderManagementStaff : System.Web.UI.Page
         string PurchasedDate;
 
         string OrderId;
-
+        string OrderCode;
         //var to store the index
         Int32 Index = 0;
         //clear the list of any existing items
         lstOrders.Items.Clear();
         //call the filter by post code method
 
-        ////AllOrders.ReportByOrderId(OrderIdFilter);
+        AllOrders.ReportByOrderCode(OrderCodeFilter);
 
         //get the count of records found
         RecordCount = AllOrders.Count;
@@ -75,9 +79,11 @@ public partial class OrderManagementStaff : System.Web.UI.Page
             //get the address no from the query results
             PurchasedDate = Convert.ToString(AllOrders.OrderList[Index].PurchasedDate);
 
-            
+            OrderCode = Convert.ToString(AllOrders.OrderList[Index].OrderCode);
+
+
             //set up a new object of class list item 
-            ListItem NewItem = new ListItem("OrderId:" + OrderId + "_" + "InventoryId:" + InventoryId + "_" + "Price:" + Price + "_" + "Quantity:" + Quantity + "_" + "PurchasedDate: " + PurchasedDate);
+            ListItem NewItem = new ListItem("OrderId:" + OrderId + "_" + "OrderCode:" + "("+OrderCode+")" + "_" + "InventoryId:" + InventoryId + "_" + "Price:" + Price + "_" + "Quantity:" + Quantity + "_" + "PurchasedDate: " + PurchasedDate, OrderId);
             //add the new item to the list
             lstOrders.Items.Add(NewItem);
             //increment the index
@@ -108,7 +114,8 @@ public partial class OrderManagementStaff : System.Web.UI.Page
             //redirect to the delete page
             Response.Redirect("DeleteOrder.aspx");
         }
-        else //if no record has been selected
+        else 
+        //if no record has been selected
         {
             //display an error
             lblError.Text = "Please select a record to delete from the list";
@@ -134,6 +141,28 @@ public partial class OrderManagementStaff : System.Web.UI.Page
             //display an error
             lblError.Text = "Please select a record to edit from the list";
         }
+    }
+
+    protected void btnDisplayall_Click(object sender, EventArgs e)
+    {
+        //var to store the record count
+        Int32 RecordCount;
+        //assign the results of the DisplayOrder function to the record count var
+        RecordCount = DisplayOrders("");
+        //display the number of records found
+        lblError.Text = RecordCount + " records in the database";
+        //clear the post code filter text box
+        txtboxOrderId.Text = "";
+    }
+
+    protected void btnApply_Click(object sender, EventArgs e)
+    {
+        //declare var to store the record count
+        Int32 RecordCount;
+        //assign the results of the DisplayOrders function to the record count var
+        RecordCount = DisplayOrders(txtboxOrderId.Text);
+        //display the number of records found
+        lblError.Text = RecordCount + " records found";
     }
 }
 

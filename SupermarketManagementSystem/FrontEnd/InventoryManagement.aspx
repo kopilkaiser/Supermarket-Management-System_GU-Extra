@@ -12,6 +12,7 @@
             <br />
             <br />
             <asp:Panel ID="Panel1" runat="server" BackColor="Aqua" Height="575px" Width="1092px">
+                <br />
                 <asp:ListBox ID="lstInventories" runat="server" Height="312px" Width="823px" DataTextField="InventoryId" DataValueField="InventoryId"></asp:ListBox>
                 <br />
                 <asp:Label ID="lblError" runat="server"></asp:Label>

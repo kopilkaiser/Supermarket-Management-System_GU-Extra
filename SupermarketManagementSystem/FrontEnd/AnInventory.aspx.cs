@@ -25,14 +25,14 @@ public partial class AnInventory : System.Web.UI.Page
             }
             else
             {
-                txtDateAdded.Text = DateTime.Today.Date.ToString("dd/MM/yyyy");
+                txtDateAdded.Text = DateTime.Today.Date.ToString("MM/dd/yyyy");
             }
         }
     }
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect("InventoryManagement.aspx");
+        Response.Redirect("Default.aspx");
     }
 
     protected void btnOK_Click(object sender, EventArgs e)

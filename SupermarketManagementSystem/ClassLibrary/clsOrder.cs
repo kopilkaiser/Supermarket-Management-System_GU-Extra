@@ -4,18 +4,144 @@ namespace ClassLibrary
 {
     public class clsOrder
     {
-        public int Quantity { get; set; }
-        public decimal Price { get; set; }
-        public int OrderId { get; set; }
-        public int InventoryId { get; set; }
-        public DateTime PurchasedDate { get; set; }
-        public bool Active { get; set; }
-        public string Error { get; private set; }
+        private int mOrderId;
+        private int mInventoryId;
+        private int mQuantity;
+        private decimal mPrice;
+        private DateTime mPurchasedDate;
+        private bool mActive;
+        private string mOrderCode;
+
+        public string OrderCode
+        {
+            get
+            {
+                return mOrderCode;
+            }
+
+            set
+            {
+                mOrderCode = value;
+            }
+        }
+        public int OrderId
+        {
+            get
+            {
+                return mOrderId;
+            }
+
+            set
+            {
+                mOrderId = value;
+            }
+        }
+
+        public int InventoryId
+        {
+            get
+            {
+                return mInventoryId;
+            }
+
+            set
+            {
+                mInventoryId = value;
+            }
+        }
+        public DateTime PurchasedDate
+        {
+            get
+            {
+                return mPurchasedDate;
+            }
+
+            set
+            {
+                mPurchasedDate = value;
+            }
+        }
 
         
-        public void Find(int primaryKey)
-        {
 
+        public int Quantity
+        {
+            get
+            {
+                return mQuantity;
+            }
+
+            set
+            {
+                mQuantity = value;
+            }
+        }
+
+      
+
+        public decimal Price
+        {
+            get
+            {
+                return mPrice;
+            }
+
+            set
+            {
+                mPrice = value;
+            }
+        }
+        public bool Active
+        {
+            get
+            {
+                return mActive;
+            }
+
+            set
+            {
+                mActive = value;
+            }
+        }
+
+
+        /* public int Quantity { get; set; }
+         public decimal Price { get; set; }
+         public int OrderId { get; set; }
+         public int InventoryId { get; set; }
+         public DateTime PurchasedDate { get; set; }
+         public bool Active { get; set; }
+         public string Error { get; private set; }*/
+
+
+        public bool Find(int OrderId)
+        {
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the Inventory id to search for
+            DB.AddParameter("@OrderId", OrderId);
+            //execute the stored procedure
+            DB.Execute("sproc_tblOrder_FilterByOrderId");
+            //if one record is found (there should be either one or zero!)
+            if (DB.Count == 1)
+            {
+                //copy the data from the database from the private data members
+                mOrderId = Convert.ToInt32(DB.DataTable.Rows[0]["OrderId"]);
+                mOrderCode = Convert.ToString(DB.DataTable.Rows[0]["OrderCode"]);
+                mPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["Price"]);
+                mQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["Quantity"]);
+                mPurchasedDate = Convert.ToDateTime(DB.DataTable.Rows[0]["PurchasedDate"]);
+                mInventoryId = Convert.ToInt32(DB.DataTable.Rows[0]["InventoryId"]);
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                //return that everything worked ok
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
 
         }
 
@@ -24,7 +150,53 @@ namespace ClassLibrary
             // create a variable to store any error message 
             String Error = "";
             DateTime DateTemp;
+            decimal PriceTemp;
+            Int32 QuantityTemp;
+            Int32 InventoryIdTemp;
+            //if price entered is a valid price
+            try
+            {
 
+                PriceTemp = Convert.ToDecimal(price);
+
+                if (PriceTemp > 10000m)
+                {
+                    Error = Error + "The price of the full ordrer cannot exceed 10000 : ";
+                }
+
+                if (PriceTemp < 0m)
+                {
+                    Error = Error + "The price of Order  cannot be less than or equsl to zero : ";
+                }
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The price entered is not valid : ";
+            }
+
+            //if Quantity entered is a valid quantity
+            try
+            {
+                QuantityTemp = Convert.ToInt32(quantity);
+
+                if (QuantityTemp > 101)
+                {
+                    Error = Error + "The quantity of Order cannot exceed 100 : ";
+                }
+
+                if (QuantityTemp < 0)
+                {
+                    Error = Error + "Thefull order price can not be less than 0.20pence : ";
+                }
+
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The Order is not valid : ";
+
+            }
             try
             {
                 // convert the string value to DateTime
@@ -51,7 +223,6 @@ namespace ClassLibrary
             }
 
             return Error;
-
         }
     }
 }

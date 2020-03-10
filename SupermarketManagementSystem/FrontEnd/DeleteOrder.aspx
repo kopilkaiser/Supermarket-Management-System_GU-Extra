@@ -11,7 +11,7 @@
         <div>
             Are you sure you want to delete the Order<br />
         </div>
-    &nbsp;<asp:Button ID="btnYes" runat="server" Text="Yes" />
+    &nbsp;<asp:Button ID="btnYes" runat="server" Text="Yes" OnClick="btnYes_Click1" />
 &nbsp;<asp:Button ID="btnNo" runat="server" Text="No" />
     </form>
 </body>

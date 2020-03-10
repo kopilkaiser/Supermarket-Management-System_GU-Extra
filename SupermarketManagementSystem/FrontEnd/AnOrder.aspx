@@ -8,13 +8,15 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:Label ID="Label1" runat="server" Text="OrderId"></asp:Label>
-&nbsp;
-            <asp:TextBox ID="txtOrderId" runat="server"></asp:TextBox>
-        </div>
         <p>
-&nbsp;<asp:Label ID="Label2" runat="server" Text="InventoryId"></asp:Label>
+            <asp:Label ID="lblAU" runat="server"></asp:Label>
+        </p>
+        <p>
+            <asp:Label ID="Label6" runat="server" Text="OrderCode"></asp:Label>
+            <asp:TextBox ID="txtOrderCode" runat="server" ReadOnly="True"></asp:TextBox>
+        </p>
+        <p>
+            <asp:Label ID="Label2" runat="server" Text="InventoryId"></asp:Label>
 &nbsp;<asp:TextBox ID="txtInventoryId" runat="server"></asp:TextBox>
         </p>
         <p>
@@ -32,12 +34,13 @@
         </p>
         <asp:CheckBox ID="ChkboxActive" runat="server" Text="Active" />
         <br />
+        <br />
         <asp:Label ID="lblError" runat="server"></asp:Label>
         <br />
         <br />
-        <asp:Button ID="btnOK1" runat="server" OnClick="btnOK1_Click" Text="OK" />
+        <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" Text="OK" />
 &nbsp;
-        <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
     </form>
 </body>
 </html>

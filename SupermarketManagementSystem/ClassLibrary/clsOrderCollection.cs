@@ -12,7 +12,7 @@ namespace ClassLibrary
         // private data member thisAdsress
         clsOrder mThisOrder = new clsOrder();
 
-
+        clsDataConnection DB = new clsDataConnection();
 
 
         // constructor for the ClsOrderCollection class
@@ -27,6 +27,8 @@ namespace ClassLibrary
             clsDataConnection DB = new clsDataConnection();
             // execute the stored procedure
             DB.Execute("sproc_tblOrder_SelectAll");
+            //populate the array list with the data table 
+            PopulateArray(DB);
             // get the count of records 
             RecordCount = DB.Count;
             // while there are records are process
@@ -41,40 +43,15 @@ namespace ClassLibrary
                 AnOrder.Quantity = Convert.ToInt32(DB.DataTable.Rows[Index]["Quantity"]);
                 AnOrder.Price = Convert.ToDecimal(DB.DataTable.Rows[Index]["Price"]);
                 AnOrder.PurchasedDate = Convert.ToDateTime(DB.DataTable.Rows[Index]["PurchasedDate"]);
+                AnOrder.OrderCode = Convert.ToString(DB.DataTable.Rows[Index]["OrderCode"]);
                 // Add the record to  the private data member
                 mOrderList.Add(AnOrder);
                 //point to the next record 
                 Index++;
 
             }
-            /*
-               // create the items of test data
-               clsOrder TestItem = new clsOrder();
-               // set its poperties 
-               TestItem.Active = true;
-               TestItem.OrderId = 1;
-               TestItem.InventoryId = 1;
-               TestItem.Quantity = 1;
-               TestItem.Price = 1.99;
-               TestItem.PurchasedDate = DateTime.Now.Date;
-               // add the item to the test list 
-               mOrderList.Add(TestItem);
-              // re initialise the object for some new data 
-               TestItem = new clsOrder();
-               // sets its properties 
-               TestItem.Active = true;
-               TestItem.OrderId = 2;
-               TestItem.InventoryId = 2;
-               TestItem.Quantity = 2;
-               TestItem.Price = 99;
-               TestItem.PurchasedDate = DateTime.Now.Date;
-               // add the item to the test list 
-               mOrderList.Add(TestItem);
-               */
 
-
-
-
+            
         }
 
         public void Delete()
@@ -97,12 +74,13 @@ namespace ClassLibrary
             clsDataConnection DB = new clsDataConnection();
             // set the parameter for the stored procedure 
             //DB.AddParameter("OrderId", mThisOrder.OrderId);
+            DB.AddParameter("OrderCode", mThisOrder.OrderCode);
             DB.AddParameter("InventoryId", mThisOrder.InventoryId);
             DB.AddParameter("Quantity", mThisOrder.Quantity);
             DB.AddParameter("Price", mThisOrder.Price);
             DB.AddParameter("PurchasedDate", mThisOrder.PurchasedDate);
             DB.AddParameter("Active", mThisOrder.Active);
-
+            
 
             // return the primary key of the new record 
             //return mThisOrder.OrderId;
@@ -122,15 +100,26 @@ namespace ClassLibrary
             DB.AddParameter("Price", mThisOrder.Price);
             DB.AddParameter("PurchasedDate", mThisOrder.PurchasedDate);
             DB.AddParameter("Active", mThisOrder.Active);
+            DB.AddParameter("OrderCode", mThisOrder.OrderCode);
 
 
            //execute the stored procedure
             DB.Execute("sproc_tblOrder_Update");
 
         }
-        private clsOrderCollection FilterByOrderId (string v)
+
+        public void ReportByOrderCode(string OrderCode)
         {
-            throw new NotImplementedException();
+            //filters the records based on a full or partial post code
+            //connect to the database
+            //clsDataConnection DB = new clsDataConnection();
+            //send the Category parameter to the database
+            DB = new clsDataConnection();
+            DB.AddParameter("@OrderCode", OrderCode);
+            //execute the stored procedure
+            DB.Execute("sproc_tblOrder_FilterByOrderCode");
+            //populate the array list with the data table
+            PopulateArray(DB);
         }
 
         // public property for ThisOrder
@@ -172,7 +161,7 @@ namespace ClassLibrary
             get
             {
                 // return the count of the list 
-                return mOrderList.Count;
+                return DB.Count;
             }
             set
             {
@@ -183,9 +172,39 @@ namespace ClassLibrary
             }
         }
 
-        //public List<clsOrder> OrderList { get; set; }
-        //public int Count { get; set; }
-       // public clsOrder ThisOrder { get; set; }
+        void PopulateArray(clsDataConnection DB)
+        {
+            //populates the array list based on the data table in the parameter DB
+            //var for the index
+            Int32 Index = 0;
+            //var to store the record count
+            Int32 RecordCount = 0;
+            //get the count of records
+            RecordCount = DB.Count;
+            //clear the private array list
+            mOrderList = new List<clsOrder>();
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //create a blank address
+                clsOrder AnOrder = new clsOrder();
+                //read in the fields from the current record
+                AnOrder.OrderId = Convert.ToInt32(DB.DataTable.Rows[Index]["OrderId"]);
+                AnOrder.InventoryId = Convert.ToInt32(DB.DataTable.Rows[Index]["InventoryId"]);
+                AnOrder.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
+                AnOrder.Price = Convert.ToDecimal(DB.DataTable.Rows[Index]["Price"]);
+                AnOrder.Quantity = Convert.ToInt32(DB.DataTable.Rows[Index]["Quantity"]);
+                AnOrder.PurchasedDate = Convert.ToDateTime(DB.DataTable.Rows[Index]["PurchasedDate"]);
+                AnOrder.OrderCode = Convert.ToString(DB.DataTable.Rows[Index]["OrderCode"]);
+
+                //add the record to the private data member
+                mOrderList.Add(AnOrder);
+                //point at the next record
+                Index++;
+            }
+        }
+
+       
     }
 
    
