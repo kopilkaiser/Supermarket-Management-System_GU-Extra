@@ -225,36 +225,36 @@ namespace SMSTestProject
             Assert.AreEqual(AllOrders.Count, FilteredOrders.Count);
 
         }
-        [TestMethod]
-        public void FilterByOrderIdTestDataFound()
-        {
-            // create an instance of the class we want to create 
-            clsOrderCollection AllOrders = new clsOrderCollection();
-            // var to store outcome 
-            Boolean OK = true;
-            // apply a post code that doesnt exist 
-            FilteredOrders.FilterByOrderId(" ");
-            // check that the correct number of records are found
-            if (FilteredOrders.Count == 2)
-            {
-                // check that the correct number of records is Order ID 5
-                if (FilteredOrders.OrderList[0].OrderID != 5)
-                {
-                    OK = false;
-                }
-                if (FilteredOrders.OrderList[1].OrderID != 6)
-                {
-                    OK = false;
-                }
-            }
-            else
-            {
-                OK = false;
-            }
-            // test to see that there are no records
-            Assert.IsTrue(OK);
+        //[TestMethod]
+        //public void FilterByOrderIdTestDataFound()
+        //{
+        //    // create an instance of the class we want to create 
+        //    clsOrderCollection AllOrders = new clsOrderCollection();
+        //    // var to store outcome 
+        //    Boolean OK = true;
+        //    // apply a post code that doesnt exist 
+        //    FilteredOrders.FilterByOrderId(" ");
+        //    // check that the correct number of records are found
+        //    if (FilteredOrders.Count == 2)
+        //    {
+        //        // check that the correct number of records is Order ID 5
+        //        if (FilteredOrders.OrderList[0].OrderID != 5)
+        //        {
+        //            OK = false;
+        //        }
+        //        if (FilteredOrders.OrderList[1].OrderID != 6)
+        //        {
+        //            OK = false;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        OK = false;
+        //    }
+        //    // test to see that there are no records
+        //    Assert.IsTrue(OK);
 
-        }
+        //}
 
     }
 }

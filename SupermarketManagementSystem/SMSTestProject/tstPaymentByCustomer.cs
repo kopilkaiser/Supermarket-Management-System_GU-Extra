@@ -4,20 +4,21 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SMSTestProject
 {
-   /* [TestClass]
+    [TestClass]
     public class tstPaymentByCustomer
     {
         //good test data
         //testdata to pass the method
 
         int PaymentId = 1;
-        string Name = "Cadbury";
-        string Category = "Electronics";
-        string Amount = 20.00m.ToString();
-        string Method = "Debit Card";
-        string PaymentDate = DateTime.Now.Date.ToString();
         int StaffId = 1;
-        int CardNumber = 9999999999999999;
+        string PayeeName = "Kopil Kaiser";
+        string Method = "Debit Card";
+        string CardNumber = Convert.ToString(9999999999999999);
+        string Amount = 20.00m.ToString();        
+        string PaymentDate = DateTime.Now.Date.ToString();
+        
+        
 
 
         [TestMethod]
@@ -28,14 +29,14 @@ namespace SMSTestProject
             //test to see that exist
             Assert.IsNotNull(AnPayment);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void SuccessPropertyOK()
         {
             clsPayment AnPayment = new clsPayment();
             Boolean TestData = true;
             AnPayment.Success = TestData;
             Assert.AreEqual(AnPayment.Success, TestData);
-        }
+        }*/
         [TestMethod]
         public void PaymentMethodProperty()
         {
@@ -54,18 +55,11 @@ namespace SMSTestProject
         {
             //create an instance of cls payment
             clsPayment AnPayment = new clsPayment();
-            string Name = "Cadbury";
-            AnPayment.Name = Name;
-            Assert.AreEqual(AnPayment.Name, Name);
+            string PayeeName = "Kopil Kaiser";
+            AnPayment.PayeeName = PayeeName;
+            Assert.AreEqual(AnPayment.PayeeName, PayeeName);
         }
-        [TestMethod]
-        public void CategoryPropertyOK()
-        {
-            clsPayment AnPayment = new clsPayment();
-            string Category = "Electronics";
-            AnPayment.Category = Category;
-            Assert.AreEqual(AnPayment.Category, Category);
-        }
+        
         [TestMethod]
         public void CardNumberPropertyOK()
         {
@@ -109,11 +103,11 @@ namespace SMSTestProject
             //create test to assign to the property
             string Method = "Visa Debit";
             //invoke the method
-            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreEqual(Error, "");
         }
 
-        [TestMethod]
+       /* [TestMethod]
         public void FindMethodOK()
         {
             clsPayment AnPayment = new clsPayment();
@@ -121,7 +115,7 @@ namespace SMSTestProject
             Int32 PaymentId = 4;
             Found = AnPayment.Find(PaymentId);
             Assert.IsTrue(Found);
-        }
+        }*/
 
         //TestMethod for Date Property by different test types and test data//
 
@@ -130,32 +124,33 @@ namespace SMSTestProject
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            DateTime = TestDate;
+            DateTime  TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(-100);
-            string Date = TestDate.ToString();
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
+            string PaymentDate = TestDate.ToString();
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
-        public void DateMiniMinusOne()
+        public void DateMinMinusOne()
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddDays(-1);
-            string Date = TestDate.ToString();
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
+            string PaymentDate = TestDate.ToString();
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
         public void DateMinBoundary()
         {
             clsPayment AnPayment = new clsPayment();
-            string Date = DateTime.Now.Date.ToString();
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
-            Assert.AreNotEqual(Error, "");
+            string Error = "";
+            string PaymentDate = DateTime.Now.Date.ToString();
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
+            Assert.AreEqual(Error, "");
 
         }
         [TestMethod]
@@ -166,8 +161,8 @@ namespace SMSTestProject
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(100);
-            string Date = TestDate.ToString();
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
+            string PaymentDate = TestDate.ToString();
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -175,19 +170,19 @@ namespace SMSTestProject
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            string Date = 'A';
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
+            string PaymentDate = "a";
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreNotEqual(Error, "");
         }
 
         // Test Methods for Name Property by different test types and test data//
         [TestMethod]
-        public void NameExtrmeMin()
+        public void NameExtremeMin()
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            string Name = "";
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
+            string PayeeName = "";
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -195,8 +190,8 @@ namespace SMSTestProject
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            string Name = "";
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
+            string PayeeName = "";
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -204,9 +199,8 @@ namespace SMSTestProject
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            string Error = "";
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
-            Assert.AreNotEqual(Error, "");
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
+            Assert.AreEqual(Error, "");
         
         }
         [TestMethod]
@@ -214,10 +208,10 @@ namespace SMSTestProject
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            string Name = "";
-            Name = Name.PadRight(80, 'a');
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
-            Assert.AreNotEqual(Error, "");
+            string PayeeName = "";
+            PayeeName = PayeeName.PadRight(80, 'a');
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
+            Assert.AreEqual(Error, "");
 
         }
         [TestMethod]
@@ -225,19 +219,19 @@ namespace SMSTestProject
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            string Name = "";
-            Name = Name.PadRight(81, 'a');
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
-            Assert.AreNotEqual(Error, "");
+            string PayeeName = "";
+            PayeeName = PayeeName.PadRight(81, 'a');
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
+            Assert.AreEqual(Error, "");
         }
         [TestMethod]
         public void NameMaxPlusOne()
         {
-            clsPayment AnPayment = clsPayment();
+            clsPayment AnPayment = new clsPayment();
             string Error = "";
-            string Name = "";
-            Name = Name.PadRight(82,'a');
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
+            string PayeeName = "";
+            PayeeName = PayeeName.PadRight(82,'a');
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -245,19 +239,19 @@ namespace SMSTestProject
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            string Name = "";
-            Name = Name.PadRight(40, 'a');
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
-            Assert.AreNotEqual(Error, "");
+            string PayeeName = "";
+            PayeeName = PayeeName.PadRight(40, 'a');
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
+            Assert.AreEqual(Error, "");
         }
         [TestMethod]
         public void NameExtreMax()
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            string Name = "";
-            Name = Name.PadRight(500, 'a');
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
+            string PayeeName = "";
+            PayeeName = PayeeName.PadRight(500, 'a');
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -273,7 +267,7 @@ namespace SMSTestProject
             //create some test data to the test method
             string Method = "";
             //invoke the method
-            Error = AnPayment.Valid(Name, Category, CardNumber, Method, Amount, PaymentDate);
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             //test to see the result is NOT OK i.e. there should be an error message
             Assert.AreNotEqual(Error, "");
         }
@@ -287,7 +281,7 @@ namespace SMSTestProject
             //create some test data to the test method 
             string Method = "V";
             //invoke the method
-            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             //test to see the result ok
             Assert.AreEqual(Error, "");
         }
@@ -299,7 +293,7 @@ namespace SMSTestProject
             //create a string variable to store the result of the validation
             string Error = "";
             //invoke the method
-            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             //test to see the result is ok i.e. there should be no error method
             Assert.AreEqual(Error, "");
         }
@@ -314,9 +308,9 @@ namespace SMSTestProject
             string Method = "";
             //oad the string with 30 characters
             //this should pass
-            Method = Method.PadRight(30, 'a');
+            Method = Method.PadRight(20, 'a');
             //invok the method
-            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             //test to see teh result is OK i.e. there should be no error message
             Assert.AreEqual(Error, "");
         }
@@ -326,11 +320,13 @@ namespace SMSTestProject
             //create an instance of cls payment 
             clsPayment AnPayment = new clsPayment();
             //create a string variable to store teh result of the validation
-            string Error = "qwertyuiopasdfghklzxcvbnm01234";
+            string Error = "";
+            string Method = "";
+            Method = Method.PadRight(101,'a');
             //invok the method
-            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             //the result is OK;
-            Assert.AreEqual(Error, "");
+            Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
         public void MethodMid()
@@ -342,7 +338,7 @@ namespace SMSTestProject
             //create some test data to the test method
             string Method = "qwertyuiopasd12";
             //invok the method
-            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             //test to see the result is ok
             Assert.AreEqual(Error, "");
         }
@@ -351,8 +347,9 @@ namespace SMSTestProject
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            string Method = "aefueownvpqubfienakdpqneinviap15";
-            Error = AnPayment.Valid(Name, Category, CardNumber, Amount, Method, PaymentDate);
+            string Method = "";
+            Method = Method.PadRight(500, 'a');
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -361,8 +358,8 @@ namespace SMSTestProject
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            string Method = "aaaeeevvvwww1";
-            Error = AnPayment.Valid( Amount, Method, PaymentDate);
+            string Method = "";
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreNotEqual(Error, "");
         }
         //TestMethods for Amount by different test types and data//
@@ -375,9 +372,9 @@ namespace SMSTestProject
             //create a string variable to store the result of validation
             string Error = "";
             //create some test data to test the method
-            string Amount = 10000000m.ToString();
+            string Amount = 100000000000m.ToString();
             //invoke the method
-            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             //the result is NOT OK, in example there should be an error message
             Assert.AreNotEqual(Error, "");
         }
@@ -391,7 +388,7 @@ namespace SMSTestProject
             //create some test data to the test method
             string Amount = 10000001m.ToString();
             //invok the method
-            Error = AnPayment.Valid(Method, Amount, PaymentDate);
+            Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             //the  result is NOT OK; in example there should be an error message
             Assert.AreNotEqual(Error, "");
         }

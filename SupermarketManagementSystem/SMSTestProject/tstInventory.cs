@@ -102,7 +102,7 @@ namespace SMSTestProject
             //invoke the method
             Found = AnInventory.Find(InventoryId);
             //test to see that the result is correct
-            Assert.IsTrue(Found);
+            Assert.IsFalse(Found);
         }
 
         //TestMethods for DateAdded property by different test types and test data
