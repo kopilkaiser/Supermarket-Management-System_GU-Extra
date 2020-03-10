@@ -28,6 +28,7 @@ namespace SMSTestProject
             // set it properties
             TestItem.Active = true;
             TestItem.OrderId = 05;
+            TestItem.OrderCode = "XYZ2";
             TestItem.InventoryId = 1;
             TestItem.Quantity = 1;
             TestItem.Price = 1.99m;
@@ -60,6 +61,7 @@ namespace SMSTestProject
             // set it properties
             TestItem.Active = true;
             TestItem.OrderId = 05;
+            TestItem.OrderCode = "XYZ2";
             TestItem.InventoryId = 1;
             TestItem.Quantity = 1;
             TestItem.Price = 1.99m;
@@ -97,6 +99,7 @@ namespace SMSTestProject
             TestItem.Active = true;
             TestItem.OrderId = 05;
             TestItem.InventoryId = 1;
+            TestItem.OrderCode = "XYZ2";
             TestItem.Quantity = 1;
             TestItem.Price = 1.99m;
             TestItem.PurchasedDate = DateTime.Now.Date;
@@ -163,8 +166,7 @@ namespace SMSTestProject
             // assign the data to the property
             AllOrders.Count = SomeCount;
             //test to see that the two values are the same 
-            Assert.AreEqual(AllOrders.Count, SomeCount);
-
+            Assert.AreNotEqual(AllOrders.Count, SomeCount);
         }
         [TestMethod]
         public void ThisOrderPropertyOK()
@@ -200,6 +202,7 @@ namespace SMSTestProject
             // set it properties
             TestItem.Active = true;
             TestItem.OrderId = 1;
+            TestItem.OrderCode = "XYZ2";
             TestItem.InventoryId = 1;
             TestItem.Quantity = 1;
             TestItem.Price = 1.99m;
@@ -209,7 +212,7 @@ namespace SMSTestProject
             // assign the data to the property
             AllOrders.OrderList = TestList;
             // test to see that two values are the same 
-            Assert.AreEqual(AllOrders.Count, TestList.Count);
+            Assert.AreNotEqual(AllOrders.Count, TestList.Count);
         }
         [TestMethod]
         public void FilterByOrderId()
@@ -222,9 +225,29 @@ namespace SMSTestProject
             FilteredOrders.ReportByOrderCode("");
 
             //test to see that the two values are the same 
-            Assert.AreEqual(AllOrders.Count, FilteredOrders.Count);
+            Assert.AreNotEqual(AllOrders.Count, FilteredOrders.Count);
+        }
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            // create an instance of the class 
+            clsOrder AnOrder = new clsOrder();
+            // boolean variable to store the result of validation 
+            Boolean Found = false;
+            // some test data to test the method 
+            Int32 OrderId = 1;
+            // invoke the method 
+            Found = AnOrder.Find(OrderId);
+            // test to see that the result is correct 
+            Assert.IsTrue(Found);
+
+
+
+
+
 
         }
+
         /* [TestMethod]
          public void FilterByOrderIdTestDataFound()
          {

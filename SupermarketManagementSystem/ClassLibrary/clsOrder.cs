@@ -152,21 +152,21 @@ namespace ClassLibrary
             DateTime DateTemp;
             decimal PriceTemp;
             Int32 QuantityTemp;
+
             Int32 InventoryIdTemp;
             //if price entered is a valid price
             try
             {
-
                 PriceTemp = Convert.ToDecimal(price);
 
                 if (PriceTemp > 20000m)
                 {
-                    Error = Error + "The price of the full ordrer cannot exceed 10000 : ";
+                    Error = Error + "The price of the full ordrer cannot exceed 20000 : ";
                 }
 
-                if (PriceTemp < 0m)
+                if (PriceTemp < 0.20m)
                 {
-                    Error = Error + "The price of Order  cannot be less than or equal to zero : ";
+                    Error = Error + "The price of Order  cannot be less than 0.20 pence : ";
                 }
             }
             catch
@@ -180,14 +180,14 @@ namespace ClassLibrary
             {
                 QuantityTemp = Convert.ToInt32(quantity);
 
-                if (QuantityTemp > 1000)
+                if (QuantityTemp > 100)
                 {
                     Error = Error + "The quantity of Order cannot exceed 100 : ";
                 }
 
-                if (QuantityTemp < 0)
+                if (QuantityTemp <= 0)
                 {
-                    Error = Error + "Thefull order price can not be less than 0.20pence : ";
+                    Error = Error + "The full order quantity cannot be less than or qual to zero : ";
                 }
 
             }
@@ -195,8 +195,9 @@ namespace ClassLibrary
             {
                 //record the error
                 Error = Error + "The Order is not valid : ";
-
             }
+
+
             try
             {
                 // convert the string value to DateTime
