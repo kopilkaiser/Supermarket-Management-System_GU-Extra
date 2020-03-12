@@ -32,7 +32,7 @@ public partial class AnInventory : System.Web.UI.Page
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Default.aspx");
+        Response.Redirect("InventoryManagement.aspx");
     }
 
     protected void btnOK_Click(object sender, EventArgs e)
@@ -98,7 +98,7 @@ public partial class AnInventory : System.Web.UI.Page
             //add the record
             AllInventories.Update();
             //all done so redirect back to the main page
-            Response.Redirect("Default.aspx");
+            Response.Redirect("InventoryManagement.aspx");
         }
         else
         {

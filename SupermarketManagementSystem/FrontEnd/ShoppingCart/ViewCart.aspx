@@ -7,7 +7,7 @@
     <title></title>
     <link href="StyleSheet.css" rel="stylesheet"/>
 </head>
-<body style="border-style:grove; border-color: inherit; border-width: medium; position:relative; left: 498px; top: 192px; height: 384px; width: 959px;">
+<body style="border-style:groove; border-color: inherit; border-width: medium; position:relative; left: 608px; top: 124px; height: 384px; width: 598px;">
 
     <form id="form1" runat="server">
        
