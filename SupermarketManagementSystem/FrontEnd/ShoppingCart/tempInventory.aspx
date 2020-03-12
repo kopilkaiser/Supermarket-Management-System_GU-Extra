@@ -28,10 +28,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <title></title>
-
+        <link href="StyleSheet.css" rel="stylesheet" />
+        <style type="text/css">
+            .auto-style1 {
+                left: 30%;
+                top: 30%;
+                height: 45%;
+            }
+            .auto-style2 {
+                width: 615px;
+                height: 96px;
+            }
+        </style>
     </head>
     <body>
         <form id="form1" runat="server">
+            <article class="auto-style1">
         <div>
             
                   <%
@@ -41,25 +53,31 @@
                       Int32 RecordCount = MyInventories.Count;
 
 
-                  %><table border="1">
+                  %><table border="1" class="auto-style2">
                       <%
                    %> <tr><% 
-                               %><td style="font-weight:bold"><%
-                                         Response.Write("InventoryId");
 
+                    %><td style="font-weight:bold"><%
+                                         Response.Write("");
                     %></td><%
+
                     %><td style="font-weight:bold; text-align:center"><%
                      Response.Write("Name");
                      %></td><%
+
+                     %><td style="font-weight:bold; text-align:center"><%
+                     Response.Write("Price Per Item");
+                     %></td><%
+
                    %></tr><%
                         
                   while(Index<RecordCount)
                   {
                     %><tr><%
                     %><td>
-                        <a href="InventoryDetails.aspx?InventoryId=<% Response.Write(MyInventories.InventoryList[Index].InventoryId);  %>&?x=y">
+                        <a href="CartItemDetails.aspx?InventoryId=<% Response.Write(MyInventories.InventoryList[Index].InventoryId);%>&Price=<%Response.Write(MyInventories.InventoryList[Index].Price);%>&Name=<% Response.Write(MyInventories.InventoryList[Index].Name); %>">
                             <%   
-                     Response.Write("ADD TO CART");
+                     Response.Write("Select Quantity");
                     %></a></td><%
                     %><td><%
                      Response.Write(MyInventories.InventoryList[Index].Name);
@@ -74,8 +92,12 @@
                     %></table><%
                   %>
         </div>
-            Your cart has
+                 Your cart has
         <asp:Label ID="lblCartCount" runat="server"></asp:Label>
-    &nbsp;items.</form>
+    &nbsp;items.
+            <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View Cart</asp:HyperLink>
+            </article>
+           
+        </form>
 </body>
 </html>

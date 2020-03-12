@@ -27,6 +27,19 @@ namespace ClassLibrary
             }
         }
 
+        private string mName;
+        public string Name
+        {
+            get
+            {
+                return mName;
+            }
+            set
+            {
+                mName = value;
+            }
+        }
+
         private Int32 mQTY;
         public Int32 QTY
         {
@@ -64,7 +77,7 @@ namespace ClassLibrary
             }
             set
             {
-                mTotalPrice = (Price * QTY);
+                mTotalPrice = value;
             }
         }
     }
