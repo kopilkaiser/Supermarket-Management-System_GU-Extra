@@ -33,12 +33,12 @@
                            <br />
                            <asp:Label ID="Label1" runat="server" Text="Name" CssClass="auto-style2"></asp:Label>
                            </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtName" runat="server" ReadOnly="True" CssClass="auto-style2"></asp:TextBox>
+        <asp:TextBox ID="txtName" runat="server" ReadOnly="True" CssClass="auto-style2" BackColor="Gray"></asp:TextBox>
                            <br />
                            <strong>
         <asp:Label ID="Label3" runat="server" Text="Price" CssClass="auto-style2"></asp:Label>
                            </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtPrice" runat="server" ReadOnly="True" CssClass="auto-style2"></asp:TextBox>
+        <asp:TextBox ID="txtPrice" runat="server" ReadOnly="True" CssClass="auto-style2" BackColor="Gray"></asp:TextBox>
                            <br />
                            <strong>
         <asp:Label ID="Label2" runat="server" Text="Quantity" CssClass="auto-style2"></asp:Label>

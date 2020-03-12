@@ -16,6 +16,7 @@ public partial class ViewCart : System.Web.UI.Page
         MyCart = (clsCart)Session["MyCart"];
         //display the cart contents
         DisplayCart();
+
     }
 
     protected void Page_UnLoad(object sender, EventArgs e)
@@ -88,5 +89,7 @@ public partial class ViewCart : System.Web.UI.Page
             Index++;
         }
         Response.Write("</table>");
+
+ 
     }
 }
