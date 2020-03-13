@@ -73,7 +73,7 @@ namespace SMSTestProject
            clsOrderlineCollection AllOrderline = new clsOrderlineCollection();
 
             // create the item of the test data
-           clsOrderline TestItem = newclsOrderline();
+           clsOrderline TestItem = new clsOrderline();
             //create the item of test data
             clsOrderline TestItem = new clsOrderline();
             // var to store the primary key
