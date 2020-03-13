@@ -5,6 +5,7 @@ namespace ClassLibrary
     public class clsOrderline
     {
         private int mOrderlineId;
+        private int mOrderId;
         private int mQuantity;
         private int mInventoryId;
     
@@ -19,6 +20,18 @@ namespace ClassLibrary
             set
             {
                 mOrderlineId = value;
+            }
+        }
+        public int OrderId
+        {
+            get
+            {
+                return mOrderId;
+            }
+
+            set
+            {
+                mOrderId = value;
             }
         }
 
@@ -53,7 +66,7 @@ namespace ClassLibrary
             //add the parameter for the Inventory id to search for
             DB.AddParameter("@OrderlineId", OrderlineId);
             //execute the stored procedure
-            DB.Execute("sproc_tblOrder_FilterByOrderlineId");
+            DB.Execute("sproc_tblOrderline_FilterByOrderlineId");
             //if one record is found (there should be either one or zero!)
             if (DB.Count == 1)
             {
@@ -133,6 +146,13 @@ namespace ClassLibrary
 
 
             return Error;
+        }
+        public string AllDetails
+        {
+            get
+            {
+                return "OrderlineId:" + OrderlineId + "_" + "OrderId:" + OrderId + "_" + "Quantity:" + Quantity + "_" + "InventoryId:" + InventoryId;
+            }
         }
 
     }

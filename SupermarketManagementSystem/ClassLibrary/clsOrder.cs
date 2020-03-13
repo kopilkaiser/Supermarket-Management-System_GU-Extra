@@ -120,48 +120,48 @@ namespace ClassLibrary
             Int32 PaymentIdTemp;
             DateTime DateTemp;
             //if price entered is a valid price
-            /*try
-            {
-                PriceTemp = Convert.ToDecimal(price);
-
-                if (PriceTemp > 20000m)
-                {
-                    Error = Error + "The price of the full ordrer cannot exceed 20000 : ";
-                }
-
-                if (PriceTemp < 0.20m)
-                {
-                    Error = Error + "The price of Order  cannot be less than 0.20 pence : ";
-                }
-            }
-            catch
-            {
-                //record the error
-                Error = Error + "The price entered is not valid : ";
-            }
-
-            //if Quantity entered is a valid quantity
             try
             {
-                QuantityTemp = Convert.ToInt32(quantity);
+                AccountNoTemp = Convert.ToInt32(accountNo);
 
-                if (QuantityTemp > 100)
+                if (AccountNoTemp > 10000)
                 {
-                    Error = Error + "The quantity of Order cannot exceed 100 : ";
+                    Error = Error + "Account No can not be exceed the limit of 10 : ";
                 }
 
-                if (QuantityTemp <= 0)
+                if (AccountNoTemp <= 0)
                 {
-                    Error = Error + "The full order quantity cannot be less than or qual to zero : ";
+                    Error = Error + "Please enter an Account No: ";
+                }
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The Account is not valid: ";
+            }
+
+       
+            try
+            {
+                PaymentIdTemp = Convert.ToInt32(PaymentId);
+
+                if (PaymentIdTemp > 10000)
+                {
+                    Error = Error + "Payment Id cannot exceed the limit of  20 : ";
+                }
+
+                if (PaymentIdTemp <= 0)
+                {
+                    Error = Error + "Payment Id can not be less than or equal to zero : ";
                 }
 
             }
             catch
             {
                 //record the error
-                Error = Error + "The Order is not valid : ";
+                Error = Error + "In valid payment Id : ";
             }
-            */
+            
 
             try
             {
@@ -189,6 +189,13 @@ namespace ClassLibrary
             }
 
             return Error;
+        }
+        public string AllDetails
+        {
+            get
+            {
+                return "OrderId:" + OrderId + "_" + "AccountNo:" + AccountNo + "_" + "PurchasedDate:" + PurchasedDate + "_" + "PaymentId:" + PaymentId; 
+            }
         }
 
     }

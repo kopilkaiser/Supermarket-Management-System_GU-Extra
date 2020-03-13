@@ -32,8 +32,24 @@ namespace SMSTestProject
             AnOrder.PurchasedDate = PurchasedDate;
             Assert.AreEqual(PurchasedDate, AnOrder.PurchasedDate);
         }
+        [TestMethod]
+        public void AccountNoPropertyOK()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string AccountNo = "1234567";
+            AnOrder.AccountNo = AccountNo;
+            Assert.AreEqual(AccountNo, AnOrder.AccountNo);
+        }
+        [TestMethod]
+        public void OrderIdPropertyOK()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string OrderId = "89063";
+            AnOrder.OrderId = OrderId;
+            Assert.AreEqual(OrderId, AnOrder.OrderId);
+        }
 
-          [TestMethod]
+        [TestMethod]
         public void ValidMethodOK()
         {
             //create an instance of class Order
@@ -51,6 +67,21 @@ namespace SMSTestProject
             Assert.AreEqual(Error, "");
 
         }
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsOrder AnOrder = new clsOrder();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 OrderId = 3;
+            //invoke the method
+            Found = AnOrder.Find(OrderId);
+            //test to see that the result is correct
+            Assert.IsFalse(Found);
+        }
+
 
         public void PurchasedDateExtremeMin()
         {
@@ -108,6 +139,207 @@ namespace SMSTestProject
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
+        /// <summary>
+        /// ////////////
+        /// </summary>
+        /// // testing for account no
+        [TestMethod]
+        public void AccountNoExtremeMin()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string AccountNo = "";
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void AccountNoMinMinusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string AccountNo = "";
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void AccountNoMinBoundary()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string AccountNo = "a";
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void AccountNoMinPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string AccountNo = "aa";
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void AccountNoMaxMinusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string AccountNo = "";
+            AccountNo = AccountNo.PadRight(9999, 'a');
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void AccountNoMaxBoundary()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string AccountNo = "";
+            AccountNo = AccountNo.PadRight(10000, 'a');
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void AccountNoMaxPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string AccountNo = "";
+            AccountNo = AccountNo.PadRight(10001, 'a');
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void AccountNoMid()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string AccountNo = "";
+            AccountNo = AccountNo.PadRight(5000, 'a');
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void AccountNoExtremeMax()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string AccountNo = "";
+            AccountNo = AccountNo.PadRight(500000, 'a');
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+        }
+        // testing for payment Id
+        /// <summary>
+        /// //////////////
+        /// </summary>
+        [TestMethod]
+        public void PaymentIdExtremeMin()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string PaymentId = "";
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PaymentIdMinMinusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string PaymentId = "";
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void PaymentIdMinBoundary()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string PaymentId = "a";
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PaymentIdMinPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string PaymentId = "aa";
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PaymentIdMaxMinusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string AccountNo = "";
+            PaymentId = PaymentId.PadRight(9999, 'a');
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PaymentIdMaxBoundary()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string AccountNo = "";
+            PaymentId = PaymentId.PadRight(10000, 'a');
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PaymentIdMaxPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string PaymentId = "";
+            PaymentId = PaymentId.PadRight(10001, 'a');
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PaymentIdMid()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string PaymentId = "";
+            PaymentId = PaymentId.PadRight(5000, 'a');
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PaymentIdExtremeMax()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string PaymentId = "";
+            PaymentId = PaymentId.PadRight(50000, 'a');
+            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Assert.AreNotEqual(Error, "");
+        }
     }
+
 }  
 

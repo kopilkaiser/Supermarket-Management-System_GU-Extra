@@ -7,8 +7,12 @@ namespace SMSTestProject
     [TestClass]
     public class tstOrderline
     {
-        // some test data to pass the method
-        string InventoryId = 1;
+        
+        // some good data to pass the method 
+        int OrderlineId = 1;
+        string Quantity = "2";
+        string InventoryId = "1";
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -142,5 +146,112 @@ namespace SMSTestProject
             Assert.AreNotEqual(Error, "");
 
         }
+        ////////////////////////////
+        /// // testing for Inventory Id
+        /// <summary>
+        /// //////////////
+        /// </summary>
+        [TestMethod]
+        public void InventoryIdExtremeMin()
+        {
+            clsOrderline AnOrderline = new clsOrderline();
+            string Error = "";
+            string InventoryId = "";
+            Error = AnOrderline.Valid(Quantity,  InventoryId);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void InventoryIdMinMinusOne()
+        {
+            clsOrderline AnOrderline = new clsOrderline();
+            string Error = "";
+            string InventoryId = "";
+            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void InventoryIdMinBoundary()
+        {
+            clsOrderline AnOrderline = new clsOrderline();
+            string Error = "";
+            string InventoryId = "a";
+            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void InventoryIdMinPlusOne()
+        {
+            clsOrderline AnOrder = new clsOrderline();
+            string Error = "";
+            string InventoryId = "aa";
+            Error = AnOrder.Valid(Quantity, InventoryId);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void InventoryIdMaxMinusOne()
+        {
+            clsOrderline AnOrder = new clsOrderline();
+            string Error = "";
+            string InventoryId = "";
+            InventoryId = InventoryId.PadRight(9999, 'a');
+            Error = AnOrder.Valid(Quantity, InventoryId);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void InventoryIdMaxBoundary()
+        {
+            clsOrderline AnOrderline = new clsOrderline();
+            string Error = "";
+            string InventoryId = "";
+            InventoryId = InventoryId.PadRight(10000, 'a');
+            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void InventoryIdMaxPlusOne()
+        {
+            clsOrderline AnOrderline = new clsOrderline();
+            string Error = "";
+            string InventoryId = "";
+            InventoryId = InventoryId.PadRight(10001, 'a');
+            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void InventoryIdMid()
+        {
+            clsOrder AnOrderline = new clsOrder();
+            string Error = "";
+            string InventoryId = "";
+            InventoryId = InventoryId.PadRight(5000, 'a');
+            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PaymentIdExtremeMax()
+        {
+            clsOrderline AnOrder = new clsOrderline();
+            string Error = "";
+            string InventoryId = "";
+            InventoryId = InventoryId.PadRight(50000, 'a');
+            Error = AnOrder.Valid(Quantity, InventoryId);
+            Assert.AreNotEqual(Error, "");
+        }
     }
-}
+
+}  
+
+
+
+    
+
