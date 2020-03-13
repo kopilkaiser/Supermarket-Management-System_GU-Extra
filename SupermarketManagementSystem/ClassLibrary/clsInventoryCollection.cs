@@ -12,6 +12,7 @@ namespace ClassLibrary
         clsInventory mThisInventory = new clsInventory();
         clsDataConnection dBConnection = new clsDataConnection();
         //dBConnection = new clsDataConnection();
+
         public clsInventoryCollection()
         {
             //object for data connection
@@ -23,6 +24,34 @@ namespace ClassLibrary
 
         }
         
+
+       
+        //public property for Count
+        public int Count
+        {
+            get
+            {
+                //return the count of the list
+                return dBConnection.Count;
+            }
+            set
+            {
+                //we shall worry about this later
+            }
+        }
+        public clsInventory ThisInventory
+        {
+            get
+            {
+                //return this private data
+                return mThisInventory;
+            }
+            set
+            {
+                //set the private data
+                mThisInventory = value;
+            }
+        }
 
         //public property for the address list
         public List<clsInventory> InventoryList
@@ -69,32 +98,6 @@ namespace ClassLibrary
             }
         }
 
-        //public property for Count
-        public int Count
-        {
-            get
-            {
-                //return the count of the list
-                return dBConnection.Count;
-            }
-            set
-            {
-                //we shall worry about this later
-            }
-        }
-        public clsInventory ThisInventory
-        {
-            get
-            {
-                //return this private data
-                return mThisInventory;
-            }
-            set
-            {
-                //set the private data
-                mThisInventory = value;
-            }
-        }
 
         public int Add()
         {
