@@ -1,6 +1,5 @@
 ﻿using System;
 using ClassLibrary;
-using ClassLibrary.Properties;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SMSTestProject
@@ -9,13 +8,12 @@ namespace SMSTestProject
     public class tstStaff
     {
         //some good test data
-        int StaffID = 001;
-        string Name = "Syed";
         int AccountNo = 1;
-        Int64 Number = 99999999999;
-        string Department = "Cleaner";
-        string StartingDate = DateTime.Now.Date.ToString();
+        string AccountEmail = "cc@email.com";
+        string AccountPassword = "1234567";
+        Boolean IsAdmin = false;
         Boolean Active = true;
+        string TempPW = "";
 
         [TestMethod]
         public void InstanceOK()
@@ -39,40 +37,34 @@ namespace SMSTestProject
         }
 
         [TestMethod]
-        public void NamePropertyOK()
+        public void IsAdminPropertyOK()
         {
+            //create an instance of the class we want to create
             clsStaff AnStaff = new clsStaff();
-            string Name = "Syed";
-            AnStaff.Name = Name;
-            Assert.AreEqual(Name, AnStaff.Name);
-        }
-
-        
-        [TestMethod]
-        public void NumberPropertyOK()
-        {
-            clsStaff AnStaff = new clsStaff();
-            Int64 Number = 99999999999;
-            AnStaff.Number = Number;
-            Assert.AreEqual(Number, AnStaff.Number);
+            //create some test data to assign to the property
+            Boolean TestData = false;
+            //assign the data to the property
+            AnStaff.IsAdmin = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AnStaff.IsAdmin, TestData);
         }
 
         [TestMethod]
-        public void DepartmentPropertyOK()
+        public void AccountEmailPropertyOK()
         {
             clsStaff AnStaff = new clsStaff();
-            string Department = "Cleaner";
-            AnStaff.Department = Department;
-            Assert.AreEqual(Department, AnStaff.Department);
+            string AccountEmail = "cc@email.com";
+            AnStaff.AccountEmail = AccountEmail;
+            Assert.AreEqual(AccountEmail, AnStaff.AccountEmail);
         }
 
         [TestMethod]
-        public void StartingDatePropertyOK()
+        public void AccountPasswordPropertyOK()
         {
             clsStaff AnStaff = new clsStaff();
-            DateTime StartingDate = DateTime.Now.Date;
-            AnStaff.StartingDate = StartingDate;
-            Assert.AreEqual(StartingDate, AnStaff.StartingDate);
+            string AccountPassword = "1234567";
+            AnStaff.AccountPassword = AccountPassword;
+            Assert.AreEqual(AccountPassword, AnStaff.AccountPassword);
         }
 
         [TestMethod]
@@ -80,7 +72,7 @@ namespace SMSTestProject
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreEqual(Error, "");
         }
 
@@ -92,54 +84,54 @@ namespace SMSTestProject
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 StaffID = 001;
+            int AccountNo = 1;
             //invoke the method
-            Found = AnStaff.Find(StaffID);
+            Found = AnStaff.Find(AccountNo);
             //test to see that the result is correct
             Assert.IsFalse(Found);
         }
 
         ///////////////////////////////
-        //TestMethods for Name property
+        //TestMethods for AccountEmail property
 
         [TestMethod]
-        public void NameExtremeMin()
+        public void AccountEmailExtremeMin()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Name = "";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountEmail = "";
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
-        public void NameMinMinusOne()
+        public void AccountEmailMinMinusOne()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Name = "";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountEmail = "";
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreNotEqual(Error, "");
 
         }
         [TestMethod]
-        public void NameMinBoundary()
+        public void AccountEmailMinBoundary()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Name = "a";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountEmail = "a";
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreEqual(Error, "");
 
         }
 
         [TestMethod]
-        public void NameMinPlusOne()
+        public void AccountEmailMinPlusOne()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Name = "aa";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountEmail = "aa";
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreEqual(Error, "");
 
         }
@@ -149,316 +141,154 @@ namespace SMSTestProject
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Name = "";
-            Name = Name.PadRight(79, 'a');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountEmail = "";
+            AccountEmail = AccountEmail.PadRight(79, 'a');
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void NameMaxBoundary()
+        public void AccountEmailMaxBoundary()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Name = "";
-            Name = Name.PadRight(80, 'a');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountEmail = "";
+            AccountEmail = AccountEmail.PadRight(80, 'a');
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void NameMaxPlusOne()
+        public void AccountEmailMaxPlusOne()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Name = "";
-            Name = Name.PadRight(81, 'a');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountEmail = "";
+            AccountEmail = AccountEmail.PadRight(81, 'a');
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
-        public void NameMid()
+        public void AccountEmailMid()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Name = "";
-            Name = Name.PadRight(40, 'a');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountEmail = "";
+            AccountEmail = AccountEmail.PadRight(40, 'a');
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void NameExtremeMax()
+        public void AccountEmailExtremeMax()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Name = "";
-            Name = Name.PadRight(500, 'a');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreNotEqual(Error, "");
-        }
-
-
-        ///////////////////////////////
-        //TestMethods for Number property
-
-        [TestMethod]
-        public void NumberExtremeMin()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            String Number = "";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void NumberMinMinusOne()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            String Number = "";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreNotEqual(Error, "");
-
-        }
-        [TestMethod]
-        public void NumberMinBoundary()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string Number = "9";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreNotEqual(Error, "");
-
-        }
-
-        [TestMethod]
-        public void NumberMinPlusOne()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string Number = "99";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreNotEqual(Error, "");
-
-        }
-
-        [TestMethod]
-        public void NumberMaxMinusOne()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            String Number = "";
-            Number = Number.PadRight(10, '9');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void NumberMaxBoundary()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            String Number = "";
-            Number = Number.PadRight(11, '9');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void NumberMaxPlusOne()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            String Number = "";
-            Number = Number.PadRight(12, '9');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void NumberMid()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            String Number = "";
-            Number = Number.PadRight(5, '9');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void NumberExtremeMax()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            String Number = "";
-            Number = Number.PadRight(500, '9');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountEmail = "";
+            AccountEmail = AccountEmail.PadRight(500, 'a');
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreNotEqual(Error, "");
         }
 
         ///////////////////////////////
-        //TestMethods for Department property
+        //TestMethods for AccountPassword property
 
         [TestMethod]
-        public void DepartmentExtremeMin()
+        public void AccountPasswordExtremeMin()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            String Department = "";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountPassword = "";
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
-        public void DepartmentMinMinusOne()
+        public void AccountPasswordMinMinusOne()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            String Department = "";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountPassword = "";
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreNotEqual(Error, "");
 
         }
         [TestMethod]
-        public void DepartmentMinBoundary()
+        public void AccountPasswordMinBoundary()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Department = "a";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountPassword = "a";
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreEqual(Error, "");
 
         }
 
         [TestMethod]
-        public void DepartmentMinPlusOne()
+        public void AccountPasswordMinPlusOne()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            string Department = "aa";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountPassword = "aa";
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreEqual(Error, "");
 
         }
 
         [TestMethod]
-        public void DepartmentMaxMinusOne()
+        public void AccountPasswordMaxMinusOne()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            String Department = "";
-            Department = Department.PadRight(79, 'a');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountPassword = "";
+            AccountPassword = AccountPassword.PadRight(79, 'a');
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void DepartmentMaxBoundary()
+        public void AccountPasswordMaxBoundary()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            String Department = "";
-            Department = Department.PadRight(80, 'a');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountPassword = "";
+            AccountPassword = AccountPassword.PadRight(80, 'a');
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void DepartmentMaxPlusOne()
+        public void AccountPasswordMaxPlusOne()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            String Department = "";
-            Department = Department.PadRight(81, 'a');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountPassword = "";
+            AccountPassword = AccountPassword.PadRight(81, 'a');
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
-        public void DepartmentMid()
+        public void AccountPasswordMid()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            String Department = "";
-            Department = Department.PadRight(40, 'a');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountPassword = "";
+            AccountPassword = AccountPassword.PadRight(40, 'a');
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void DepartmentExtremeMax()
+        public void AccountPasswordExtremeMax()
         {
             clsStaff AnStaff = new clsStaff();
             string Error = "";
-            String Department = "";
-            Department = Department.PadRight(500, 'a');
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
+            string AccountPassword = "";
+            AccountPassword = AccountPassword.PadRight(500, 'a');
+            Error = AnStaff.Valid(AccountEmail, AccountPassword);
             Assert.AreNotEqual(Error, "");
         }
-
-        //TestMethods for StartingDate property
-
-        [TestMethod]
-        public void StartingDateExtremeMin()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            DateTime TestDate;
-            TestDate = DateTime.Now.Date;
-            TestDate = DateTime.Now.AddYears(-100);
-            string StartingDate = TestDate.ToString();
-            Error = AnStaff.Valid(Name, Number, Department, this.StartingDate);
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void StartingDateMinMinusOne()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            DateTime TestDate;
-            TestDate = DateTime.Now.Date;
-            TestDate = DateTime.Now.AddDays(-1);
-            string StartingDate = TestDate.ToString();
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreNotEqual(Error, "");
-        }
-        [TestMethod]
-        public void StartingDateMinBoundary()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string StartingDate = DateTime.Now.Date.ToString();
-            string Error = "";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreEqual(Error, "");
-        }
-        [TestMethod]
-        public void StartingDateExtremeMax()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            DateTime TestDate;
-            TestDate = DateTime.Now.Date;
-            TestDate = DateTime.Now.AddYears(100);
-            string StartingDate = TestDate.ToString();
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreNotEqual(Error, "");
-        }
-        [TestMethod]
-        public void StartingDateInvalidDataType()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string StartingDate = "a";
-            Error = AnStaff.Valid(Name, Number, Department, StartingDate);
-            Assert.AreNotEqual(Error, "");
-        }
-
-
-
     }
 }

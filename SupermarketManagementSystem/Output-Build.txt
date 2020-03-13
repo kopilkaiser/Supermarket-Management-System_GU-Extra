@@ -1,0 +1,22 @@
+﻿1>------ Build started: Project: ClassLibrary, Configuration: Debug Any CPU ------
+1>H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\ClassLibrary\clsOrder.cs(155,19,155,34): warning CS0168: The variable 'InventoryIdTemp' is declared but never used
+1>  ClassLibrary -> H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\ClassLibrary\bin\Debug\ClassLibrary.dll
+2>------ Build started: Project: BackEnd, Configuration: Debug Any CPU ------
+3>------ Build started: Project: FrontEnd, Configuration: Debug Any CPU ------
+3>Validating Web Site
+4>------ Build started: Project: Test Framework, Configuration: Debug Any CPU ------
+3>Building directory '/'.
+2>H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\BackEnd\InventoryManageForm.cs(20,15,20,26): warning CS0169: The field 'InventoryManageForm.InventoryId' is never used
+2>H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\BackEnd\InventoryManageForm.cs(21,27,21,39): warning CS0169: The field 'InventoryManageForm.dBConnection' is never used
+2>H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\BackEnd\AddInventoryForm.cs(17,13,17,24): warning CS0649: Field 'AddInventoryForm.InventoryId' is never assigned to, and will always have its default value 0
+2>  BackEnd -> H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\BackEnd\bin\Debug\BackEnd.exe
+4>H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\SMSTestProject\tstStaff.cs(12,13,12,20): warning CS0414: The field 'tstStaff.StaffID' is assigned but its value is never used
+4>H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\SMSTestProject\tstOrder.cs(11,13,11,20): warning CS0414: The field 'tstOrder.OrderId' is assigned but its value is never used
+4>H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\SMSTestProject\tstStaff.cs(18,17,18,23): warning CS0414: The field 'tstStaff.Active' is assigned but its value is never used
+4>H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\SMSTestProject\tstPaymentByCustomer.cs(14,13,14,20): warning CS0414: The field 'tstPaymentByCustomer.StaffId' is assigned but its value is never used
+4>H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\SMSTestProject\tstInventory.cs(11,13,11,24): warning CS0414: The field 'tstInventory.InventoryId' is assigned but its value is never used
+4>H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\SMSTestProject\tstPaymentByCustomer.cs(13,13,13,22): warning CS0414: The field 'tstPaymentByCustomer.PaymentId' is assigned but its value is never used
+4>  Test Framework -> H:\Desktop\Project Management & Development\SupermarketManagementSystem\SupermarketManagementSystem\SMSTestProject\bin\Debug\SMSTestProject.dll
+3>
+3>Validation Complete
+========== Build: 4 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

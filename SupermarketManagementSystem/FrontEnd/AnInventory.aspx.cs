@@ -32,7 +32,7 @@ public partial class AnInventory : System.Web.UI.Page
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Default.aspx");
+        Response.Redirect("InventoryManagement.aspx");
     }
 
     protected void btnOK_Click(object sender, EventArgs e)
