@@ -28,7 +28,7 @@ public partial class ViewCart : System.Web.UI.Page
     {
         Int32 Index = 0;
         Int32 Count = MyCart.Products.Count;
-        Response.Write("<table border =\"1\">");
+        Response.Write("<table border =\"1\" text-align:center");
         Response.Write("<tr>");
 
         Response.Write("<td>");
@@ -90,6 +90,6 @@ public partial class ViewCart : System.Web.UI.Page
         }
         Response.Write("</table>");
 
- 
+
     }
 }

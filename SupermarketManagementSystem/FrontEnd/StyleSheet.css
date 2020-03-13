@@ -2,13 +2,13 @@
     background-color:lightgrey;
 }
 
-article{
-    position:fixed;
-    border:solid;
-    height:40%;
-    width:40%;
-    top:20%;
-    left:20%;
+article {
+    position: fixed;
+    border: solid;
+    height: 40%;
+    width: 40%;
+    top: 20%;
+    left: 20%;
 }
 
 div{
