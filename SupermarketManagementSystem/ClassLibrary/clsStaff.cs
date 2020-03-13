@@ -4,64 +4,28 @@ namespace ClassLibrary
 {
     public class clsStaff
     {
-        private string mAccountEmail;
-        private string mAccountPassword;
-        private bool mActive;
-        private bool mIsAdmin;
+        private int mStaffId;
         private int mAccountNo;
+        private string mName;
+        private int mPhonenum;
+        private DateTime mDateJoined;
+        private bool mActive;
 
 
-        public bool Active
+
+        public int StaffId
         {
             get
             {
-                return mActive;
+                return mStaffId;
             }
 
             set
             {
-                mActive = value;
+                mStaffId = value;
             }
         }
 
-        public bool IsAdmin
-        {
-            get
-            {
-                return mIsAdmin;
-            }
-
-            set
-            {
-                mIsAdmin = value;
-            }
-        }
-
-        public string AccountEmail
-        {
-            get
-            {
-                return mAccountEmail;
-            }
-
-            set
-            {
-                mAccountEmail = value;
-            }
-        }
-
-        public string AccountPassword
-        {
-            get
-            {
-                return mAccountPassword;
-            }
-
-            set
-            {
-                mAccountPassword = value;
-            }
-        }
 
         public int AccountNo
         {
@@ -76,6 +40,61 @@ namespace ClassLibrary
             }
         }
 
+
+        public string Name
+        {
+            get
+            {
+                return mName;
+            }
+
+            set
+            {
+                mName = value;
+            }
+        }
+
+
+        public int Phonenum
+        {
+            get
+            {
+                return mPhonenum;
+            }
+
+            set
+            {
+                mPhonenum = value;
+            }
+        }
+
+        public DateTime DateJoined
+        {
+            get
+            {
+                return mDateJoined;
+            }
+
+            set
+            {
+                mDateJoined = value;
+            }
+        }
+
+        public bool Active
+        {
+            get
+            {
+                return mActive;
+            }
+
+            set
+            {
+                mActive = value;
+            }
+        }
+
+      
         public string Valid(string accountEmail, string accountPassword)
         {
             string Error = "";
@@ -103,24 +122,25 @@ namespace ClassLibrary
             return Error;
         }
 
-        public bool Find(int accountNo)
+        public bool Find(int StaffId)
         {
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //add the parameter for the AccountNo to search for
-            DB.AddParameter("@AccountNo", AccountNo);
+            DB.AddParameter("@StaffId", StaffId);
             //execute the stored procedure
-            DB.Execute("sproc_tblAccount_FilterByAccountNo");
+            DB.Execute("sproc_tblStaff_FilterByName");
             //if one record is found (there should be either one or zero!)
             if (DB.Count == 1)
             {
                 //copy the data from the database from the private data members
+                mStaffId = Convert.ToInt32(DB.DataTable.Rows[0]["StaffId"]);
                 mAccountNo = Convert.ToInt32(DB.DataTable.Rows[0]["AccountNo"]);
-                mAccountEmail = Convert.ToString(DB.DataTable.Rows[0]["AccountEmail"]);
-                mAccountPassword = Convert.ToString(DB.DataTable.Rows[0]["AccountPassword"]);
-                mIsAdmin = Convert.ToBoolean(DB.DataTable.Rows[0]["IsAdmin"]);
-                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
-               
+                mName = Convert.ToString(DB.DataTable.Rows[0]["Name"]);
+                mPhonenum = Convert.ToInt32(DB.DataTable.Rows[0]["Phonenum"]);
+                mDateJoined = Convert.ToDateTime(DB.DataTable.Rows[0]["DateJoined"]);
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]); ;
+
                 //return that everything worked ok
                 return true;
             }
@@ -136,7 +156,7 @@ namespace ClassLibrary
         {
             get
             {
-                return "AccountEmail:" + AccountEmail + "AccountPassword:" + AccountPassword;
+                return ("StaffId:" + StaffId + "_" + "AccountNo:" + AccountNo + "_" + "Name:" + Name + "_" + "Phonenum:" + Phonenum + "_" + "DateJoined:" + DateJoined) ;
             }
         }
     }
