@@ -4,26 +4,13 @@ namespace ClassLibrary
 {
     public class clsOrder
     {
-        private int mOrderId;
-        private int mInventoryId;
-        private int mQuantity;
-        private decimal mPrice;
+
+
+        private int mOrderId
+        private int mAccountNo;
+        private int mPaymentId;
         private DateTime mPurchasedDate;
-        private bool mActive;
-        private string mOrderCode;
 
-        public string OrderCode
-        {
-            get
-            {
-                return mOrderCode;
-            }
-
-            set
-            {
-                mOrderCode = value;
-            }
-        }
         public int OrderId
         {
             get
@@ -37,16 +24,31 @@ namespace ClassLibrary
             }
         }
 
-        public int InventoryId
+
+
+
+        public int AccountNo
         {
             get
             {
-                return mInventoryId;
+                return mAccountNo;
             }
 
             set
             {
-                mInventoryId = value;
+                mAccountNo = value;
+            }
+        }
+        public int PaymentId
+        {
+            get
+            {
+                return mPaymentId;
+            }
+
+            set
+            {
+                mPaymentId = value;
             }
         }
         public DateTime PurchasedDate
@@ -62,36 +64,8 @@ namespace ClassLibrary
             }
         }
 
-        
 
-        public int Quantity
-        {
-            get
-            {
-                return mQuantity;
-            }
-
-            set
-            {
-                mQuantity = value;
-            }
-        }
-
-      
-
-        public decimal Price
-        {
-            get
-            {
-                return mPrice;
-            }
-
-            set
-            {
-                mPrice = value;
-            }
-        }
-        public bool Active
+     /* public bool Active
         {
             get
             {
@@ -103,16 +77,9 @@ namespace ClassLibrary
                 mActive = value;
             }
         }
+        */
 
-
-        /* public int Quantity { get; set; }
-         public decimal Price { get; set; }
-         public int OrderId { get; set; }
-         public int InventoryId { get; set; }
-         public DateTime PurchasedDate { get; set; }
-         public bool Active { get; set; }
-         public string Error { get; private set; }*/
-
+       
 
         public bool Find(int OrderId)
         {
@@ -127,12 +94,10 @@ namespace ClassLibrary
             {
                 //copy the data from the database from the private data members
                 mOrderId = Convert.ToInt32(DB.DataTable.Rows[0]["OrderId"]);
-                mOrderCode = Convert.ToString(DB.DataTable.Rows[0]["OrderCode"]);
-                mPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["Price"]);
-                mQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["Quantity"]);
+                mAccountId = Convert.ToInt32(DB.DataTable.Rows[0]["AccountId"]);
+                mPaymentId = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentId"]);
                 mPurchasedDate = Convert.ToDateTime(DB.DataTable.Rows[0]["PurchasedDate"]);
-                mInventoryId = Convert.ToInt32(DB.DataTable.Rows[0]["InventoryId"]);
-                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                //mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
                 //return that everything worked ok
                 return true;
             }
@@ -145,17 +110,17 @@ namespace ClassLibrary
 
         }
 
-        public string Valid(string quantity, string price, string purchasedDate, string inventoryId)
+        public string Valid(string accountNo, string paymentId, string purchasedDate)
         {
-            // create a variable to store any error message 
+            // create a variable to store any error message
             String Error = "";
-            DateTime DateTemp;
-            decimal PriceTemp;
-            Int32 QuantityTemp;
 
-            Int32 InventoryIdTemp;
+            Int32 OrderIdTemp;
+            Int32 AccountNoTemp;
+            Int32 PaymentIdTemp;
+            DateTime DateTemp;
             //if price entered is a valid price
-            try
+            /*try
             {
                 PriceTemp = Convert.ToDecimal(price);
 
@@ -196,7 +161,7 @@ namespace ClassLibrary
                 //record the error
                 Error = Error + "The Order is not valid : ";
             }
-
+            */
 
             try
             {
@@ -225,5 +190,6 @@ namespace ClassLibrary
 
             return Error;
         }
+
     }
 }

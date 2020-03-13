@@ -1,24 +1,24 @@
 ﻿using System;
-using ClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ClassLibrary;
 
 namespace SMSTestProject
 {
     [TestClass]
-    public class tstOrderCollection
+    public class tstOrderlineCollection
     {
         [TestMethod]
         public void InstanceOK()
         {
-            clsOrderCollection AllOrders = new clsOrderCollection();
+            clsOrderlineCollection AllOrderline = new clsOrderlineCollection();
             // teat to see tha t it exist
-            Assert.IsNotNull(AllOrders);
+            Assert.IsNotNull(AllOrderline);
         }
         [TestMethod]
         public void AddMethodOK()
         {
             // create an instance for the class we want to create
-            clsOrderCollection AllOrders = new clsOrderCollection();
+            clsOrderlineCollection AllOrders = new clsOrderCollection();
 
             // create the item of the test data
             clsOrder TestItem = new clsOrder();
