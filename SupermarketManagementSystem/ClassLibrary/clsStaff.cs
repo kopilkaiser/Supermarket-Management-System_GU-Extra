@@ -8,7 +8,7 @@ namespace ClassLibrary
         private string mAccountPassword;
         private bool mActive;
         private bool mIsAdmin;
-        public int mAccountNo;
+        private int mAccountNo;
 
 
         public bool Active
