@@ -28,7 +28,7 @@ namespace SMSTestProject
             TestStaff.Active = true;
             TestStaff.AccountEmail = "cc@email.com";
             TestStaff.AccountPassword = "1234567";
-            TestStaff.IsAdmin = false;
+            //TestStaff.IsAdmin = false;
             //assign the data to the property
             AllStaffs.ThisStaff = TestStaff;
             //test to see that the two values are the same;
