@@ -6,7 +6,7 @@ namespace ClassLibrary
     {
 
 
-        private int mOrderId
+        private int mOrderId;
         private int mAccountNo;
         private int mPaymentId;
         private DateTime mPurchasedDate;
@@ -94,7 +94,7 @@ namespace ClassLibrary
             {
                 //copy the data from the database from the private data members
                 mOrderId = Convert.ToInt32(DB.DataTable.Rows[0]["OrderId"]);
-                mAccountId = Convert.ToInt32(DB.DataTable.Rows[0]["AccountId"]);
+                mAccountNo = Convert.ToInt32(DB.DataTable.Rows[0]["AccountNo"]);
                 mPaymentId = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentId"]);
                 mPurchasedDate = Convert.ToDateTime(DB.DataTable.Rows[0]["PurchasedDate"]);
                 //mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
