@@ -9,6 +9,7 @@ namespace SMSTestProject
     {
         // some good data to pass the method 
         int OrderId = 1;
+
         string InventoryId = 2.ToString();
         string Quantity = "22";
         string Price = "20.20";              ////10.99m.ToString();
@@ -99,7 +100,7 @@ namespace SMSTestProject
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(-100);
             string PurchasedDate = TestDate.ToString();
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -112,7 +113,7 @@ namespace SMSTestProject
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddDays(-1);
             string PurchasedDate = TestDate.ToString();
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
 
             Assert.AreNotEqual(Error, "");
         }
@@ -122,8 +123,8 @@ namespace SMSTestProject
             clsOrder AnOrder = new clsOrder();
             string PurchasedDate = DateTime.Now.Date.ToString();
             string Error = "";
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
-            Assert.AreNotEqual(Error, "");
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
+            Assert.AreEqual(Error, "");
         }
         [TestMethod]
         public void PurchasedDateExtremeMax()
@@ -134,7 +135,7 @@ namespace SMSTestProject
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(100);
             string PurchasedDate = TestDate.ToString();
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -143,7 +144,7 @@ namespace SMSTestProject
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string PurchasedDate = "a";
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -159,7 +160,7 @@ namespace SMSTestProject
             string Quantity = "0";
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There shold be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -175,7 +176,7 @@ namespace SMSTestProject
             string Quantity = "0";
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+            Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -191,7 +192,7 @@ namespace SMSTestProject
             string Quantity = "2";
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be NO error message 
             Assert.AreEqual(Error, "");
 
@@ -204,10 +205,10 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-            string Quantity = "100";
+            string Quantity = 100.ToString();
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+            Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be NO error message 
             Assert.AreEqual(Error, "");
 
@@ -223,7 +224,7 @@ namespace SMSTestProject
             string Quantity = "101";
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -239,7 +240,7 @@ namespace SMSTestProject
             string Quantity = "50";
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+            Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be no error message 
             Assert.AreEqual(Error, "");
 
@@ -255,7 +256,7 @@ namespace SMSTestProject
             string Quantity = 10000.ToString();
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -272,7 +273,7 @@ namespace SMSTestProject
             string Price = 0.ToString();
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+            Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There shold be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -288,9 +289,9 @@ namespace SMSTestProject
             string Price = 0.20m.ToString();
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be an error message 
-            Assert.AreNotEqual(Error, "");
+            Assert.AreEqual(Error, "");
 
         }
         [TestMethod]
@@ -301,10 +302,10 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-            string Price = 1.20m.ToString();
+            string Price = 2m.ToString();
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be NO error message 
             Assert.AreEqual(Error, "");
 
@@ -320,7 +321,7 @@ namespace SMSTestProject
             string Price = 10000m.ToString();
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be NO error message 
             Assert.AreEqual(Error, "");
 
@@ -333,10 +334,10 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-            string Price = 10001m.ToString();
+            string Price = 20001m.ToString();
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be an error message 
             Assert.AreNotEqual(Error, "");
 
@@ -349,10 +350,10 @@ namespace SMSTestProject
             // create an string variable to store the result of validation 
             String Error = "";
             // create some test data to the test method
-            string Price = 5000m.ToString();
+            string Price = 10000m.ToString();
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be no error message 
             Assert.AreEqual(Error, "");
 
@@ -368,7 +369,7 @@ namespace SMSTestProject
             string Price = 100000m.ToString();
 
             // invoke the method 
-            Error = AnOrder.Valid(Price, Quantity, PurchasedDate, InventoryId);
+             Error = AnOrder.Valid(Quantity, Price, PurchasedDate, InventoryId);
             // test to see that result is ok , e, g - There should be an error message 
             Assert.AreNotEqual(Error, "");
 
