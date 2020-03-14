@@ -20,7 +20,7 @@ public partial class RemoveCartItem : System.Web.UI.Page
         //remove the item in the query string
         MyCart.Products.RemoveAt(Index);
         //go back to view cart
-        Response.Redirect("ViewCartItems.aspx");
+        Response.Redirect("ViewCart.aspx");
     }
 
     protected void Page_UnLoad(object sender, EventArgs e)

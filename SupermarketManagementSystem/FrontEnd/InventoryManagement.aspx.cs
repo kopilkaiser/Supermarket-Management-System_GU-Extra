@@ -58,6 +58,7 @@ public partial class InventoryManagement : System.Web.UI.Page
         //clear the list of any existing items
         lstInventories.Items.Clear();
         //call the filter by post code method
+        //InventoryIdFilter = Convert.ToInt32(InventoryIdFilter);
         AllInventories.ReportByCategory(CategoryFilter);
         //get the count of records found
         RecordCount = AllInventories.Count;
