@@ -6,9 +6,9 @@ namespace ClassLibrary
     {
         private int mOrderlineId;
         private int mOrderId;
-        private int mQuantity;
         private int mInventoryId;
-    
+        private int mQuantity;
+
 
         public int OrderlineId
         {
@@ -59,6 +59,65 @@ namespace ClassLibrary
                 mQuantity = value;
             }
         }
+
+        public string Valid(string orderId, string inventoryId, string quantity)
+        {
+            // create a variable to store any error message
+            String Error = "";
+
+
+            Int32 QuantityTemp;
+
+            Int32 InventoryIdTemp;
+            //if price entered is a valid price
+
+
+            //if Quantity entered is a valid quantity
+            try
+            {
+                QuantityTemp = Convert.ToInt32(Quantity);
+
+                if (QuantityTemp > 1000)
+                {
+                    Error = Error + "The quantity of Order cannot exceed 100 : ";
+                }
+
+                if (QuantityTemp <= 0)
+                {
+                    Error = Error + "The full order quantity cannot be less than or qual to zero : ";
+                }
+
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The Order is not valid : ";
+            }
+
+            try
+            {
+                InventoryIdTemp = Convert.ToInt32(InventoryId);
+
+                if (InventoryIdTemp <= 0)
+                {
+                    Error = Error + "please enter an inventory Id : ";
+                }
+
+
+
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The Order is not valid : ";
+            }
+
+
+
+
+            return Error;
+        }
+
         public bool Find(int OrderlineId)
         {
             //create an instance of the data connection
@@ -90,63 +149,6 @@ namespace ClassLibrary
 
         }
 
-        public string Valid(string orderId, string quantiy,string inventoryId)
-        {
-            // create a variable to store any error message
-            String Error = "";
-            
-
-            Int32 QuantityTemp;
-
-            Int32 InventoryIdTemp;
-            //if price entered is a valid price
-            
-
-            //if Quantity entered is a valid quantity
-            try
-            {
-                QuantityTemp = Convert.ToInt32(Quantity);
-
-                if (QuantityTemp > 1000)
-                {
-                    Error = Error + "The quantity of Order cannot exceed 100 : ";
-                }
-
-                if (QuantityTemp <= 0)
-                {
-                    Error = Error + "The full order quantity cannot be less than or qual to zero : ";
-                }
-
-            }
-            catch
-            {
-                //record the error
-                Error = Error + "The Order is not valid : ";
-            }
-
-            try
-            {
-                InventoryIdTemp = Convert.ToInt32(InventoryId);
-
-                if (InventoryIdTemp <= 0 )
-                {
-                    Error = Error + "please enter an inventory Id : ";
-                }
-
-               
-
-            }
-            catch
-            {
-                //record the error
-                Error = Error + "The Order is not valid : ";
-            }
-
-
-
-
-            return Error;
-        }
         public string AllDetails
         {
             get

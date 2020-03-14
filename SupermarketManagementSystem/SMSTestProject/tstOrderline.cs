@@ -10,8 +10,10 @@ namespace SMSTestProject
         
         // some good data to pass the method 
         int OrderlineId = 1;
-        string Quantity = "2";
+        string OrderId = "2";
         string InventoryId = "1";
+        string Quantity = "2";
+     
 
         [TestMethod]
         public void InstanceOK()
@@ -21,6 +23,19 @@ namespace SMSTestProject
             // test to see that it exist
             Assert.IsNotNull(AnOrderline);
         }
+
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            //create an instance of class Orderline
+            clsOrderline AnOrderline = new clsOrderline();
+            // test to see that it exist
+            string Error = "";
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
+            Assert.AreEqual(Error, "");
+
+        }
+
         [TestMethod]
         public void QuantityPropertyOK()
         {
@@ -45,7 +60,7 @@ namespace SMSTestProject
             string Quantity = "0";
 
             // invoke the method
-            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             // test to see that result is ok , e, g - There shold be an error message
             Assert.AreNotEqual(Error, "");
 
@@ -61,7 +76,7 @@ namespace SMSTestProject
             string Quantity = "0";
 
             // invoke the method
-            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             // test to see that result is ok , e, g - There should be an error message
             Assert.AreNotEqual(Error, "");
 
@@ -77,7 +92,7 @@ namespace SMSTestProject
             string Quantity = "2";
 
             // invoke the method
-            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             // test to see that result is ok , e, g - There should be NO error message
             Assert.AreEqual(Error, "");
 
@@ -93,7 +108,7 @@ namespace SMSTestProject
             string Quantity = 100.ToString();
 
             // invoke the method
-            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             // test to see that result is ok , e, g - There should be NO error message
             Assert.AreEqual(Error, "");
 
@@ -109,7 +124,7 @@ namespace SMSTestProject
             string Quantity = "101";
 
             // invoke the method
-            Error = AnOrderline.Valid(Quantity,  InventoryId);
+           Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             // test to see that result is ok , e, g - There should be an error message
             Assert.AreNotEqual(Error, "");
 
@@ -125,7 +140,7 @@ namespace SMSTestProject
             string Quantity = "50";
 
             // invoke the method
-            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             // test to see that result is ok , e, g - There should be no error message
             Assert.AreEqual(Error, "");
 
@@ -141,7 +156,7 @@ namespace SMSTestProject
             string Quantity = 10000.ToString();
 
             // invoke the method
-            Error = AnOrderline.Valid(Quantity,  InventoryId);
+           Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             // test to see that result is ok , e, g - There should be an error message
             Assert.AreNotEqual(Error, "");
 
@@ -157,7 +172,7 @@ namespace SMSTestProject
             clsOrderline AnOrderline = new clsOrderline();
             string Error = "";
             string InventoryId = "";
-            Error = AnOrderline.Valid(Quantity,  InventoryId);
+           Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -167,7 +182,7 @@ namespace SMSTestProject
             clsOrderline AnOrderline = new clsOrderline();
             string Error = "";
             string InventoryId = "";
-            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -177,7 +192,7 @@ namespace SMSTestProject
             clsOrderline AnOrderline = new clsOrderline();
             string Error = "";
             string InventoryId = "a";
-            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             Assert.AreEqual(Error, "");
 
         }
@@ -185,10 +200,10 @@ namespace SMSTestProject
         [TestMethod]
         public void InventoryIdMinPlusOne()
         {
-            clsOrderline AnOrder = new clsOrderline();
+            clsOrderline AnOrderline = new clsOrderline();
             string Error = "";
             string InventoryId = "aa";
-            Error = AnOrder.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             Assert.AreEqual(Error, "");
 
         }
@@ -196,11 +211,11 @@ namespace SMSTestProject
         [TestMethod]
         public void InventoryIdMaxMinusOne()
         {
-            clsOrderline AnOrder = new clsOrderline();
+            clsOrderline AnOrderline = new clsOrderline();
             string Error = "";
             string InventoryId = "";
             InventoryId = InventoryId.PadRight(9999, 'a');
-            Error = AnOrder.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             Assert.AreEqual(Error, "");
         }
 
@@ -211,7 +226,7 @@ namespace SMSTestProject
             string Error = "";
             string InventoryId = "";
             InventoryId = InventoryId.PadRight(10000, 'a');
-            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             Assert.AreEqual(Error, "");
         }
 
@@ -222,7 +237,7 @@ namespace SMSTestProject
             string Error = "";
             string InventoryId = "";
             InventoryId = InventoryId.PadRight(10001, 'a');
-            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -233,18 +248,18 @@ namespace SMSTestProject
             string Error = "";
             string InventoryId = "";
             InventoryId = InventoryId.PadRight(5000, 'a');
-            Error = AnOrderline.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
         public void PaymentIdExtremeMax()
         {
-            clsOrderline AnOrder = new clsOrderline();
+            clsOrderline AnOrderline = new clsOrderline();
             string Error = "";
             string InventoryId = "";
             InventoryId = InventoryId.PadRight(50000, 'a');
-            Error = AnOrder.Valid(Quantity, InventoryId);
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             Assert.AreNotEqual(Error, "");
         }
     }

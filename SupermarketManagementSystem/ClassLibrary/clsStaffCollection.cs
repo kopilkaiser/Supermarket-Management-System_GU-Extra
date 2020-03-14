@@ -18,7 +18,7 @@ namespace ClassLibrary
             //object for data connection
             clsDataConnection DB = new clsDataConnection();
             //execute the store procedure
-            DB.Execute("sproc_tblAccount_SelectAll");
+            DB.Execute("sproc_tblStaff_SelectAll");
             //populate the array list with the data table
             PopulateArray(DB);
         }
@@ -66,7 +66,7 @@ namespace ClassLibrary
                     //get the street from the query results
                     NewStaff.Name = Convert.ToString(dBConnection.DataTable.Rows[Index]["Name"]);
                     //get the post code from the query results
-                    NewStaff.Phonenum = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["Phonenum"]);
+                    NewStaff.Phonenum = Convert.ToString(dBConnection.DataTable.Rows[Index]["Phonenum"]);
                     //get the address no from the query results
                     NewStaff.DateJoined = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DateJoined"]);
                     NewStaff.StaffId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["StaffId"]);
@@ -164,7 +164,7 @@ namespace ClassLibrary
                 AnStaff.StaffId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["StaffId"]);
                 AnStaff.AccountNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["AccountNo"]);
                 AnStaff.Name = Convert.ToString(dBConnection.DataTable.Rows[Index]["Name"]);
-                AnStaff.Phonenum = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["Phonenum"]);
+                AnStaff.Phonenum = Convert.ToString(dBConnection.DataTable.Rows[Index]["Phonenum"]);
                 AnStaff.DateJoined = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DateJoined"]);
                 AnStaff.Active = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["Active"]);
 
