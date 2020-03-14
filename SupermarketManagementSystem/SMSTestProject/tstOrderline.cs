@@ -223,9 +223,9 @@ namespace SMSTestProject
         public void InventoryIdMaxBoundary()
         {
             clsOrderline AnOrderline = new clsOrderline();
-            string Error = "";
+            string Error = "2";
             string InventoryId = "";
-            InventoryId = InventoryId.PadRight(10000, 'a');
+           
             Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             Assert.AreEqual(Error, "");
         }

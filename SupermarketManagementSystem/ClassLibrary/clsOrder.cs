@@ -9,6 +9,7 @@ namespace ClassLibrary
         private int mOrderId;
         private int mAccountNo;
         private int mPaymentId;
+
         private DateTime mPurchasedDate;
 
         public int OrderId
@@ -113,13 +114,15 @@ namespace ClassLibrary
         public string Valid(string accountNo, string paymentId, string purchasedDate)
         {
             // create a variable to store any error message
-            String Error = "";
+            string Error = "";
 
-            Int32 OrderIdTemp;
             Int32 AccountNoTemp;
             Int32 PaymentIdTemp;
             DateTime DateTemp;
-            //if price entered is a valid price
+
+            int OrderIdTemp;
+            
+            //if accountNo entered is valid 
             try
             {
                 AccountNoTemp = Convert.ToInt32(accountNo);
@@ -137,13 +140,13 @@ namespace ClassLibrary
             catch
             {
                 //record the error
-                Error = Error + "The Account is not valid: ";
+                Error = Error + "The AccountNo is not valid: ";
             }
 
-       
+             //if paymentId entered is valid 
             try
             {
-                PaymentIdTemp = Convert.ToInt32(PaymentId);
+                PaymentIdTemp = Convert.ToInt32(paymentId);
 
                 if (PaymentIdTemp > 10000)
                 {
@@ -159,10 +162,10 @@ namespace ClassLibrary
             catch
             {
                 //record the error
-                Error = Error + "In valid payment Id : ";
+                Error = Error + "Invalid payment Id : ";
             }
-            
 
+            //if purchasedDate entered is valid 
             try
             {
                 // convert the string value to DateTime
@@ -185,7 +188,7 @@ namespace ClassLibrary
             catch
             {
                 //record the error
-                Error = Error + "Invalid date : ";
+                Error = Error + "The date entered was not a valid date : ";
             }
 
             return Error;

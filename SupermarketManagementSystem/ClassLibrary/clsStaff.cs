@@ -129,7 +129,7 @@ namespace ClassLibrary
             //add the parameter for the AccountNo to search for
             DB.AddParameter("@StaffId", StaffId);
             //execute the stored procedure
-            DB.Execute("sproc_tblStaff_FilterByName");
+            DB.Execute("sproc_tblStaff_FilterByStaffId");
             //if one record is found (there should be either one or zero!)
             if (DB.Count == 1)
             {

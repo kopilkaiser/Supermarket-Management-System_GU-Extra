@@ -44,10 +44,10 @@ namespace SMSTestProject
             // var to store the primary key
             Int32 PrimaryKey = 0;
            
-            TestItem.OrderId = 01;
-            TestItem.AccountNo = 02;
+            TestItem.OrderId = 1;
+            TestItem.AccountNo = 2;
             TestItem.PurchasedDate = DateTime.Now.Date;
-            TestItem.PaymentId = 05;
+            TestItem.PaymentId = 5;
 
             // set thisAdress to the test data
             AllOrders.ThisOrder = TestItem;

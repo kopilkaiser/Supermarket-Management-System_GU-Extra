@@ -37,37 +37,6 @@ namespace SMSTestProject
         }
 
         [TestMethod]
-        public void IsAdminPropertyOK()
-        {
-            //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
-            //create some test data to assign to the property
-            Boolean TestData = false;
-            //assign the data to the property
-            AnStaff.IsAdmin = TestData;
-            //test to see that the two values are the same
-            Assert.AreEqual(AnStaff.IsAdmin, TestData);
-        }
-
-        [TestMethod]
-        public void AccountEmailPropertyOK()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string AccountEmail = "cc@email.com";
-            AnStaff.AccountEmail = AccountEmail;
-            Assert.AreEqual(AccountEmail, AnStaff.AccountEmail);
-        }
-
-        [TestMethod]
-        public void AccountPasswordPropertyOK()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string AccountPassword = "1234567";
-            AnStaff.AccountPassword = AccountPassword;
-            Assert.AreEqual(AccountPassword, AnStaff.AccountPassword);
-        }
-
-        [TestMethod]
         public void ValidMethodOK()
         {
             clsStaff AnStaff = new clsStaff();
@@ -84,9 +53,9 @@ namespace SMSTestProject
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            int AccountNo = 1;
+            int StaffId = 1;
             //invoke the method
-            Found = AnStaff.Find(AccountNo);
+            Found = AnStaff.Find(StaffId);
             //test to see that the result is correct
             Assert.IsFalse(Found);
         }

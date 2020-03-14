@@ -24,10 +24,12 @@ namespace SMSTestProject
             //create some test data to assign to the property
             clsStaff TestStaff = new clsStaff();
             //set the properties of the test object
+            TestStaff.StaffId = 1;
             TestStaff.AccountNo = 1;
+            TestStaff.Name = "Syed";
+            TestStaff.Phonenum = "123456789123456";
+            TestStaff.DateJoined = DateTime.Now.Date;
             TestStaff.Active = true;
-            TestStaff.AccountEmail = "cc@email.com";
-            TestStaff.AccountPassword = "1234567";
             //TestStaff.IsAdmin = false;
             //assign the data to the property
             AllStaffs.ThisStaff = TestStaff;
@@ -72,11 +74,12 @@ namespace SMSTestProject
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set it's properties
+            TestItem.StaffId = 1;
             TestItem.AccountNo = 1;
+            TestItem.Name = "Syed";
+            TestItem.Phonenum = "123456789123456";
+            TestItem.DateJoined = DateTime.Now.Date;
             TestItem.Active = true;
-            TestItem.AccountEmail = "cc@email.com";
-            TestItem.AccountPassword = "1234567";
-            TestItem.IsAdmin = false;
             //set ThisAddress to the test data
             AllStaffs.ThisStaff = TestItem;
             //add the record
@@ -103,10 +106,12 @@ namespace SMSTestProject
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set it's properties
+            TestItem.StaffId = 1;
+            TestItem.AccountNo = 1;
+            TestItem.Name = "Syed";
+            TestItem.Phonenum = "123456789123456";
+            TestItem.DateJoined = DateTime.Now.Date;
             TestItem.Active = true;
-            TestItem.AccountEmail = "cc@email.com";
-            TestItem.AccountPassword = "1234567";
-            TestItem.IsAdmin = false;
             //set ThisAddress to the test data
             AllStaffs.ThisStaff = TestItem;
             //add the record
@@ -114,10 +119,12 @@ namespace SMSTestProject
             //set the primary key of the test data
             TestItem.AccountNo = PrimaryKey;
             //modify the test data
+            TestItem.StaffId = 1;
+            TestItem.AccountNo = 1;
+            TestItem.Name = "Syed";
+            TestItem.Phonenum = "123456789123456";
+            TestItem.DateJoined = DateTime.Now.Date;
             TestItem.Active = true;
-            TestItem.AccountEmail = "jj@email.com";
-            TestItem.AccountPassword = "3456789";
-            TestItem.IsAdmin = false;
             //set the record based on the new test data
             AllStaffs.ThisStaff = TestItem;
             //update the record

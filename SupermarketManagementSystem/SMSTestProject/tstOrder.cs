@@ -9,9 +9,9 @@ namespace SMSTestProject
     {
         // some good data to pass the method 
         int OrderId = 1;
-        string AccountNo = "2";
-        string PaymentId = "3";
-        string PurchasedDate = DateTime.Now.ToString();
+        string AccountNo = "55";
+        string PaymentId = "55";
+        string PurchasedDate = DateTime.Now.Date.ToString();
         
 
         [TestMethod]
@@ -57,9 +57,9 @@ namespace SMSTestProject
             // create an string variable to store the result of validation
             String Error = "";
             // create some test data to the test method
-            string Quantity = 1.ToString();
+            string AccountNo = 1.ToString();
             // create some test data to asign the property
-            string Price = 10.99m.ToString();
+            string PaymentId = 10.ToString();
             string PurchasedDate = DateTime.Now.Date.ToString();
             // invoke the method
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
@@ -168,7 +168,7 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "a";
+            string AccountNo = "1";
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
 
@@ -179,7 +179,7 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "aa";
+            string AccountNo = "2";
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
 
@@ -190,8 +190,8 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "";
-            AccountNo = AccountNo.PadRight(9999, 'a');
+            string AccountNo = "9999";
+           
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
@@ -201,8 +201,7 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "";
-            AccountNo = AccountNo.PadRight(10000, 'a');
+            string AccountNo = "10000";
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
@@ -223,8 +222,8 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "";
-            AccountNo = AccountNo.PadRight(5000, 'a');
+            string AccountNo = "5000";
+      
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
@@ -268,7 +267,7 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string PaymentId = "a";
+            string PaymentId = "1";
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
 
@@ -279,7 +278,7 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string PaymentId = "aa";
+            string PaymentId = "2";
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
 
@@ -290,8 +289,8 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "";
-            PaymentId = PaymentId.PadRight(9999, 'a');
+            string AccountNo = "9999";
+            
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
@@ -301,8 +300,8 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "";
-            PaymentId = PaymentId.PadRight(10000, 'a');
+            string AccountNo = "10000";
+            
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
@@ -323,8 +322,8 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string PaymentId = "";
-            PaymentId = PaymentId.PadRight(5000, 'a');
+            string PaymentId = "5000";
+           
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
