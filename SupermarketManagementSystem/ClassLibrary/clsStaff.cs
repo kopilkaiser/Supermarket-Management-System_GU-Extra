@@ -95,28 +95,78 @@ namespace ClassLibrary
         }
 
       
-        public string Valid(string accountEmail, string accountPassword)
+        public string Valid(string accountno, string name, string phonenum, string datejoined)
         {
             string Error = "";
 
-            if (accountEmail.Length == 0)
+            DateTime DateTemp;
+            Int32 AccountNoTemp;
+
+            //if accountNo entered is valid 
+            try
             {
-                Error = Error + "The Email cannot be blank : ";
+                AccountNoTemp = Convert.ToInt32(accountno);
+
+                if (AccountNoTemp > 10000)
+                {
+                    Error = Error + "Account No can not be exceed the limit of 10 : ";
+                }
+
+                if (AccountNoTemp <= 0)
+                {
+                    Error = Error + "Please enter an Account No: ";
+                }
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The AccountNo is not valid: ";
             }
 
-            if (accountEmail.Length > 80)
+            if (name.Length == 0)
             {
-                Error = Error + "The Email cannot exceed 100 characters : ";
+                Error = Error + "The name cannot be blank : ";
             }
 
-            if (accountPassword.Length == 0)
+            if (name.Length > 80)
             {
-                Error = Error + "The Password cannot be blank : ";
+                Error = Error + "The name cannot exceed 100 characters : ";
             }
 
-            if (accountPassword.Length > 80)
+            if (phonenum.Length < 10)
             {
-                Error = Error + "The Password cannot exceed 100 characters : ";
+                Error = Error + "The Phonenum cannot be less than 10 : ";
+            }
+
+            if (phonenum.Length > 15)
+            {
+                Error = Error + "The Phonenum cannot exceed 15 numbers : ";
+            }
+
+            //if date entered is a valid date
+            try
+            {
+                // convert the string value to DateTime
+                //& then copy the value of datejoined to DateTemp variable
+                DateTemp = Convert.ToDateTime(datejoined);
+                //if date value is less than today's date
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "Date cannot be in the past : ";
+                }
+                //if date value is more than today's date
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "Date cannot be in the future : ";
+                }
+            }
+            //if date entered is an invalid date
+            catch
+            {
+                //record the error
+                Error = Error + "The date entered is not a valid date : ";
             }
 
             return Error;

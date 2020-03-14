@@ -134,5 +134,16 @@ namespace SMSTestProject
             //test to see ThisInventory matches with test data
             Assert.AreEqual(AllStaffs.ThisStaff, TestItem);
         }
+
+        [TestMethod]
+        public void ReportByNameNoneFound()
+        {
+            //create an instance of the filtered data
+            clsStaffCollection FilteredStaffs = new clsStaffCollection();
+            //apply a category that doesn't exist
+            FilteredStaffs.ReportByName("Syed");
+            //test to see that there are no records
+            Assert.AreEqual(0, FilteredStaffs.Count);
+        }
     }
 }

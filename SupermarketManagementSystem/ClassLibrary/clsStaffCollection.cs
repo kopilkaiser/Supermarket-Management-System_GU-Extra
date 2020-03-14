@@ -8,7 +8,7 @@ namespace ClassLibrary
 
         //private data member for the list
         List<clsStaff> mStaffList = new List<clsStaff>();
-        //private data member thisInventory
+        //private data member thisStaff
         clsStaff mThisStaff = new clsStaff();
         clsDataConnection dBConnection = new clsDataConnection();
         //dBConnection = new clsDataConnection();
@@ -48,6 +48,7 @@ namespace ClassLibrary
             set
             {
                 //we shall worry about this later
+
             }
         }
 
@@ -98,7 +99,7 @@ namespace ClassLibrary
             dBConnection.AddParameter("@DateJoined", mThisStaff.DateJoined);
             dBConnection.AddParameter("@Active", mThisStaff.Active);
             //execute the query returning the primary key value
-            return dBConnection.Execute("sproc_tblStaff_Add");
+            return dBConnection.Execute("sproc_tblStaff_Insert");
         }
 
         public void Update()
