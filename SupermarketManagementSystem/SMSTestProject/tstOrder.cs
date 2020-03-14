@@ -36,7 +36,7 @@ namespace SMSTestProject
         public void AccountNoPropertyOK()
         {
             clsOrder AnOrder = new clsOrder();
-            string AccountNo = "1234567";
+            int AccountNo = 12345;
             AnOrder.AccountNo = AccountNo;
             Assert.AreEqual(AccountNo, AnOrder.AccountNo);
         }
@@ -44,7 +44,7 @@ namespace SMSTestProject
         public void OrderIdPropertyOK()
         {
             clsOrder AnOrder = new clsOrder();
-            string OrderId = "89063";
+            int OrderId = 89063;
             AnOrder.OrderId = OrderId;
             Assert.AreEqual(OrderId, AnOrder.OrderId);
         }
