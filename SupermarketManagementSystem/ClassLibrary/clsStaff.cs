@@ -7,7 +7,7 @@ namespace ClassLibrary
         private int mStaffId;
         private int mAccountNo;
         private string mName;
-        private int mPhonenum;
+        private string mPhonenum;
         private DateTime mDateJoined;
         private bool mActive;
 
@@ -55,7 +55,7 @@ namespace ClassLibrary
         }
 
 
-        public int Phonenum
+        public string Phonenum
         {
             get
             {
@@ -137,7 +137,7 @@ namespace ClassLibrary
                 mStaffId = Convert.ToInt32(DB.DataTable.Rows[0]["StaffId"]);
                 mAccountNo = Convert.ToInt32(DB.DataTable.Rows[0]["AccountNo"]);
                 mName = Convert.ToString(DB.DataTable.Rows[0]["Name"]);
-                mPhonenum = Convert.ToInt32(DB.DataTable.Rows[0]["Phonenum"]);
+                mPhonenum = Convert.ToString(DB.DataTable.Rows[0]["Phonenum"]);
                 mDateJoined = Convert.ToDateTime(DB.DataTable.Rows[0]["DateJoined"]);
                 mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]); ;
 
