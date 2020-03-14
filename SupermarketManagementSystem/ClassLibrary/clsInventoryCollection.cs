@@ -155,7 +155,7 @@ namespace ClassLibrary
             dBConnection = new clsDataConnection();
             dBConnection.AddParameter("@Category", Category);
             //execute the stored procedure
-            dBConnection.Execute("sproc_tblInventory_FilterByCategory");
+            dBConnection.Execute("sproc_tblInventory_FIlterByCategory");
             //populate the array list with the data table
             PopulateArray(dBConnection);
         }

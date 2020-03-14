@@ -49,7 +49,7 @@ namespace SMSTestProject
             TestItem.Active = true;
             TestItem.AccountEmail = "cc@email.com";
             TestItem.AccountPassword = "1234567";
-            TestItem.IsAdmin = false;
+            //TestItem.IsAdmin = false;
             //set ThisAddress to the test data
             AllStaffs.ThisStaff = TestItem;
             //add the record
