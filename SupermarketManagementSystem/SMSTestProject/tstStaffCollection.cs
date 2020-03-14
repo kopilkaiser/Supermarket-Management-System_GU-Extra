@@ -45,17 +45,18 @@ namespace SMSTestProject
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set it's properties
+            TestItem.StaffId = 1;
             TestItem.AccountNo = 1;
+            TestItem.Name = "Syed";
+            TestItem.Phonenum = "123456789123456";
+            TestItem.DateJoined = DateTime.Now.Date;
             TestItem.Active = true;
-            TestItem.AccountEmail = "cc@email.com";
-            TestItem.AccountPassword = "1234567";
-            TestItem.IsAdmin = false;
             //set ThisAddress to the test data
             AllStaffs.ThisStaff = TestItem;
             //add the record
             PrimaryKey = AllStaffs.Add();
             //set the primary key of the test data
-            TestItem.AccountNo = PrimaryKey;
+            TestItem.StaffId = PrimaryKey;
             //find the record
             AllStaffs.ThisStaff.Find(PrimaryKey);
             //test to see that the two values are the same
