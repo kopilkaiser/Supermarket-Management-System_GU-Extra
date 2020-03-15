@@ -128,7 +128,7 @@ namespace ClassLibrary
                 Error = Error + "The name cannot be blank : ";
             }
 
-            if (name.Length > 80)
+            if (name.Length > 50)
             {
                 Error = Error + "The name cannot exceed 100 characters : ";
             }
@@ -206,7 +206,7 @@ namespace ClassLibrary
         {
             get
             {
-                return ("StaffId:" + StaffId + "_" + "AccountNo:" + AccountNo + "_" + "Name:" + Name + "_" + "Phonenum:" + Phonenum + "_" + "DateJoined:" + DateJoined) ;
+                return ("StaffId:" + StaffId + "_" + "AccountNo:" + AccountNo + "_" + "Name:" + Name + "_" + "Phonenum:" + Phonenum + "_" + "DateJoined:" + DateJoined.ToString("MM.dd.yyyy")) ;
             }
         }
     }

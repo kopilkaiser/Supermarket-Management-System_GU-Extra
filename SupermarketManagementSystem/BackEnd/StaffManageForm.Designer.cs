@@ -42,42 +42,48 @@
             // lstStaff
             // 
             this.lstStaff.FormattingEnabled = true;
-            this.lstStaff.Location = new System.Drawing.Point(92, 12);
+            this.lstStaff.ItemHeight = 16;
+            this.lstStaff.Location = new System.Drawing.Point(123, 15);
+            this.lstStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstStaff.Name = "lstStaff";
-            this.lstStaff.Size = new System.Drawing.Size(417, 264);
+            this.lstStaff.Size = new System.Drawing.Size(895, 324);
             this.lstStaff.TabIndex = 6;
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(89, 288);
+            this.lblError.Location = new System.Drawing.Point(119, 354);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(29, 13);
+            this.lblError.Size = new System.Drawing.Size(40, 17);
             this.lblError.TabIndex = 7;
             this.lblError.Text = "Error";
             // 
             // lblFilter
             // 
             this.lblFilter.AutoSize = true;
-            this.lblFilter.Location = new System.Drawing.Point(182, 326);
+            this.lblFilter.Location = new System.Drawing.Point(243, 401);
+            this.lblFilter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFilter.Name = "lblFilter";
-            this.lblFilter.Size = new System.Drawing.Size(87, 13);
+            this.lblFilter.Size = new System.Drawing.Size(118, 17);
             this.lblFilter.TabIndex = 8;
             this.lblFilter.Text = "Filter list by name";
             // 
             // txtCategory
             // 
-            this.txtCategory.Location = new System.Drawing.Point(185, 348);
+            this.txtCategory.Location = new System.Drawing.Point(247, 428);
+            this.txtCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCategory.Multiline = true;
             this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(219, 35);
+            this.txtCategory.Size = new System.Drawing.Size(291, 42);
             this.txtCategory.TabIndex = 0;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(591, 72);
+            this.btnAdd.Location = new System.Drawing.Point(1065, 89);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 40);
+            this.btnAdd.Size = new System.Drawing.Size(100, 49);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -85,9 +91,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(591, 137);
+            this.btnUpdate.Location = new System.Drawing.Point(1065, 169);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 40);
+            this.btnUpdate.Size = new System.Drawing.Size(100, 49);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -95,9 +102,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(591, 201);
+            this.btnDelete.Location = new System.Drawing.Point(1065, 247);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 40);
+            this.btnDelete.Size = new System.Drawing.Size(100, 49);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -105,9 +113,10 @@
             // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(185, 416);
+            this.btnApply.Location = new System.Drawing.Point(247, 512);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(98, 41);
+            this.btnApply.Size = new System.Drawing.Size(131, 50);
             this.btnApply.TabIndex = 1;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
@@ -115,9 +124,10 @@
             // 
             // btnDisplayAll
             // 
-            this.btnDisplayAll.Location = new System.Drawing.Point(306, 416);
+            this.btnDisplayAll.Location = new System.Drawing.Point(408, 512);
+            this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplayAll.Name = "btnDisplayAll";
-            this.btnDisplayAll.Size = new System.Drawing.Size(98, 41);
+            this.btnDisplayAll.Size = new System.Drawing.Size(131, 50);
             this.btnDisplayAll.TabIndex = 2;
             this.btnDisplayAll.Text = "DisplayAll";
             this.btnDisplayAll.UseVisualStyleBackColor = true;
@@ -125,9 +135,9 @@
             // 
             // StaffManageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 515);
+            this.ClientSize = new System.Drawing.Size(1312, 634);
             this.Controls.Add(this.btnDisplayAll);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.btnDelete);
@@ -137,6 +147,7 @@
             this.Controls.Add(this.lblFilter);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lstStaff);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StaffManageForm";
             this.Text = "StaffManageForm";
             this.Load += new System.EventHandler(this.StaffManageForm_Load);

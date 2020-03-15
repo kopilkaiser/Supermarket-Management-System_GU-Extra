@@ -22,23 +22,37 @@
         .auto-style4 {
             font-size: x-large;
         }
+        .auto-style5 {
+            left: 4%;
+            top: 16%;
+            width: 58%;
+            height: 83%;
+        }
+        .auto-style6 {
+            position: fixed;
+            top: 144px;
+            left: 1281px;
+            height: 587px;
+            width: 295px;
+        }
     </style>
 </head>
 <body>
-    <header style="text-align:center; position:fixed; height: 54px; width: 1416px; top: 14px; left: 125px; bottom: 596px;" class="auto-style1">
+    <header style="text-align:center; position:relative; height: 54px; width: 1416px; top: 14px; left: 125px; bottom: 596px;" class="auto-style1">
         <span class="auto-style3">&nbsp;&nbsp;
         Supermarket Management System 
         <br />
         </span><span class="auto-style2">GU-Extra</span></header>
-    <article>
+    <article class="auto-style5">
         
     <form id="form1" runat="server">
         <br />
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-    <div class="h">
+    <div class="auto-style6">
         <br />
+        <asp:Button ID="btnBrowseProducts" runat="server" OnClick="btnBrowseProducts_Click" Text="Browse Products" />
         <br />
         <asp:HyperLink ID="hypSignIn" runat="server" NavigateUrl="~/SignIn.aspx" CssClass="auto-style4">Sign In</asp:HyperLink>
         <strong>
@@ -53,8 +67,6 @@
         <asp:HyperLink ID="hypReSet" runat="server" NavigateUrl="~/ReSet.aspx" CssClass="auto-style4">ReSet Password</asp:HyperLink>
         <strong>
         <br class="auto-style4" />
-        <span class="auto-style4">&nbsp;
-        </span>
         </strong>
         <asp:HyperLink ID="hypChangePassword" runat="server" NavigateUrl="~/ChangePassword.aspx" CssClass="auto-style4">Change Password</asp:HyperLink>
         <strong>

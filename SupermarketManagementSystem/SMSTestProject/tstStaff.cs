@@ -373,7 +373,7 @@ namespace SMSTestProject
         {
             clsStaff AStaff = new clsStaff();
             string Error = "";
-            string Phonenum = "1234567";
+            string Phonenum = "1234567896";
             Error = AStaff.Valid(AccountNo, Name, Phonenum, DateJoined);
             Assert.AreEqual(Error, "");
         }

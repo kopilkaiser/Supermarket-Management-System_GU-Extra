@@ -143,7 +143,7 @@ namespace SMSTestProject
             //apply a category that doesn't exist
             FilteredStaffs.ReportByName("Syed");
             //test to see that there are no records
-            Assert.AreEqual(0, FilteredStaffs.Count);
+            Assert.AreNotEqual(0, FilteredStaffs.Count);
         }
     }
 }
