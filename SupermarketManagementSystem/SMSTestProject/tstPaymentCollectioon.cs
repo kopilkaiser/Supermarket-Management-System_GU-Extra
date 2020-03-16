@@ -20,7 +20,7 @@ namespace SMSTestProject
         [TestMethod]
         public void ThisPaymentsPropertyOK()
         {
-            //create the instance of the class we want ti create 
+            //create the instance of the class we want to create 
             clsPaymentCollection AllPayments = new clsPaymentCollection();
             //create some test data to assign to teh property
             clsPayment TestPayment = new clsPayment();
