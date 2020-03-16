@@ -55,8 +55,10 @@ namespace BackEnd
             txtPrice.Text = AllInventories.ThisInventory.Price.ToString();
             txtQuantity.Text = AllInventories.ThisInventory.Quantity.ToString();
             txtDateAdded.Text = AllInventories.ThisInventory.DateAdded.ToString();
-            txtCategory.Text = AllInventories.ThisInventory.Category;
+            //txtCategory.Text = AllInventories.ThisInventory.Category;
             chkActive.Checked = AllInventories.ThisInventory.Active;
+            comboBoxCategory.SelectedText = AllInventories.ThisInventory.Category;
+           
 
         }
 
@@ -65,17 +67,17 @@ namespace BackEnd
             //create an instance of the Inventory Collenction
             clsInventoryCollection AllInventories = new clsInventoryCollection();
             //validate the data on the web form
-            string Error = AllInventories.ThisInventory.Valid(txtName.Text, txtPrice.Text, txtQuantity.Text, txtCategory.Text, txtDateAdded.Text);
+            string Error = AllInventories.ThisInventory.Valid(txtName.Text, txtPrice.Text, txtQuantity.Text, Convert.ToString(comboBoxCategory.SelectedItem), txtDateAdded.Text);
             //if the data is OK then add it to the object
             if (Error == "")
             {
                 //get the data entered by the user
                 AllInventories.ThisInventory.Name = txtName.Text;
                 AllInventories.ThisInventory.Price = Convert.ToDecimal(txtPrice.Text);
-                AllInventories.ThisInventory.Quantity = Convert.ToInt32(txtQuantity.Text);
-                AllInventories.ThisInventory.Category = txtCategory.Text;
+                AllInventories.ThisInventory.Quantity = Convert.ToInt32(txtQuantity.Text);               
                 AllInventories.ThisInventory.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
                 AllInventories.ThisInventory.Active = chkActive.Checked;
+                AllInventories.ThisInventory.Category = Convert.ToString(comboBoxCategory.SelectedItem);
                 //add the record
                 AllInventories.Add();
                 //all done so redirect back to the main page

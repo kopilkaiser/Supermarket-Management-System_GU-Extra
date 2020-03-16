@@ -42,7 +42,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(65, 513);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(102, 38);
             this.btnAdd.TabIndex = 1;
@@ -65,15 +65,15 @@
             this.lstInventories.FormattingEnabled = true;
             this.lstInventories.ItemHeight = 16;
             this.lstInventories.Location = new System.Drawing.Point(65, 41);
-            this.lstInventories.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstInventories.Margin = new System.Windows.Forms.Padding(4);
             this.lstInventories.Name = "lstInventories";
-            this.lstInventories.Size = new System.Drawing.Size(675, 292);
+            this.lstInventories.Size = new System.Drawing.Size(936, 292);
             this.lstInventories.TabIndex = 3;
             // 
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(175, 513);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 38);
             this.btnUpdate.TabIndex = 4;
@@ -142,7 +142,7 @@
             this.Controls.Add(this.lstInventories);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnAdd);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InventoryManageForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.InventoryManagement_Load);

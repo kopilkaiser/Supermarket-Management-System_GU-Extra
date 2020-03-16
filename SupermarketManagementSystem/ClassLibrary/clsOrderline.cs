@@ -75,9 +75,9 @@ namespace ClassLibrary
             //if Quantity entered is a valid quantity
             try
             {
-                QuantityTemp = Convert.ToInt32(Quantity);
+                QuantityTemp = Convert.ToInt32(quantity);
 
-                if (QuantityTemp > 1000)
+                if (QuantityTemp > 100)
                 {
                     Error = Error + "The quantity of Order cannot exceed 100 : ";
                 }
@@ -96,12 +96,19 @@ namespace ClassLibrary
 
             try
             {
-                InventoryIdTemp = Convert.ToInt32(InventoryId);
+                InventoryIdTemp = Convert.ToInt32(inventoryId);
+
+                if (InventoryIdTemp > 50000)
+                {
+                    Error = Error + "Invalid inventory Id : ";
+                }
 
                 if (InventoryIdTemp <= 0)
                 {
                     Error = Error + "please enter an inventory Id : ";
                 }
+
+
 
 
 

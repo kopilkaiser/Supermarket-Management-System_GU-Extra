@@ -53,11 +53,11 @@
     <Compile Include="AddInventoryForm.Designer.cs">
       <DependentUpon>AddInventoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPayment.cs">
+    <Compile Include="AddOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPayment.Designer.cs">
-      <DependentUpon>AddPayment.cs</DependentUpon>
+    <Compile Include="AddOrder.Designer.cs">
+      <DependentUpon>AddOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="AddStaffForm.cs">
       <SubType>Form</SubType>
@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="ConfirmDeleteForm.Designer.cs">
       <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageOrder.Designer.cs">
+      <DependentUpon>ManageOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="mdiBackEnd.cs">
       <SubType>Form</SubType>
@@ -112,8 +118,8 @@
     <EmbeddedResource Include="AddInventoryForm.resx">
       <DependentUpon>AddInventoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPayment.resx">
-      <DependentUpon>AddPayment.cs</DependentUpon>
+    <EmbeddedResource Include="AddOrder.resx">
+      <DependentUpon>AddOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmDeleteForm.resx">
       <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageOrder.resx">
+      <DependentUpon>ManageOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiBackEnd.resx">
       <DependentUpon>mdiBackEnd.cs</DependentUpon>

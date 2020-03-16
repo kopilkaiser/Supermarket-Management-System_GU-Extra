@@ -37,11 +37,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDateAdded = new System.Windows.Forms.TextBox();
-            this.txtCategory = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
+            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // chkActive
@@ -57,7 +57,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(217, 428);
+            this.btnCancel.Location = new System.Drawing.Point(242, 363);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 28);
@@ -68,7 +68,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(91, 428);
+            this.btnOK.Location = new System.Drawing.Point(115, 363);
             this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(100, 28);
@@ -135,14 +135,6 @@
             this.txtDateAdded.Size = new System.Drawing.Size(132, 22);
             this.txtDateAdded.TabIndex = 11;
             // 
-            // txtCategory
-            // 
-            this.txtCategory.Location = new System.Drawing.Point(184, 213);
-            this.txtCategory.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(132, 22);
-            this.txtCategory.TabIndex = 7;
-            // 
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(184, 169);
@@ -176,11 +168,29 @@
             this.lblError.Size = new System.Drawing.Size(0, 17);
             this.lblError.TabIndex = 6;
             // 
+            // comboBoxCategory
+            // 
+            this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Items.AddRange(new object[] {
+            "Bakery",
+            "Electronic",
+            "Chocolate",
+            "Vegetable",
+            "Fruit",
+            "Meat ",
+            "Drink",
+            "Snack"});
+            this.comboBoxCategory.Location = new System.Drawing.Point(184, 214);
+            this.comboBoxCategory.Name = "comboBoxCategory";
+            this.comboBoxCategory.Size = new System.Drawing.Size(132, 24);
+            this.comboBoxCategory.TabIndex = 20;
+            // 
             // UpdateInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 554);
+            this.ClientSize = new System.Drawing.Size(538, 554);
+            this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.chkActive);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
@@ -190,7 +200,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDateAdded);
-            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtName);
@@ -215,10 +224,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDateAdded;
-        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.ComboBox comboBoxCategory;
     }
 }

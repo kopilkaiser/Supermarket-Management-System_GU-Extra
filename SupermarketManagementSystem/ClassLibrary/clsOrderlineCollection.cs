@@ -129,9 +129,9 @@ namespace ClassLibrary
             public void Update()
             {
                 dBConnection = new clsDataConnection();
-               //set the parameters for the stored procedure
+            //set the parameters for the stored procedure
+               dBConnection.AddParameter("@OrderlineId", mThisOrderline.OrderlineId);
                dBConnection.AddParameter("@OrderId", mThisOrderline.OrderId);
-               
                dBConnection.AddParameter("@Quantity", mThisOrderline.Quantity);
                dBConnection.AddParameter("@InventoryId", mThisOrderline.InventoryId);
 
