@@ -91,12 +91,12 @@ namespace SMSTestProject
             Assert.IsFalse(Found);
         }
 
-        
+
         [TestMethod]
         public void UpdateMethodOK()
         {
             //create an instance of thge class we want to create
-            clsPaymentCollection AllPayments= new clsPaymentCollection();
+            clsPaymentCollection AllPayments = new clsPaymentCollection();
             clsPayment TestPayment = new clsPayment();
             //var to store the primary key
             Int32 PrimaryKey = 0;
@@ -126,7 +126,7 @@ namespace SMSTestProject
             //test to see this Payment matches with test data
             Assert.AreEqual(AllPayments.ThisPayment, TestPayment);
 
-        } 
+        }
 
         [TestMethod]
         public void ReportByMethodNoneFound()

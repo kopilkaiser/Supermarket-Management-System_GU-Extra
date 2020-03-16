@@ -15,10 +15,10 @@ namespace SMSTestProject
         string PayeeName = "Kopil Kaiser";
         string Method = "Debit Card";
         string CardNumber = Convert.ToString(9999999999999999);
-        string Amount = 20.00m.ToString();        
+        string Amount = 20.00m.ToString();
         string PaymentDate = DateTime.Now.Date.ToString();
-        
-        
+
+
 
 
         [TestMethod]
@@ -59,7 +59,7 @@ namespace SMSTestProject
             AnPayment.PayeeName = PayeeName;
             Assert.AreEqual(AnPayment.PayeeName, PayeeName);
         }
-        
+
         [TestMethod]
         public void CardNumberPropertyOK()
         {
@@ -124,7 +124,7 @@ namespace SMSTestProject
         {
             clsPayment AnPayment = new clsPayment();
             string Error = "";
-            DateTime  TestDate;
+            DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(-100);
             string PaymentDate = TestDate.ToString();
@@ -201,7 +201,7 @@ namespace SMSTestProject
             string Error = "";
             Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreEqual(Error, "");
-        
+
         }
         [TestMethod]
         public void NameMaxMinusOne()
@@ -230,7 +230,7 @@ namespace SMSTestProject
             clsPayment AnPayment = new clsPayment();
             string Error = "";
             string PayeeName = "";
-            PayeeName = PayeeName.PadRight(82,'a');
+            PayeeName = PayeeName.PadRight(82, 'a');
             Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             Assert.AreNotEqual(Error, "");
         }
@@ -322,7 +322,7 @@ namespace SMSTestProject
             //create a string variable to store teh result of the validation
             string Error = "";
             string Method = "";
-            Method = Method.PadRight(101,'a');
+            Method = Method.PadRight(101, 'a');
             //invok the method
             Error = AnPayment.Valid(PayeeName, CardNumber, Method, Amount, PaymentDate);
             //the result is OK;
