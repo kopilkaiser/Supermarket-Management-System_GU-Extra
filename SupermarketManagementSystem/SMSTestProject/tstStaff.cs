@@ -1,6 +1,5 @@
 ﻿using System;
 using ClassLibrary;
-using ClassLibrary.Properties;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SMSTestProject

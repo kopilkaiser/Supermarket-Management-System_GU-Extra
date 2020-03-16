@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SMSTestProject
 {
     [TestClass]
-    public class tstPaymentByCustomer
+    public class tstPayment
     {
         //good test data
         //testdata to pass the method
@@ -107,12 +107,12 @@ namespace SMSTestProject
             Assert.AreEqual(Error, "");
         }
 
-       /* [TestMethod]
+        /*[TestMethod]
         public void FindMethodOK()
         {
             clsPayment AnPayment = new clsPayment();
             Boolean Found = false;
-            Int32 PaymentId = 4;
+            Int32 PaymentId = 1;
             Found = AnPayment.Find(PaymentId);
             Assert.IsTrue(Found);
         }*/

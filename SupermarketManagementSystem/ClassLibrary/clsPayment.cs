@@ -76,7 +76,7 @@ namespace ClassLibrary
                     Error = Error + "The card number cannot exceed 16 digits : ";
                 }
 
-                if (CardNumberTemp < 9999999999999)
+                if (CardNumberTemp < 1111111111111)
                 {
                     Error = Error + "The card number is required to have minimum 13 digits : ";
                 }

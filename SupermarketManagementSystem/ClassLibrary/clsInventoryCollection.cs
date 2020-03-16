@@ -164,7 +164,7 @@ namespace ClassLibrary
             Int32 Index = 0;
             //var to store the record count
             Int32 RecordCount = 0;
-            //get the count of records
+            //get the count of recordsA
             RecordCount = dBConnection.Count;
             //clear the private array list
             mInventoryList = new List<clsInventory>();
