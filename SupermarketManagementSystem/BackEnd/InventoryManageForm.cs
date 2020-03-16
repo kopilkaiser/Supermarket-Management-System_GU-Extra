@@ -15,7 +15,7 @@ namespace BackEnd
 {
     public partial class InventoryManageForm : Form
     {
-        public static int quantity;
+        
         
         Int32 InventoryId ;
         clsDataConnection dBConnection;

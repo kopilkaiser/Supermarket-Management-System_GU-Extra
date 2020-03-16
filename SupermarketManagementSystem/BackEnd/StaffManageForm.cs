@@ -14,7 +14,6 @@ namespace BackEnd
 {
     public partial class StaffManageForm : Form
     {
-        public static int quantity; // ask kopil
 
         Int32 StaffId;
         clsDataConnection dBConnection;

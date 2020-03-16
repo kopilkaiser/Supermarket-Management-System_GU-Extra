@@ -93,8 +93,10 @@ namespace BackEnd
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            //add the new record
-            Add();
+
+
+                        //add the new record
+                        Add();
 
         }
     }
