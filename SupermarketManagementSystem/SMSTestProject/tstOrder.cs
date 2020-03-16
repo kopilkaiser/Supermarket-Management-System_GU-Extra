@@ -75,7 +75,7 @@ namespace SMSTestProject
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 OrderId = 3;
+            int OrderId = 1;
             //invoke the method
             Found = AnOrder.Find(OrderId);
             //test to see that the result is correct
@@ -211,8 +211,8 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "";
-            AccountNo = AccountNo.PadRight(10001, 'a');
+            string AccountNo = "10001";
+            
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
@@ -233,8 +233,7 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "";
-            AccountNo = AccountNo.PadRight(500000, 'a');
+            string AccountNo = "5000000";
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
@@ -311,8 +310,8 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string PaymentId = "";
-            PaymentId = PaymentId.PadRight(10001, 'a');
+            string PaymentId = "10001";
+            
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
@@ -333,8 +332,8 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string PaymentId = "";
-            PaymentId = PaymentId.PadRight(50000, 'a');
+            string PaymentId = "500000";
+            
             Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }

@@ -112,7 +112,7 @@ namespace SMSTestProject
             // var to store the primary key
             Int32 PrimaryKey = 0;
             // set it properties
-            TestItem.OrderlineId = 2;
+            //TestItem.OrderlineId = 2;
             TestItem.OrderId = 05;
             TestItem.Quantity = 01;
             TestItem.InventoryId = 01;
@@ -228,26 +228,13 @@ namespace SMSTestProject
            Assert.AreNotEqual(AllOrderline.Count, FilteredOrders.Count);
        }*/
 
-        [TestMethod]
-        public void FindMethodOK()
-        {
-            // create an instance of the class
-           clsOrderline AnOrderline = new clsOrderline();
-            // boolean variable to store the result of validation
-            Boolean Found = false;
-            // some test data to test the method
-            Int32 OrderId = 1;
-            // invoke the method
-            Found = AnOrderline.Find(OrderId);
-            // test to see that the result is correct
-            Assert.IsTrue(Found);
+        
 
 
 
 
 
-
-        }
+    }
 
         /* [TestMethod]
          public void FilterByOrderIdTestDataFound()
@@ -280,5 +267,5 @@ namespace SMSTestProject
 
          }*/
 
-    }
+    
 }

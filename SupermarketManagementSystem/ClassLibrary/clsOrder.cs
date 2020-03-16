@@ -9,7 +9,6 @@ namespace ClassLibrary
         private int mOrderId;
         private int mAccountNo;
         private int mPaymentId;
-
         private DateTime mPurchasedDate;
 
         public int OrderId
