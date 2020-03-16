@@ -34,9 +34,10 @@
             // 
             // btnYes
             // 
-            this.btnYes.Location = new System.Drawing.Point(77, 81);
+            this.btnYes.Location = new System.Drawing.Point(58, 66);
+            this.btnYes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(93, 45);
+            this.btnYes.Size = new System.Drawing.Size(70, 37);
             this.btnYes.TabIndex = 0;
             this.btnYes.Text = "&Yes";
             this.btnYes.UseVisualStyleBackColor = true;
@@ -44,9 +45,10 @@
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(244, 81);
+            this.btnNo.Location = new System.Drawing.Point(183, 66);
+            this.btnNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(101, 45);
+            this.btnNo.Size = new System.Drawing.Size(76, 37);
             this.btnNo.TabIndex = 1;
             this.btnNo.Text = "&No";
             this.btnNo.UseVisualStyleBackColor = true;
@@ -54,11 +56,12 @@
             // 
             // ConfirmDelete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 218);
+            this.ClientSize = new System.Drawing.Size(323, 177);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ConfirmDelete";
             this.Text = "ConfirmDelete";
             this.ResumeLayout(false);

@@ -54,9 +54,11 @@
     <Compile Include="tstInventoryCollection.cs" />
     <Compile Include="tstOrder.cs" />
     <Compile Include="tstOrderCollection.cs" />
-    <Compile Include="tstPayment.cs" />
-    <Compile Include="tstPaymentCollection.cs" />
+    <Compile Include="tstOrderline.cs" />
+    <Compile Include="tstOrderlineCollection.cs" />
+    <Compile Include="tstPaymentByCustomer.cs" />
     <Compile Include="tstStaff.cs" />
+    <Compile Include="tstStaffCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

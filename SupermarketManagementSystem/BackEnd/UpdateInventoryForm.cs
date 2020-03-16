@@ -39,6 +39,7 @@ namespace BackEnd
 
             //display the current data for the record
             DisplayInventory();
+            txtDateAdded.Text = DateTime.Now.Date.ToString("MM/dd/yyyy");
            
         }
 
@@ -47,7 +48,7 @@ namespace BackEnd
             Update();
         }
 
-        /*public void Update()
+        public void Update()
         {
             
             //create an instance of the Inventory Collenction
@@ -80,7 +81,7 @@ namespace BackEnd
                 //report an error
                 lblError.Text = "There were problems with the data entered : " + Error;
             }
-        }*/
+        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

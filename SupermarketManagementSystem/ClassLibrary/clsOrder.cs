@@ -4,26 +4,14 @@ namespace ClassLibrary
 {
     public class clsOrder
     {
+
+
         private int mOrderId;
-        private int mInventoryId;
-        private int mQuantity;
-        private decimal mPrice;
+        private int mAccountNo;
+        private int mPaymentId;
+
         private DateTime mPurchasedDate;
-        private bool mActive;
-        private string mOrderCode;
 
-        public string OrderCode
-        {
-            get
-            {
-                return mOrderCode;
-            }
-
-            set
-            {
-                mOrderCode = value;
-            }
-        }
         public int OrderId
         {
             get
@@ -37,16 +25,31 @@ namespace ClassLibrary
             }
         }
 
-        public int InventoryId
+
+
+
+        public int AccountNo
         {
             get
             {
-                return mInventoryId;
+                return mAccountNo;
             }
 
             set
             {
-                mInventoryId = value;
+                mAccountNo = value;
+            }
+        }
+        public int PaymentId
+        {
+            get
+            {
+                return mPaymentId;
+            }
+
+            set
+            {
+                mPaymentId = value;
             }
         }
         public DateTime PurchasedDate
@@ -62,36 +65,8 @@ namespace ClassLibrary
             }
         }
 
-        
 
-        public int Quantity
-        {
-            get
-            {
-                return mQuantity;
-            }
-
-            set
-            {
-                mQuantity = value;
-            }
-        }
-
-      
-
-        public decimal Price
-        {
-            get
-            {
-                return mPrice;
-            }
-
-            set
-            {
-                mPrice = value;
-            }
-        }
-        public bool Active
+     /* public bool Active
         {
             get
             {
@@ -103,16 +78,9 @@ namespace ClassLibrary
                 mActive = value;
             }
         }
+        */
 
-
-        /* public int Quantity { get; set; }
-         public decimal Price { get; set; }
-         public int OrderId { get; set; }
-         public int InventoryId { get; set; }
-         public DateTime PurchasedDate { get; set; }
-         public bool Active { get; set; }
-         public string Error { get; private set; }*/
-
+       
 
         public bool Find(int OrderId)
         {
@@ -127,12 +95,10 @@ namespace ClassLibrary
             {
                 //copy the data from the database from the private data members
                 mOrderId = Convert.ToInt32(DB.DataTable.Rows[0]["OrderId"]);
-                mOrderCode = Convert.ToString(DB.DataTable.Rows[0]["OrderCode"]);
-                mPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["Price"]);
-                mQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["Quantity"]);
+                mAccountNo = Convert.ToInt32(DB.DataTable.Rows[0]["AccountNo"]);
+                mPaymentId = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentId"]);
                 mPurchasedDate = Convert.ToDateTime(DB.DataTable.Rows[0]["PurchasedDate"]);
-                mInventoryId = Convert.ToInt32(DB.DataTable.Rows[0]["InventoryId"]);
-                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                //mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
                 //return that everything worked ok
                 return true;
             }
@@ -145,59 +111,61 @@ namespace ClassLibrary
 
         }
 
-        public string Valid(string quantity, string price, string purchasedDate, string inventoryId)
+        public string Valid(string accountNo, string paymentId, string purchasedDate)
         {
-            // create a variable to store any error message 
-            String Error = "";
+            // create a variable to store any error message
+            string Error = "";
+
+            Int32 AccountNoTemp;
+            Int32 PaymentIdTemp;
             DateTime DateTemp;
-            decimal PriceTemp;
-            Int32 QuantityTemp;
 
-            Int32 InventoryIdTemp;
-            //if price entered is a valid price
+            int OrderIdTemp;
+            
+            //if accountNo entered is valid 
             try
             {
-                PriceTemp = Convert.ToDecimal(price);
+                AccountNoTemp = Convert.ToInt32(accountNo);
 
-                if (PriceTemp > 20000m)
+                if (AccountNoTemp > 10000)
                 {
-                    Error = Error + "The price of the full ordrer cannot exceed 20000 : ";
+                    Error = Error + "Account No can not be exceed the limit of 10 : ";
                 }
 
-                if (PriceTemp < 0.20m)
+                if (AccountNoTemp <= 0)
                 {
-                    Error = Error + "The price of Order  cannot be less than 0.20 pence : ";
+                    Error = Error + "Please enter an Account No: ";
                 }
             }
             catch
             {
                 //record the error
-                Error = Error + "The price entered is not valid : ";
+                Error = Error + "The AccountNo is not valid: ";
             }
 
-            //if Quantity entered is a valid quantity
+             //if paymentId entered is valid 
             try
             {
-                QuantityTemp = Convert.ToInt32(quantity);
+                PaymentIdTemp = Convert.ToInt32(paymentId);
 
-                if (QuantityTemp > 100)
+                if (PaymentIdTemp > 10000)
                 {
-                    Error = Error + "The quantity of Order cannot exceed 100 : ";
+                    Error = Error + "Payment Id cannot exceed the limit of  20 : ";
                 }
 
-                if (QuantityTemp <= 0)
+                if (PaymentIdTemp <= 0)
                 {
-                    Error = Error + "The full order quantity cannot be less than or qual to zero : ";
+                    Error = Error + "Payment Id can not be less than or equal to zero : ";
                 }
 
             }
             catch
             {
                 //record the error
-                Error = Error + "The Order is not valid : ";
+                Error = Error + "Invalid payment Id : ";
             }
 
-
+            //if purchasedDate entered is valid 
             try
             {
                 // convert the string value to DateTime
@@ -220,10 +188,18 @@ namespace ClassLibrary
             catch
             {
                 //record the error
-                Error = Error + "Invalid date : ";
+                Error = Error + "The date entered was not a valid date : ";
             }
 
             return Error;
         }
+        public string AllDetails
+        {
+            get
+            {
+                return "OrderId:" + OrderId + "_" + "AccountNo:" + AccountNo + "_" + "PurchasedDate:" + PurchasedDate + "_" + "PaymentId:" + PaymentId; 
+            }
+        }
+
     }
 }
