@@ -9,7 +9,7 @@ namespace SMSTestProject
     {
         // some good data to pass the method 
         int OrderId = 1;
-        string AccountNo = "55";
+        string Email = "A@gmail.com";
         string PaymentId = "55";
         string PurchasedDate = DateTime.Now.Date.ToString();
         
@@ -33,14 +33,16 @@ namespace SMSTestProject
             Assert.AreEqual(PurchasedDate, AnOrder.PurchasedDate);
         }
         [TestMethod]
-        public void AccountNoPropertyOK()
+        public void EmailPropertyOK()
         {
             clsOrder AnOrder = new clsOrder();
-            int AccountNo = 12345;
-            AnOrder.AccountNo = AccountNo;
-            Assert.AreEqual(AccountNo, AnOrder.AccountNo);
+            string Email = "S@gmail.com";
+            AnOrder.Email = Email;
+            Assert.AreEqual(Email, AnOrder.Email);
         }
         [TestMethod]
+       
+      
         public void OrderIdPropertyOK()
         {
             clsOrder AnOrder = new clsOrder();
@@ -57,12 +59,12 @@ namespace SMSTestProject
             // create an string variable to store the result of validation
             String Error = "";
             // create some test data to the test method
-            string AccountNo = 1.ToString();
+            string Email = "k@gmail.com";
             // create some test data to asign the property
             string PaymentId = 10.ToString();
             string PurchasedDate = DateTime.Now.Date.ToString();
             // invoke the method
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             // test to see that result is ok , e, g - There are no error message
             Assert.AreEqual(Error, "");
 
@@ -92,7 +94,7 @@ namespace SMSTestProject
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(-100);
             string PurchasedDate = TestDate.ToString();
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -105,7 +107,7 @@ namespace SMSTestProject
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddDays(-1);
             string PurchasedDate = TestDate.ToString();
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
 
             Assert.AreNotEqual(Error, "");
         }
@@ -115,7 +117,7 @@ namespace SMSTestProject
             clsOrder AnOrder = new clsOrder();
             string PurchasedDate = DateTime.Now.Date.ToString();
             string Error = "";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -127,7 +129,7 @@ namespace SMSTestProject
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(100);
             string PurchasedDate = TestDate.ToString();
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -136,107 +138,110 @@ namespace SMSTestProject
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string PurchasedDate = "a";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
         /// <summary>
         /// ////////////
         /// </summary>
-        /// // testing for account no
-        [TestMethod]
-        public void AccountNoExtremeMin()
+        /// // testing foremail
+         [TestMethod]
+        public void EmailExtremeMin()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            string Email = "";
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
-        public void AccountNoMinMinusOne()
+        public void EmailMinMinusOne()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            string Email = "";
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
 
         }
         [TestMethod]
-        public void AccountNoMinBoundary()
+        public void EmailMinBoundary()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "1";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            string Email = "a";
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
 
         }
 
         [TestMethod]
-        public void AccountNoMinPlusOne()
+        public void EmailMinPlusOne()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "2";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            string Email = "aa";
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
 
         }
 
         [TestMethod]
-        public void AccountNoMaxMinusOne()
+        public void EmailMaxMinusOne()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "9999";
-           
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            string Email = "";
+            Email = Email.PadRight(49, 'a');
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void AccountNoMaxBoundary()
+        public void EmailMaxBoundary()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "10000";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            string Email = "";
+            Email = Email.PadRight(50, 'a');
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void AccountNoMaxPlusOne()
+        public void EmailMaxPlusOne()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "10001";
-            
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            string Email = "";
+            Email = Email.PadRight(51, 'a');
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
-        public void AccountNoMid()
+        public void EmailMid()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "5000";
-      
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            string Email = "";
+           Email =Email.PadRight(25, 'a');
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void AccountNoExtremeMax()
+        public void EmailExtremeMax()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "5000000";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            string Email = "";
+           Email =Email.PadRight(100, 'a');
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
+
         // testing for payment Id
         /// <summary>
         /// //////////////
@@ -247,7 +252,7 @@ namespace SMSTestProject
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string PaymentId = "";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -257,7 +262,7 @@ namespace SMSTestProject
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string PaymentId = "";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -267,7 +272,7 @@ namespace SMSTestProject
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string PaymentId = "1";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
 
         }
@@ -278,7 +283,7 @@ namespace SMSTestProject
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string PaymentId = "2";
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
 
         }
@@ -288,9 +293,9 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "9999";
+            string PaymentId = "9999";
             
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
 
@@ -299,9 +304,9 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "10000";
+            string PaymentId = "10000";
             
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
 
@@ -312,7 +317,7 @@ namespace SMSTestProject
             string Error = "";
             string PaymentId = "10001";
             
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -323,7 +328,7 @@ namespace SMSTestProject
             string Error = "";
             string PaymentId = "5000";
            
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
 
@@ -334,7 +339,7 @@ namespace SMSTestProject
             string Error = "";
             string PaymentId = "500000";
             
-            Error = AnOrder.Valid(AccountNo, PaymentId, PurchasedDate);
+            Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
     }

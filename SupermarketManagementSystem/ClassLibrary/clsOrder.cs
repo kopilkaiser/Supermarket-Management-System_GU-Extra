@@ -7,7 +7,7 @@ namespace ClassLibrary
 
 
         private int mOrderId;
-        private int mAccountNo;
+        private string mEmail;
         private int mPaymentId;
         private DateTime mPurchasedDate;
 
@@ -27,16 +27,16 @@ namespace ClassLibrary
 
 
 
-        public int AccountNo
+        public int Email
         {
             get
             {
-                return mAccountNo;
+                return mEmail;
             }
 
             set
             {
-                mAccountNo = value;
+                mEmail = value;
             }
         }
         public int PaymentId
@@ -94,7 +94,7 @@ namespace ClassLibrary
             {
                 //copy the data from the database from the private data members
                 mOrderId = Convert.ToInt32(DB.DataTable.Rows[0]["OrderId"]);
-                mAccountNo = Convert.ToInt32(DB.DataTable.Rows[0]["AccountNo"]);
+                mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
                 mPaymentId = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentId"]);
                 mPurchasedDate = Convert.ToDateTime(DB.DataTable.Rows[0]["PurchasedDate"]);
                 //mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
@@ -110,39 +110,45 @@ namespace ClassLibrary
 
         }
 
-        public string Valid(string accountNo, string paymentId, string purchasedDate)
+        public string Valid(string Email, string paymentId, string purchasedDate)
         {
             // create a variable to store any error message
             string Error = "";
 
-            Int32 AccountNoTemp;
+            Int32 EmailTemp;
             Int32 PaymentIdTemp;
             DateTime DateTemp;
 
             int OrderIdTemp;
-            
-            //if accountNo entered is valid 
-            try
-            {
-                AccountNoTemp = Convert.ToInt32(accountNo);
 
-                if (AccountNoTemp > 10000)
-                {
-                    Error = Error + "Account No can not be exceed the limit of 10 : ";
-                }
-
-                if (AccountNoTemp <= 0)
-                {
-                    Error = Error + "Please enter an Account No: ";
-                }
-            }
-            catch
+            //if Email entered is valid 
+            if (Email.Length == 0)
             {
-                //record the error
-                Error = Error + "The AccountNo is not valid: ";
+                Error = Error + "The Email cannot be blank : ";
             }
 
-             //if paymentId entered is valid 
+            if (Email.Length > 50)
+            {
+                Error = Error + "The Email cannot exceed 100 characters : ";
+            }
+
+            if (Email.Length < 10)
+            {
+                Error = Error + "The Email cannot be less than 10 : ";
+            }
+
+            if (Email.Length > 15)
+            {
+                Error = Error + "The Email cannot exceed 15 numbers : ";
+            }
+
+
+
+
+
+
+
+            //if paymentId entered is valid 
             try
             {
                 PaymentIdTemp = Convert.ToInt32(paymentId);
@@ -196,7 +202,7 @@ namespace ClassLibrary
         {
             get
             {
-                return "OrderId:" + OrderId + "_" + "AccountNo:" + AccountNo + "_" + "PurchasedDate:" + PurchasedDate + "_" + "PaymentId:" + PaymentId; 
+                return "OrderId:" + OrderId + "_" + "Email:" + Email + "_" + "PurchasedDate:" + PurchasedDate + "_" + "PaymentId:" + PaymentId; 
             }
         }
 
