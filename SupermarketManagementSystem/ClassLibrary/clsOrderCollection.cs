@@ -185,6 +185,11 @@ namespace ClassLibrary
                 Index++;
             }
         }
+
+        public void FilterByEmail(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

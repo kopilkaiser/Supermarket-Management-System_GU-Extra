@@ -77,6 +77,12 @@
     <Compile Include="ConfirmDeleteForm.Designer.cs">
       <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteOrder.Designer.cs">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,12 @@
     <Compile Include="UpdateInventoryForm.Designer.cs">
       <DependentUpon>UpdateInventoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateOrder.Designer.cs">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmDeleteForm.resx">
       <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteOrder.resx">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageOrder.resx">
       <DependentUpon>ManageOrder.cs</DependentUpon>

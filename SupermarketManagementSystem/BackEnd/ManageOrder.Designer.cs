@@ -35,10 +35,10 @@
             this.btnSearchbyorderid = new System.Windows.Forms.Button();
             this.listOrders = new System.Windows.Forms.ListBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnApply = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDisplayall = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSignout = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
@@ -76,6 +76,7 @@
             this.btnSearchbyorderid.TabIndex = 3;
             this.btnSearchbyorderid.Text = "Search by OrderId";
             this.btnSearchbyorderid.UseVisualStyleBackColor = true;
+            this.btnSearchbyorderid.Click += new System.EventHandler(this.btnSearchbyorderid_Click);
             // 
             // listOrders
             // 
@@ -94,16 +95,18 @@
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button2
+            // btnUpdate
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(76, 234);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 29);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(76, 234);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 29);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -114,6 +117,7 @@
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnApply
             // 
@@ -124,16 +128,18 @@
             this.btnApply.TabIndex = 8;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
-            // button1
+            // btnDisplayall
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(398, 374);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 33);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Display All";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDisplayall.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisplayall.Location = new System.Drawing.Point(398, 374);
+            this.btnDisplayall.Name = "btnDisplayall";
+            this.btnDisplayall.Size = new System.Drawing.Size(100, 33);
+            this.btnDisplayall.TabIndex = 9;
+            this.btnDisplayall.Text = "Display All";
+            this.btnDisplayall.UseVisualStyleBackColor = true;
+            this.btnDisplayall.Click += new System.EventHandler(this.btnDisplayall_Click);
             // 
             // panel1
             // 
@@ -168,20 +174,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(861, 569);
+            this.ClientSize = new System.Drawing.Size(858, 569);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnSignout);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDisplayall);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.listOrders);
             this.Controls.Add(this.btnSearchbyorderid);
             this.Controls.Add(this.txtSearchbyorderid);
             this.Name = "ManageOrder";
             this.Text = "ManageOrder";
+            this.Load += new System.EventHandler(this.ManageOrder_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -197,10 +204,10 @@
         private System.Windows.Forms.Button btnSearchbyorderid;
         private System.Windows.Forms.ListBox listOrders;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnApply;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDisplayall;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSignout;
         private System.Windows.Forms.Label lblError;
