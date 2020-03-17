@@ -11,52 +11,55 @@ using ClassLibrary;
 
 namespace BackEnd
 {
-    public partial class ConfirmDeleteForm : Form
+    public partial class DeleteOrderForm : Form
     {
-        private int mStaffId = 0;
-        public int StaffID
+        private int mOrderId = 0;
+        public int OrderID
         {
             set
             {
-                mStaffId = value;
+                mOrderId = value;
             }
-        }
 
-        public ConfirmDeleteForm()
+
+        }
+        public DeleteOrderForm()
         {
             InitializeComponent();
         }
 
-        private void btnYES_Click(object sender, EventArgs e)
+        private void btnYes_Click(object sender, EventArgs e)
         {
-            //delete the record
-            DeleteStaff();
+
+            // delete the record
+            DeleteOrders();
             //redirect to the main form
-            StaffManageForm StaffManageForm = new StaffManageForm();
+            ManageOrderForm ManageOrder = new ManageOrderForm();
             this.Show();
-            StaffManageForm.Show();
+            ManageOrder.Show();
             this.Close();
+
         }
 
-        private void btnNO_Click(object sender, EventArgs e)
+        private void btnNo_Click(object sender, EventArgs e)
         {
             //redirect to the main form
-            StaffManageForm StaffManageForm = new StaffManageForm();
+            ManageOrderForm ManageOrder = new ManageOrderForm();
             this.Show();
-            StaffManageForm.Show();
+            ManageOrder.Show();
             this.Close();
-        }
 
-        void DeleteStaff()
+        }
+        void DeleteOrders()
         {
             //function to delete the selected record
 
             //create an instance of the Staff List
-            clsStaffCollection AllStaffs = new clsStaffCollection();
+            clsOrderCollection AllOrders = new clsOrderCollection();
             //find the record to delete
-            AllStaffs.ThisStaff.Find(mStaffId);
+            AllOrders.ThisOrder.Find(mOrderId);
             //delete the record
-            AllStaffs.Delete();
+            AllOrders.Delete();
         }
     }
 }
