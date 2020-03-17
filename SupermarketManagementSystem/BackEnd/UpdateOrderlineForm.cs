@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace BackEnd
 {
-    public partial class OrderlineManagement : Form
+    public partial class UpdateOrderlineForm : Form
     {
-        public OrderlineManagement()
+        public UpdateOrderlineForm()
         {
             InitializeComponent();
         }
-
-        private void OrderlineManagement_Load(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }

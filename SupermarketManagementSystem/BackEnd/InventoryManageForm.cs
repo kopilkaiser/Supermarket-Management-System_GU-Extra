@@ -152,7 +152,7 @@ namespace BackEnd
                 UpdateInventoryForm.tempInv = InventoryId;
 
                 //redirect to the delete page
-                ConfirmDelete ConfirmDelete = new ConfirmDelete();
+                ConfirmDeleteInventoryForm ConfirmDelete = new ConfirmDeleteInventoryForm();
                 ConfirmDelete.InventoryID = InventoryId;
                 this.Hide();
                 ConfirmDelete.Show();

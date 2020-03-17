@@ -11,7 +11,7 @@ using ClassLibrary;
 
 namespace BackEnd
 {
-    public partial class ConfirmDeleteForm : Form
+    public partial class ConfirmDeleteStaffForm : Form
     {
         private int mStaffId = 0;
         public int StaffID
@@ -22,7 +22,7 @@ namespace BackEnd
             }
         }
 
-        public ConfirmDeleteForm()
+        public ConfirmDeleteStaffForm()
         {
             InitializeComponent();
         }
