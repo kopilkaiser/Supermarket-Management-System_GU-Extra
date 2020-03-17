@@ -42,25 +42,28 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // chkActive
             // 
             this.chkActive.AutoSize = true;
-            this.chkActive.Location = new System.Drawing.Point(184, 300);
+            this.chkActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkActive.Location = new System.Drawing.Point(802, 350);
             this.chkActive.Margin = new System.Windows.Forms.Padding(4);
             this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(68, 21);
+            this.chkActive.Size = new System.Drawing.Size(83, 24);
             this.chkActive.TabIndex = 19;
             this.chkActive.Text = "Active";
             this.chkActive.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(242, 363);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(850, 468);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 28);
+            this.btnCancel.Size = new System.Drawing.Size(110, 42);
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -68,10 +71,11 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(115, 363);
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Location = new System.Drawing.Point(723, 468);
             this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(100, 28);
+            this.btnOK.Size = new System.Drawing.Size(110, 42);
             this.btnOK.TabIndex = 18;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -80,96 +84,112 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(67, 255);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(658, 313);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 17);
+            this.label5.Size = new System.Drawing.Size(126, 25);
             this.label5.TabIndex = 12;
             this.label5.Text = "Date Added";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(87, 217);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(684, 264);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.Size = new System.Drawing.Size(100, 25);
             this.label4.TabIndex = 13;
             this.label4.Text = "Category";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(87, 172);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(685, 231);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
+            this.label3.Size = new System.Drawing.Size(93, 25);
             this.label3.TabIndex = 14;
             this.label3.Text = "Quantity";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(107, 129);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(710, 188);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 17);
+            this.label2.Size = new System.Drawing.Size(61, 25);
             this.label2.TabIndex = 15;
             this.label2.Text = "Price";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(101, 85);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(710, 143);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 16;
             this.label1.Text = "Name";
             // 
             // txtDateAdded
             // 
-            this.txtDateAdded.Location = new System.Drawing.Point(184, 251);
+            this.txtDateAdded.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateAdded.Location = new System.Drawing.Point(802, 301);
             this.txtDateAdded.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDateAdded.Multiline = true;
             this.txtDateAdded.Name = "txtDateAdded";
-            this.txtDateAdded.Size = new System.Drawing.Size(132, 22);
+            this.txtDateAdded.Size = new System.Drawing.Size(164, 37);
             this.txtDateAdded.TabIndex = 11;
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(184, 169);
+            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.Location = new System.Drawing.Point(802, 219);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuantity.Multiline = true;
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(132, 22);
+            this.txtQuantity.Size = new System.Drawing.Size(164, 37);
             this.txtQuantity.TabIndex = 8;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(184, 126);
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(802, 176);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(132, 22);
+            this.txtPrice.Size = new System.Drawing.Size(164, 37);
             this.txtPrice.TabIndex = 9;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(184, 81);
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(802, 131);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(132, 22);
+            this.txtName.Size = new System.Drawing.Size(164, 37);
             this.txtName.TabIndex = 10;
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(107, 342);
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(42, 407);
             this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 17);
+            this.lblError.Size = new System.Drawing.Size(0, 18);
             this.lblError.TabIndex = 6;
             // 
             // comboBoxCategory
             // 
+            this.comboBoxCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Items.AddRange(new object[] {
             "Bakery",
@@ -180,16 +200,27 @@
             "Meat ",
             "Drink",
             "Snack"});
-            this.comboBoxCategory.Location = new System.Drawing.Point(184, 214);
+            this.comboBoxCategory.Location = new System.Drawing.Point(802, 264);
             this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(132, 24);
+            this.comboBoxCategory.Size = new System.Drawing.Size(164, 30);
             this.comboBoxCategory.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(708, 51);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(276, 39);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Update Inventory";
             // 
             // UpdateInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 554);
+            this.ClientSize = new System.Drawing.Size(1810, 554);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.chkActive);
             this.Controls.Add(this.btnCancel);
@@ -229,5 +260,6 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.ComboBox comboBoxCategory;
+        private System.Windows.Forms.Label label6;
     }
 }

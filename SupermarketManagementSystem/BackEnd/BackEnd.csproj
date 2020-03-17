@@ -12,21 +12,6 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -74,12 +59,6 @@
     <Compile Include="AddOrder.Designer.cs">
       <DependentUpon>AddOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPaymentForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddPaymentForm.Designer.cs">
-      <DependentUpon>AddPaymentForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +77,11 @@
     <Compile Include="ConfirmDeleteForm.Designer.cs">
       <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeletePaymentConfirmForm.cs">
+    <Compile Include="DeleteOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeletePaymentConfirmForm.Designer.cs">
-      <DependentUpon>DeletePaymentConfirmForm.cs</DependentUpon>
+    <Compile Include="DeleteOrder.Designer.cs">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageOrder.cs">
       <SubType>Form</SubType>
@@ -122,11 +101,17 @@
     <Compile Include="InventoryManageForm.Designer.cs">
       <DependentUpon>InventoryManageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaymentManageForm.cs">
+    <Compile Include="OrderlineManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaymentManageForm.Designer.cs">
-      <DependentUpon>PaymentManageForm.cs</DependentUpon>
+    <Compile Include="OrderlineManagement.Designer.cs">
+      <DependentUpon>OrderlineManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSubform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderSubform.Designer.cs">
+      <DependentUpon>OrderSubform.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,11 +127,11 @@
     <Compile Include="UpdateInventoryForm.Designer.cs">
       <DependentUpon>UpdateInventoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdatePaymentForm.cs">
+    <Compile Include="UpdateOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdatePaymentForm.Designer.cs">
-      <DependentUpon>UpdatePaymentForm.cs</DependentUpon>
+    <Compile Include="UpdateOrder.Designer.cs">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateStaffForm.cs">
       <SubType>Form</SubType>
@@ -160,9 +145,6 @@
     <EmbeddedResource Include="AddOrder.resx">
       <DependentUpon>AddOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPaymentForm.resx">
-      <DependentUpon>AddPaymentForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,8 +154,8 @@
     <EmbeddedResource Include="ConfirmDeleteForm.resx">
       <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeletePaymentConfirmForm.resx">
-      <DependentUpon>DeletePaymentConfirmForm.cs</DependentUpon>
+    <EmbeddedResource Include="DeleteOrder.resx">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageOrder.resx">
       <DependentUpon>ManageOrder.cs</DependentUpon>
@@ -184,8 +166,11 @@
     <EmbeddedResource Include="InventoryManageForm.resx">
       <DependentUpon>InventoryManageForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PaymentManageForm.resx">
-      <DependentUpon>PaymentManageForm.cs</DependentUpon>
+    <EmbeddedResource Include="OrderlineManagement.resx">
+      <DependentUpon>OrderlineManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderSubform.resx">
+      <DependentUpon>OrderSubform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -201,9 +186,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateInventoryForm.resx">
       <DependentUpon>UpdateInventoryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdatePaymentForm.resx">
-      <DependentUpon>UpdatePaymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStaffForm.resx">
       <DependentUpon>UpdateStaffForm.cs</DependentUpon>
@@ -226,27 +208,6 @@
       <Project>{98f8ffcc-ade1-41e1-bbdc-a12379674db3}</Project>
       <Name>ClassLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SMS_SSDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SMS_SSDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>SMS_SSDB.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

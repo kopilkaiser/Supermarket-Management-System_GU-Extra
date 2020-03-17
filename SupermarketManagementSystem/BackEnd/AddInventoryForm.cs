@@ -36,7 +36,7 @@ namespace BackEnd
 
            
             //DisplayInventory();
-            txtDateAdded.Text = DateTime.Today.Date.ToString("MM/dd/yyyy");
+            txtDateAdded.Text = DateTime.Now.Date.ToString("MM/dd/yyyy");
             txtName.Text = "";
             txtPrice.Text = "";
             txtQuantity.Text = "";
