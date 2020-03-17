@@ -56,7 +56,7 @@
             this.lstPayments.FormattingEnabled = true;
             this.lstPayments.Location = new System.Drawing.Point(12, 85);
             this.lstPayments.Name = "lstPayments";
-            this.lstPayments.Size = new System.Drawing.Size(636, 186);
+            this.lstPayments.Size = new System.Drawing.Size(828, 186);
             this.lstPayments.TabIndex = 1;
             // 
             // txtMethod
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 450);
+            this.ClientSize = new System.Drawing.Size(862, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);

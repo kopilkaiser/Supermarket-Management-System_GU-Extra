@@ -82,7 +82,7 @@ namespace BackEnd
             txtCardNumber.Text = "";
             cmbMethod.Text = "";
             txtAmount.Text = "";
-            txtPaymentDate.Text = DateTime.Now.Date.ToString("dd/mm/yyyy");
+            txtPaymentDate.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
         }
 
         void DisplayInventory()
