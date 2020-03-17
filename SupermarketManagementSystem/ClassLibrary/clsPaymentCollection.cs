@@ -36,7 +36,7 @@ namespace ClassLibrary
                     NewPayment.PaymentId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["PaymentId"]);
                     NewPayment.PayeeName = Convert.ToString(dBConnection.DataTable.Rows[Index]["PayeeName"]);
                     NewPayment.Method = Convert.ToString(dBConnection.DataTable.Rows[Index]["Method"]);
-                    NewPayment.CardNumber = Convert.ToInt64(dBConnection.DataTable.Rows[Index]["CardNumber"]);
+                    NewPayment.CardNumber = Convert.ToString(dBConnection.DataTable.Rows[Index]["CardNumber"]);
                     NewPayment.Amount = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["Amount"]);
                     NewPayment.PaymentDate = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["PaymentDate"]);
 
@@ -76,8 +76,7 @@ namespace ClassLibrary
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
             //set the parameter for the stored procedure
-            dBConnection.AddParameter("@PaymentId", mThisPayment.PaymentId);
-            dBConnection.AddParameter("@Name", mThisPayment.PayeeName);
+            dBConnection.AddParameter("@PayeeName", mThisPayment.PayeeName);
             dBConnection.AddParameter("@Method", mThisPayment.Method);
             dBConnection.AddParameter("@CardNumber", mThisPayment.CardNumber);
             dBConnection.AddParameter("@Amount", mThisPayment.Amount);
@@ -105,15 +104,15 @@ namespace ClassLibrary
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
-            dBConnection.AddParameter("@InventoryId", mThisPayment.PaymentId);
-            dBConnection.AddParameter("@Name", mThisPayment.PayeeName);
-            dBConnection.AddParameter("@Price", mThisPayment.Method);
-            dBConnection.AddParameter("@Quantity", mThisPayment.CardNumber);
-            dBConnection.AddParameter("@Category", mThisPayment.Amount);
-            dBConnection.AddParameter("@DateAdded", mThisPayment.PaymentDate);
-            
+            dBConnection.AddParameter("@PaymentId", mThisPayment.PaymentId);
+            dBConnection.AddParameter("@PayeeName", mThisPayment.PayeeName);
+            dBConnection.AddParameter("@Method", mThisPayment.Method);
+            dBConnection.AddParameter("@CardNumber", mThisPayment.CardNumber);
+            dBConnection.AddParameter("@Amount", mThisPayment.Amount);
+            dBConnection.AddParameter("@PaymentDate", mThisPayment.PaymentDate);
+
             //execute the stored procedure
-            dBConnection.Execute("sproc_tblInventory_Update");
+            dBConnection.Execute("sproc_tblPayment_Update");
         }
         public void ReportByMethod(string Method)
         {
@@ -145,7 +144,7 @@ namespace ClassLibrary
                 AnPayment.PaymentId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["PaymentId"]);
                 AnPayment.PayeeName = Convert.ToString(dBConnection.DataTable.Rows[Index]["PayeeName"]);
                 AnPayment.Method = Convert.ToString(dBConnection.DataTable.Rows[Index]["Method"]);
-                AnPayment.CardNumber = Convert.ToInt64(dBConnection.DataTable.Rows[Index]["CardNumber"]);
+                AnPayment.CardNumber = Convert.ToString(dBConnection.DataTable.Rows[Index]["CardNumber"]);
                 AnPayment.Amount = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["Amount"]);
                 AnPayment.PaymentDate = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["PaymentDate"]);
                 //add the recordto teh private data member

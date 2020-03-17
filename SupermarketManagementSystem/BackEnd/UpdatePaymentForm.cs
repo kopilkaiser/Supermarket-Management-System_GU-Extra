@@ -7,21 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Web.UI.WebControls;
-using ClassLibrary;
-
 
 namespace BackEnd
 {
-    public partial class AddPaymentForm : Form
+    public partial class UpdatePaymentForm : Form
     {
-        
-
-        public AddPaymentForm()
+        public UpdatePaymentForm()
         {
             InitializeComponent();
         }
-
-
     }
 }
