@@ -94,7 +94,7 @@
                     %></table><%
 
                   %>
-            <asp:HyperLink ID="hyptempInventory" runat="server" NavigateUrl="~/Default.aspx">Continue Shopping</asp:HyperLink>
+            <asp:HyperLink ID="hypBrowseProducts" runat="server" NavigateUrl="~/BrowseProducts.aspx">Continue Shopping</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:HyperLink ID="hypCheckOut" runat="server" ForeColor="#CC3300" NavigateUrl="~/Default3.aspx">*checkout*</asp:HyperLink>
        
