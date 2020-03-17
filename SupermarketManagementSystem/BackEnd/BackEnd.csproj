@@ -89,17 +89,41 @@
     <Compile Include="ManageOrder.Designer.cs">
       <DependentUpon>ManageOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="mdiBackEnd.cs">
+    <Compile Include="mdiBackEndAddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mdiBackEnd.Designer.cs">
-      <DependentUpon>mdiBackEnd.cs</DependentUpon>
+    <Compile Include="mdiBackEndAddUserForm.Designer.cs">
+      <DependentUpon>mdiBackEndAddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiBackEndChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiBackEndChangePasswordForm.Designer.cs">
+      <DependentUpon>mdiBackEndChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiBackEndForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiBackEndForm.Designer.cs">
+      <DependentUpon>mdiBackEndForm.cs</DependentUpon>
     </Compile>
     <Compile Include="InventoryManageForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InventoryManageForm.Designer.cs">
       <DependentUpon>InventoryManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiBackEndMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiBackEndMenuForm.Designer.cs">
+      <DependentUpon>mdiBackEndMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiBackEndSignInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiBackEndSignInForm.Designer.cs">
+      <DependentUpon>mdiBackEndSignInForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OrderlineManagement.cs">
       <SubType>Form</SubType>
@@ -160,11 +184,20 @@
     <EmbeddedResource Include="ManageOrder.resx">
       <DependentUpon>ManageOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mdiBackEnd.resx">
-      <DependentUpon>mdiBackEnd.cs</DependentUpon>
+    <EmbeddedResource Include="mdiBackEndAddUserForm.resx">
+      <DependentUpon>mdiBackEndAddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiBackEndChangePasswordForm.resx">
+      <DependentUpon>mdiBackEndChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiBackEndForm.resx">
+      <DependentUpon>mdiBackEndForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryManageForm.resx">
       <DependentUpon>InventoryManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiBackEndSignInForm.resx">
+      <DependentUpon>mdiBackEndSignInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderlineManagement.resx">
       <DependentUpon>OrderlineManagement.cs</DependentUpon>
