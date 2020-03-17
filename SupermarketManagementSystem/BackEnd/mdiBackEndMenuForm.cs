@@ -16,5 +16,32 @@ namespace BackEnd
         {
             InitializeComponent();
         }
+
+        private void btnInventoryManagement_Click(object sender, EventArgs e)
+        {
+            InventoryManageForm IM = new InventoryManageForm();
+
+            this.Hide();
+            IM.Show();
+            this.Close();
+        }
+
+        private void btnStaffManagement_Click(object sender, EventArgs e)
+        {
+            StaffManageForm SM = new StaffManageForm();
+
+            this.Hide();
+            SM.Show();
+            this.Close();
+        }
+
+        private void btnPaymentManagement_Click(object sender, EventArgs e)
+        {
+            PaymentManageForm PM = new PaymentManageForm();
+
+            this.Hide();
+            PM.Show();
+            this.Close();
+        }
     }
 }

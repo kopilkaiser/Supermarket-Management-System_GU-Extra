@@ -132,5 +132,14 @@ namespace BackEnd
 
             lstStaff.ClearSelected();
         }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            mdiBackEndMenuForm IM = new mdiBackEndMenuForm();
+
+            this.Hide();
+            IM.Show();
+            this.Close();
+        }
     }
 }
