@@ -14,7 +14,7 @@ namespace BackEnd
     public partial class UpdatePaymentForm : Form
     {
         private int mPaymentId = 0;
-        public int PaymentId
+        public int PaymentID
         {
             set
             {
@@ -22,17 +22,14 @@ namespace BackEnd
             }
         }
 
-        public static int tempInv { get; set; }
-       
+        public static int payInv { get; set; }
 
         public UpdatePaymentForm()
         {
             InitializeComponent();
         }
 
-
-
-        private void btnOk_Click(object sender, EventArgs e)
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
             Update();
         }
@@ -52,11 +49,10 @@ namespace BackEnd
                 AllPayments.ThisPayment.Find(mPaymentId);
                 //get the data entered by the user
                 AllPayments.ThisPayment.PayeeName = txtPayeeName.Text;
-                AllPayments.ThisPayment.CardNumber = Convert.ToString(txtCardNumber.Text);
+                AllPayments.ThisPayment.CardNumber = txtCardNumber.Text;
                 AllPayments.ThisPayment.Method = Convert.ToString(cmbMethod.SelectedItem);
                 AllPayments.ThisPayment.Amount = Convert.ToDecimal(txtAmount.Text);
                 AllPayments.ThisPayment.PaymentDate = Convert.ToDateTime(txtPaymentDate.Text);
-
                 //add the record
                 AllPayments.Update();
                 //all done so redirect back to the main page
@@ -70,29 +66,40 @@ namespace BackEnd
                 //report an error
                 lblError.Text = "There were problems with the data entered : " + Error;
             }
-
-
         }
 
         private void UpdatePaymentForm_Load(object sender, EventArgs e)
         {
+            //textBox1.Text = tempInv.ToString();
+            //textBox1.Text = InventoryManageForm.quantity.ToString();
+            //InventoryId = Convert.ToInt32(InventoryManageForm.quantity);
+
             //display the current data for the record
             DisplayPayment();
-            txtPaymentDate.Text = DateTime.Now.Date.ToString("dd/mm/yyyy");
+            txtPaymentDate.Text = DateTime.Now.Date.ToString("MM/dd/yyyy");
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            InventoryManageForm IM = new InventoryManageForm();
+
+            this.Hide();
+            IM.Show();
+            this.Close();
         }
 
         public void DisplayPayment()
         {
-            //create an instance of the Payment collection
-            clsPaymentCollection AllPayment = new clsPaymentCollection();
+            //create an instance of the inventory collection
+            clsPaymentCollection AllPayments = new clsPaymentCollection();
             //find the record to update
-            AllPayment.ThisPayment.Find(mPaymentId);
+            AllPayments.ThisPayment.Find(mPaymentId);
             //display the data for this record
-            txtPayeeName.Text = AllPayment.ThisPayment.PayeeName;
-            txtCardNumber.Text = AllPayment.ThisPayment.CardNumber.ToString();
-            cmbMethod.Text = AllPayment.ThisPayment.Method.ToString();
-            txtAmount.Text = AllPayment.ThisPayment.Amount.ToString();
-            txtPaymentDate.Text = AllPayment.ThisPayment.PaymentDate.ToString();
+            AllPayments.ThisPayment.PayeeName = txtPayeeName.Text;
+            AllPayments.ThisPayment.CardNumber = txtCardNumber.Text;
+            AllPayments.ThisPayment.Method = Convert.ToString(cmbMethod.SelectedItem);
+            AllPayments.ThisPayment.Amount = Convert.ToDecimal(txtAmount.Text);
+            AllPayments.ThisPayment.PaymentDate = Convert.ToDateTime(txtPaymentDate.Text);
         }
     }
 }

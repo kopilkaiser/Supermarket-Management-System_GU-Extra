@@ -11,58 +11,52 @@ using ClassLibrary;
 
 namespace BackEnd
 {
-    public partial class ConfirmDelete : Form
+    public partial class ConfirmDeletePaymentForm : Form
     {
-        private int mInventoryId = 0;
-        public int InventoryID
+        private int mPaymentId = 0;
+        public int PaymentId
         {
             set
             {
-                mInventoryId = value;
+                mPaymentId = value;
             }
         }
 
-        public int PaymentID { get; internal set; }
-
-        public ConfirmDelete()
+        public ConfirmDeletePaymentForm()
         {
             InitializeComponent();
         }
 
-
-
-        private void btnYes_Click(object sender, EventArgs e)
+        private void btnOk_Click(object sender, EventArgs e)
         {
             //delete the record
-            DeleteInventory();
+            DeletePayment();
             //redirect to the main form
-            InventoryManageForm InvManageForm = new InventoryManageForm();
+            PaymentManageForm paymentManageForm = new PaymentManageForm();
             this.Show();
-            InvManageForm.Show();
+            paymentManageForm.Show();
             this.Close();
         }
 
         private void btnNo_Click(object sender, EventArgs e)
         {
             //redirect to the main form
-            InventoryManageForm InvManageForm = new InventoryManageForm();
+            PaymentManageForm paymentManageForm = new PaymentManageForm();
             this.Show();
-            InvManageForm.Show();
+            paymentManageForm.Show();
             this.Close();
         }
 
-        void DeleteInventory()
+        void DeletePayment()
         {
             //function to delete the selected record
 
-            //create an instance of the Inventory List
-            clsInventoryCollection AllInventories = new clsInventoryCollection();
+            //create an instance of the Payment List
+            clsPaymentCollection AllPayments = new clsPaymentCollection();
             //find the record to delete
-            AllInventories.ThisInventory.Find(mInventoryId);
+            AllPayments.ThisPayment.Find(mPaymentId);
             //delete the record
-            AllInventories.Delete();
+            AllPayments.Delete();
         }
-
-
     }
 }

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web.UI.WebControls;
 using ClassLibrary;
-using System.Data.SqlClient;
 
 
 namespace BackEnd
@@ -18,47 +17,38 @@ namespace BackEnd
     {
         int PaymentId;
         clsPayment AnPayment = new clsPayment();
+
+
         public AddPaymentForm()
         {
             InitializeComponent();
         }
 
-        void DisplayPayment()
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
-            //create an instance of the Payment collection
-            clsPaymentCollection AllPayment = new clsPaymentCollection();
-            //find the record to update
-            AllPayment.ThisPayment.Find(PaymentId);
-            //display the data for this record
-            txtPayeeName.Text = AllPayment.ThisPayment.PayeeName;
-            txtCardNumber.Text = AllPayment.ThisPayment.CardNumber.ToString();
-            cmbMethod.Text = AllPayment.ThisPayment.Method.ToString();
-            txtAmount.Text = AllPayment.ThisPayment.Amount.ToString();
-            txtPaymentDate.Text = AllPayment.ThisPayment.PaymentDate.ToString();
-            
-
-
+            //add the new record
+            Add();
         }
 
         void Add()
         {
             //create an instance of the Payment Collenction
-            clsPaymentCollection AllPayment = new clsPaymentCollection();
+            clsPaymentCollection AllPayments = new clsPaymentCollection();
             //validate the data on the web form
-            string Error = AllPayment.ThisPayment.Valid(txtPayeeName.Text, txtCardNumber.Text, txtAmount.Text, Convert.ToString(cmbMethod.SelectedItem), txtPaymentDate.Text);
+            string Error = AllPayments.ThisPayment.Valid(txtPayeeName.Text, txtCardNumber.Text, Convert.ToString(cmbMethod.SelectedItem), txtAmount.Text,  txtPaymentDate.Text);
             //if the data is OK then add it to the object
             if (Error == "")
             {
                 //get the data entered by the user
-                AllPayment.ThisPayment.PayeeName = txtPayeeName.Text;
-                AllPayment.ThisPayment.CardNumber = Convert.ToString(txtCardNumber.Text);
-                AllPayment.ThisPayment.Method = Convert.ToString(cmbMethod.SelectedItem);
-                AllPayment.ThisPayment.Amount = Convert.ToDecimal(txtAmount.Text);
-                AllPayment.ThisPayment.PaymentDate = Convert.ToDateTime(txtPaymentDate.Text);
+                AllPayments.ThisPayment.PayeeName = txtPayeeName.Text;
+                AllPayments.ThisPayment.CardNumber = txtCardNumber.Text;
+                AllPayments.ThisPayment.Method = Convert.ToString(cmbMethod.SelectedItem);
+                AllPayments.ThisPayment.Amount = Convert.ToDecimal(txtAmount.Text);
+                AllPayments.ThisPayment.PaymentDate = Convert.ToDateTime(txtPaymentDate.Text);
                 
                 
                 //add the record
-                AllPayment.Add();
+                AllPayments.Add();
                 //all done so redirect back to the main page
                 PaymentManageForm IM = new PaymentManageForm();
                 this.Hide();
@@ -73,18 +63,6 @@ namespace BackEnd
         }
 
 
-        private void AddPayment_Load(object sender, EventArgs e)
-        {
-            //PaymentId = Covert.ToInt32(PaymentId);
-
-            //Display Payment();
-            txtPaymentDate.Text = DateTime.Today.Date.ToString("dd/MM/YYYY");
-            txtPayeeName.Text = "";
-            txtCardNumber.Text = "";
-            txtAmount.Text = "";
-            txtPaymentDate.Text = "";
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             PaymentManageForm IM = new PaymentManageForm();
@@ -94,10 +72,33 @@ namespace BackEnd
             this.Close();
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void AddPaymentForm_Load(object sender, EventArgs e)
         {
-            //add the new record
-            Add();
+            //PaymentId = Convert.ToInt32
+
+            //DisplayPayment();
+            
+            txtPayeeName.Text = "";
+            txtCardNumber.Text = "";
+            cmbMethod.Text = "";
+            txtAmount.Text = "";
+            txtPaymentDate.Text = DateTime.Now.Date.ToString("dd/mm/yyyy");
+        }
+
+        void DisplayInventory()
+        {
+            //create an instance of the Payment Collection
+            clsPaymentCollection AllPayments = new clsPaymentCollection();
+            //find the record to update
+            AllPayments.ThisPayment.Find(PaymentId);
+            //display the data for this record
+            AllPayments.ThisPayment.PayeeName = txtPayeeName.Text;
+            AllPayments.ThisPayment.CardNumber = txtCardNumber.Text;
+            AllPayments.ThisPayment.Method = Convert.ToString(cmbMethod.SelectedItem);
+            AllPayments.ThisPayment.Amount = Convert.ToDecimal(txtAmount.Text);
+            AllPayments.ThisPayment.PaymentDate = Convert.ToDateTime(txtPaymentDate.Text);
+
+
         }
     }
 }

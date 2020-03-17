@@ -28,125 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblPaymentManageTitle = new System.Windows.Forms.Label();
             this.lstPayments = new System.Windows.Forms.ListBox();
-            this.btnApply = new System.Windows.Forms.Button();
-            this.lblError = new System.Windows.Forms.Label();
             this.txtMethod = new System.Windows.Forms.TextBox();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
             this.btnDisplayAll = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.lbl1 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // lblPaymentManageTitle
+            // 
+            this.lblPaymentManageTitle.AutoSize = true;
+            this.lblPaymentManageTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaymentManageTitle.Location = new System.Drawing.Point(222, 37);
+            this.lblPaymentManageTitle.Name = "lblPaymentManageTitle";
+            this.lblPaymentManageTitle.Size = new System.Drawing.Size(254, 25);
+            this.lblPaymentManageTitle.TabIndex = 0;
+            this.lblPaymentManageTitle.Text = "Payment Manage Form";
             // 
             // lstPayments
             // 
+            this.lstPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstPayments.FormattingEnabled = true;
-            this.lstPayments.Location = new System.Drawing.Point(31, 28);
+            this.lstPayments.Location = new System.Drawing.Point(12, 85);
             this.lstPayments.Name = "lstPayments";
-            this.lstPayments.Size = new System.Drawing.Size(691, 199);
-            this.lstPayments.TabIndex = 0;
+            this.lstPayments.Size = new System.Drawing.Size(636, 186);
+            this.lstPayments.TabIndex = 1;
             // 
-            // btnApply
+            // txtMethod
             // 
-            this.btnApply.Location = new System.Drawing.Point(31, 344);
-            this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(80, 23);
-            this.btnApply.TabIndex = 1;
-            this.btnApply.Text = "&Apply";
-            this.btnApply.UseVisualStyleBackColor = true;
-            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
+            this.txtMethod.Location = new System.Drawing.Point(15, 349);
+            this.txtMethod.Multiline = true;
+            this.txtMethod.Name = "txtMethod";
+            this.txtMethod.Size = new System.Drawing.Size(226, 27);
+            this.txtMethod.TabIndex = 2;
+            // 
+            // btnOk
+            // 
+            this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOk.Location = new System.Drawing.Point(12, 393);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(80, 33);
+            this.btnOk.TabIndex = 3;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(28, 250);
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Location = new System.Drawing.Point(12, 294);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(39, 13);
-            this.lblError.TabIndex = 2;
+            this.lblError.Size = new System.Drawing.Size(54, 17);
+            this.lblError.TabIndex = 4;
             this.lblError.Text = "lblError";
-            // 
-            // txtMethod
-            // 
-            this.txtMethod.Location = new System.Drawing.Point(31, 309);
-            this.txtMethod.Multiline = true;
-            this.txtMethod.Name = "txtMethod";
-            this.txtMethod.Size = new System.Drawing.Size(209, 29);
-            this.txtMethod.TabIndex = 3;
             // 
             // btnDisplayAll
             // 
-            this.btnDisplayAll.Location = new System.Drawing.Point(160, 344);
+            this.btnDisplayAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisplayAll.Location = new System.Drawing.Point(115, 393);
             this.btnDisplayAll.Name = "btnDisplayAll";
-            this.btnDisplayAll.Size = new System.Drawing.Size(80, 23);
-            this.btnDisplayAll.TabIndex = 4;
-            this.btnDisplayAll.Text = "&Display All";
+            this.btnDisplayAll.Size = new System.Drawing.Size(126, 33);
+            this.btnDisplayAll.TabIndex = 5;
+            this.btnDisplayAll.Text = "Display All";
             this.btnDisplayAll.UseVisualStyleBackColor = true;
             this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAdd.Location = new System.Drawing.Point(31, 387);
+            this.btnAdd.Location = new System.Drawing.Point(453, 349);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(80, 27);
-            this.btnAdd.TabIndex = 5;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Size = new System.Drawing.Size(80, 33);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "&Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(28, 289);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(229, 13);
-            this.lbl1.TabIndex = 6;
-            this.lbl1.Text = "Please Enter a Method to Filter the List";
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUpdate.Location = new System.Drawing.Point(160, 387);
+            this.btnUpdate.Location = new System.Drawing.Point(396, 405);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(80, 27);
+            this.btnUpdate.Size = new System.Drawing.Size(80, 33);
             this.btnUpdate.TabIndex = 7;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Text = "&Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDelete.Location = new System.Drawing.Point(284, 387);
+            this.btnDelete.Location = new System.Drawing.Point(520, 405);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(80, 27);
+            this.btnDelete.Size = new System.Drawing.Size(80, 33);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 326);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Please Enter a Method to Filter the List";
             // 
             // PaymentManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(702, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.lbl1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDisplayAll);
-            this.Controls.Add(this.txtMethod);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.btnApply);
+            this.Controls.Add(this.btnOk);
+            this.Controls.Add(this.txtMethod);
             this.Controls.Add(this.lstPayments);
+            this.Controls.Add(this.lblPaymentManageTitle);
             this.Name = "PaymentManageForm";
-            this.Text = "PaymentMangeForm";
-            this.Load += new System.EventHandler(this.PaymentMangeForm_Load);
+            this.Text = "PaymentManageForm";
+            this.Load += new System.EventHandler(this.PaymentManageForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,14 +164,15 @@
 
         #endregion
 
+        private System.Windows.Forms.Label lblPaymentManageTitle;
         private System.Windows.Forms.ListBox lstPayments;
-        private System.Windows.Forms.Button btnApply;
-        private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.TextBox txtMethod;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Button btnDisplayAll;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label1;
     }
 }
