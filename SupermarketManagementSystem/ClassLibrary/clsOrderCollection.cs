@@ -47,7 +47,7 @@ namespace ClassLibrary
                     clsOrder NewOrder = new clsOrder();
                     //get the house no from the query results
                     NewOrder.OrderId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["OrderId"]);
-                    NewOrder.AccountNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["AccountNo"]);
+                    NewOrder.Email = Convert.ToString(dBConnection.DataTable.Rows[Index]["Email"]);
                     //get the street from the query results
 
                     NewOrder.PaymentId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["PaymentId"]);
@@ -104,7 +104,7 @@ namespace ClassLibrary
             //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
 
-            dBConnection.AddParameter("@AccountNo", mThisOrder.AccountNo);
+            dBConnection.AddParameter("@Email", mThisOrder.Email);
             dBConnection.AddParameter("@PurchasedDate", mThisOrder.PurchasedDate);
             dBConnection.AddParameter("@PaymentId", mThisOrder.PaymentId);
 
@@ -132,7 +132,7 @@ namespace ClassLibrary
             //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
             dBConnection.AddParameter("@OrderId", mThisOrder.OrderId);
-            dBConnection.AddParameter("@AccountNo", mThisOrder.AccountNo);
+            dBConnection.AddParameter("@Email", mThisOrder.Email);
             dBConnection.AddParameter("@PurchasedDate", mThisOrder.PurchasedDate);
             dBConnection.AddParameter("@PaymentId", mThisOrder.PaymentId);
 
@@ -142,16 +142,7 @@ namespace ClassLibrary
 
        /* public void ReportByCategory(string Category)
         {
-            //filters the records based on a full or partial post code
-            //connect to the database
-            //clsDataConnection DB = new clsDataConnection();
-            //send the Category parameter to the database
-            dBConnection = new clsDataConnection();
-            dBConnection.AddParameter("@Category", Category);
-            //execute the stored procedure
-            dBConnection.Execute("sproc_tblInventory_FilterByCategory");
-            //populate the array list with the data table
-            PopulateArray(dBConnection);
+            
         }*/
 
         void PopulateArray(clsDataConnection dBConnection)
@@ -172,7 +163,7 @@ namespace ClassLibrary
                 clsOrder AnOrder = new clsOrder();
                 //read in the fields from the current record
                 AnOrder.OrderId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["OrderId"]);
-                AnOrder.AccountNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["AccountNo"]);
+                AnOrder.Email = Convert.ToString(dBConnection.DataTable.Rows[Index]["Email"]);
                 AnOrder.PurchasedDate = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["PurchasedDate"]);
                 AnOrder.PaymentId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["PaymentId"]);
                
@@ -184,6 +175,20 @@ namespace ClassLibrary
                 //point at the next record
                 Index++;
             }
+        }
+
+        public void FilterByEmail(string Email)
+        {
+            //filters the records based on a full or partial post code
+            //connect to the database
+            //clsDataConnection DB = new clsDataConnection();
+            //send the Category parameter to the database
+            dBConnection = new clsDataConnection();
+            dBConnection.AddParameter("@Email", Email);
+            //execute the stored procedure
+            dBConnection.Execute("sproc_tblOrder_FilterByEmail");
+            //populate the array list with the data table
+            PopulateArray(dBConnection);
         }
     }
 }

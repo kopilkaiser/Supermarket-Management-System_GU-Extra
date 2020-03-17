@@ -129,9 +129,9 @@ namespace ClassLibrary
             public void Update()
             {
                 dBConnection = new clsDataConnection();
-               //set the parameters for the stored procedure
+            //set the parameters for the stored procedure
+               dBConnection.AddParameter("@OrderlineId", mThisOrderline.OrderlineId);
                dBConnection.AddParameter("@OrderId", mThisOrderline.OrderId);
-               
                dBConnection.AddParameter("@Quantity", mThisOrderline.Quantity);
                dBConnection.AddParameter("@InventoryId", mThisOrderline.InventoryId);
 
@@ -140,19 +140,19 @@ namespace ClassLibrary
              dBConnection.Execute("sproc_tblOrderline_Update");
             }
 
-          /* public void ReportByOrderlineId(string Category)
+           public void FilterByEmail(string Email)
             {
                 //filters the records based on a full or partial post code
                 //connect to the database
                 //clsDataConnection DB = new clsDataConnection();
                 //send the Category parameter to the database
                 dBConnection = new clsDataConnection();
-                dBConnection.AddParameter("@Category", Category);
+                dBConnection.AddParameter("@Email", Email);
                 //execute the stored procedure
-                dBConnection.Execute("sproc_tblInventory_FilterByCategory");
+                dBConnection.Execute("sproc_tblOrder_FilterByEmail");
                 //populate the array list with the data table
                 PopulateArray(dBConnection);
-            }*/
+           }
 
             void PopulateArray(clsDataConnection dBConnection)
             {
