@@ -27,9 +27,9 @@ namespace BackEnd
                 return mSec;
             }
         }
-        
 
-        public void SetMode(object sec, object userEMail)
+
+        public void SetMode(clsSecurity Sec, string EMail)
         {
             ///sets the mode of the form
             ///if an email is supplied then it is a user wanting to change their password

@@ -14,6 +14,7 @@ namespace BackEnd
     {
         //create an object based on the security class
         clsDataConnection DB = new clsDataConnection();
+        clsSecurity Sec = new clsSecurity();
         //create an instance of the main menu form
         mdiBackEndMenuForm Menu = new mdiBackEndMenuForm();
 
