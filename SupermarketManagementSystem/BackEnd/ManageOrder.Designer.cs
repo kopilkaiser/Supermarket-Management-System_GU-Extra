@@ -32,7 +32,6 @@
             this.txtSearchbyorderid = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSearchbyorderid = new System.Windows.Forms.Button();
             this.listOrders = new System.Windows.Forms.ListBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -47,13 +46,15 @@
             // 
             // txtSearchbyorderid
             // 
-            this.txtSearchbyorderid.Location = new System.Drawing.Point(191, 97);
+            this.txtSearchbyorderid.Location = new System.Drawing.Point(324, 439);
+            this.txtSearchbyorderid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearchbyorderid.Name = "txtSearchbyorderid";
-            this.txtSearchbyorderid.Size = new System.Drawing.Size(254, 20);
+            this.txtSearchbyorderid.Size = new System.Drawing.Size(337, 22);
             this.txtSearchbyorderid.TabIndex = 0;
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
@@ -61,37 +62,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(218, 11);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(291, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 31);
+            this.label1.Size = new System.Drawing.Size(451, 39);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Order Management (Staff)";
-            // 
-            // btnSearchbyorderid
-            // 
-            this.btnSearchbyorderid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchbyorderid.Location = new System.Drawing.Point(465, 91);
-            this.btnSearchbyorderid.Name = "btnSearchbyorderid";
-            this.btnSearchbyorderid.Size = new System.Drawing.Size(149, 31);
-            this.btnSearchbyorderid.TabIndex = 3;
-            this.btnSearchbyorderid.Text = "Search by OrderId";
-            this.btnSearchbyorderid.UseVisualStyleBackColor = true;
-            this.btnSearchbyorderid.Click += new System.EventHandler(this.btnSearchbyorderid_Click);
+            this.label1.Text = "Order Management (Order)";
             // 
             // listOrders
             // 
             this.listOrders.FormattingEnabled = true;
-            this.listOrders.Location = new System.Drawing.Point(191, 158);
+            this.listOrders.ItemHeight = 16;
+            this.listOrders.Location = new System.Drawing.Point(255, 194);
+            this.listOrders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listOrders.Name = "listOrders";
-            this.listOrders.Size = new System.Drawing.Size(423, 173);
+            this.listOrders.Size = new System.Drawing.Size(563, 212);
             this.listOrders.TabIndex = 4;
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(76, 173);
+            this.btnAdd.Location = new System.Drawing.Point(101, 213);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 32);
+            this.btnAdd.Size = new System.Drawing.Size(100, 39);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -100,9 +95,10 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(76, 234);
+            this.btnUpdate.Location = new System.Drawing.Point(101, 288);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(100, 36);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -111,9 +107,10 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(76, 290);
+            this.btnDelete.Location = new System.Drawing.Point(101, 357);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 27);
+            this.btnDelete.Size = new System.Drawing.Size(100, 33);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -122,9 +119,10 @@
             // btnApply
             // 
             this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApply.Location = new System.Drawing.Point(275, 374);
+            this.btnApply.Location = new System.Drawing.Point(324, 489);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(75, 33);
+            this.btnApply.Size = new System.Drawing.Size(100, 37);
             this.btnApply.TabIndex = 8;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
@@ -133,9 +131,10 @@
             // btnDisplayall
             // 
             this.btnDisplayall.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayall.Location = new System.Drawing.Point(398, 374);
+            this.btnDisplayall.Location = new System.Drawing.Point(462, 485);
+            this.btnDisplayall.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplayall.Name = "btnDisplayall";
-            this.btnDisplayall.Size = new System.Drawing.Size(100, 33);
+            this.btnDisplayall.Size = new System.Drawing.Size(133, 41);
             this.btnDisplayall.TabIndex = 9;
             this.btnDisplayall.Text = "Display All";
             this.btnDisplayall.UseVisualStyleBackColor = true;
@@ -143,19 +142,21 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.Navy;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(4, 2);
+            this.panel1.Location = new System.Drawing.Point(5, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(845, 65);
+            this.panel1.Size = new System.Drawing.Size(1127, 80);
             this.panel1.TabIndex = 10;
             // 
             // btnSignout
             // 
             this.btnSignout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignout.Location = new System.Drawing.Point(754, 84);
+            this.btnSignout.Location = new System.Drawing.Point(1005, 103);
+            this.btnSignout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSignout.Name = "btnSignout";
-            this.btnSignout.Size = new System.Drawing.Size(95, 33);
+            this.btnSignout.Size = new System.Drawing.Size(127, 41);
             this.btnSignout.TabIndex = 11;
             this.btnSignout.Text = "SignOut";
             this.btnSignout.UseVisualStyleBackColor = true;
@@ -163,18 +164,19 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(188, 334);
+            this.lblError.Location = new System.Drawing.Point(251, 411);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(29, 13);
+            this.lblError.Size = new System.Drawing.Size(40, 17);
             this.lblError.TabIndex = 12;
             this.lblError.Text = "Error";
             // 
             // ManageOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(858, 569);
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(1144, 700);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnSignout);
             this.Controls.Add(this.panel1);
@@ -184,8 +186,9 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.listOrders);
-            this.Controls.Add(this.btnSearchbyorderid);
             this.Controls.Add(this.txtSearchbyorderid);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ManageOrder";
             this.Text = "ManageOrder";
             this.Load += new System.EventHandler(this.ManageOrder_Load);
@@ -201,7 +204,6 @@
         private System.Windows.Forms.TextBox txtSearchbyorderid;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSearchbyorderid;
         private System.Windows.Forms.ListBox listOrders;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;

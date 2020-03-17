@@ -101,6 +101,18 @@
     <Compile Include="InventoryManageForm.Designer.cs">
       <DependentUpon>InventoryManageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderlineManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderlineManagement.Designer.cs">
+      <DependentUpon>OrderlineManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSubform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderSubform.Designer.cs">
+      <DependentUpon>OrderSubform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaffManageForm.cs">
@@ -153,6 +165,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryManageForm.resx">
       <DependentUpon>InventoryManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderlineManagement.resx">
+      <DependentUpon>OrderlineManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderSubform.resx">
+      <DependentUpon>OrderSubform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
