@@ -15,7 +15,7 @@ namespace BackEnd
         //create an object based on the security class
         clsDataConnection DB = new clsDataConnection();
         //create an instance of the main menu form
-        MainMenuForm Menu = new MainMenuForm();
+        //MainMenuForm Menu = new MainMenuForm();
 
         private int childFormNumber = 0;
 
