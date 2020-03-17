@@ -24,10 +24,10 @@ namespace BackEnd
 
         private void AddOrder_Load(object sender, EventArgs e)
         {
-            
-            
+
+
             txtPurchasedDate.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
-           
+
 
         }
         void DisplayOrders()

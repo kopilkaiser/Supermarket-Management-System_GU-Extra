@@ -21,7 +21,7 @@ namespace BackEnd
                 mOrderId = value;
             }
         }
-       public static int tempOrder { get; set; }
+        public static int tempOrder { get; set; }
 
         public UpdateOrderForm()
         {
@@ -55,22 +55,22 @@ namespace BackEnd
             //create an instance of the Staff Collenction
             clsOrderCollection AllOrders = new clsOrderCollection();
             //validate the data on the web form
-            string Error = AllOrders.ThisOrder.Valid(txtEmail.Text, txtPurchasedDate.Text,txtPaymentId.Text);
+            string Error = AllOrders.ThisOrder.Valid(txtEmail.Text, txtPurchasedDate.Text, txtPaymentId.Text);
             //if the data is OK then add it to the object
             if (Error == "")
             {
 
                 //find the record to update
-               AllOrders.ThisOrder.Find(mOrderId);
+                AllOrders.ThisOrder.Find(mOrderId);
                 //get the data entered by the user
                 AllOrders.ThisOrder.Email = txtEmail.Text;
                 AllOrders.ThisOrder.PurchasedDate = Convert.ToDateTime(txtPurchasedDate.Text);
                 AllOrders.ThisOrder.PaymentId = Convert.ToInt32(txtPaymentId.Text);
-                
-                
-               
+
+
+
                 //add the record
-               AllOrders.Update();
+                AllOrders.Update();
                 //all done so redirect back to the main page
                 ManageOrderForm IM = new ManageOrderForm();
                 this.Hide();
@@ -93,8 +93,8 @@ namespace BackEnd
             this.Close();
         }
     }
-        
 
-       
-    
+
+
+
 }
