@@ -40,7 +40,7 @@ namespace ClassLibrary
 
             get
             {
-                List<clsOrder> mOrderList = new List<clsOrder>();
+                List<clsOrder> mInventoryList = new List<clsOrder>();
                 Int32 Index = 0;
                 while (Index < dBConnection.Count)
                 {

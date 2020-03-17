@@ -1,6 +1,6 @@
 ﻿namespace BackEnd
 {
-    partial class DeleteOrderlineForm
+    partial class DeleteOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -34,34 +34,34 @@
             // 
             // btnYes
             // 
-            this.btnYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnYes.Location = new System.Drawing.Point(150, 129);
+            this.btnYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnYes.Location = new System.Drawing.Point(33, 80);
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(89, 37);
+            this.btnYes.Size = new System.Drawing.Size(75, 23);
             this.btnYes.TabIndex = 0;
             this.btnYes.Text = "Yes";
             this.btnYes.UseVisualStyleBackColor = true;
+            this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
             // btnNo
             // 
-            this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNo.Location = new System.Drawing.Point(286, 129);
+            this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNo.Location = new System.Drawing.Point(148, 80);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(75, 35);
-            this.btnNo.TabIndex = 7;
+            this.btnNo.Size = new System.Drawing.Size(75, 23);
+            this.btnNo.TabIndex = 1;
             this.btnNo.Text = "No";
             this.btnNo.UseVisualStyleBackColor = true;
             // 
-            // DeleteOrderline
+            // DeleteOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(553, 323);
+            this.ClientSize = new System.Drawing.Size(296, 191);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);
-            this.Name = "DeleteOrderline";
-            this.Text = "DeleteOrderline";
+            this.Name = "DeleteOrder";
+            this.Text = "DeleteOrder";
             this.ResumeLayout(false);
 
         }

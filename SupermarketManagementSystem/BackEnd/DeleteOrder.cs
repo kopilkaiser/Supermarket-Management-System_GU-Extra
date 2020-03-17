@@ -7,17 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary;
 
 namespace BackEnd
 {
-    public partial class AddOrderlineForm : Form
+    public partial class DeleteOrder : Form
     {
-        public AddOrderlineForm()
+        public DeleteOrder()
         {
             InitializeComponent();
         }
 
-        private void btnOk_Click(object sender, EventArgs e)
+        private void btnYes_Click(object sender, EventArgs e)
         {
 
         }

@@ -11,7 +11,7 @@ using ClassLibrary;
 
 namespace BackEnd
 {
-    public partial class ConfirmDeleteInventoryForm : Form
+    public partial class ConfirmDelete : Form
     {
         private int mInventoryId = 0;
         public int InventoryID
@@ -22,7 +22,7 @@ namespace BackEnd
             }
         }
 
-        public ConfirmDeleteInventoryForm()
+        public ConfirmDelete()
         {
             InitializeComponent();
         }

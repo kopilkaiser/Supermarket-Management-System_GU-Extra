@@ -1,6 +1,6 @@
 ﻿namespace BackEnd
 {
-    partial class OrderlineManagementForm
+    partial class OrderlineManagement
     {
         /// <summary>
         /// Required designer variable.

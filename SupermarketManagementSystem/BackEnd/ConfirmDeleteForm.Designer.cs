@@ -1,6 +1,6 @@
 ﻿namespace BackEnd
 {
-    partial class ConfirmDeleteStaffForm
+    partial class ConfirmDeleteForm
     {
         /// <summary>
         /// Required designer variable.

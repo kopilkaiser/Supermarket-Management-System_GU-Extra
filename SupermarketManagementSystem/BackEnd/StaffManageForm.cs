@@ -97,7 +97,7 @@ namespace BackEnd
                 UpdateStaffForm.tempStaff = StaffId;
 
                 //redirect to the delete page
-                ConfirmDeleteStaffForm ConfirmDelete = new ConfirmDeleteStaffForm();
+                ConfirmDeleteForm ConfirmDelete = new ConfirmDeleteForm();
                 ConfirmDelete.StaffID = StaffId;
                 this.Hide();
                 ConfirmDelete.Show();

@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace BackEnd
 {
-    public partial class DeleteOrderlineForm : Form
+    public partial class AddOrder : Form
     {
-        public DeleteOrderlineForm()
+        public AddOrder()
         {
             InitializeComponent();
         }
+
+       
     }
 }
