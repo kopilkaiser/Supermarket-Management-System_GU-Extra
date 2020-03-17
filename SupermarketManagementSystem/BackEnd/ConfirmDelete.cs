@@ -63,6 +63,6 @@ namespace BackEnd
             AllInventories.Delete();
         }
 
-        
+
     }
 }

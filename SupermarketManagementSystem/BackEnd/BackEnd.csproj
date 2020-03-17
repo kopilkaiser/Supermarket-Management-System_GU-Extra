@@ -71,6 +71,12 @@
     <Compile Include="AddStaffForm.Designer.cs">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnInventory.Designer.cs">
+      <DependentUpon>AnInventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConfirmDelete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,11 +101,23 @@
     <Compile Include="DeleteOrder.Designer.cs">
       <DependentUpon>DeleteOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageOrder.cs">
+    <Compile Include="DeletePaymentConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageOrder.Designer.cs">
-      <DependentUpon>ManageOrder.cs</DependentUpon>
+    <Compile Include="DeletePaymentConfirmForm.Designer.cs">
+      <DependentUpon>DeletePaymentConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryManagement.Designer.cs">
+      <DependentUpon>InventoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="mdiBackEnd.cs">
       <SubType>Form</SubType>
@@ -175,6 +193,9 @@
     <EmbeddedResource Include="AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AnInventory.resx">
+      <DependentUpon>AnInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfirmDelete.resx">
       <DependentUpon>ConfirmDelete.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,8 +208,11 @@
     <EmbeddedResource Include="DeleteOrder.resx">
       <DependentUpon>DeleteOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageOrder.resx">
-      <DependentUpon>ManageOrder.cs</DependentUpon>
+    <EmbeddedResource Include="DeletePaymentConfirmForm.resx">
+      <DependentUpon>DeletePaymentConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryManagement.resx">
+      <DependentUpon>InventoryManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiBackEnd.resx">
       <DependentUpon>mdiBackEnd.cs</DependentUpon>
