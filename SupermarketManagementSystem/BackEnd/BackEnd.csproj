@@ -77,6 +77,12 @@
     <Compile Include="ConfirmDeleteForm.Designer.cs">
       <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageOrder.cs">
       <SubType>Form</SubType>
     </Compile>
