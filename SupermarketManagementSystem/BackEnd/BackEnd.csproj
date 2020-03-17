@@ -53,11 +53,11 @@
     <Compile Include="AddInventoryForm.Designer.cs">
       <DependentUpon>AddInventoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddOrderForm.cs">
+    <Compile Include="AddOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddOrderForm.Designer.cs">
-      <DependentUpon>AddOrderForm.cs</DependentUpon>
+    <Compile Include="AddOrder.Designer.cs">
+      <DependentUpon>AddOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="AddPaymentForm.cs">
       <SubType>Form</SubType>
@@ -71,23 +71,53 @@
     <Compile Include="AddStaffForm.Designer.cs">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnInventory.Designer.cs">
+      <DependentUpon>AnInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmDelete.Designer.cs">
+      <DependentUpon>ConfirmDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmDeleteForm.Designer.cs">
+      <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConfirmPaymentDeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConfirmPaymentDeleteForm.Designer.cs">
       <DependentUpon>ConfirmPaymentDeleteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteOrderForm.cs">
+    <Compile Include="DeleteOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteOrderForm.Designer.cs">
-      <DependentUpon>DeleteOrderForm.cs</DependentUpon>
+    <Compile Include="DeleteOrder.Designer.cs">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageOrderForm.cs">
+    <Compile Include="DeletePaymentConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageOrderForm.Designer.cs">
-      <DependentUpon>ManageOrderForm.cs</DependentUpon>
+    <Compile Include="DeletePaymentConfirmForm.Designer.cs">
+      <DependentUpon>DeletePaymentConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryManagement.Designer.cs">
+      <DependentUpon>InventoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="mdiBackEnd.cs">
       <SubType>Form</SubType>
@@ -133,11 +163,11 @@
     <Compile Include="UpdateInventoryForm.Designer.cs">
       <DependentUpon>UpdateInventoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateOrderForm.cs">
+    <Compile Include="UpdateOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateOrderForm.Designer.cs">
-      <DependentUpon>UpdateOrderForm.cs</DependentUpon>
+    <Compile Include="UpdateOrder.Designer.cs">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdatePaymentForm.cs">
       <SubType>Form</SubType>
@@ -154,8 +184,8 @@
     <EmbeddedResource Include="AddInventoryForm.resx">
       <DependentUpon>AddInventoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddOrderForm.resx">
-      <DependentUpon>AddOrderForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddOrder.resx">
+      <DependentUpon>AddOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddPaymentForm.resx">
       <DependentUpon>AddPaymentForm.cs</DependentUpon>
@@ -163,14 +193,26 @@
     <EmbeddedResource Include="AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AnInventory.resx">
+      <DependentUpon>AnInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmDelete.resx">
+      <DependentUpon>ConfirmDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmDeleteForm.resx">
+      <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfirmPaymentDeleteForm.resx">
       <DependentUpon>ConfirmPaymentDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteOrderForm.resx">
-      <DependentUpon>DeleteOrderForm.cs</DependentUpon>
+    <EmbeddedResource Include="DeleteOrder.resx">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageOrderForm.resx">
-      <DependentUpon>ManageOrderForm.cs</DependentUpon>
+    <EmbeddedResource Include="DeletePaymentConfirmForm.resx">
+      <DependentUpon>DeletePaymentConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryManagement.resx">
+      <DependentUpon>InventoryManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiBackEnd.resx">
       <DependentUpon>mdiBackEnd.cs</DependentUpon>
@@ -201,9 +243,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateInventoryForm.resx">
       <DependentUpon>UpdateInventoryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateOrderForm.resx">
-      <DependentUpon>UpdateOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatePaymentForm.resx">
       <DependentUpon>UpdatePaymentForm.cs</DependentUpon>
