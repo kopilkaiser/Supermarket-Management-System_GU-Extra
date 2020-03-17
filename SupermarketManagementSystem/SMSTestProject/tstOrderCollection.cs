@@ -24,7 +24,7 @@ namespace SMSTestProject
             clsOrder TestOrder = new clsOrder();
             //set the properties of the test object
             TestOrder.OrderId = 01;
-            TestOrder.AccountNo = 02;
+            TestOrder.Email = "k@gmail.com";
             TestOrder.PurchasedDate = DateTime.Now.Date;
             TestOrder.PaymentId = 05;
             //assign the data to the property
@@ -45,7 +45,7 @@ namespace SMSTestProject
             Int32 PrimaryKey = 0;
            
             TestItem.OrderId = 1;
-            TestItem.AccountNo = 2;
+            TestItem.Email = "k@gmail.com";
             TestItem.PurchasedDate = DateTime.Now.Date;
             TestItem.PaymentId = 5;
 
@@ -75,7 +75,7 @@ namespace SMSTestProject
             Int32 PrimaryKey = 0;
             // set it properties
             TestItem.OrderId = 1;
-            TestItem.AccountNo = 02;
+            TestItem.Email = "k@gmail.com";
             TestItem.PurchasedDate = DateTime.Now.Date;
             TestItem.PaymentId = 05;
 
@@ -110,8 +110,8 @@ namespace SMSTestProject
             // var to store the primary key
             Int32 PrimaryKey = 0;
             // set it properties
-            TestItem.AccountNo = 02;
-           
+            TestItem.Email = "k@gmail.com";
+
             TestItem.PaymentId = 05;
             TestItem.PurchasedDate = DateTime.Now.Date;
 
@@ -122,9 +122,9 @@ namespace SMSTestProject
             // set the primary key TestI data
             TestItem.OrderId = PrimaryKey;
             // modify the test data
-            TestItem.AccountNo = 03;
+            TestItem.Email = "l@gmail.com";
             TestItem.PurchasedDate = DateTime.Now.Date;
-            TestItem.PaymentId = 05;
+            TestItem.PaymentId = 06;
             
             // set the record based on the new test data
             AllOrders.ThisOrder = TestItem;
@@ -201,21 +201,22 @@ namespace SMSTestProject
             AllOrders.OrderList = TestList;
             // test to see that two values are the same
             Assert.AreNotEqual(AllOrders.Count, TestList.Count);
-        }/*
-      /*  [TestMethod]
-        public void FilterByOrderId()
+        }*/
+       [TestMethod]
+        public void FilterByEmail()
         {
             // create an instance of the class we want to create
             clsOrderCollection AllOrders = new clsOrderCollection();
             // create an instance of the filtered data
             clsOrderCollection FilteredOrders = new clsOrderCollection();
             // apply the blank string
-            FilteredOrders.ReportByOrderId("");
+            FilteredOrders.FilterByEmail("");
 
             //test to see that the two values are the same
             Assert.AreNotEqual(AllOrders.Count, FilteredOrders.Count);
-        }~*/
-        [TestMethod]
+        }
+       
+    /*[TestMethod]
         public void FindMethodOK()
         {
             // create an instance of the class
@@ -234,7 +235,7 @@ namespace SMSTestProject
 
 
 
-        }
+        }*/
 
        
 

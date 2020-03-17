@@ -7,27 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Web.UI.WebControls;
 using ClassLibrary;
-
 
 namespace BackEnd
 {
-    public partial class AddPayment : Form
+    public partial class DeleteOrder : Form
     {
-        int PaymentId;
-        clsPayment AnPayment = new clsPayment();
-        public AddPayment()
+        public DeleteOrder()
         {
             InitializeComponent();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnYes_Click(object sender, EventArgs e)
         {
-            Payment
-            this.Hide();
-            
-            this.Close();
+
         }
     }
 }

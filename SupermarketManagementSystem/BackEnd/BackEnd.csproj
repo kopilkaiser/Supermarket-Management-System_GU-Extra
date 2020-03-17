@@ -77,11 +77,11 @@
     <Compile Include="ConfirmDeleteForm.Designer.cs">
       <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenuForm.cs">
+    <Compile Include="DeleteOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenuForm.Designer.cs">
-      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    <Compile Include="DeleteOrder.Designer.cs">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageOrder.cs">
       <SubType>Form</SubType>
@@ -101,6 +101,18 @@
     <Compile Include="InventoryManageForm.Designer.cs">
       <DependentUpon>InventoryManageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderlineManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderlineManagement.Designer.cs">
+      <DependentUpon>OrderlineManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSubform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderSubform.Designer.cs">
+      <DependentUpon>OrderSubform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaffManageForm.cs">
@@ -114,6 +126,12 @@
     </Compile>
     <Compile Include="UpdateInventoryForm.Designer.cs">
       <DependentUpon>UpdateInventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateOrder.Designer.cs">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateStaffForm.cs">
       <SubType>Form</SubType>
@@ -136,6 +154,9 @@
     <EmbeddedResource Include="ConfirmDeleteForm.resx">
       <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteOrder.resx">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageOrder.resx">
       <DependentUpon>ManageOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +165,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryManageForm.resx">
       <DependentUpon>InventoryManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderlineManagement.resx">
+      <DependentUpon>OrderlineManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderSubform.resx">
+      <DependentUpon>OrderSubform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

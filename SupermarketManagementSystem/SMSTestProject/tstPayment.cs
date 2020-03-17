@@ -64,7 +64,7 @@ namespace SMSTestProject
         public void CardNumberPropertyOK()
         {
             clsPayment AnPayment = new clsPayment();
-            Int64 CardNumber = 450456012578;
+            string CardNumber = 450456012578.ToString();
             AnPayment.CardNumber = CardNumber;
             Assert.AreEqual(AnPayment.CardNumber, CardNumber);
         }
