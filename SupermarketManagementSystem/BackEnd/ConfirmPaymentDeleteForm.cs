@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace BackEnd
 {
-    public partial class OrderlineManagement : Form
+    public partial class ConfirmPaymentDeleteForm : Form
     {
-        public OrderlineManagement()
+        public ConfirmPaymentDeleteForm()
         {
             InitializeComponent();
         }
-
-        private void OrderlineManagement_Load(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }

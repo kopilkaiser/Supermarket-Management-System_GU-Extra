@@ -39,6 +39,7 @@ namespace ClassLibrary
                 mEmail = value;
             }
         }
+
         public int PaymentId
         {
             get
@@ -63,21 +64,6 @@ namespace ClassLibrary
                 mPurchasedDate = value;
             }
         }
-
-
-     /* public bool Active
-        {
-            get
-            {
-                return mActive;
-            }
-
-            set
-            {
-                mActive = value;
-            }
-        }
-        */
 
        
 
@@ -114,12 +100,8 @@ namespace ClassLibrary
         {
             // create a variable to store any error message
             string Error = "";
-
-            string EmailTemp;
             Int32 PaymentIdTemp;
             DateTime DateTemp;
-
-            int OrderIdTemp;
 
             //if Email entered is valid 
             if (email.Length == 0)
@@ -131,13 +113,6 @@ namespace ClassLibrary
             {
                 Error = Error + "The Email cannot exceed 100 characters : ";
             }
-            
-
-
-
-
-
-
 
             //if paymentId entered is valid 
             try
@@ -146,7 +121,7 @@ namespace ClassLibrary
 
                 if (PaymentIdTemp > 10000)
                 {
-                    Error = Error + "Payment Id cannot exceed the limit of  20 : ";
+                    Error = Error + "Payment Id cannot exceed the limit of  10000 : ";
                 }
 
                 if (PaymentIdTemp <= 0)
@@ -189,6 +164,7 @@ namespace ClassLibrary
 
             return Error;
         }
+
         public string AllDetails
         {
             get

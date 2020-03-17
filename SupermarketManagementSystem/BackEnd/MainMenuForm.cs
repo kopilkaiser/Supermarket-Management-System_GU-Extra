@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace BackEnd
 {
-    public partial class AddOrder : Form
+    public partial class MainMenuForm : Form
     {
-        public AddOrder()
+        public MainMenuForm()
         {
             InitializeComponent();
         }
-
-       
     }
 }
