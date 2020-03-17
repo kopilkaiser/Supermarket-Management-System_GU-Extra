@@ -142,16 +142,7 @@ namespace ClassLibrary
 
        /* public void ReportByCategory(string Category)
         {
-            //filters the records based on a full or partial post code
-            //connect to the database
-            //clsDataConnection DB = new clsDataConnection();
-            //send the Category parameter to the database
-            dBConnection = new clsDataConnection();
-            dBConnection.AddParameter("@Category", Category);
-            //execute the stored procedure
-            dBConnection.Execute("sproc_tblInventory_FilterByCategory");
-            //populate the array list with the data table
-            PopulateArray(dBConnection);
+            
         }*/
 
         void PopulateArray(clsDataConnection dBConnection)
@@ -186,9 +177,18 @@ namespace ClassLibrary
             }
         }
 
-        public void FilterByEmail(string v)
+        public void FilterByEmail(string Email)
         {
-            throw new NotImplementedException();
+            //filters the records based on a full or partial post code
+            //connect to the database
+            //clsDataConnection DB = new clsDataConnection();
+            //send the Category parameter to the database
+            dBConnection = new clsDataConnection();
+            dBConnection.AddParameter("@Email", Email);
+            //execute the stored procedure
+            dBConnection.Execute("sproc_tblOrder_FilterByEmail");
+            //populate the array list with the data table
+            PopulateArray(dBConnection);
         }
     }
 }

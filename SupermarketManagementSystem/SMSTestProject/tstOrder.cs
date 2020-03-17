@@ -170,7 +170,7 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string Email = "a";
+            string Email = "aaaaaaaaaa";
             Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
 
@@ -181,7 +181,7 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string Email = "aa";
+            string Email = "aaaaaaaaaaa";
             Error = AnOrder.Valid(Email, PaymentId, PurchasedDate);
             Assert.AreEqual(Error, "");
 

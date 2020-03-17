@@ -27,7 +27,7 @@ namespace ClassLibrary
 
 
 
-        public int Email
+        public String Email
         {
             get
             {
@@ -110,37 +110,28 @@ namespace ClassLibrary
 
         }
 
-        public string Valid(string Email, string paymentId, string purchasedDate)
+        public string Valid(string email, string paymentId, string purchasedDate)
         {
             // create a variable to store any error message
             string Error = "";
 
-            Int32 EmailTemp;
+            string EmailTemp;
             Int32 PaymentIdTemp;
             DateTime DateTemp;
 
             int OrderIdTemp;
 
             //if Email entered is valid 
-            if (Email.Length == 0)
+            if (email.Length == 0)
             {
                 Error = Error + "The Email cannot be blank : ";
             }
 
-            if (Email.Length > 50)
+            if (email.Length > 50)
             {
                 Error = Error + "The Email cannot exceed 100 characters : ";
             }
-
-            if (Email.Length < 10)
-            {
-                Error = Error + "The Email cannot be less than 10 : ";
-            }
-
-            if (Email.Length > 15)
-            {
-                Error = Error + "The Email cannot exceed 15 numbers : ";
-            }
+            
 
 
 

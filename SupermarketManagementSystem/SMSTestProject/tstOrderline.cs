@@ -118,7 +118,7 @@ namespace SMSTestProject
             // invoke the method
             Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             // test to see that result is ok , e, g - There should be an error message
-            Assert.AreNotEqual(Error, "");
+            Assert.AreEqual(Error, "");
 
         }
         [TestMethod]

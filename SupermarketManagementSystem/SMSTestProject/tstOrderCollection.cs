@@ -124,7 +124,7 @@ namespace SMSTestProject
             // modify the test data
             TestItem.Email = "l@gmail.com";
             TestItem.PurchasedDate = DateTime.Now.Date;
-            TestItem.PaymentId = 05;
+            TestItem.PaymentId = 06;
             
             // set the record based on the new test data
             AllOrders.ThisOrder = TestItem;
