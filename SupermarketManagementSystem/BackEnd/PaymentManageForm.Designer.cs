@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblPaymentManageTitle = new System.Windows.Forms.Label();
-            this.listPayments = new System.Windows.Forms.ListBox();
+            this.lstPayments = new System.Windows.Forms.ListBox();
             this.txtMethod = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
@@ -50,14 +50,14 @@
             this.lblPaymentManageTitle.TabIndex = 0;
             this.lblPaymentManageTitle.Text = "Payment Manage Form";
             // 
-            // listPayments
+            // lstPayments
             // 
-            this.listPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listPayments.FormattingEnabled = true;
-            this.listPayments.Location = new System.Drawing.Point(12, 85);
-            this.listPayments.Name = "listPayments";
-            this.listPayments.Size = new System.Drawing.Size(636, 186);
-            this.listPayments.TabIndex = 1;
+            this.lstPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstPayments.FormattingEnabled = true;
+            this.lstPayments.Location = new System.Drawing.Point(12, 85);
+            this.lstPayments.Name = "lstPayments";
+            this.lstPayments.Size = new System.Drawing.Size(636, 186);
+            this.lstPayments.TabIndex = 1;
             // 
             // txtMethod
             // 
@@ -76,6 +76,7 @@
             this.btnOk.TabIndex = 3;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // lblError
             // 
@@ -96,6 +97,7 @@
             this.btnDisplayAll.TabIndex = 5;
             this.btnDisplayAll.Text = "Display All";
             this.btnDisplayAll.UseVisualStyleBackColor = true;
+            this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
             // 
             // btnAdd
             // 
@@ -105,6 +107,7 @@
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -114,6 +117,7 @@
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -123,6 +127,7 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label1
             // 
@@ -147,10 +152,11 @@
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtMethod);
-            this.Controls.Add(this.listPayments);
+            this.Controls.Add(this.lstPayments);
             this.Controls.Add(this.lblPaymentManageTitle);
             this.Name = "PaymentManageForm";
             this.Text = "PaymentManageForm";
+            this.Load += new System.EventHandler(this.PaymentManageForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,7 +165,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblPaymentManageTitle;
-        private System.Windows.Forms.ListBox listPayments;
+        private System.Windows.Forms.ListBox lstPayments;
         private System.Windows.Forms.TextBox txtMethod;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label lblError;

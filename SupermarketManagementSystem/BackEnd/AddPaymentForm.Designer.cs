@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPayeeName = new System.Windows.Forms.TextBox();
             this.lblPayeeName = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbMethod = new System.Windows.Forms.ComboBox();
             this.lblCardNumber = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCardNumber = new System.Windows.Forms.TextBox();
             this.lblAmount = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.lblPaymentDate = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPaymentDate = new System.Windows.Forms.TextBox();
             this.lblMethod = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblAddPaymentTitle = new System.Windows.Forms.Label();
@@ -53,13 +53,14 @@
             this.btnConfirm.TabIndex = 0;
             this.btnConfirm.Text = "&Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // textBox1
+            // txtPayeeName
             // 
-            this.textBox1.Location = new System.Drawing.Point(194, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtPayeeName.Location = new System.Drawing.Point(194, 83);
+            this.txtPayeeName.Name = "txtPayeeName";
+            this.txtPayeeName.Size = new System.Drawing.Size(179, 20);
+            this.txtPayeeName.TabIndex = 1;
             // 
             // lblPayeeName
             // 
@@ -71,17 +72,17 @@
             this.lblPayeeName.TabIndex = 2;
             this.lblPayeeName.Text = "PayeeName";
             // 
-            // comboBox1
+            // cmbMethod
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbMethod.FormattingEnabled = true;
+            this.cmbMethod.Items.AddRange(new object[] {
             "Visa Debit",
             "Credit Card",
             "MasterCard"});
-            this.comboBox1.Location = new System.Drawing.Point(194, 165);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cmbMethod.Location = new System.Drawing.Point(194, 165);
+            this.cmbMethod.Name = "cmbMethod";
+            this.cmbMethod.Size = new System.Drawing.Size(179, 21);
+            this.cmbMethod.TabIndex = 3;
             // 
             // lblCardNumber
             // 
@@ -93,12 +94,12 @@
             this.lblCardNumber.TabIndex = 5;
             this.lblCardNumber.Text = "CardNumber";
             // 
-            // textBox2
+            // txtCardNumber
             // 
-            this.textBox2.Location = new System.Drawing.Point(194, 127);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtCardNumber.Location = new System.Drawing.Point(194, 127);
+            this.txtCardNumber.Name = "txtCardNumber";
+            this.txtCardNumber.Size = new System.Drawing.Size(179, 20);
+            this.txtCardNumber.TabIndex = 4;
             // 
             // lblAmount
             // 
@@ -110,12 +111,12 @@
             this.lblAmount.TabIndex = 7;
             this.lblAmount.Text = "Amount";
             // 
-            // textBox3
+            // txtAmount
             // 
-            this.textBox3.Location = new System.Drawing.Point(194, 206);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(179, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtAmount.Location = new System.Drawing.Point(194, 206);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(179, 20);
+            this.txtAmount.TabIndex = 6;
             // 
             // lblPaymentDate
             // 
@@ -127,12 +128,12 @@
             this.lblPaymentDate.TabIndex = 9;
             this.lblPaymentDate.Text = "PaymentDate";
             // 
-            // textBox4
+            // txtPaymentDate
             // 
-            this.textBox4.Location = new System.Drawing.Point(194, 250);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(179, 20);
-            this.textBox4.TabIndex = 8;
+            this.txtPaymentDate.Location = new System.Drawing.Point(194, 250);
+            this.txtPaymentDate.Name = "txtPaymentDate";
+            this.txtPaymentDate.Size = new System.Drawing.Size(179, 20);
+            this.txtPaymentDate.TabIndex = 8;
             // 
             // lblMethod
             // 
@@ -153,6 +154,7 @@
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblAddPaymentTitle
             // 
@@ -184,17 +186,18 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblMethod);
             this.Controls.Add(this.lblPaymentDate);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtPaymentDate);
             this.Controls.Add(this.lblAmount);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.lblCardNumber);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtCardNumber);
+            this.Controls.Add(this.cmbMethod);
             this.Controls.Add(this.lblPayeeName);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPayeeName);
             this.Controls.Add(this.btnConfirm);
             this.Name = "AddPaymentForm";
             this.Text = "AddPaymentForm";
+            this.Load += new System.EventHandler(this.AddPaymentForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,15 +206,15 @@
         #endregion
 
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPayeeName;
         private System.Windows.Forms.Label lblPayeeName;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbMethod;
         private System.Windows.Forms.Label lblCardNumber;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCardNumber;
         private System.Windows.Forms.Label lblAmount;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Label lblPaymentDate;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPaymentDate;
         private System.Windows.Forms.Label lblMethod;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblAddPaymentTitle;

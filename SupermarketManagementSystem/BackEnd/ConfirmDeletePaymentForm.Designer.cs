@@ -1,6 +1,6 @@
 ﻿namespace BackEnd
 {
-    partial class ConfirmPaymentDeleteForm
+    partial class ConfirmDeletePaymentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             this.btnOk.TabIndex = 0;
             this.btnOk.Text = "&Ok";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // lblDeleteMessage
             // 
@@ -62,6 +63,7 @@
             this.btnNo.TabIndex = 2;
             this.btnNo.Text = "&No";
             this.btnNo.UseVisualStyleBackColor = true;
+            this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
             // ConfirmPaymentDeleteForm
             // 
