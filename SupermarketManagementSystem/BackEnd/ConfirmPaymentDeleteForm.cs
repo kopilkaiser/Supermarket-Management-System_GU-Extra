@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BackEnd
 {
-    public partial class UpdatePaymentForm : Form
+    public partial class ConfirmPaymentDeleteForm : Form
     {
-        public UpdatePaymentForm()
+        public ConfirmPaymentDeleteForm()
         {
             InitializeComponent();
         }
