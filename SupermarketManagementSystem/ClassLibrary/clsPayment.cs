@@ -4,15 +4,90 @@ namespace ClassLibrary
 {
     public class clsPayment
     {
-        public int PaymentId { get; set; }
-        public int OrderId { get; set; }
-        public string PayeeName { get; set; }
-        public Int64 CardNumber { get; set; }
-        public string Method { get; set; }
-        public decimal Amount { get; set; }
-        public DateTime PaymentDate { get; set; }
+        private int mPaymentId;
+        private string mPayeeName;
+        private String mCardNumber;
+        private string mMethod;
+        private decimal mAmount;
+        private DateTime mPaymentDate;
 
+        public DateTime PaymentDate
+        {
+            get
+            {
+                return mPaymentDate;
+            }
 
+            set
+            {
+                mPaymentDate = value;
+            }
+        }
+
+        public int PaymentId
+        {
+            get
+            {
+                return mPaymentId;
+            }
+
+            set
+            {
+                mPaymentId = value;
+            }
+        }
+
+        public string PayeeName
+        {
+            get
+            {
+                return mPayeeName;
+            }
+
+            set
+            {
+                mPayeeName = value;
+            }
+        }
+
+        public string CardNumber
+        {
+            get
+            {
+                return mCardNumber;
+            }
+
+            set
+            {
+                mCardNumber = value;
+            }
+        }
+
+        public string Method
+        {
+            get
+            {
+                return mMethod;
+            }
+
+            set
+            {
+                mMethod = value;
+            }
+        }
+
+        public decimal Amount
+        {
+            get
+            {
+                return mAmount;
+            }
+
+            set
+            {
+                mAmount = value;
+            }
+        }
 
         public string Valid(string payeeName, string cardNumber, string method, string amount, string paymentDate)        
         {
@@ -119,21 +194,26 @@ namespace ClassLibrary
 
             return Error;
         }
-        public bool Find (int PaymentId)
+
+        public bool Find(int PaymentId)
         {
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //add the parameter for the Payment Id to search for 
             DB.AddParameter("@PaymentId", PaymentId);
             //execute the stored procedure
-            DB.Execute("sproc_tblPayment_FilterByPAymentId");
+            DB.Execute("sproc_tblPayment_FilterByPaymentId");
             //if one record is found (there should be either one or zero!)
             if (DB.Count == 1)
             {
                 //copy the data from the database from the private data members
-                PaymentId = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentId"]);
-                OrderId = Convert.ToInt32(DB.DataTable.Rows[0]["OrderId"]);
-                PayeeName = Convert.ToString(DB.DataTable.Rows[0]["PayeeName"]);
+                mPaymentId = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentId"]);
+                mPayeeName = Convert.ToString(DB.DataTable.Rows[0]["PayeeName"]);
+                mCardNumber = Convert.ToString(DB.DataTable.Rows[0]["CardNumber"]);
+                mMethod = Convert.ToString(DB.DataTable.Rows[0]["Method"]);
+                mAmount = Convert.ToDecimal(DB.DataTable.Rows[0]["Amount"]);
+                mPaymentDate = Convert.ToDateTime(DB.DataTable.Rows[0]["PaymentDate"]);
+
                 return true;
 
             }
@@ -142,7 +222,15 @@ namespace ClassLibrary
                 return false;
             }
         }
-        
+
+        public string AllPayments
+        {
+            get
+            {
+                return ("PayeeName:" + PayeeName + "_" + "CardNumber:" + CardNumber + "_" + "Method:" + Method + "_" + "Amount:" + Amount + "_" + "PaymentDate:" + PaymentDate.ToString("MM/dd/yyyy"));
+            }
+        }
+
 
     }
 }

@@ -28,7 +28,7 @@ namespace SMSTestProject
             TestPayment.PaymentId = 1;
             TestPayment.PayeeName = "Kopil Kaiser";
             TestPayment.Method = "Visa Debit";
-            TestPayment.CardNumber = 9999999999999999;
+            TestPayment.CardNumber = 9999999999999999.ToString();
             TestPayment.Amount = 200m;
             TestPayment.PaymentDate = DateTime.Now.Date;
 
@@ -45,22 +45,22 @@ namespace SMSTestProject
             //create the payment of test data
             clsPayment TestPayment = new clsPayment();
             //var to store the primary key
-            Int32 PrimarKey = 0;
+            Int32 PrimaryKey = 0;
             //set it's properties
             TestPayment.PaymentId = 1;
             TestPayment.PayeeName = "Kopil Kaiser";
             TestPayment.Method = "Visa Debit";
-            TestPayment.CardNumber = 9999999999999999;
+            TestPayment.CardNumber = 1234567891012345.ToString();
             TestPayment.Amount = 200m;
             TestPayment.PaymentDate = DateTime.Now.Date;
             //set ThisPayment to the test data
             AllPayments.ThisPayment = TestPayment;
             //add the record
-            PrimarKey = AllPayments.Add();
+            PrimaryKey = AllPayments.Add();
             //set the promary key of the test data
-            TestPayment.PaymentId = PrimarKey;
+            TestPayment.PaymentId = PrimaryKey;
             //find the record
-            AllPayments.ThisPayment.Find(PrimarKey);
+            AllPayments.ThisPayment.Find(PrimaryKey);
             //test to see that the two values are the sane
             Assert.AreEqual(AllPayments.ThisPayment, TestPayment);
 
@@ -75,7 +75,7 @@ namespace SMSTestProject
             TestPayment.PaymentId = 1;
             TestPayment.PayeeName = "Kopil Kaiser";
             TestPayment.Method = "Visa Debit";
-            TestPayment.CardNumber = 9999999999999999;
+            TestPayment.CardNumber = "9999999999999999";
             TestPayment.Amount = 250.00m;
             TestPayment.PaymentDate = DateTime.Now.Date;
             AllPayments.ThisPayment = TestPayment;
@@ -104,7 +104,7 @@ namespace SMSTestProject
             TestPayment.PaymentId = 1;
             TestPayment.PayeeName = "Kopil Kaiser";
             TestPayment.Method = "Dabit Visa";
-            TestPayment.CardNumber = 9999999999999999;
+            TestPayment.CardNumber = 9999999999999999.ToString();
             TestPayment.Amount = 250.00m;
             TestPayment.PaymentDate = DateTime.Now.Date;
             //set ThisAddress to the test data
@@ -114,7 +114,7 @@ namespace SMSTestProject
             //modify the test data
             TestPayment.PayeeName = "Mr.Kopil Kaiser";
             TestPayment.Method = "Dabit Visa";
-            TestPayment.CardNumber = 9999999999999991;
+            TestPayment.CardNumber = "9999999999999991";
             TestPayment.Amount = 25000.00m;
             TestPayment.PaymentDate = DateTime.Now.Date;
             //set the record based on the new test data
