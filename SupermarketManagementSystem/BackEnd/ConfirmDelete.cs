@@ -22,7 +22,6 @@ namespace BackEnd
             }
         }
 
-        public int PaymentID { get; internal set; }
 
         public ConfirmDelete()
         {
