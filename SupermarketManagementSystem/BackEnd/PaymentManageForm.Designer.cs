@@ -38,6 +38,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnMainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPaymentManageTitle
@@ -56,7 +57,7 @@
             this.lstPayments.FormattingEnabled = true;
             this.lstPayments.Location = new System.Drawing.Point(12, 85);
             this.lstPayments.Name = "lstPayments";
-            this.lstPayments.Size = new System.Drawing.Size(636, 186);
+            this.lstPayments.Size = new System.Drawing.Size(828, 186);
             this.lstPayments.TabIndex = 1;
             // 
             // txtMethod
@@ -139,11 +140,26 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Please Enter a Method to Filter the List";
             // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnMainMenu.FlatAppearance.BorderSize = 5;
+            this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainMenu.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnMainMenu.Location = new System.Drawing.Point(693, 393);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(157, 43);
+            this.btnMainMenu.TabIndex = 10;
+            this.btnMainMenu.Text = "Back To MainMenu";
+            this.btnMainMenu.UseVisualStyleBackColor = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            // 
             // PaymentManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 450);
+            this.ClientSize = new System.Drawing.Size(862, 450);
+            this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -155,6 +171,7 @@
             this.Controls.Add(this.lstPayments);
             this.Controls.Add(this.lblPaymentManageTitle);
             this.Name = "PaymentManageForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaymentManageForm";
             this.Load += new System.EventHandler(this.PaymentManageForm_Load);
             this.ResumeLayout(false);
@@ -174,5 +191,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnMainMenu;
     }
 }

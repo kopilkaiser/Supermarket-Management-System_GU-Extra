@@ -60,9 +60,9 @@
             this.lblAddPaymentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblAddPaymentTitle.Location = new System.Drawing.Point(185, 42);
             this.lblAddPaymentTitle.Name = "lblAddPaymentTitle";
-            this.lblAddPaymentTitle.Size = new System.Drawing.Size(189, 24);
+            this.lblAddPaymentTitle.Size = new System.Drawing.Size(217, 24);
             this.lblAddPaymentTitle.TabIndex = 27;
-            this.lblAddPaymentTitle.Text = "Add Payment Form";
+            this.lblAddPaymentTitle.Text = "Update Payment Form";
             // 
             // btnCancel
             // 

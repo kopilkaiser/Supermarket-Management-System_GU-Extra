@@ -32,20 +32,20 @@ namespace BackEnd
             lstPayments.ClearSelected();
         }
 
-        Int32 DisplayPayments(string CategoryFilter)
+        Int32 DisplayPayments(string Method)
         {
             //create an instance of the Payments collection
             clsPaymentCollection AllPayments = new clsPaymentCollection();
-            AllPayments.ReportByMethod(CategoryFilter);
+            AllPayments.ReportByMethod(Method);
             //set the data source to the list of inventories in the collection
             lstPayments.DataSource = AllPayments.PaymentList;
             //set the name of the primary Key
             lstPayments.ValueMember = "PaymentId";
             //set the data field to display
 
-            lstPayments.DisplayMember = "AllDetails";
+            lstPayments.DisplayMember = "AllPayments";
 
-            AllPayments.ReportByMethod(CategoryFilter);
+            AllPayments.ReportByMethod(Method);
 
             return AllPayments.Count;
         }
@@ -97,10 +97,10 @@ namespace BackEnd
                 UpdatePaymentForm.payInv = PaymentId;
 
                 //redirect to the delete page
-                ConfirmDelete ConfirmDelete = new ConfirmDelete();
-                ConfirmDelete.PaymentID = PaymentId;
+                ConfirmDeletePaymentForm ConfirmDeletePayment = new ConfirmDeletePaymentForm();
+                ConfirmDeletePayment.PaymentID = PaymentId;
                 this.Hide();
-                ConfirmDelete.Show();
+                ConfirmDeletePayment.Show();
             }
             else //if no record has been selected
             {
@@ -131,6 +131,15 @@ namespace BackEnd
             txtMethod.Text = "";
 
             lstPayments.ClearSelected();
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            mdiBackEndMenuForm IM = new mdiBackEndMenuForm();
+
+            this.Hide();
+            IM.Show();
+            this.Close();
         }
     }
 }

@@ -40,7 +40,7 @@ namespace BackEnd
             //create an instance of the Payment Collenction
             clsPaymentCollection AllPayments = new clsPaymentCollection();
             //validate the data on the web form
-            string Error = AllPayments.ThisPayment.Valid(txtPayeeName.Text, txtCardNumber.Text, txtAmount.Text, Convert.ToString(cmbMethod.SelectedItem), txtPaymentDate.Text);
+            string Error = AllPayments.ThisPayment.Valid(txtPayeeName.Text, txtCardNumber.Text, Convert.ToString(cmbMethod.SelectedItem), txtAmount.Text, txtPaymentDate.Text);
             //if the data is OK then add it to the object
             if (Error == "")
             {
@@ -76,12 +76,12 @@ namespace BackEnd
 
             //display the current data for the record
             DisplayPayment();
-            txtPaymentDate.Text = DateTime.Now.Date.ToString("MM/dd/yyyy");
+            txtPaymentDate.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            InventoryManageForm IM = new InventoryManageForm();
+            PaymentManageForm IM = new PaymentManageForm();
 
             this.Hide();
             IM.Show();
@@ -95,11 +95,11 @@ namespace BackEnd
             //find the record to update
             AllPayments.ThisPayment.Find(mPaymentId);
             //display the data for this record
-            AllPayments.ThisPayment.PayeeName = txtPayeeName.Text;
-            AllPayments.ThisPayment.CardNumber = txtCardNumber.Text;
-            AllPayments.ThisPayment.Method = Convert.ToString(cmbMethod.SelectedItem);
-            AllPayments.ThisPayment.Amount = Convert.ToDecimal(txtAmount.Text);
-            AllPayments.ThisPayment.PaymentDate = Convert.ToDateTime(txtPaymentDate.Text);
+            txtPayeeName.Text = AllPayments.ThisPayment.PayeeName;
+            txtCardNumber.Text = AllPayments.ThisPayment.CardNumber.ToString();
+            cmbMethod.SelectedItem = AllPayments.ThisPayment.Method;
+            txtAmount.Text = AllPayments.ThisPayment.Amount.ToString();
+            txtPaymentDate.Text = AllPayments.ThisPayment.PaymentDate.ToString();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace BackEnd
     public partial class ConfirmDeletePaymentForm : Form
     {
         private int mPaymentId = 0;
-        public int PaymentId
+        public int PaymentID
         {
             set
             {
