@@ -53,12 +53,6 @@
     <Compile Include="AddInventoryForm.Designer.cs">
       <DependentUpon>AddInventoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddOrder.Designer.cs">
-      <DependentUpon>AddOrder.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddPaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,12 +88,6 @@
     </Compile>
     <Compile Include="ConfirmDeletePaymentForm.Designer.cs">
       <DependentUpon>ConfirmDeletePaymentForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DeleteOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteOrder.Designer.cs">
-      <DependentUpon>DeleteOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="InventoryManagement.cs">
       <SubType>Form</SubType>
@@ -143,17 +131,59 @@
     <Compile Include="MDIParent1.Designer.cs">
       <DependentUpon>MDIParent1.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderlineManagement.cs">
+    <Compile Include="OrderAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderlineManagement.Designer.cs">
-      <DependentUpon>OrderlineManagement.cs</DependentUpon>
+    <Compile Include="OrderAddForm.Designer.cs">
+      <DependentUpon>OrderAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDeleteForm.Designer.cs">
+      <DependentUpon>OrderDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderlineAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderlineAddForm.Designer.cs">
+      <DependentUpon>OrderlineAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderlineDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderlineDeleteForm.Designer.cs">
+      <DependentUpon>OrderlineDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderlineManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderlineManageForm.Designer.cs">
+      <DependentUpon>OrderlineManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderlineUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderlineUpdateForm.Designer.cs">
+      <DependentUpon>OrderlineUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderManageForm.Designer.cs">
+      <DependentUpon>OrderManageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OrderSubform.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OrderSubform.Designer.cs">
       <DependentUpon>OrderSubform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderUpdateForm.Designer.cs">
+      <DependentUpon>OrderUpdateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PaymentManageForm.cs">
       <SubType>Form</SubType>
@@ -175,12 +205,6 @@
     <Compile Include="UpdateInventoryForm.Designer.cs">
       <DependentUpon>UpdateInventoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateOrder.Designer.cs">
-      <DependentUpon>UpdateOrder.cs</DependentUpon>
-    </Compile>
     <Compile Include="UpdatePaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,9 +219,6 @@
     </Compile>
     <EmbeddedResource Include="AddInventoryForm.resx">
       <DependentUpon>AddInventoryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddOrder.resx">
-      <DependentUpon>AddOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddPaymentForm.resx">
       <DependentUpon>AddPaymentForm.cs</DependentUpon>
@@ -216,9 +237,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmDeletePaymentForm.resx">
       <DependentUpon>ConfirmDeletePaymentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeleteOrder.resx">
-      <DependentUpon>DeleteOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryManagement.resx">
       <DependentUpon>InventoryManagement.cs</DependentUpon>
@@ -241,11 +259,32 @@
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderlineManagement.resx">
-      <DependentUpon>OrderlineManagement.cs</DependentUpon>
+    <EmbeddedResource Include="OrderAddForm.resx">
+      <DependentUpon>OrderAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDeleteForm.resx">
+      <DependentUpon>OrderDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderlineAddForm.resx">
+      <DependentUpon>OrderlineAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderlineDeleteForm.resx">
+      <DependentUpon>OrderlineDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderlineManageForm.resx">
+      <DependentUpon>OrderlineManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderlineUpdateForm.resx">
+      <DependentUpon>OrderlineUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderManageForm.resx">
+      <DependentUpon>OrderManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderSubform.resx">
       <DependentUpon>OrderSubform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderUpdateForm.resx">
+      <DependentUpon>OrderUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentManageForm.resx">
       <DependentUpon>PaymentManageForm.cs</DependentUpon>
