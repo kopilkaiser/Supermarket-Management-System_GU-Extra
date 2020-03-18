@@ -42,12 +42,13 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblAddPaymentTitle = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnConfirm
             // 
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(152, 309);
+            this.btnConfirm.Location = new System.Drawing.Point(152, 318);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 0;
@@ -65,6 +66,7 @@
             // lblPayeeName
             // 
             this.lblPayeeName.AutoSize = true;
+            this.lblPayeeName.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblPayeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPayeeName.Location = new System.Drawing.Point(94, 83);
             this.lblPayeeName.Name = "lblPayeeName";
@@ -87,6 +89,7 @@
             // lblCardNumber
             // 
             this.lblCardNumber.AutoSize = true;
+            this.lblCardNumber.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCardNumber.Location = new System.Drawing.Point(94, 127);
             this.lblCardNumber.Name = "lblCardNumber";
@@ -104,6 +107,7 @@
             // lblAmount
             // 
             this.lblAmount.AutoSize = true;
+            this.lblAmount.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmount.Location = new System.Drawing.Point(94, 206);
             this.lblAmount.Name = "lblAmount";
@@ -121,6 +125,7 @@
             // lblPaymentDate
             // 
             this.lblPaymentDate.AutoSize = true;
+            this.lblPaymentDate.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblPaymentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaymentDate.Location = new System.Drawing.Point(94, 250);
             this.lblPaymentDate.Name = "lblPaymentDate";
@@ -138,6 +143,7 @@
             // lblMethod
             // 
             this.lblMethod.AutoSize = true;
+            this.lblMethod.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMethod.Location = new System.Drawing.Point(94, 165);
             this.lblMethod.Name = "lblMethod";
@@ -148,7 +154,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(298, 309);
+            this.btnCancel.Location = new System.Drawing.Point(298, 318);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 12;
@@ -160,7 +166,8 @@
             // 
             this.lblAddPaymentTitle.AutoSize = true;
             this.lblAddPaymentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblAddPaymentTitle.Location = new System.Drawing.Point(161, 30);
+            this.lblAddPaymentTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblAddPaymentTitle.Location = new System.Drawing.Point(148, 29);
             this.lblAddPaymentTitle.Name = "lblAddPaymentTitle";
             this.lblAddPaymentTitle.Size = new System.Drawing.Size(189, 24);
             this.lblAddPaymentTitle.TabIndex = 13;
@@ -170,17 +177,25 @@
             // 
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.Location = new System.Drawing.Point(109, 278);
+            this.lblError.Location = new System.Drawing.Point(85, 298);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(34, 13);
             this.lblError.TabIndex = 14;
             this.lblError.Text = "Error";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Location = new System.Drawing.Point(88, 71);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(309, 215);
+            this.panel1.TabIndex = 15;
+            // 
             // AddPaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 368);
+            this.ClientSize = new System.Drawing.Size(900, 368);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblAddPaymentTitle);
             this.Controls.Add(this.btnCancel);
@@ -195,6 +210,7 @@
             this.Controls.Add(this.lblPayeeName);
             this.Controls.Add(this.txtPayeeName);
             this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.panel1);
             this.Name = "AddPaymentForm";
             this.Text = "AddPaymentForm";
             this.Load += new System.EventHandler(this.AddPaymentForm_Load);
@@ -219,5 +235,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblAddPaymentTitle;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Panel panel1;
     }
 }

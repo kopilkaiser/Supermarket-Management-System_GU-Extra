@@ -39,6 +39,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMainMenu = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPaymentManageTitle
@@ -102,32 +104,35 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(453, 349);
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnAdd.Location = new System.Drawing.Point(67, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(80, 33);
+            this.btnAdd.Size = new System.Drawing.Size(62, 33);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "&Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(396, 405);
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnUpdate.Location = new System.Drawing.Point(10, 59);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(80, 33);
+            this.btnUpdate.Size = new System.Drawing.Size(62, 33);
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "&Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(520, 405);
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnDelete.Location = new System.Drawing.Point(134, 59);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(80, 33);
+            this.btnDelete.Size = new System.Drawing.Size(62, 33);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label1
@@ -146,7 +151,7 @@
             this.btnMainMenu.FlatAppearance.BorderSize = 5;
             this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMainMenu.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnMainMenu.Location = new System.Drawing.Point(693, 393);
+            this.btnMainMenu.Location = new System.Drawing.Point(693, 385);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(157, 43);
             this.btnMainMenu.TabIndex = 10;
@@ -154,26 +159,37 @@
             this.btnMainMenu.UseVisualStyleBackColor = false;
             this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Location = new System.Drawing.Point(396, 326);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(204, 100);
+            this.panel1.TabIndex = 11;
+            // 
             // PaymentManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(862, 450);
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDisplayAll);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtMethod);
             this.Controls.Add(this.lstPayments);
             this.Controls.Add(this.lblPaymentManageTitle);
+            this.Controls.Add(this.panel1);
             this.Name = "PaymentManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaymentManageForm";
             this.Load += new System.EventHandler(this.PaymentManageForm_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +208,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMainMenu;
+        private System.Windows.Forms.Panel panel1;
     }
 }
