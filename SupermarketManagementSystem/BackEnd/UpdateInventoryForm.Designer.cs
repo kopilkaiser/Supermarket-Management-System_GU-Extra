@@ -53,7 +53,7 @@
             this.chkActive.Margin = new System.Windows.Forms.Padding(4);
             this.chkActive.Name = "chkActive";
             this.chkActive.Size = new System.Drawing.Size(83, 24);
-            this.chkActive.TabIndex = 19;
+            this.chkActive.TabIndex = 5;
             this.chkActive.Text = "Active";
             this.chkActive.UseVisualStyleBackColor = true;
             // 
@@ -64,8 +64,8 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 42);
-            this.btnCancel.TabIndex = 17;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -76,8 +76,8 @@
             this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(110, 42);
-            this.btnOK.TabIndex = 18;
-            this.btnOK.Text = "OK";
+            this.btnOK.TabIndex = 6;
+            this.btnOK.Text = "&OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -144,7 +144,7 @@
             this.txtDateAdded.Multiline = true;
             this.txtDateAdded.Name = "txtDateAdded";
             this.txtDateAdded.Size = new System.Drawing.Size(164, 37);
-            this.txtDateAdded.TabIndex = 11;
+            this.txtDateAdded.TabIndex = 4;
             // 
             // txtQuantity
             // 
@@ -154,7 +154,7 @@
             this.txtQuantity.Multiline = true;
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(164, 37);
-            this.txtQuantity.TabIndex = 8;
+            this.txtQuantity.TabIndex = 2;
             // 
             // txtPrice
             // 
@@ -164,7 +164,7 @@
             this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(164, 37);
-            this.txtPrice.TabIndex = 9;
+            this.txtPrice.TabIndex = 1;
             // 
             // txtName
             // 
@@ -174,7 +174,7 @@
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(164, 37);
-            this.txtName.TabIndex = 10;
+            this.txtName.TabIndex = 0;
             // 
             // lblError
             // 
@@ -203,7 +203,7 @@
             this.comboBoxCategory.Location = new System.Drawing.Point(802, 264);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(164, 30);
-            this.comboBoxCategory.TabIndex = 20;
+            this.comboBoxCategory.TabIndex = 3;
             // 
             // label6
             // 

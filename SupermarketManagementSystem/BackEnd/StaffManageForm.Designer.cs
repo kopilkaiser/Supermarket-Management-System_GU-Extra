@@ -48,10 +48,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lstStaff.FormattingEnabled = true;
-            this.lstStaff.Location = new System.Drawing.Point(132, 60);
+            this.lstStaff.ItemHeight = 16;
+            this.lstStaff.Location = new System.Drawing.Point(176, 74);
+            this.lstStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstStaff.Name = "lstStaff";
-            this.lstStaff.Size = new System.Drawing.Size(672, 264);
-            this.lstStaff.TabIndex = 6;
+            this.lstStaff.Size = new System.Drawing.Size(895, 324);
+            this.lstStaff.TabIndex = 0;
             // 
             // lblError
             // 
@@ -61,9 +63,10 @@
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(129, 341);
+            this.lblError.Location = new System.Drawing.Point(172, 420);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(44, 20);
+            this.lblError.Size = new System.Drawing.Size(54, 25);
             this.lblError.TabIndex = 7;
             this.lblError.Text = "Error";
             // 
@@ -74,9 +77,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFilter.AutoSize = true;
             this.lblFilter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFilter.Location = new System.Drawing.Point(355, 371);
+            this.lblFilter.Location = new System.Drawing.Point(473, 457);
+            this.lblFilter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFilter.Name = "lblFilter";
-            this.lblFilter.Size = new System.Drawing.Size(87, 13);
+            this.lblFilter.Size = new System.Drawing.Size(118, 17);
             this.lblFilter.TabIndex = 8;
             this.lblFilter.Text = "Filter list by name";
             // 
@@ -85,20 +89,22 @@
             this.txtCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCategory.Location = new System.Drawing.Point(358, 393);
+            this.txtCategory.Location = new System.Drawing.Point(477, 484);
+            this.txtCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCategory.Multiline = true;
             this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(219, 35);
-            this.txtCategory.TabIndex = 0;
+            this.txtCategory.Size = new System.Drawing.Size(291, 42);
+            this.txtCategory.TabIndex = 4;
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Navy;
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAdd.Location = new System.Drawing.Point(858, 154);
+            this.btnAdd.Location = new System.Drawing.Point(1144, 190);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 40);
-            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Size = new System.Drawing.Size(100, 49);
+            this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -107,10 +113,11 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Navy;
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnUpdate.Location = new System.Drawing.Point(858, 219);
+            this.btnUpdate.Location = new System.Drawing.Point(1144, 270);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 40);
-            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Size = new System.Drawing.Size(100, 49);
+            this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -119,10 +126,11 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Navy;
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnDelete.Location = new System.Drawing.Point(858, 283);
+            this.btnDelete.Location = new System.Drawing.Point(1144, 348);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 40);
-            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Size = new System.Drawing.Size(100, 49);
+            this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -134,11 +142,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnApply.BackColor = System.Drawing.Color.Navy;
             this.btnApply.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnApply.Location = new System.Drawing.Point(358, 461);
+            this.btnApply.Location = new System.Drawing.Point(477, 567);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(98, 41);
-            this.btnApply.TabIndex = 1;
-            this.btnApply.Text = "Apply";
+            this.btnApply.Size = new System.Drawing.Size(131, 50);
+            this.btnApply.TabIndex = 5;
+            this.btnApply.Text = "&Apply";
             this.btnApply.UseVisualStyleBackColor = false;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
@@ -149,11 +158,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplayAll.BackColor = System.Drawing.Color.Navy;
             this.btnDisplayAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnDisplayAll.Location = new System.Drawing.Point(479, 461);
+            this.btnDisplayAll.Location = new System.Drawing.Point(639, 567);
+            this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplayAll.Name = "btnDisplayAll";
-            this.btnDisplayAll.Size = new System.Drawing.Size(98, 41);
-            this.btnDisplayAll.TabIndex = 2;
-            this.btnDisplayAll.Text = "DisplayAll";
+            this.btnDisplayAll.Size = new System.Drawing.Size(131, 50);
+            this.btnDisplayAll.TabIndex = 6;
+            this.btnDisplayAll.Text = "&DisplayAll";
             this.btnDisplayAll.UseVisualStyleBackColor = false;
             this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
             // 
@@ -163,11 +173,12 @@
             this.btnMainMenu.FlatAppearance.BorderSize = 5;
             this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnMainMenu.Location = new System.Drawing.Point(799, 451);
+            this.btnMainMenu.Location = new System.Drawing.Point(1065, 555);
+            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.Size = new System.Drawing.Size(157, 43);
-            this.btnMainMenu.TabIndex = 9;
-            this.btnMainMenu.Text = "Back To MainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(209, 53);
+            this.btnMainMenu.TabIndex = 7;
+            this.btnMainMenu.Text = "&Back To MainMenu";
             this.btnMainMenu.UseVisualStyleBackColor = false;
             this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
@@ -179,18 +190,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(339, 19);
+            this.label1.Location = new System.Drawing.Point(452, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 25);
+            this.label1.Size = new System.Drawing.Size(318, 31);
             this.label1.TabIndex = 10;
             this.label1.Text = "STAFF MANAGEMENT";
             // 
             // StaffManageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(984, 515);
+            this.ClientSize = new System.Drawing.Size(1312, 634);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMainMenu);
@@ -203,6 +215,7 @@
             this.Controls.Add(this.lblFilter);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lstStaff);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StaffManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StaffManageForm";

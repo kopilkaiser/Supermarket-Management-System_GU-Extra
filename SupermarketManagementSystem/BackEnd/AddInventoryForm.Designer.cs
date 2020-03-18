@@ -56,7 +56,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(133, 113);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(132, 22);
             this.txtName.TabIndex = 1;
@@ -64,26 +64,26 @@
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(133, 158);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(132, 22);
-            this.txtPrice.TabIndex = 1;
+            this.txtPrice.TabIndex = 2;
             // 
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(133, 201);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(132, 22);
-            this.txtQuantity.TabIndex = 1;
+            this.txtQuantity.TabIndex = 3;
             // 
             // txtDateAdded
             // 
             this.txtDateAdded.Location = new System.Drawing.Point(133, 283);
-            this.txtDateAdded.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDateAdded.Margin = new System.Windows.Forms.Padding(4);
             this.txtDateAdded.Name = "txtDateAdded";
             this.txtDateAdded.Size = new System.Drawing.Size(132, 22);
-            this.txtDateAdded.TabIndex = 2;
+            this.txtDateAdded.TabIndex = 5;
             // 
             // label1
             // 
@@ -138,22 +138,22 @@
             // btnOK
             // 
             this.btnOK.Location = new System.Drawing.Point(64, 383);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(100, 28);
-            this.btnOK.TabIndex = 4;
-            this.btnOK.Text = "OK";
+            this.btnOK.TabIndex = 7;
+            this.btnOK.Text = "&OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(194, 383);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 28);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TabIndex = 8;
+            this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -161,10 +161,10 @@
             // 
             this.chkActive.AutoSize = true;
             this.chkActive.Location = new System.Drawing.Point(133, 332);
-            this.chkActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkActive.Margin = new System.Windows.Forms.Padding(4);
             this.chkActive.Name = "chkActive";
             this.chkActive.Size = new System.Drawing.Size(68, 21);
-            this.chkActive.TabIndex = 5;
+            this.chkActive.TabIndex = 6;
             this.chkActive.Text = "Active";
             this.chkActive.UseVisualStyleBackColor = true;
             // 
@@ -183,7 +183,7 @@
             this.comboBoxCategory.Location = new System.Drawing.Point(133, 244);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(132, 24);
-            this.comboBoxCategory.TabIndex = 6;
+            this.comboBoxCategory.TabIndex = 4;
             // 
             // AddInventoryForm
             // 
@@ -204,9 +204,9 @@
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblError);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddInventoryForm";
-            this.Text = "AnInventory";
+            this.Text = "AddInventoryForm";
             this.Load += new System.EventHandler(this.AnInventoryForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

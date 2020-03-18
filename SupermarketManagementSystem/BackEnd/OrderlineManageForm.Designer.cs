@@ -54,7 +54,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(68, 33);
             this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -64,7 +64,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(68, 33);
             this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "&Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -74,7 +74,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(68, 33);
             this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -83,8 +83,8 @@
             this.btnApply.Location = new System.Drawing.Point(121, 379);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(68, 33);
-            this.btnApply.TabIndex = 4;
-            this.btnApply.Text = "Apply";
+            this.btnApply.TabIndex = 5;
+            this.btnApply.Text = "&Apply";
             this.btnApply.UseVisualStyleBackColor = true;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
@@ -92,9 +92,9 @@
             // 
             this.btnDisplayAll.Location = new System.Drawing.Point(219, 379);
             this.btnDisplayAll.Name = "btnDisplayAll";
-            this.btnDisplayAll.Size = new System.Drawing.Size(68, 33);
-            this.btnDisplayAll.TabIndex = 5;
-            this.btnDisplayAll.Text = "Display All";
+            this.btnDisplayAll.Size = new System.Drawing.Size(103, 33);
+            this.btnDisplayAll.TabIndex = 6;
+            this.btnDisplayAll.Text = "&Display All";
             this.btnDisplayAll.UseVisualStyleBackColor = true;
             this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
             // 
@@ -103,7 +103,7 @@
             this.txtOrderlineId.Location = new System.Drawing.Point(121, 337);
             this.txtOrderlineId.Name = "txtOrderlineId";
             this.txtOrderlineId.Size = new System.Drawing.Size(166, 22);
-            this.txtOrderlineId.TabIndex = 6;
+            this.txtOrderlineId.TabIndex = 4;
             // 
             // lblError
             // 

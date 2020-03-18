@@ -72,29 +72,29 @@
             this.txtEmail.Location = new System.Drawing.Point(202, 184);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(236, 22);
-            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TabIndex = 0;
             // 
             // txtPurchasedDate
             // 
             this.txtPurchasedDate.Location = new System.Drawing.Point(202, 240);
             this.txtPurchasedDate.Name = "txtPurchasedDate";
             this.txtPurchasedDate.Size = new System.Drawing.Size(236, 22);
-            this.txtPurchasedDate.TabIndex = 4;
+            this.txtPurchasedDate.TabIndex = 2;
             // 
             // txtCardNumber
             // 
             this.txtCardNumber.Location = new System.Drawing.Point(202, 212);
             this.txtCardNumber.Name = "txtCardNumber";
             this.txtCardNumber.Size = new System.Drawing.Size(236, 22);
-            this.txtCardNumber.TabIndex = 5;
+            this.txtCardNumber.TabIndex = 1;
             // 
             // btnOk
             // 
             this.btnOk.Location = new System.Drawing.Point(202, 327);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 23);
-            this.btnOk.TabIndex = 6;
-            this.btnOk.Text = "Ok";
+            this.btnOk.Size = new System.Drawing.Size(99, 41);
+            this.btnOk.TabIndex = 3;
+            this.btnOk.Text = "&Ok";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
@@ -102,9 +102,9 @@
             // 
             this.btnCancel.Location = new System.Drawing.Point(306, 327);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Size = new System.Drawing.Size(99, 41);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 

@@ -35,28 +35,28 @@
             // 
             // btnYes
             // 
-            this.btnYes.Location = new System.Drawing.Point(108, 142);
+            this.btnYes.Location = new System.Drawing.Point(157, 149);
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(75, 23);
+            this.btnYes.Size = new System.Drawing.Size(86, 33);
             this.btnYes.TabIndex = 0;
-            this.btnYes.Text = "Yes";
+            this.btnYes.Text = "&YES";
             this.btnYes.UseVisualStyleBackColor = true;
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(215, 142);
+            this.btnNo.Location = new System.Drawing.Point(267, 149);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(75, 23);
+            this.btnNo.Size = new System.Drawing.Size(85, 33);
             this.btnNo.TabIndex = 2;
-            this.btnNo.Text = "No";
+            this.btnNo.Text = "&NO";
             this.btnNo.UseVisualStyleBackColor = true;
             this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 105);
+            this.label1.Location = new System.Drawing.Point(123, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(285, 17);
             this.label1.TabIndex = 3;

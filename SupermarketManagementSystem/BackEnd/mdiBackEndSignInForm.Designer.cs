@@ -40,35 +40,39 @@
             // 
             // txtEMail
             // 
-            this.txtEMail.Location = new System.Drawing.Point(144, 83);
+            this.txtEMail.Location = new System.Drawing.Point(192, 102);
+            this.txtEMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEMail.Name = "txtEMail";
-            this.txtEMail.Size = new System.Drawing.Size(253, 20);
+            this.txtEMail.Size = new System.Drawing.Size(336, 22);
             this.txtEMail.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(144, 129);
+            this.txtPassword.Location = new System.Drawing.Point(192, 159);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(253, 20);
+            this.txtPassword.Size = new System.Drawing.Size(336, 22);
             this.txtPassword.TabIndex = 1;
             // 
             // btbSignIn
             // 
-            this.btbSignIn.Location = new System.Drawing.Point(228, 181);
+            this.btbSignIn.Location = new System.Drawing.Point(304, 223);
+            this.btbSignIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btbSignIn.Name = "btbSignIn";
-            this.btbSignIn.Size = new System.Drawing.Size(75, 23);
+            this.btbSignIn.Size = new System.Drawing.Size(100, 28);
             this.btbSignIn.TabIndex = 2;
-            this.btbSignIn.Text = "Sign In";
+            this.btbSignIn.Text = "&Sign In";
             this.btbSignIn.UseVisualStyleBackColor = true;
             this.btbSignIn.Click += new System.EventHandler(this.btbSignIn_Click);
             // 
             // btnDone
             // 
-            this.btnDone.Location = new System.Drawing.Point(321, 181);
+            this.btnDone.Location = new System.Drawing.Point(428, 223);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(75, 23);
+            this.btnDone.Size = new System.Drawing.Size(100, 28);
             this.btnDone.TabIndex = 3;
-            this.btnDone.Text = "Done";
+            this.btnDone.Text = "&Done";
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
@@ -76,9 +80,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 86);
+            this.label1.Location = new System.Drawing.Point(43, 106);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.Size = new System.Drawing.Size(103, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "E-Mail Address";
             // 
@@ -86,9 +91,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 132);
+            this.label2.Location = new System.Drawing.Point(43, 162);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
@@ -96,9 +102,10 @@
             // 
             this.lblError.AutoSize = true;
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(32, 227);
+            this.lblError.Location = new System.Drawing.Point(43, 279);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.Size = new System.Drawing.Size(0, 17);
             this.lblError.TabIndex = 6;
             // 
             // label3
@@ -106,18 +113,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(168, 24);
+            this.label3.Location = new System.Drawing.Point(224, 30);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 25);
+            this.label3.Size = new System.Drawing.Size(123, 31);
             this.label3.TabIndex = 7;
             this.label3.Text = "SIGN IN";
             // 
             // mdiBackEndSignInForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(477, 259);
+            this.ClientSize = new System.Drawing.Size(636, 319);
             this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblError);
@@ -127,6 +135,7 @@
             this.Controls.Add(this.btbSignIn);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEMail);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "mdiBackEndSignInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mdiBackEndSignInForm";
