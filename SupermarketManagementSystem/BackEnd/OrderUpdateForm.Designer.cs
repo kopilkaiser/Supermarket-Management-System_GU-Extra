@@ -33,7 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPurchasedDate = new System.Windows.Forms.TextBox();
-            this.txtPaymentId = new System.Windows.Forms.TextBox();
+            this.txtCardNumber = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(86, 223);
+            this.label2.Location = new System.Drawing.Point(86, 245);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 17);
             this.label2.TabIndex = 1;
@@ -61,11 +61,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(118, 262);
+            this.label3.Location = new System.Drawing.Point(104, 215);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 17);
+            this.label3.Size = new System.Drawing.Size(92, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Payment Id";
+            this.label3.Text = "Card Number";
             // 
             // txtEmail
             // 
@@ -76,17 +76,17 @@
             // 
             // txtPurchasedDate
             // 
-            this.txtPurchasedDate.Location = new System.Drawing.Point(202, 218);
+            this.txtPurchasedDate.Location = new System.Drawing.Point(202, 240);
             this.txtPurchasedDate.Name = "txtPurchasedDate";
             this.txtPurchasedDate.Size = new System.Drawing.Size(236, 22);
             this.txtPurchasedDate.TabIndex = 4;
             // 
-            // txtPaymentId
+            // txtCardNumber
             // 
-            this.txtPaymentId.Location = new System.Drawing.Point(202, 257);
-            this.txtPaymentId.Name = "txtPaymentId";
-            this.txtPaymentId.Size = new System.Drawing.Size(236, 22);
-            this.txtPaymentId.TabIndex = 5;
+            this.txtCardNumber.Location = new System.Drawing.Point(202, 212);
+            this.txtCardNumber.Name = "txtCardNumber";
+            this.txtCardNumber.Size = new System.Drawing.Size(236, 22);
+            this.txtCardNumber.TabIndex = 5;
             // 
             // btnOk
             // 
@@ -136,7 +136,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.txtPaymentId);
+            this.Controls.Add(this.txtCardNumber);
             this.Controls.Add(this.txtPurchasedDate);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label3);
@@ -157,7 +157,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPurchasedDate;
-        private System.Windows.Forms.TextBox txtPaymentId;
+        private System.Windows.Forms.TextBox txtCardNumber;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label4;

@@ -31,7 +31,7 @@ namespace BackEnd
         private void OrderUpdateForm_Load(object sender, EventArgs e)
         {
             DisplayOrders();
-
+            txtPurchasedDate.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
         }
         public void DisplayOrders()
         {
@@ -42,7 +42,7 @@ namespace BackEnd
             //display the data for this record
             txtEmail.Text = AllOrders.ThisOrder.Email;
             txtPurchasedDate.Text = AllOrders.ThisOrder.PurchasedDate.ToString();
-            txtPaymentId.Text = AllOrders.ThisOrder.PaymentId.ToString();
+            txtCardNumber.Text = AllOrders.ThisOrder.CardNumber.ToString();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace BackEnd
             //create an instance of the Staff Collenction
             clsOrderCollection AllOrders = new clsOrderCollection();
             //validate the data on the web form
-            string Error = AllOrders.ThisOrder.Valid(txtEmail.Text, txtPurchasedDate.Text, txtPaymentId.Text);
+            string Error = AllOrders.ThisOrder.Valid(txtEmail.Text, txtCardNumber.Text, txtPurchasedDate.Text);
             //if the data is OK then add it to the object
             if (Error == "")
             {
@@ -67,7 +67,7 @@ namespace BackEnd
                 //get the data entered by the user
                 AllOrders.ThisOrder.Email = txtEmail.Text;
                 AllOrders.ThisOrder.PurchasedDate = Convert.ToDateTime(txtPurchasedDate.Text);
-                AllOrders.ThisOrder.PaymentId = Convert.ToInt32(txtPaymentId.Text);
+                AllOrders.ThisOrder.CardNumber = Convert.ToString(txtCardNumber.Text);
 
 
 

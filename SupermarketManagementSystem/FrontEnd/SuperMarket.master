@@ -24,16 +24,19 @@
         }
         .auto-style5 {
             left: 4%;
-            top: 16%;
-            width: 58%;
-            height: 83%;
+            top: 11%;
+            width: 65%;
+            height: 90%;
         }
         .auto-style6 {
             position: fixed;
-            top: 144px;
-            left: 1281px;
+            top: 117px;
+            left: 1262px;
             height: 587px;
             width: 295px;
+        }
+        .auto-style7 {
+            color: #FF0000;
         }
     </style>
 </head>
@@ -41,8 +44,7 @@
     <header style="text-align:center; position:relative; height: 54px; width: 1416px; top: 14px; left: 125px; bottom: 596px;" class="auto-style1">
         <span class="auto-style3">&nbsp;&nbsp;
         Supermarket Management System 
-        <br />
-        </span><span class="auto-style2">GU-Extra</span></header>
+        </span><span class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="auto-style7"><strong>&nbsp;GU-Extra</strong></span></header>
     <article class="auto-style5">
         
     <form id="form1" runat="server">
@@ -51,8 +53,11 @@
         
         </asp:ContentPlaceHolder>
     <div class="auto-style6">
+        <asp:TextBox ID="txtWelcome" runat="server" BackColor="#CCCCCC" BorderStyle="None" Font-Italic="True" Font-Size="Small" Font-Underline="False" Height="29px" ReadOnly="True" Width="284px"></asp:TextBox>
+        <br />
         <br />
         <asp:Button ID="btnBrowseProducts" runat="server" OnClick="btnBrowseProducts_Click" Text="Browse Products" />
+        <br />
         <br />
         <asp:HyperLink ID="hypSignIn" runat="server" NavigateUrl="~/SignIn.aspx" CssClass="auto-style4">Sign In</asp:HyperLink>
         <strong>

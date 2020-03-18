@@ -39,6 +39,8 @@ public partial class SuperMarket : System.Web.UI.MasterPage
         hypChangePassword.Visible = Authenticated;
         hypSignOut.Visible = Authenticated;
         btnBrowseProducts.Visible = Authenticated;
+        txtWelcome.Visible = Authenticated;
+        txtWelcome.Text = "Welcome "+ Sec.UserEMail +"!";
         
     }
 
