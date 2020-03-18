@@ -22,7 +22,7 @@ namespace BackEnd
                 mOrderlineId = value;
             }
         }
-        public static int tempOrder { get; set; }
+        public static int tempOrderline { get; set; }
         public OrderlineUpdateForm()
         {
             InitializeComponent();

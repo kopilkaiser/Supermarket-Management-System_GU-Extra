@@ -29,7 +29,7 @@ namespace BackEnd
         void DisplayOrderlines()
         {
             //create an instance of the staff collection
-            clsOrderlineCollection AllOrderline = new clsOrderlineCollection();
+            clsOrderlineCollection AllOrderlines = new clsOrderlineCollection();
             //find the record to update
             AllOrderlines.ThisOrderline.Find(OrderlineId);
             //display the data for this record

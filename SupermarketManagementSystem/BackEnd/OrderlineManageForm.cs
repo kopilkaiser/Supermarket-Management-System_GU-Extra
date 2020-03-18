@@ -35,7 +35,7 @@ namespace BackEnd
         Int32 DisplayOrderlines(string OrderlineFilter)
         {
             //create an instance of the Order collection
-            clsOrderCollection AllOrderlines = new clsOrderCollection();
+            clsOrderlineCollection AllOrderlines = new clsOrderlineCollection();
             AllOrderlines.FilterByOrderlineId(OrderlineFilter);
             //set the data source to the list of Orders in the collection
             listboxOrderline.DataSource = AllOrderlines.OrderlineList;
@@ -45,7 +45,7 @@ namespace BackEnd
 
             listboxOrderline.DisplayMember = "AllDetails";
 
-            AllOrderlines.FilterByOrderlineId(OrderlineIdFilter);
+            AllOrderlines.FilterByOrderlineId(OrderlineFilter);
 
             return AllOrderlines.Count;
         }
@@ -65,14 +65,14 @@ namespace BackEnd
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             //var to store the primary key value of the record to be edited
-            Int32 OrderId;
+            Int32 OrderlineId;
             //if a record has been selected from the list
             if (listboxOrderline.SelectedIndex != -1)
             {
                 //get the primary key value of the record to delete
-                OrderId = Convert.ToInt32(listboxOrderline.SelectedValue);
+                OrderlineId = Convert.ToInt32(listboxOrderline.SelectedValue);
                 //store the data in the session object
-                OrderlineUpdateForm.tempOrderline = OrderId;
+                OrderlineUpdateForm.tempOrderline = OrderlineId;
 
                 //redirect to the delete page
                 OrderlineUpdateForm UpdateOrderline = new OrderlineUpdateForm();
