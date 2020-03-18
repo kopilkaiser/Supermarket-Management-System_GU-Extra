@@ -218,6 +218,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1097, 570);
+            this.ControlBox = false;
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
