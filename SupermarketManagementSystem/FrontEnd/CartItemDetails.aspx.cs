@@ -50,7 +50,7 @@ public partial class CartItemDetails : System.Web.UI.Page
         //add the item to the cart's products collection
         MyCart.Products.Add(AnItem);
         //go back to shopping
-        Response.Redirect("Default.aspx");
+        Response.Redirect("BrowseProducts.aspx");
     }
 
     protected void btnBack_Click(object sender, EventArgs e)
