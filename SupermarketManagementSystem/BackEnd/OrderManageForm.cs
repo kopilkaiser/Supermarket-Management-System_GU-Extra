@@ -138,8 +138,9 @@ namespace BackEnd
             listboxOrder.ClearSelected();
 
         }
+        
 
-        private void btnMainMenu_Click(object sender, EventArgs e)
+        private void btnMainMenu_Click_1(object sender, EventArgs e)
         {
             mdiBackEndMenuForm PK = new mdiBackEndMenuForm();
 

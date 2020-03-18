@@ -35,9 +35,10 @@
             // 
             // btnYes
             // 
-            this.btnYes.Location = new System.Drawing.Point(157, 149);
+            this.btnYes.Location = new System.Drawing.Point(118, 121);
+            this.btnYes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(86, 33);
+            this.btnYes.Size = new System.Drawing.Size(64, 27);
             this.btnYes.TabIndex = 0;
             this.btnYes.Text = "&YES";
             this.btnYes.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(267, 149);
+            this.btnNo.Location = new System.Drawing.Point(200, 121);
+            this.btnNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(85, 33);
+            this.btnNo.Size = new System.Drawing.Size(64, 27);
             this.btnNo.TabIndex = 2;
             this.btnNo.Text = "&NO";
             this.btnNo.UseVisualStyleBackColor = true;
@@ -56,21 +58,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 112);
+            this.label1.Location = new System.Drawing.Point(92, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 17);
+            this.label1.Size = new System.Drawing.Size(212, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Are you sure you want to delete the Order ?";
             // 
             // OrderDeleteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 328);
+            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ClientSize = new System.Drawing.Size(378, 220);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OrderDeleteForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderDeleteForm";
             this.Load += new System.EventHandler(this.OrderDeleteForm_Load);
             this.ResumeLayout(false);
