@@ -42,13 +42,15 @@
             this.lblPayeeName = new System.Windows.Forms.Label();
             this.txtPayeeName = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.Location = new System.Drawing.Point(133, 290);
+            this.lblError.Location = new System.Drawing.Point(118, 364);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(34, 13);
             this.lblError.TabIndex = 28;
@@ -66,20 +68,21 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(322, 321);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 26;
             this.btnCancel.Text = "&Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblMethod
             // 
             this.lblMethod.AutoSize = true;
             this.lblMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMethod.Location = new System.Drawing.Point(118, 177);
+            this.lblMethod.Location = new System.Drawing.Point(8, 95);
             this.lblMethod.Name = "lblMethod";
             this.lblMethod.Size = new System.Drawing.Size(49, 13);
             this.lblMethod.TabIndex = 25;
@@ -89,7 +92,7 @@
             // 
             this.lblPaymentDate.AutoSize = true;
             this.lblPaymentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentDate.Location = new System.Drawing.Point(118, 262);
+            this.lblPaymentDate.Location = new System.Drawing.Point(8, 180);
             this.lblPaymentDate.Name = "lblPaymentDate";
             this.lblPaymentDate.Size = new System.Drawing.Size(82, 13);
             this.lblPaymentDate.TabIndex = 24;
@@ -97,16 +100,16 @@
             // 
             // txtPaymentDate
             // 
-            this.txtPaymentDate.Location = new System.Drawing.Point(218, 262);
+            this.txtPaymentDate.Location = new System.Drawing.Point(108, 180);
             this.txtPaymentDate.Name = "txtPaymentDate";
-            this.txtPaymentDate.Size = new System.Drawing.Size(179, 20);
+            this.txtPaymentDate.Size = new System.Drawing.Size(186, 20);
             this.txtPaymentDate.TabIndex = 23;
             // 
             // lblAmount
             // 
             this.lblAmount.AutoSize = true;
             this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.Location = new System.Drawing.Point(118, 218);
+            this.lblAmount.Location = new System.Drawing.Point(8, 136);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(49, 13);
             this.lblAmount.TabIndex = 22;
@@ -114,16 +117,16 @@
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(218, 218);
+            this.txtAmount.Location = new System.Drawing.Point(108, 136);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(179, 20);
+            this.txtAmount.Size = new System.Drawing.Size(186, 20);
             this.txtAmount.TabIndex = 21;
             // 
             // lblCardNumber
             // 
             this.lblCardNumber.AutoSize = true;
             this.lblCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCardNumber.Location = new System.Drawing.Point(118, 139);
+            this.lblCardNumber.Location = new System.Drawing.Point(8, 57);
             this.lblCardNumber.Name = "lblCardNumber";
             this.lblCardNumber.Size = new System.Drawing.Size(76, 13);
             this.lblCardNumber.TabIndex = 20;
@@ -131,9 +134,9 @@
             // 
             // txtCardNumber
             // 
-            this.txtCardNumber.Location = new System.Drawing.Point(218, 139);
+            this.txtCardNumber.Location = new System.Drawing.Point(108, 57);
             this.txtCardNumber.Name = "txtCardNumber";
-            this.txtCardNumber.Size = new System.Drawing.Size(179, 20);
+            this.txtCardNumber.Size = new System.Drawing.Size(186, 20);
             this.txtCardNumber.TabIndex = 19;
             // 
             // cmbMethod
@@ -143,16 +146,16 @@
             "Visa Debit",
             "Credit Card",
             "MasterCard"});
-            this.cmbMethod.Location = new System.Drawing.Point(218, 177);
+            this.cmbMethod.Location = new System.Drawing.Point(108, 95);
             this.cmbMethod.Name = "cmbMethod";
-            this.cmbMethod.Size = new System.Drawing.Size(179, 21);
+            this.cmbMethod.Size = new System.Drawing.Size(186, 21);
             this.cmbMethod.TabIndex = 18;
             // 
             // lblPayeeName
             // 
             this.lblPayeeName.AutoSize = true;
             this.lblPayeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPayeeName.Location = new System.Drawing.Point(118, 95);
+            this.lblPayeeName.Location = new System.Drawing.Point(8, 13);
             this.lblPayeeName.Name = "lblPayeeName";
             this.lblPayeeName.Size = new System.Drawing.Size(74, 13);
             this.lblPayeeName.TabIndex = 17;
@@ -160,44 +163,57 @@
             // 
             // txtPayeeName
             // 
-            this.txtPayeeName.Location = new System.Drawing.Point(218, 95);
+            this.txtPayeeName.Location = new System.Drawing.Point(108, 13);
             this.txtPayeeName.Name = "txtPayeeName";
-            this.txtPayeeName.Size = new System.Drawing.Size(179, 20);
+            this.txtPayeeName.Size = new System.Drawing.Size(186, 20);
             this.txtPayeeName.TabIndex = 16;
             // 
             // btnConfirm
             // 
+            this.btnConfirm.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.Location = new System.Drawing.Point(176, 321);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 15;
             this.btnConfirm.Text = "&Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.txtPayeeName);
+            this.panel1.Controls.Add(this.lblPayeeName);
+            this.panel1.Controls.Add(this.cmbMethod);
+            this.panel1.Controls.Add(this.lblMethod);
+            this.panel1.Controls.Add(this.txtCardNumber);
+            this.panel1.Controls.Add(this.lblPaymentDate);
+            this.panel1.Controls.Add(this.lblCardNumber);
+            this.panel1.Controls.Add(this.txtPaymentDate);
+            this.panel1.Controls.Add(this.txtAmount);
+            this.panel1.Controls.Add(this.lblAmount);
+            this.panel1.Location = new System.Drawing.Point(121, 84);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(309, 211);
+            this.panel1.TabIndex = 29;
             // 
             // UpdatePaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1097, 452);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblAddPaymentTitle);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.lblMethod);
-            this.Controls.Add(this.lblPaymentDate);
-            this.Controls.Add(this.txtPaymentDate);
-            this.Controls.Add(this.lblAmount);
-            this.Controls.Add(this.txtAmount);
-            this.Controls.Add(this.lblCardNumber);
-            this.Controls.Add(this.txtCardNumber);
-            this.Controls.Add(this.cmbMethod);
-            this.Controls.Add(this.lblPayeeName);
-            this.Controls.Add(this.txtPayeeName);
             this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.panel1);
             this.Name = "UpdatePaymentForm";
             this.Text = "UpdatePaymentForm";
             this.Load += new System.EventHandler(this.UpdatePaymentForm_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +235,6 @@
         private System.Windows.Forms.Label lblPayeeName;
         private System.Windows.Forms.TextBox txtPayeeName;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Panel panel1;
     }
 }
