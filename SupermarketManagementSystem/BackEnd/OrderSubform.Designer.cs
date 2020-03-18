@@ -40,7 +40,7 @@
             this.btnOrdermanagement.Name = "btnOrdermanagement";
             this.btnOrdermanagement.Size = new System.Drawing.Size(110, 63);
             this.btnOrdermanagement.TabIndex = 0;
-            this.btnOrdermanagement.Text = "Order Management";
+            this.btnOrdermanagement.Text = "&Order Management";
             this.btnOrdermanagement.UseVisualStyleBackColor = true;
             // 
             // btnOrderlinemanagement
@@ -51,7 +51,7 @@
             this.btnOrderlinemanagement.Name = "btnOrderlinemanagement";
             this.btnOrderlinemanagement.Size = new System.Drawing.Size(116, 63);
             this.btnOrderlinemanagement.TabIndex = 1;
-            this.btnOrderlinemanagement.Text = "Orderline Management";
+            this.btnOrderlinemanagement.Text = "&Orderline Management";
             this.btnOrderlinemanagement.UseVisualStyleBackColor = true;
             // 
             // OrderSubform
