@@ -55,6 +55,7 @@
             // 
             // lstPayments
             // 
+            this.lstPayments.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.lstPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstPayments.FormattingEnabled = true;
             this.lstPayments.Location = new System.Drawing.Point(12, 85);
