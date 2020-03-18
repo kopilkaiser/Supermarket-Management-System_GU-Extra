@@ -107,12 +107,6 @@
     <Compile Include="InventoryManagement.Designer.cs">
       <DependentUpon>InventoryManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenuForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainMenuForm.Designer.cs">
-      <DependentUpon>MainMenuForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="mdiBackEndAddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,12 +118,6 @@
     </Compile>
     <Compile Include="mdiBackEndChangePasswordForm.Designer.cs">
       <DependentUpon>mdiBackEndChangePasswordForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="mdiBackEndForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mdiBackEndForm.Designer.cs">
-      <DependentUpon>mdiBackEndForm.cs</DependentUpon>
     </Compile>
     <Compile Include="InventoryManageForm.cs">
       <SubType>Form</SubType>
@@ -148,6 +136,12 @@
     </Compile>
     <Compile Include="mdiBackEndSignInForm.Designer.cs">
       <DependentUpon>mdiBackEndSignInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
     </Compile>
     <Compile Include="OrderlineManagement.cs">
       <SubType>Form</SubType>
@@ -235,14 +229,17 @@
     <EmbeddedResource Include="mdiBackEndChangePasswordForm.resx">
       <DependentUpon>mdiBackEndChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mdiBackEndForm.resx">
-      <DependentUpon>mdiBackEndForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InventoryManageForm.resx">
       <DependentUpon>InventoryManageForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="mdiBackEndMenuForm.resx">
+      <DependentUpon>mdiBackEndMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mdiBackEndSignInForm.resx">
       <DependentUpon>mdiBackEndSignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderlineManagement.resx">
       <DependentUpon>OrderlineManagement.cs</DependentUpon>

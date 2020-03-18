@@ -10,28 +10,17 @@ using System.Windows.Forms;
 
 namespace BackEnd
 {
-    public partial class mdiBackEndForm : Form
+    public partial class MDIParent1 : Form
     {
-        //create an object based on the security class
-        clsDataConnection DB = new clsDataConnection();
+        clsSecurity Sec = new clsSecurity();
         //create an instance of the main menu form
         mdiBackEndMenuForm Menu = new mdiBackEndMenuForm();
 
         private int childFormNumber = 0;
 
-        public mdiBackEndForm()
+        public MDIParent1()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            SetLinks(Sec.Authenticated, Sec.Admin);
-        }
-
-        private void SetLinks(object authenticated, object admin)
-        {
-            throw new NotImplementedException();
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -53,7 +42,7 @@ namespace BackEnd
             }
         }
 
-        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
@@ -64,62 +53,77 @@ namespace BackEnd
             }
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void cutToolStripButton_Click(object sender, EventArgs e)
+        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void copyToolStripButton_Click(object sender, EventArgs e)
+        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void pasteToolStripButton_Click(object sender, EventArgs e)
+        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void toolBarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
-        private void statusBarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
-        private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.Cascade);
         }
 
-        private void tileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.TileVertical);
         }
 
-        private void tileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.TileHorizontal);
         }
 
-        private void arrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.ArrangeIcons);
         }
 
-        private void closeAllToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form childForm in MdiChildren)
             {
                 childForm.Close();
             }
+        }
+
+        private void MDIParent1_Load(object sender, EventArgs e)
+        {
+            SetLinks(Sec.Authenticated, Sec.Admin);
+        }
+
+        private void SetLinks(Boolean Authenticated, Boolean IsAdmin)
+        {
+            //sets the enabled state of links based on the authentiaction state and if the user is admin or not
+            //set the login option to the opposite of authentiaction
+            signInToolStripMenuItem.Enabled = !Authenticated;
+            //if the user is authentiacted then enable the following
+            signOutToolStripMenuItem.Enabled = Authenticated;
+            changePasswordToolStripMenuItem.Enabled = Authenticated;
+            //if the user is authenticated and admin then enable the following
+            reSetPasswordToolStripMenuItem.Enabled = Authenticated & IsAdmin;
+            addUserToolStripMenuItem.Enabled = Authenticated & IsAdmin;
         }
 
         private void signInToolStripMenuItem_Click(object sender, EventArgs e)
@@ -142,19 +146,6 @@ namespace BackEnd
                 //set the state of the security links
                 SetLinks(Sec.Authenticated, Sec.Admin);
             }
-        }
-
-        private void SetLinks(Boolean Authenticated, Boolean IsAdmin)
-        {
-            //sets the enabled state of links based on the authentiaction state and if the user is admin or not
-            //set the login option to the opposite of authentiaction
-            signInToolStripMenuItem.Enabled = !Authenticated;
-            //if the user is authentiacted then enable the following
-            signOutToolStripMenuItem.Enabled = Authenticated;
-            changePasswordToolStripMenuItem.Enabled = Authenticated;
-            //if the user is authenticated and admin then enable the following
-            reSetPasswordToolStripMenuItem.Enabled = Authenticated & IsAdmin;
-            addUserToolStripMenuItem.Enabled = Authenticated & IsAdmin;
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
