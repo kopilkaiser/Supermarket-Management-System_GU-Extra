@@ -65,12 +65,6 @@
     <Compile Include="AddStaffForm.Designer.cs">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AnInventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnInventory.Designer.cs">
-      <DependentUpon>AnInventory.cs</DependentUpon>
-    </Compile>
     <Compile Include="ConfirmDelete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +82,6 @@
     </Compile>
     <Compile Include="ConfirmDeletePaymentForm.Designer.cs">
       <DependentUpon>ConfirmDeletePaymentForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InventoryManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InventoryManagement.Designer.cs">
-      <DependentUpon>InventoryManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="mdiBackEndAddUserForm.cs">
       <SubType>Form</SubType>
@@ -226,9 +214,6 @@
     <EmbeddedResource Include="AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AnInventory.resx">
-      <DependentUpon>AnInventory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ConfirmDelete.resx">
       <DependentUpon>ConfirmDelete.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,9 +222,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmDeletePaymentForm.resx">
       <DependentUpon>ConfirmDeletePaymentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InventoryManagement.resx">
-      <DependentUpon>InventoryManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiBackEndAddUserForm.resx">
       <DependentUpon>mdiBackEndAddUserForm.cs</DependentUpon>

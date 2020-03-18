@@ -60,8 +60,8 @@
             this.lstPayments.FormattingEnabled = true;
             this.lstPayments.Location = new System.Drawing.Point(12, 85);
             this.lstPayments.Name = "lstPayments";
-            this.lstPayments.Size = new System.Drawing.Size(828, 186);
-            this.lstPayments.TabIndex = 1;
+            this.lstPayments.Size = new System.Drawing.Size(828, 173);
+            this.lstPayments.TabIndex = 0;
             // 
             // txtMethod
             // 
@@ -69,7 +69,7 @@
             this.txtMethod.Multiline = true;
             this.txtMethod.Name = "txtMethod";
             this.txtMethod.Size = new System.Drawing.Size(226, 27);
-            this.txtMethod.TabIndex = 2;
+            this.txtMethod.TabIndex = 4;
             // 
             // btnOk
             // 
@@ -77,8 +77,8 @@
             this.btnOk.Location = new System.Drawing.Point(12, 393);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(80, 33);
-            this.btnOk.TabIndex = 3;
-            this.btnOk.Text = "Ok";
+            this.btnOk.TabIndex = 5;
+            this.btnOk.Text = "&Apply";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
@@ -98,8 +98,8 @@
             this.btnDisplayAll.Location = new System.Drawing.Point(115, 393);
             this.btnDisplayAll.Name = "btnDisplayAll";
             this.btnDisplayAll.Size = new System.Drawing.Size(126, 33);
-            this.btnDisplayAll.TabIndex = 5;
-            this.btnDisplayAll.Text = "Display All";
+            this.btnDisplayAll.TabIndex = 6;
+            this.btnDisplayAll.Text = "&Display All";
             this.btnDisplayAll.UseVisualStyleBackColor = true;
             this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
             // 
@@ -109,7 +109,7 @@
             this.btnAdd.Location = new System.Drawing.Point(67, 3);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(62, 33);
-            this.btnAdd.TabIndex = 6;
+            this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -120,7 +120,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(10, 59);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(62, 33);
-            this.btnUpdate.TabIndex = 7;
+            this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -131,8 +131,8 @@
             this.btnDelete.Location = new System.Drawing.Point(134, 59);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(62, 33);
-            this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -155,8 +155,8 @@
             this.btnMainMenu.Location = new System.Drawing.Point(693, 385);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(157, 43);
-            this.btnMainMenu.TabIndex = 10;
-            this.btnMainMenu.Text = "Back To MainMenu";
+            this.btnMainMenu.TabIndex = 7;
+            this.btnMainMenu.Text = "&Back To MainMenu";
             this.btnMainMenu.UseVisualStyleBackColor = false;
             this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
@@ -175,8 +175,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(862, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDisplayAll);

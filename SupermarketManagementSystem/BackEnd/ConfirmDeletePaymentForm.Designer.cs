@@ -38,11 +38,11 @@
             this.btnOk.BackColor = System.Drawing.Color.Red;
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnOk.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnOk.Location = new System.Drawing.Point(102, 115);
+            this.btnOk.Location = new System.Drawing.Point(148, 113);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(83, 34);
             this.btnOk.TabIndex = 0;
-            this.btnOk.Text = "&Ok";
+            this.btnOk.Text = "&OK";
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
@@ -52,19 +52,19 @@
             this.lblDeleteMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeleteMessage.Location = new System.Drawing.Point(40, 61);
             this.lblDeleteMessage.Name = "lblDeleteMessage";
-            this.lblDeleteMessage.Size = new System.Drawing.Size(370, 24);
+            this.lblDeleteMessage.Size = new System.Drawing.Size(488, 24);
             this.lblDeleteMessage.TabIndex = 1;
-            this.lblDeleteMessage.Text = "Are you Confirm to Delete Payment Id?";
+            this.lblDeleteMessage.Text = "Are you Confirm to delete the selected Payment Id?";
             // 
             // btnNo
             // 
             this.btnNo.BackColor = System.Drawing.Color.Green;
             this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnNo.Location = new System.Drawing.Point(247, 115);
+            this.btnNo.Location = new System.Drawing.Point(293, 113);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(83, 34);
-            this.btnNo.TabIndex = 2;
-            this.btnNo.Text = "&No";
+            this.btnNo.TabIndex = 1;
+            this.btnNo.Text = "&NO";
             this.btnNo.UseVisualStyleBackColor = false;
             this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
@@ -72,12 +72,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(451, 226);
+            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ClientSize = new System.Drawing.Size(531, 226);
+            this.ControlBox = false;
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.lblDeleteMessage);
             this.Controls.Add(this.btnOk);
             this.Name = "ConfirmDeletePaymentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConfirmPaymentDeleteForm";
             this.ResumeLayout(false);
             this.PerformLayout();

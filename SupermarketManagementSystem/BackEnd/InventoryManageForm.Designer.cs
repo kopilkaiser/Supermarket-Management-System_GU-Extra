@@ -76,8 +76,8 @@
             this.lstInventories.ItemHeight = 16;
             this.lstInventories.Location = new System.Drawing.Point(40, 85);
             this.lstInventories.Name = "lstInventories";
-            this.lstInventories.Size = new System.Drawing.Size(844, 228);
-            this.lstInventories.TabIndex = 3;
+            this.lstInventories.Size = new System.Drawing.Size(844, 212);
+            this.lstInventories.TabIndex = 0;
             // 
             // btnUpdate
             // 
@@ -86,7 +86,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(28, 57);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(91, 40);
-            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -96,11 +96,11 @@
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(151, 57);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Location = new System.Drawing.Point(148, 57);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(91, 41);
-            this.btnDelete.TabIndex = 5;
+            this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -109,11 +109,11 @@
             // 
             this.txtCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCategory.Location = new System.Drawing.Point(38, 395);
-            this.txtCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCategory.Multiline = true;
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(187, 38);
-            this.txtCategory.TabIndex = 6;
+            this.txtCategory.TabIndex = 4;
             // 
             // label1
             // 
@@ -131,10 +131,10 @@
             this.btnApply.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApply.Location = new System.Drawing.Point(39, 437);
-            this.btnApply.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(66, 34);
-            this.btnApply.TabIndex = 8;
+            this.btnApply.TabIndex = 5;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = false;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
@@ -144,10 +144,10 @@
             this.btnDisplayAll.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnDisplayAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayAll.Location = new System.Drawing.Point(110, 437);
-            this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDisplayAll.Name = "btnDisplayAll";
             this.btnDisplayAll.Size = new System.Drawing.Size(99, 34);
-            this.btnDisplayAll.TabIndex = 8;
+            this.btnDisplayAll.TabIndex = 6;
             this.btnDisplayAll.Text = "Display All";
             this.btnDisplayAll.UseVisualStyleBackColor = false;
             this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
@@ -160,7 +160,7 @@
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Location = new System.Drawing.Point(526, 392);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 117);
             this.panel1.TabIndex = 9;
@@ -207,7 +207,7 @@
             this.btnMainMenu.Location = new System.Drawing.Point(916, 502);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(157, 43);
-            this.btnMainMenu.TabIndex = 6;
+            this.btnMainMenu.TabIndex = 7;
             this.btnMainMenu.Text = "Back To MainMenu";
             this.btnMainMenu.UseVisualStyleBackColor = false;
             this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
@@ -216,7 +216,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1097, 570);
             this.ControlBox = false;
             this.Controls.Add(this.btnMainMenu);
