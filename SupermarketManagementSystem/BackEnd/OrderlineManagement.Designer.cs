@@ -36,7 +36,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDisplayAll = new System.Windows.Forms.Button();
             this.btnApply = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtOrderlineId = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -94,6 +95,7 @@
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -105,41 +107,44 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnDisplayAll
             // 
             this.btnDisplayAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayAll.Location = new System.Drawing.Point(934, 260);
+            this.btnDisplayAll.Location = new System.Drawing.Point(915, 274);
             this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplayAll.Name = "btnDisplayAll";
             this.btnDisplayAll.Size = new System.Drawing.Size(127, 29);
             this.btnDisplayAll.TabIndex = 5;
             this.btnDisplayAll.Text = "Display All";
             this.btnDisplayAll.UseVisualStyleBackColor = true;
+            this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
             // 
             // btnApply
             // 
             this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApply.Location = new System.Drawing.Point(778, 260);
+            this.btnApply.Location = new System.Drawing.Point(753, 274);
             this.btnApply.Margin = new System.Windows.Forms.Padding(4);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(103, 29);
             this.btnApply.TabIndex = 6;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
-            // textBox1
+            // txtOrderlineId
             // 
-            this.textBox1.Location = new System.Drawing.Point(727, 174);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(360, 27);
-            this.textBox1.TabIndex = 7;
+            this.txtOrderlineId.Location = new System.Drawing.Point(727, 202);
+            this.txtOrderlineId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOrderlineId.Name = "txtOrderlineId";
+            this.txtOrderlineId.Size = new System.Drawing.Size(360, 27);
+            this.txtOrderlineId.TabIndex = 7;
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(734, 217);
+            this.lblError.Location = new System.Drawing.Point(36, 544);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(72, 20);
             this.lblError.TabIndex = 8;
@@ -152,7 +157,7 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1242, 716);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtOrderlineId);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.btnDisplayAll);
             this.Controls.Add(this.btnDelete);
@@ -182,7 +187,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDisplayAll;
         private System.Windows.Forms.Button btnApply;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOrderlineId;
         private System.Windows.Forms.Label lblError;
     }
 }
