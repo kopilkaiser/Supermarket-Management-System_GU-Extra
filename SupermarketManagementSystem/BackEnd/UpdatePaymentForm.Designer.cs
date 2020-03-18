@@ -58,11 +58,11 @@
             // 
             this.lblAddPaymentTitle.AutoSize = true;
             this.lblAddPaymentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblAddPaymentTitle.Location = new System.Drawing.Point(185, 42);
+            this.lblAddPaymentTitle.Location = new System.Drawing.Point(172, 38);
             this.lblAddPaymentTitle.Name = "lblAddPaymentTitle";
-            this.lblAddPaymentTitle.Size = new System.Drawing.Size(189, 24);
+            this.lblAddPaymentTitle.Size = new System.Drawing.Size(217, 24);
             this.lblAddPaymentTitle.TabIndex = 27;
-            this.lblAddPaymentTitle.Text = "Add Payment Form";
+            this.lblAddPaymentTitle.Text = "Update Payment Form";
             // 
             // btnCancel
             // 
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 442);
+            this.ClientSize = new System.Drawing.Size(1097, 452);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblAddPaymentTitle);
             this.Controls.Add(this.btnCancel);
