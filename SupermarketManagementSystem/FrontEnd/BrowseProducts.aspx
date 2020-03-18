@@ -49,6 +49,11 @@
             height: 85px;
             width: 391px;
         }
+        .auto-style10 {
+            position: fixed;
+            left: 83px;
+            top: 134px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -56,11 +61,22 @@
         <div class="auto-style7">
             &nbsp;<div class="auto-style6">
                 &nbsp;
-
+              
             </div>
         </div>
+
+        <div style="text-align:center; " class="auto-style10">
+            <h3>Browse our products from the Product List!</h3>
+              Your cart has
+        <asp:Label ID="lblCartCount" runat="server"></asp:Label>
+    &nbsp;items.
+            <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View Cart</asp:HyperLink>
+            
+        </div>
+
         <div style="text-align:center; " class="auto-style9">
-            Browse our products from the Product List below!
+            
+            
             
                   <%
                       clsInventoryCollection MyInventories = new clsInventoryCollection();
@@ -107,10 +123,7 @@
                     }
                     %></table><%
                   %>
-                         Your cart has
-        <asp:Label ID="lblCartCount" runat="server"></asp:Label>
-    &nbsp;items.
-            <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View Cart</asp:HyperLink>
+                         
         </div>
         </div>
 &nbsp;&nbsp;

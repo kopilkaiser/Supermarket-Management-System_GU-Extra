@@ -27,20 +27,11 @@ namespace ClassLibrary
         //public property for the address list
         public List<clsOrder> OrderList
         {
-            /*get
-            {
-                //return the private data
-                return mInventoryList;
-            }
-            set
-            {
-                //set the private data
-                mInventoryList = value;
-            }*/
+
 
             get
             {
-                List<clsOrder> mInventoryList = new List<clsOrder>();
+                List<clsOrder> mOrderList = new List<clsOrder>();
                 Int32 Index = 0;
                 while (Index < dBConnection.Count)
                 {
@@ -50,7 +41,7 @@ namespace ClassLibrary
                     NewOrder.Email = Convert.ToString(dBConnection.DataTable.Rows[Index]["Email"]);
                     //get the street from the query results
 
-                    NewOrder.PaymentId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["PaymentId"]);
+                    NewOrder.CardNumber = Convert.ToString(dBConnection.DataTable.Rows[Index]["CardNumber"]);
                     //get the post code from the query results
                     NewOrder.PurchasedDate = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["PurchasedDate"]);
 
@@ -106,7 +97,7 @@ namespace ClassLibrary
 
             dBConnection.AddParameter("@Email", mThisOrder.Email);
             dBConnection.AddParameter("@PurchasedDate", mThisOrder.PurchasedDate);
-            dBConnection.AddParameter("@PaymentId", mThisOrder.PaymentId);
+            dBConnection.AddParameter("@CardNumber", mThisOrder.CardNumber);
 
             //execute the query returning the primary key value
             return dBConnection.Execute("sproc_tblOrder_Insert");
@@ -134,7 +125,7 @@ namespace ClassLibrary
             dBConnection.AddParameter("@OrderId", mThisOrder.OrderId);
             dBConnection.AddParameter("@Email", mThisOrder.Email);
             dBConnection.AddParameter("@PurchasedDate", mThisOrder.PurchasedDate);
-            dBConnection.AddParameter("@PaymentId", mThisOrder.PaymentId);
+            dBConnection.AddParameter("@CardNumber", mThisOrder.CardNumber);
 
             //execute the stored procedure
             dBConnection.Execute("sproc_tblOrder_Update");
@@ -165,7 +156,7 @@ namespace ClassLibrary
                 AnOrder.OrderId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["OrderId"]);
                 AnOrder.Email = Convert.ToString(dBConnection.DataTable.Rows[Index]["Email"]);
                 AnOrder.PurchasedDate = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["PurchasedDate"]);
-                AnOrder.PaymentId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["PaymentId"]);
+                AnOrder.CardNumber = Convert.ToString(dBConnection.DataTable.Rows[Index]["CardNumber"]);
                
 
 

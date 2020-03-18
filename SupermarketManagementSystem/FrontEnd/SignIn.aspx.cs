@@ -30,6 +30,7 @@ public partial class Login : System.Web.UI.Page
         //if there were no errors
         if (Error == "")
         {
+
             //redirect to the main page
             Response.Redirect("Default.aspx");
         }

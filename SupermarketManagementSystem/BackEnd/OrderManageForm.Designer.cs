@@ -45,7 +45,7 @@
             this.listboxOrder.ItemHeight = 16;
             this.listboxOrder.Location = new System.Drawing.Point(157, 103);
             this.listboxOrder.Name = "listboxOrder";
-            this.listboxOrder.Size = new System.Drawing.Size(448, 180);
+            this.listboxOrder.Size = new System.Drawing.Size(917, 260);
             this.listboxOrder.TabIndex = 0;
             // 
             // btnAdd
@@ -80,7 +80,7 @@
             // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(250, 403);
+            this.btnApply.Location = new System.Drawing.Point(263, 469);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(75, 35);
             this.btnApply.TabIndex = 4;
@@ -90,7 +90,7 @@
             // 
             // btnDisplayAll
             // 
-            this.btnDisplayAll.Location = new System.Drawing.Point(344, 412);
+            this.btnDisplayAll.Location = new System.Drawing.Point(344, 469);
             this.btnDisplayAll.Name = "btnDisplayAll";
             this.btnDisplayAll.Size = new System.Drawing.Size(157, 35);
             this.btnDisplayAll.TabIndex = 5;
@@ -100,7 +100,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(250, 375);
+            this.txtEmail.Location = new System.Drawing.Point(263, 441);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(235, 22);
             this.txtEmail.TabIndex = 6;
@@ -108,7 +108,7 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(154, 299);
+            this.lblError.Location = new System.Drawing.Point(154, 376);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(40, 17);
             this.lblError.TabIndex = 7;
@@ -117,7 +117,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 355);
+            this.label2.Location = new System.Drawing.Point(260, 421);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 17);
             this.label2.TabIndex = 8;
@@ -127,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 520);
+            this.ClientSize = new System.Drawing.Size(1494, 520);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtEmail);

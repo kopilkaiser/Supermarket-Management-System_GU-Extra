@@ -19,11 +19,20 @@
     }
 </script>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .auto-style8 {
+            position: fixed;
+            top: 254px;
+            left: 392px;
+            height: 274px;
+            width: 561px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
    
-    <div style="position:fixed; top: 246px; left: 517px; height: 274px; width: 561px;">
+    <div class="auto-style8">
 
         <%
                       Int32 Index = 0;
@@ -96,7 +105,7 @@
                   %>
             <asp:HyperLink ID="hypBrowseProducts" runat="server" NavigateUrl="~/BrowseProducts.aspx">Continue Shopping</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:HyperLink ID="hypCheckOut" runat="server" ForeColor="#CC3300" NavigateUrl="~/Default3.aspx">*checkout*</asp:HyperLink>
+            <asp:HyperLink ID="hypCheckOut" runat="server" NavigateUrl="~/CustomerPayment.aspx">CheckOut</asp:HyperLink>
        
     </div>
 

@@ -8,7 +8,7 @@ namespace ClassLibrary
 
         private int mOrderId;
         private string mEmail;
-        private int mPaymentId;
+        private string mCardNumber;
         private DateTime mPurchasedDate;
 
         public int OrderId
@@ -39,16 +39,16 @@ namespace ClassLibrary
                 mEmail = value;
             }
         }
-        public int PaymentId
+        public string CardNumber
         {
             get
             {
-                return mPaymentId;
+                return mCardNumber;
             }
 
             set
             {
-                mPaymentId = value;
+                mCardNumber = value;
             }
         }
         public DateTime PurchasedDate
@@ -95,7 +95,7 @@ namespace ClassLibrary
                 //copy the data from the database from the private data members
                 mOrderId = Convert.ToInt32(DB.DataTable.Rows[0]["OrderId"]);
                 mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
-                mPaymentId = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentId"]);
+                mCardNumber = Convert.ToString(DB.DataTable.Rows[0]["CardNumber"]);
                 mPurchasedDate = Convert.ToDateTime(DB.DataTable.Rows[0]["PurchasedDate"]);
                 //mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
                 //return that everything worked ok
@@ -110,13 +110,13 @@ namespace ClassLibrary
 
         }
 
-        public string Valid(string email, string paymentId, string purchasedDate)
+        public string Valid(string email, string cardNumber, string purchasedDate)
         {
             // create a variable to store any error message
             string Error = "";
 
             string EmailTemp;
-            Int32 PaymentIdTemp;
+            //Int32 PaymentIdTemp;
             DateTime DateTemp;
 
             int OrderIdTemp;
@@ -131,35 +131,21 @@ namespace ClassLibrary
             {
                 Error = Error + "The Email cannot exceed 100 characters : ";
             }
-            
 
 
-
-
-
-
-
-            //if paymentId entered is valid 
-            try
+            if (cardNumber.Length < 13)
             {
-                PaymentIdTemp = Convert.ToInt32(paymentId);
-
-                if (PaymentIdTemp > 10000)
-                {
-                    Error = Error + "Payment Id cannot exceed the limit of  20 : ";
-                }
-
-                if (PaymentIdTemp <= 0)
-                {
-                    Error = Error + "Payment Id can not be less than or equal to zero : ";
-                }
-
+                Error = Error + "Card number is required to have 13 numbers : ";
             }
-            catch
+
+            if (cardNumber.Length > 16)
             {
-                //record the error
-                Error = Error + "Invalid payment Id : ";
+                Error = Error + "Card Number cannot exceed 16 numbers : ";
             }
+
+
+
+
 
             //if purchasedDate entered is valid 
             try
@@ -193,9 +179,43 @@ namespace ClassLibrary
         {
             get
             {
-                return "OrderId:" + OrderId + "_" + "Email:" + Email + "_" + "PurchasedDate:" + PurchasedDate + "_" + "PaymentId:" + PaymentId; 
+                return "OrderId:" + OrderId + "_" + "Email:" + Email + "_" + "PurchasedDate:" + PurchasedDate.ToString("dd/MM/yyyy") + "_" + "CardNumber:" + CardNumber; 
             }
         }
 
+        public void ProcessCart(clsCart ShoppingCart)
+        {
+            ///at this point all the data has been captured by the presentation layer
+            ///this is the stage where all of the data is passed to the data layer via the two stored procedures like so
+            ///
+
+            //first we add the order to the database using data from the cart's private data member s
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //pass the data as parameters to the data layer
+            DB.AddParameter("@PurchasedDate", DateTime.Now.Date);
+            DB.AddParameter("@Email", ShoppingCart.Email);
+            DB.AddParameter("@CardNumber", ShoppingCart.CardNumber);
+
+            //execute the stored procedure capturing the primary key of the new record in the variable OrderNo
+            Int32 NewOrderNo;
+            NewOrderNo = DB.Execute("sproc_tblOrder_Insert");
+
+            //now we need to loop through all the products adding them to the order line table
+            Int32 Index = 0;
+            Int32 Count = ShoppingCart.Products.Count;
+            while (Index < Count)
+            {
+                //reset the connection to the database
+                DB = new clsDataConnection();
+                DB.AddParameter("@OrderId", NewOrderNo);
+                DB.AddParameter("@InventoryId", ShoppingCart.Products[Index].InventoryId);
+                DB.AddParameter("@Quantity", ShoppingCart.Products[Index].QTY);
+                Int32 OrderNo = DB.Execute("sproc_tblOrderLine_Insert");
+                Index++;
+            }
+            //now look in the tables and the order should be present
+            //we could also do other things here such as adjust stock levels
+        }
     }
 }
