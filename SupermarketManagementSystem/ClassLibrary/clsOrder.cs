@@ -143,10 +143,6 @@ namespace ClassLibrary
                 Error = Error + "Card Number cannot exceed 16 numbers : ";
             }
 
-
-
-
-
             //if purchasedDate entered is valid 
             try
             {
@@ -175,6 +171,7 @@ namespace ClassLibrary
 
             return Error;
         }
+
         public string AllDetails
         {
             get
