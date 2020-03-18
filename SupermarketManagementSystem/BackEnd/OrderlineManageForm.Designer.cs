@@ -34,7 +34,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnApply = new System.Windows.Forms.Button();
             this.btnDisplayAll = new System.Windows.Forms.Button();
-            this.txtboxOrderlineId = new System.Windows.Forms.TextBox();
+            this.txtOrderlineId = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -56,6 +56,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -65,6 +66,7 @@
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -74,6 +76,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnApply
             // 
@@ -83,6 +86,7 @@
             this.btnApply.TabIndex = 4;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // btnDisplayAll
             // 
@@ -92,13 +96,14 @@
             this.btnDisplayAll.TabIndex = 5;
             this.btnDisplayAll.Text = "Display All";
             this.btnDisplayAll.UseVisualStyleBackColor = true;
+            this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
             // 
-            // txtboxOrderlineId
+            // txtOrderlineId
             // 
-            this.txtboxOrderlineId.Location = new System.Drawing.Point(121, 337);
-            this.txtboxOrderlineId.Name = "txtboxOrderlineId";
-            this.txtboxOrderlineId.Size = new System.Drawing.Size(166, 22);
-            this.txtboxOrderlineId.TabIndex = 6;
+            this.txtOrderlineId.Location = new System.Drawing.Point(121, 337);
+            this.txtOrderlineId.Name = "txtOrderlineId";
+            this.txtOrderlineId.Size = new System.Drawing.Size(166, 22);
+            this.txtOrderlineId.TabIndex = 6;
             // 
             // lblError
             // 
@@ -126,7 +131,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.txtboxOrderlineId);
+            this.Controls.Add(this.txtOrderlineId);
             this.Controls.Add(this.btnDisplayAll);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.btnDelete);
@@ -135,6 +140,7 @@
             this.Controls.Add(this.listboxOrderline);
             this.Name = "OrderlineManageForm";
             this.Text = "OrderlineManageForm";
+            this.Load += new System.EventHandler(this.OrderlineManageForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,7 +154,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.Button btnDisplayAll;
-        private System.Windows.Forms.TextBox txtboxOrderlineId;
+        private System.Windows.Forms.TextBox txtOrderlineId;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Label label1;
     }

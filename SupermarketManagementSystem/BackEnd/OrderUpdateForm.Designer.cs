@@ -31,12 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPurchasedDate = new System.Windows.Forms.TextBox();
+            this.txtPaymentId = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -66,26 +67,26 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Payment Id";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(202, 184);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 22);
-            this.textBox1.TabIndex = 3;
+            this.txtEmail.Location = new System.Drawing.Point(202, 184);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(236, 22);
+            this.txtEmail.TabIndex = 3;
             // 
-            // textBox2
+            // txtPurchasedDate
             // 
-            this.textBox2.Location = new System.Drawing.Point(202, 218);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(236, 22);
-            this.textBox2.TabIndex = 4;
+            this.txtPurchasedDate.Location = new System.Drawing.Point(202, 218);
+            this.txtPurchasedDate.Name = "txtPurchasedDate";
+            this.txtPurchasedDate.Size = new System.Drawing.Size(236, 22);
+            this.txtPurchasedDate.TabIndex = 4;
             // 
-            // textBox3
+            // txtPaymentId
             // 
-            this.textBox3.Location = new System.Drawing.Point(202, 257);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(236, 22);
-            this.textBox3.TabIndex = 5;
+            this.txtPaymentId.Location = new System.Drawing.Point(202, 257);
+            this.txtPaymentId.Name = "txtPaymentId";
+            this.txtPaymentId.Size = new System.Drawing.Size(236, 22);
+            this.txtPaymentId.TabIndex = 5;
             // 
             // btnOk
             // 
@@ -95,6 +96,7 @@
             this.btnOk.TabIndex = 6;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -104,6 +106,7 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label4
             // 
@@ -115,22 +118,33 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Update Order";
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Location = new System.Drawing.Point(33, 413);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(40, 17);
+            this.lblError.TabIndex = 9;
+            this.lblError.Text = "Error";
+            // 
             // OrderUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPaymentId);
+            this.Controls.Add(this.txtPurchasedDate);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "OrderUpdateForm";
             this.Text = "OrderUpdateForm";
+            this.Load += new System.EventHandler(this.OrderUpdateForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,11 +155,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPurchasedDate;
+        private System.Windows.Forms.TextBox txtPaymentId;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblError;
     }
 }

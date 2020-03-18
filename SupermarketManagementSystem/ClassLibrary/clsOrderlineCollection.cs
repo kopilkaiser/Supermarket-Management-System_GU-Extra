@@ -140,16 +140,16 @@ namespace ClassLibrary
              dBConnection.Execute("sproc_tblOrderline_Update");
             }
 
-           public void FilterByEmail(string Email)
+           public void FilterByOrderlineId(string OrderlineId)
             {
                 //filters the records based on a full or partial post code
                 //connect to the database
                 //clsDataConnection DB = new clsDataConnection();
                 //send the Category parameter to the database
                 dBConnection = new clsDataConnection();
-                dBConnection.AddParameter("@Email", Email);
+                dBConnection.AddParameter("@OrderlineId", OrderlineId);
                 //execute the stored procedure
-                dBConnection.Execute("sproc_tblOrder_FilterByEmail");
+                dBConnection.Execute("sproc_tblOrderline_FilterByOrderlineId");
                 //populate the array list with the data table
                 PopulateArray(dBConnection);
            }
