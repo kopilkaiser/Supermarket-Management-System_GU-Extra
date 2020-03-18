@@ -96,7 +96,7 @@
                   %>
             <asp:HyperLink ID="hypBrowseProducts" runat="server" NavigateUrl="~/BrowseProducts.aspx">Continue Shopping</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:HyperLink ID="hypCheckOut" runat="server" ForeColor="#CC3300" NavigateUrl="~/CustomerPayment.aspx">*checkout*</asp:HyperLink>
+            <asp:HyperLink ID="hypCheckOut" runat="server" NavigateUrl="~/CustomerPayment.aspx">CheckOut</asp:HyperLink>
        
     </div>
 

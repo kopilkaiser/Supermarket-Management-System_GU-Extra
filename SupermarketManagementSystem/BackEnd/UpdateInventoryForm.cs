@@ -39,7 +39,7 @@ namespace BackEnd
 
             //display the current data for the record
             DisplayInventory();
-            txtDateAdded.Text = DateTime.Now.Date.ToString("MM/dd/yyyy");
+            txtDateAdded.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
            
         }
 

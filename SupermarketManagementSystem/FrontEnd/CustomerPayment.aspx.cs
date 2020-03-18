@@ -18,7 +18,7 @@ public partial class Default2 : System.Web.UI.Page
         Sec = (clsSecurity)Session["Sec"];
 
         MyCart.Email = Sec.UserEMail;
-        
+        txtPaymentDate.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
 
     }
 
