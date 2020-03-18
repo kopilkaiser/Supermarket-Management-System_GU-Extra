@@ -49,10 +49,9 @@
             // 
             this.chkActive.AutoSize = true;
             this.chkActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkActive.Location = new System.Drawing.Point(802, 350);
-            this.chkActive.Margin = new System.Windows.Forms.Padding(4);
+            this.chkActive.Location = new System.Drawing.Point(602, 284);
             this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(83, 24);
+            this.chkActive.Size = new System.Drawing.Size(71, 21);
             this.chkActive.TabIndex = 19;
             this.chkActive.Text = "Active";
             this.chkActive.UseVisualStyleBackColor = true;
@@ -60,10 +59,9 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(850, 468);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(638, 380);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(110, 42);
+            this.btnCancel.Size = new System.Drawing.Size(82, 34);
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -72,10 +70,9 @@
             // btnOK
             // 
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Location = new System.Drawing.Point(723, 468);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOK.Location = new System.Drawing.Point(542, 380);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(110, 42);
+            this.btnOK.Size = new System.Drawing.Size(82, 34);
             this.btnOK.TabIndex = 18;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -85,10 +82,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(658, 313);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(494, 254);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 25);
+            this.label5.Size = new System.Drawing.Size(105, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Date Added";
             // 
@@ -96,10 +92,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(684, 264);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(513, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 25);
+            this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Category";
             // 
@@ -107,10 +102,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(685, 231);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(514, 188);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 25);
+            this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "Quantity";
             // 
@@ -118,10 +112,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(710, 188);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(532, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 25);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 15;
             this.label2.Text = "Price";
             // 
@@ -129,51 +122,46 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(710, 143);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(532, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 25);
+            this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 16;
             this.label1.Text = "Name";
             // 
             // txtDateAdded
             // 
             this.txtDateAdded.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateAdded.Location = new System.Drawing.Point(802, 301);
-            this.txtDateAdded.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDateAdded.Location = new System.Drawing.Point(602, 245);
             this.txtDateAdded.Multiline = true;
             this.txtDateAdded.Name = "txtDateAdded";
-            this.txtDateAdded.Size = new System.Drawing.Size(164, 37);
+            this.txtDateAdded.Size = new System.Drawing.Size(124, 31);
             this.txtDateAdded.TabIndex = 11;
             // 
             // txtQuantity
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(802, 219);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuantity.Location = new System.Drawing.Point(602, 178);
             this.txtQuantity.Multiline = true;
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(164, 37);
+            this.txtQuantity.Size = new System.Drawing.Size(124, 31);
             this.txtQuantity.TabIndex = 8;
             // 
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(802, 176);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Location = new System.Drawing.Point(602, 143);
             this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(164, 37);
+            this.txtPrice.Size = new System.Drawing.Size(124, 31);
             this.txtPrice.TabIndex = 9;
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(802, 131);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Location = new System.Drawing.Point(602, 106);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(164, 37);
+            this.txtName.Size = new System.Drawing.Size(124, 31);
             this.txtName.TabIndex = 10;
             // 
             // lblError
@@ -181,10 +169,9 @@
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(42, 407);
-            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblError.Location = new System.Drawing.Point(32, 331);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 18);
+            this.lblError.Size = new System.Drawing.Size(0, 15);
             this.lblError.TabIndex = 6;
             // 
             // comboBoxCategory
@@ -200,26 +187,30 @@
             "Meat ",
             "Drink",
             "Snack"});
-            this.comboBoxCategory.Location = new System.Drawing.Point(802, 264);
+            this.comboBoxCategory.Location = new System.Drawing.Point(602, 214);
+            this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(164, 30);
+            this.comboBoxCategory.Size = new System.Drawing.Size(124, 26);
             this.comboBoxCategory.TabIndex = 20;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(708, 51);
+            this.label6.Location = new System.Drawing.Point(531, 41);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(276, 39);
+            this.label6.Size = new System.Drawing.Size(222, 31);
             this.label6.TabIndex = 21;
             this.label6.Text = "Update Inventory";
             // 
             // UpdateInventoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1810, 554);
+            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ClientSize = new System.Drawing.Size(1203, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.chkActive);
@@ -235,8 +226,8 @@
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblError);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateInventoryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateInventoryForm";
             this.Load += new System.EventHandler(this.UpdateInventoryForm_Load);
             this.ResumeLayout(false);

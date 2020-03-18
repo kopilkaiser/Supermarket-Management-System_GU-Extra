@@ -60,7 +60,7 @@
             // 
             this.lblAddPaymentTitle.AutoSize = true;
             this.lblAddPaymentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblAddPaymentTitle.Location = new System.Drawing.Point(172, 38);
+            this.lblAddPaymentTitle.Location = new System.Drawing.Point(426, 38);
             this.lblAddPaymentTitle.Name = "lblAddPaymentTitle";
             this.lblAddPaymentTitle.Size = new System.Drawing.Size(217, 24);
             this.lblAddPaymentTitle.TabIndex = 27;
@@ -70,7 +70,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(322, 321);
+            this.btnCancel.Location = new System.Drawing.Point(576, 321);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 26;
@@ -172,7 +172,7 @@
             // 
             this.btnConfirm.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(176, 321);
+            this.btnConfirm.Location = new System.Drawing.Point(430, 321);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 15;
@@ -193,7 +193,7 @@
             this.panel1.Controls.Add(this.txtPaymentDate);
             this.panel1.Controls.Add(this.txtAmount);
             this.panel1.Controls.Add(this.lblAmount);
-            this.panel1.Location = new System.Drawing.Point(121, 84);
+            this.panel1.Location = new System.Drawing.Point(375, 84);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(309, 211);
             this.panel1.TabIndex = 29;
@@ -202,14 +202,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1097, 452);
+            this.ControlBox = false;
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblAddPaymentTitle);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.panel1);
             this.Name = "UpdatePaymentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdatePaymentForm";
             this.Load += new System.EventHandler(this.UpdatePaymentForm_Load);
             this.panel1.ResumeLayout(false);

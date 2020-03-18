@@ -16,7 +16,7 @@ namespace BackEnd
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OrderManageForm());
+            Application.Run(new MDIParent1());
         }
     }
 }

@@ -138,6 +138,15 @@ namespace BackEnd
             listboxOrder.ClearSelected();
 
         }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            mdiBackEndMenuForm PK = new mdiBackEndMenuForm();
+
+            this.Hide();
+            PK.Show();
+            this.Close();
+        }
     }
 }
 

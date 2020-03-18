@@ -48,7 +48,7 @@
             // btnConfirm
             // 
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(152, 318);
+            this.btnConfirm.Location = new System.Drawing.Point(316, 323);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             // txtPayeeName
             // 
-            this.txtPayeeName.Location = new System.Drawing.Point(194, 83);
+            this.txtPayeeName.Location = new System.Drawing.Point(388, 83);
             this.txtPayeeName.Name = "txtPayeeName";
             this.txtPayeeName.Size = new System.Drawing.Size(179, 20);
             this.txtPayeeName.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.lblPayeeName.AutoSize = true;
             this.lblPayeeName.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblPayeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPayeeName.Location = new System.Drawing.Point(94, 83);
+            this.lblPayeeName.Location = new System.Drawing.Point(288, 83);
             this.lblPayeeName.Name = "lblPayeeName";
             this.lblPayeeName.Size = new System.Drawing.Size(74, 13);
             this.lblPayeeName.TabIndex = 2;
@@ -81,7 +81,7 @@
             "Visa Debit",
             "Credit Card",
             "MasterCard"});
-            this.cmbMethod.Location = new System.Drawing.Point(194, 165);
+            this.cmbMethod.Location = new System.Drawing.Point(388, 165);
             this.cmbMethod.Name = "cmbMethod";
             this.cmbMethod.Size = new System.Drawing.Size(179, 21);
             this.cmbMethod.TabIndex = 3;
@@ -91,7 +91,7 @@
             this.lblCardNumber.AutoSize = true;
             this.lblCardNumber.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCardNumber.Location = new System.Drawing.Point(94, 127);
+            this.lblCardNumber.Location = new System.Drawing.Point(288, 127);
             this.lblCardNumber.Name = "lblCardNumber";
             this.lblCardNumber.Size = new System.Drawing.Size(76, 13);
             this.lblCardNumber.TabIndex = 5;
@@ -99,7 +99,7 @@
             // 
             // txtCardNumber
             // 
-            this.txtCardNumber.Location = new System.Drawing.Point(194, 127);
+            this.txtCardNumber.Location = new System.Drawing.Point(388, 127);
             this.txtCardNumber.Name = "txtCardNumber";
             this.txtCardNumber.Size = new System.Drawing.Size(179, 20);
             this.txtCardNumber.TabIndex = 4;
@@ -109,7 +109,7 @@
             this.lblAmount.AutoSize = true;
             this.lblAmount.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.Location = new System.Drawing.Point(94, 206);
+            this.lblAmount.Location = new System.Drawing.Point(288, 206);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(49, 13);
             this.lblAmount.TabIndex = 7;
@@ -117,7 +117,7 @@
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(194, 206);
+            this.txtAmount.Location = new System.Drawing.Point(388, 206);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(179, 20);
             this.txtAmount.TabIndex = 6;
@@ -127,7 +127,7 @@
             this.lblPaymentDate.AutoSize = true;
             this.lblPaymentDate.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblPaymentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentDate.Location = new System.Drawing.Point(94, 250);
+            this.lblPaymentDate.Location = new System.Drawing.Point(288, 250);
             this.lblPaymentDate.Name = "lblPaymentDate";
             this.lblPaymentDate.Size = new System.Drawing.Size(82, 13);
             this.lblPaymentDate.TabIndex = 9;
@@ -135,7 +135,7 @@
             // 
             // txtPaymentDate
             // 
-            this.txtPaymentDate.Location = new System.Drawing.Point(194, 250);
+            this.txtPaymentDate.Location = new System.Drawing.Point(388, 250);
             this.txtPaymentDate.Name = "txtPaymentDate";
             this.txtPaymentDate.Size = new System.Drawing.Size(179, 20);
             this.txtPaymentDate.TabIndex = 8;
@@ -145,7 +145,7 @@
             this.lblMethod.AutoSize = true;
             this.lblMethod.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMethod.Location = new System.Drawing.Point(94, 165);
+            this.lblMethod.Location = new System.Drawing.Point(288, 165);
             this.lblMethod.Name = "lblMethod";
             this.lblMethod.Size = new System.Drawing.Size(49, 13);
             this.lblMethod.TabIndex = 11;
@@ -154,7 +154,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(298, 318);
+            this.btnCancel.Location = new System.Drawing.Point(462, 323);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 12;
@@ -167,7 +167,7 @@
             this.lblAddPaymentTitle.AutoSize = true;
             this.lblAddPaymentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblAddPaymentTitle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAddPaymentTitle.Location = new System.Drawing.Point(148, 29);
+            this.lblAddPaymentTitle.Location = new System.Drawing.Point(342, 29);
             this.lblAddPaymentTitle.Name = "lblAddPaymentTitle";
             this.lblAddPaymentTitle.Size = new System.Drawing.Size(189, 24);
             this.lblAddPaymentTitle.TabIndex = 13;
@@ -186,7 +186,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Location = new System.Drawing.Point(88, 71);
+            this.panel1.Location = new System.Drawing.Point(282, 71);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(309, 215);
             this.panel1.TabIndex = 15;
@@ -195,7 +195,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(900, 368);
+            this.ControlBox = false;
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblAddPaymentTitle);
             this.Controls.Add(this.btnCancel);
@@ -212,6 +214,7 @@
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.panel1);
             this.Name = "AddPaymentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPaymentForm";
             this.Load += new System.EventHandler(this.AddPaymentForm_Load);
             this.ResumeLayout(false);
