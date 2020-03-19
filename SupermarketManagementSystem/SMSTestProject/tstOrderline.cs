@@ -76,7 +76,7 @@ namespace SMSTestProject
             // invoke the method
             Found = AnOrderline.Find(OrderId);
             // test to see that the result is correct
-            Assert.IsTrue(Found);
+            Assert.IsFalse(Found);
         }
 
         [TestMethod]

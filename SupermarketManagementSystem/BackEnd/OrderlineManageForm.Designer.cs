@@ -42,18 +42,19 @@
             // listboxOrderline
             // 
             this.listboxOrderline.FormattingEnabled = true;
-            this.listboxOrderline.Location = new System.Drawing.Point(83, 88);
-            this.listboxOrderline.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listboxOrderline.ItemHeight = 16;
+            this.listboxOrderline.Location = new System.Drawing.Point(111, 108);
+            this.listboxOrderline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listboxOrderline.Name = "listboxOrderline";
-            this.listboxOrderline.Size = new System.Drawing.Size(350, 121);
+            this.listboxOrderline.Size = new System.Drawing.Size(465, 148);
             this.listboxOrderline.TabIndex = 0;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(465, 101);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(620, 124);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(51, 27);
+            this.btnAdd.Size = new System.Drawing.Size(68, 33);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -61,10 +62,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(465, 142);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(620, 175);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(51, 27);
+            this.btnUpdate.Size = new System.Drawing.Size(68, 33);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -72,10 +73,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(465, 181);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Location = new System.Drawing.Point(620, 223);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(51, 27);
+            this.btnDelete.Size = new System.Drawing.Size(68, 33);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -83,10 +84,10 @@
             // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(165, 313);
-            this.btnApply.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnApply.Location = new System.Drawing.Point(220, 385);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(51, 27);
+            this.btnApply.Size = new System.Drawing.Size(68, 33);
             this.btnApply.TabIndex = 5;
             this.btnApply.Text = "&Apply";
             this.btnApply.UseVisualStyleBackColor = true;
@@ -94,10 +95,10 @@
             // 
             // btnDisplayAll
             // 
-            this.btnDisplayAll.Location = new System.Drawing.Point(238, 313);
-            this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDisplayAll.Location = new System.Drawing.Point(317, 385);
+            this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDisplayAll.Name = "btnDisplayAll";
-            this.btnDisplayAll.Size = new System.Drawing.Size(77, 27);
+            this.btnDisplayAll.Size = new System.Drawing.Size(103, 33);
             this.btnDisplayAll.TabIndex = 6;
             this.btnDisplayAll.Text = "&Display All";
             this.btnDisplayAll.UseVisualStyleBackColor = true;
@@ -105,19 +106,18 @@
             // 
             // txtOrderlineId
             // 
-            this.txtOrderlineId.Location = new System.Drawing.Point(165, 279);
-            this.txtOrderlineId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOrderlineId.Location = new System.Drawing.Point(220, 343);
+            this.txtOrderlineId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOrderlineId.Name = "txtOrderlineId";
-            this.txtOrderlineId.Size = new System.Drawing.Size(126, 20);
+            this.txtOrderlineId.Size = new System.Drawing.Size(167, 22);
             this.txtOrderlineId.TabIndex = 4;
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(83, 220);
-            this.lblError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblError.Location = new System.Drawing.Point(111, 271);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(29, 13);
+            this.lblError.Size = new System.Drawing.Size(40, 17);
             this.lblError.TabIndex = 7;
             this.lblError.Text = "Error";
             // 
@@ -125,19 +125,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(113, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(151, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 44);
+            this.label1.Size = new System.Drawing.Size(425, 55);
             this.label1.TabIndex = 8;
             this.label1.Text = "Orderline Manage";
             // 
             // OrderlineManageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(582, 383);
+            this.ClientSize = new System.Drawing.Size(1095, 471);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblError);
@@ -148,7 +147,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.listboxOrderline);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OrderlineManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderlineManageForm";

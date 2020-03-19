@@ -26,7 +26,7 @@ namespace SMSTestProject
             TestOrder.OrderId = 01;
             TestOrder.Email = "k@gmail.com";
             TestOrder.PurchasedDate = DateTime.Now.Date;
-            TestOrder.PaymentId = 05;
+            TestOrder.CardNumber = "1234567913214";
             //assign the data to the property
             AllOrders.ThisOrder = TestOrder;
             //test to see that the two values are the same;
@@ -47,7 +47,7 @@ namespace SMSTestProject
             TestItem.OrderId = 1;
             TestItem.Email = "k@gmail.com";
             TestItem.PurchasedDate = DateTime.Now.Date;
-            TestItem.PaymentId = 5;
+            TestItem.CardNumber = "1234567891234";
 
             // set thisAdress to the test data
             AllOrders.ThisOrder = TestItem;
@@ -77,7 +77,7 @@ namespace SMSTestProject
             TestItem.OrderId = 1;
             TestItem.Email = "k@gmail.com";
             TestItem.PurchasedDate = DateTime.Now.Date;
-            TestItem.PaymentId = 05;
+            TestItem.CardNumber = "1111111111111111";
 
         
 
@@ -112,7 +112,7 @@ namespace SMSTestProject
             // set it properties
             TestItem.Email = "k@gmail.com";
 
-            TestItem.PaymentId = 05;
+            TestItem.CardNumber = "1111111111111111";
             TestItem.PurchasedDate = DateTime.Now.Date;
 
             // set thisAdress to the test data
@@ -124,8 +124,8 @@ namespace SMSTestProject
             // modify the test data
             TestItem.Email = "l@gmail.com";
             TestItem.PurchasedDate = DateTime.Now.Date;
-            TestItem.PaymentId = 06;
-            
+            TestItem.CardNumber = "1111111111111111";
+
             // set the record based on the new test data
             AllOrders.ThisOrder = TestItem;
             // Update the record
@@ -154,7 +154,7 @@ namespace SMSTestProject
             // set it properties
             TestItem.AccountNo = 02;
             TestItem.PurchasedDate = DateTime.Now.Date;
-            TestItem.PaymentId = 05;
+            TestItem.CardNumber = 05;
 
             TestItem.PurchasedDate = DateTime.Now.Date;
 

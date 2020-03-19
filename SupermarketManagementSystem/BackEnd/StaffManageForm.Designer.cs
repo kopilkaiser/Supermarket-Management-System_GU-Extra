@@ -47,12 +47,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lstStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstStaff.FormattingEnabled = true;
-            this.lstStaff.ItemHeight = 16;
-            this.lstStaff.Location = new System.Drawing.Point(176, 74);
-            this.lstStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstStaff.ItemHeight = 20;
+            this.lstStaff.Location = new System.Drawing.Point(108, 74);
+            this.lstStaff.Margin = new System.Windows.Forms.Padding(4);
             this.lstStaff.Name = "lstStaff";
-            this.lstStaff.Size = new System.Drawing.Size(895, 324);
+            this.lstStaff.Size = new System.Drawing.Size(999, 324);
             this.lstStaff.TabIndex = 0;
             // 
             // lblError
@@ -90,7 +91,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCategory.Location = new System.Drawing.Point(477, 484);
-            this.txtCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCategory.Margin = new System.Windows.Forms.Padding(4);
             this.txtCategory.Multiline = true;
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(291, 42);
@@ -99,9 +100,10 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Navy;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAdd.Location = new System.Drawing.Point(1144, 190);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 49);
             this.btnAdd.TabIndex = 1;
@@ -112,9 +114,10 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Navy;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnUpdate.Location = new System.Drawing.Point(1144, 270);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 49);
             this.btnUpdate.TabIndex = 2;
@@ -125,9 +128,10 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Navy;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDelete.Location = new System.Drawing.Point(1144, 348);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 49);
             this.btnDelete.TabIndex = 3;
@@ -141,9 +145,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnApply.BackColor = System.Drawing.Color.Navy;
+            this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApply.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnApply.Location = new System.Drawing.Point(477, 567);
-            this.btnApply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(4);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(131, 50);
             this.btnApply.TabIndex = 5;
@@ -157,9 +162,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplayAll.BackColor = System.Drawing.Color.Navy;
+            this.btnDisplayAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDisplayAll.Location = new System.Drawing.Point(639, 567);
-            this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplayAll.Name = "btnDisplayAll";
             this.btnDisplayAll.Size = new System.Drawing.Size(131, 50);
             this.btnDisplayAll.TabIndex = 6;
@@ -174,7 +180,7 @@
             this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnMainMenu.Location = new System.Drawing.Point(1065, 555);
-            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(209, 53);
             this.btnMainMenu.TabIndex = 7;
@@ -215,7 +221,7 @@
             this.Controls.Add(this.lblFilter);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lstStaff);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StaffManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StaffManageForm";

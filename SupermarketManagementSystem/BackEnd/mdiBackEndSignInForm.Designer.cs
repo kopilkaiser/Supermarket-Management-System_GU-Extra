@@ -41,7 +41,7 @@
             // txtEMail
             // 
             this.txtEMail.Location = new System.Drawing.Point(192, 102);
-            this.txtEMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMail.Name = "txtEMail";
             this.txtEMail.Size = new System.Drawing.Size(336, 22);
             this.txtEMail.TabIndex = 0;
@@ -49,15 +49,16 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(192, 159);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(336, 22);
             this.txtPassword.TabIndex = 1;
             // 
             // btbSignIn
             // 
             this.btbSignIn.Location = new System.Drawing.Point(304, 223);
-            this.btbSignIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btbSignIn.Margin = new System.Windows.Forms.Padding(4);
             this.btbSignIn.Name = "btbSignIn";
             this.btbSignIn.Size = new System.Drawing.Size(100, 28);
             this.btbSignIn.TabIndex = 2;
@@ -68,7 +69,7 @@
             // btnDone
             // 
             this.btnDone.Location = new System.Drawing.Point(428, 223);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(4);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(100, 28);
             this.btnDone.TabIndex = 3;
@@ -135,7 +136,7 @@
             this.Controls.Add(this.btbSignIn);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEMail);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "mdiBackEndSignInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mdiBackEndSignInForm";
