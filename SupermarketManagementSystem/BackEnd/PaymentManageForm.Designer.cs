@@ -68,7 +68,7 @@
             // 
             // txtMethod
             // 
-            this.txtMethod.Location = new System.Drawing.Point(111, 538);
+            this.txtMethod.Location = new System.Drawing.Point(132, 538);
             this.txtMethod.Margin = new System.Windows.Forms.Padding(4);
             this.txtMethod.Multiline = true;
             this.txtMethod.Name = "txtMethod";
@@ -78,7 +78,7 @@
             // btnOk
             // 
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(107, 592);
+            this.btnOk.Location = new System.Drawing.Point(128, 592);
             this.btnOk.Margin = new System.Windows.Forms.Padding(4);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(107, 41);
@@ -101,7 +101,7 @@
             // btnDisplayAll
             // 
             this.btnDisplayAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayAll.Location = new System.Drawing.Point(244, 592);
+            this.btnDisplayAll.Location = new System.Drawing.Point(265, 592);
             this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplayAll.Name = "btnDisplayAll";
             this.btnDisplayAll.Size = new System.Drawing.Size(168, 41);
@@ -150,7 +150,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(107, 509);
+            this.label1.Location = new System.Drawing.Point(128, 509);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(293, 17);

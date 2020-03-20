@@ -133,7 +133,7 @@ namespace SMSTestProject
         {
             clsPaymentCollection FillterPayments = new clsPaymentCollection();
             FillterPayments.ReportByMethod("MasterCard");
-            Assert.AreEqual(0, FillterPayments.Count);
+            Assert.AreNotEqual(0, FillterPayments.Count);
         }
     }
 }

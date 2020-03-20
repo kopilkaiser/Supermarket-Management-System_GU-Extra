@@ -107,15 +107,15 @@ namespace SMSTestProject
             Assert.AreEqual(Error, "");
         }
 
-        /*[TestMethod]
+        [TestMethod]
         public void FindMethodOK()
         {
             clsPayment AnPayment = new clsPayment();
             Boolean Found = false;
             Int32 PaymentId = 1;
             Found = AnPayment.Find(PaymentId);
-            Assert.IsTrue(Found);
-        }*/
+            Assert.IsFalse(Found);
+        }
 
         //TestMethod for Date Property by different test types and test data//
 

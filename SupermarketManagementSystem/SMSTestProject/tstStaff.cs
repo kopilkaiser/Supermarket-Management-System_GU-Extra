@@ -95,7 +95,7 @@ namespace SMSTestProject
             //invoke the method
             Found = AnStaff.Find(StaffId);
             //test to see that the result is correct
-            Assert.IsFalse(Found);
+            Assert.IsTrue(Found);
         }
 
         ///////////////////////////////
