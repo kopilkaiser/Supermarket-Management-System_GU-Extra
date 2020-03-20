@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SuperMarket.master.cs" Inherits="SuperMarket" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="SuperMarket.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: x-large;
+            color: #6699FF;
+            position: relative;
+            height: 54px;
+            width: 1416px;
+            top: -11px;
+            left: 114px;
+            bottom: 11px;
+        }
+        .auto-style2 {
+            color: #000099;
+        }
+        .auto-style3 {
+            color: #0000CC;
+        }
+        .auto-style4 {
+            font-size: x-large;
+        }
+        .auto-style5 {
+            left: 4%;
+            top: 11%;
+            width: 65%;
+            height: 90%;
+        }
+        .auto-style6 {
+            position: fixed;
+            top: 117px;
+            left: 1219px;
+            height: 587px;
+            width: 295px;
+        }
+        .auto-style7 {
+            color: #FF0000;
+        }
+        .auto-style8 {
+            font-size: xx-large;
+        }
+        .auto-style9 {
+            color: #CC3300;
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align:center; " class="auto-style1" >
+        <span class="auto-style3">&nbsp;&nbsp;
+        </span>
+        <span class="auto-style8">
+        <span class="auto-style9">Supermarket Management System</span><span class="auto-style3"> 
+        </span> </span> 
+        <span class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="auto-style7"><strong>&nbsp;</strong></span></header>
+    <article class="auto-style5">
+        
+    <form id="form1" runat="server">
+        <br />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    <div class="auto-style6">
+        <asp:TextBox ID="txtWelcome" runat="server" BackColor="#CCCCCC" BorderStyle="None" Font-Italic="True" Font-Size="Small" Font-Underline="False" Height="29px" ReadOnly="True" Width="284px"></asp:TextBox>
+        <br />
+        
+        <span class="auto-style3">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/GUExtraLogo.png" Height="200px" Width="301px" />
+        </span>
+        
+        <br />
+        <br />
+        <asp:Button ID="btnBrowseProducts" runat="server" OnClick="btnBrowseProducts_Click" Text="Browse Products" />
+        <br />
+        <br />
+        <asp:HyperLink ID="hypSignIn" runat="server" NavigateUrl="~/SignIn1.aspx" CssClass="auto-style4">Sign In</asp:HyperLink>
+        <strong>
+        <span class="auto-style4">&nbsp;
+        </span>
+        <br class="auto-style4" />
+        </strong>
+        <asp:HyperLink ID="hypSignUp" runat="server" NavigateUrl="~/SignUp.aspx" CssClass="auto-style4">Sign Up</asp:HyperLink>
+        <strong>
+        <br class="auto-style4" />
+        </strong>
+        <asp:HyperLink ID="hypReSet" runat="server" NavigateUrl="~/ReSet.aspx" CssClass="auto-style4">ReSet Password</asp:HyperLink>
+        <strong>
+        <br class="auto-style4" />
+        </strong>
+        <asp:HyperLink ID="hypChangePassword" runat="server" NavigateUrl="~/ChangePassword.aspx" CssClass="auto-style4">Change Password</asp:HyperLink>
+        <strong>
+        <span class="auto-style4">&nbsp;
+        </span>
+        <br class="auto-style4" />
+        </strong>
+        <asp:HyperLink ID="hypSignOut" runat="server" NavigateUrl="~/SignOut.aspx" CssClass="auto-style4">Sign Out</asp:HyperLink>
+        <strong>
+        <span class="auto-style4">&nbsp;
+        </span></strong>
+        <br />
+&nbsp;<br />
+        <br />
+        <br />
+        
+    </div>
+    </form>
+        </article>
+</body>
+</html>
