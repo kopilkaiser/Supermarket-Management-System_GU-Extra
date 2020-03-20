@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class ViewCart : System.Web.UI.Page
+public partial class ViewCart1 : System.Web.UI.Page
 {
     clsCart MyCart = new clsCart();
 

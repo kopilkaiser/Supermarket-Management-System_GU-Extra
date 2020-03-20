@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using ClassLibrary;
 
-public partial class Default2 : System.Web.UI.Page
+public partial class CustomerPayment1 : System.Web.UI.Page
 {
     clsSecurity Sec;
     clsCart MyCart = new clsCart();
@@ -40,7 +40,7 @@ public partial class Default2 : System.Web.UI.Page
 
             //save the card no
             Add();
-            MyCart.CardNumber = txtCardNumber.Text; 
+            MyCart.CardNumber = txtCardNumber.Text;
             MyCart.Checkout();
 
             Response.Redirect("Thanks.aspx");

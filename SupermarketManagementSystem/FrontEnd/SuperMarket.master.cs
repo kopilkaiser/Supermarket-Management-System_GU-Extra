@@ -38,7 +38,9 @@ public partial class SuperMarket : System.Web.UI.MasterPage
         //set the state of the following to not authenticated i.e. they will be visible when logged in
         hypChangePassword.Visible = Authenticated;
         hypSignOut.Visible = Authenticated;
+
         btnBrowseProducts.Visible = Authenticated;
+      
         txtWelcome.Visible = Authenticated;
         txtWelcome.Text = "Welcome "+ Sec.UserEMail +"!";
         
@@ -46,6 +48,8 @@ public partial class SuperMarket : System.Web.UI.MasterPage
 
     protected void btnBrowseProducts_Click(object sender, EventArgs e)
     {
-        Response.Redirect("BrowseProducts.aspx");
+        Response.Redirect("BrowseProducts1.aspx");
     }
+
+
 }

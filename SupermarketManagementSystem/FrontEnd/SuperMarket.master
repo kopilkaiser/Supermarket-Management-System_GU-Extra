@@ -12,6 +12,12 @@
         .auto-style1 {
             font-size: x-large;
             color: #6699FF;
+            position: relative;
+            height: 54px;
+            width: 1416px;
+            top: -11px;
+            left: 114px;
+            bottom: 11px;
         }
         .auto-style2 {
             color: #000099;
@@ -31,20 +37,29 @@
         .auto-style6 {
             position: fixed;
             top: 117px;
-            left: 1262px;
+            left: 1219px;
             height: 587px;
             width: 295px;
         }
         .auto-style7 {
             color: #FF0000;
         }
+        .auto-style8 {
+            font-size: xx-large;
+        }
+        .auto-style9 {
+            color: #CC3300;
+        }
     </style>
 </head>
 <body>
-    <header style="text-align:center; position:relative; height: 54px; width: 1416px; top: 14px; left: 125px; bottom: 596px;" class="auto-style1">
+    <header style="text-align:center; " class="auto-style1" >
         <span class="auto-style3">&nbsp;&nbsp;
-        Supermarket Management System 
-        </span><span class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="auto-style7"><strong>&nbsp;GU-Extra</strong></span></header>
+        </span>
+        <span class="auto-style8">
+        <span class="auto-style9">Supermarket Management System</span><span class="auto-style3"> 
+        </span> </span> 
+        <span class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="auto-style7"><strong>&nbsp;</strong></span></header>
     <article class="auto-style5">
         
     <form id="form1" runat="server">
@@ -55,11 +70,17 @@
     <div class="auto-style6">
         <asp:TextBox ID="txtWelcome" runat="server" BackColor="#CCCCCC" BorderStyle="None" Font-Italic="True" Font-Size="Small" Font-Underline="False" Height="29px" ReadOnly="True" Width="284px"></asp:TextBox>
         <br />
+        
+        <span class="auto-style3">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/GUExtraLogo.png" Height="200px" Width="301px" />
+        </span>
+        
+        <br />
         <br />
         <asp:Button ID="btnBrowseProducts" runat="server" OnClick="btnBrowseProducts_Click" Text="Browse Products" />
         <br />
         <br />
-        <asp:HyperLink ID="hypSignIn" runat="server" NavigateUrl="~/SignIn.aspx" CssClass="auto-style4">Sign In</asp:HyperLink>
+        <asp:HyperLink ID="hypSignIn" runat="server" NavigateUrl="~/SignIn1.aspx" CssClass="auto-style4">Sign In</asp:HyperLink>
         <strong>
         <span class="auto-style4">&nbsp;
         </span>

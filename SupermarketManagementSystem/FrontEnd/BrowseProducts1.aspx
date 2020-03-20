@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SuperMarket.master" AutoEventWireup="true" CodeFile="BrowseProducts.aspx.cs" Inherits="BrowseProducts
-    " %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SuperMarket.master" AutoEventWireup="true" CodeFile="BrowseProducts1.aspx.cs" Inherits="BrowseProducts1" %>
 <%@ Import Namespace="ClassLibrary"%>
+
 <script runat="server">
 
     clsCart MyCart = new clsCart();
@@ -26,59 +26,23 @@
 </script>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
-        .auto-style5 {
-            text-align: left;
-        }
-        .auto-style6 {
-            text-align: center;
-        }
-
-        .auto-style2{
-            position:fixed;
-        }
-        .auto-style8 {
-            position: fixed;
-            color: #000099;
-            left: 494px;
-            top: 128px;
-        }
-        .auto-style9 {
-            position: fixed;
-            top: 651px;
-            left: 438px;
-            height: 85px;
-            width: 391px;
-        }
-        .auto-style10 {
-            position: fixed;
-            left: 83px;
-            top: 134px;
-        }
-    </style>
+    .auto-style9 {
+        font-size: medium;
+    }
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
-        <div class="auto-style7">
-            &nbsp;<div class="auto-style6">
-                &nbsp;
-              
-            </div>
-        </div>
 
-        <div style="text-align:center; " class="auto-style10">
-            <h3>Browse our products from the Product List!</h3>
-              Your cart has
-        <asp:Label ID="lblCartCount" runat="server"></asp:Label>
-    &nbsp;items.
-            <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View Cart</asp:HyperLink>
+        Browse Products here. You have
+        <br />
+        <asp:Label ID="lblCartCount" runat="server" ForeColor="Red"></asp:Label>
+        &nbsp;items<br />
+            <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart1.aspx">View Cart</asp:HyperLink>
             
-        </div>
-
-        <div style="text-align:center; " class="auto-style9">
-            
-            
-            
-                  <%
+        &nbsp;</div>
+    
+    <div> <%
                       clsInventoryCollection MyInventories = new clsInventoryCollection();
                       MyInventories.ReportByCategory("");
                       Int32 Index = 0;
@@ -89,15 +53,15 @@
                       <%
                    %> <tr><% 
 
-                    %><td style="font-weight:bold"><%
+                    %><td style="font-weight:bold" class="auto-style9"><%
                                          Response.Write("");
                     %></td><%
 
-                    %><td style="font-weight:bold; text-align:center"><%
+                    %><td style="font-weight:bold; text-align:center" class="auto-style4"><%
                      Response.Write("Name");
                      %></td><%
 
-                     %><td style="font-weight:bold; text-align:center"><%
+                     %><td style="font-weight:bold; text-align:center" class="auto-style4"><%
                      Response.Write("Price Per Item");
                      %></td><%
 
@@ -106,16 +70,16 @@
                   while(Index<RecordCount)
                   {
                     %><tr><%
-                    %><td>
-                        <a href="CartItemDetails.aspx?InventoryId=<% Response.Write(MyInventories.InventoryList[Index].InventoryId);%>&Price=<%Response.Write(MyInventories.InventoryList[Index].Price);%>&Name=<% Response.Write(MyInventories.InventoryList[Index].Name); %>">
+                    %><td class="auto-style9">
+                        <a href="CartItemDetails1.aspx?InventoryId=<% Response.Write(MyInventories.InventoryList[Index].InventoryId);%>&Price=<%Response.Write(MyInventories.InventoryList[Index].Price);%>&Name=<% Response.Write(MyInventories.InventoryList[Index].Name); %>">
                             <%   
                      Response.Write("Select Quantity");
                     %></a></td><%
-                    %><td><%
+                    %><td class="auto-style4"><%
                      Response.Write(MyInventories.InventoryList[Index].Name);
                      %></td><%    
 
-                                %><td><%
+                                %><td class="auto-style4"><%
                      Response.Write(MyInventories.InventoryList[Index].Price);
                      %></td><%  
                      %> </tr><%
@@ -123,12 +87,6 @@
                     }
                     %></table><%
                   %>
-                         
         </div>
-        </div>
-&nbsp;&nbsp;
-                    
-    <br />
-    <br />
 </asp:Content>
 

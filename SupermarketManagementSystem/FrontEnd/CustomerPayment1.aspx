@@ -1,21 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SuperMarket.master" AutoEventWireup="true" CodeFile="CustomerPayment.aspx.cs" Inherits="Default2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SuperMarket.master" AutoEventWireup="true" CodeFile="CustomerPayment1.aspx.cs" Inherits="CustomerPayment1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .auto-style8 {
-            position: fixed;
-            left: 407px;
-            top: 234px;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div >
+     <div >
         <asp:Label ID="Label1" runat="server" Text="Card Number"></asp:Label>
     &nbsp;<asp:TextBox ID="txtCardNumber" runat="server"></asp:TextBox>
     <br />
     <asp:Label ID="Label2" runat="server" Text="PayeeName"></asp:Label>
-    &nbsp;
+    &nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="txtPayeeName" runat="server"></asp:TextBox>
     <br />
     <asp:Label ID="Label3" runat="server" Text="Method"></asp:Label>
@@ -27,7 +20,7 @@
 </asp:DropDownList>
     <br />
     <asp:Label ID="Label4" runat="server" Text="Amount"></asp:Label>
-    &nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="txtAmount" runat="server"></asp:TextBox>
     <br />
     <asp:Label ID="Label5" runat="server" Text="PaymentDate"></asp:Label>

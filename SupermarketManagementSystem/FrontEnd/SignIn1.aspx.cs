@@ -32,7 +32,7 @@ public partial class Login : System.Web.UI.Page
         {
 
             //redirect to the main page
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Homepage.aspx");
         }
         else
         {

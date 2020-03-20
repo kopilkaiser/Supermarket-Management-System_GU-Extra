@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ClassLibrary;
-public partial class BrowseProducts : System.Web.UI.Page
+public partial class BrowseProducts1 : System.Web.UI.Page
 {
     clsSecurity Sec;
     //this function handles the load event for the page
@@ -15,10 +15,10 @@ public partial class BrowseProducts : System.Web.UI.Page
         if (IsPostBack == false)
         {
             //update the list box
-           // lblError.Text = DisplayInventories("") + " records in the database";
+            // lblError.Text = DisplayInventories("") + " records in the database";
         }
 
-         //on load get the current state from the session
+        //on load get the current state from the session
         Sec = (clsSecurity)Session["Sec"];
         //if the object is null then it needs initialising
         if (Sec == null)
@@ -29,7 +29,7 @@ public partial class BrowseProducts : System.Web.UI.Page
             Session["Sec"] = Sec;
         }
         //set the state of the link based on the current state of authentication
-        SetLinks(Sec.Authenticated); 
+        SetLinks(Sec.Authenticated);
     }
 
     private void SetLinks(Boolean Authenticated)
@@ -37,18 +37,18 @@ public partial class BrowseProducts : System.Web.UI.Page
         //sets the visible state of the links based on the authentication state
         //
 
-       /* lstInventories.Visible = Authenticated;
-        lblError.Visible = Authenticated;
-        btnAdd.Visible = Authenticated;
-        btnEdit.Visible = Authenticated;
-        btnDelete.Visible = Authenticated;
-        txtCategory.Visible = Authenticated;
-        btnApply.Visible = Authenticated;
-        btnDisplayAll.Visible = Authenticated;
+        /* lstInventories.Visible = Authenticated;
+         lblError.Visible = Authenticated;
+         btnAdd.Visible = Authenticated;
+         btnEdit.Visible = Authenticated;
+         btnDelete.Visible = Authenticated;
+         txtCategory.Visible = Authenticated;
+         btnApply.Visible = Authenticated;
+         btnDisplayAll.Visible = Authenticated;
 
-        lblCategory.Visible = Authenticated; */
+         lblCategory.Visible = Authenticated; */
 
     }
 
-   
+
 }

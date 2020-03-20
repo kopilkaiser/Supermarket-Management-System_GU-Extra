@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class CartItemDetails : System.Web.UI.Page
+public partial class CartItemDetails1 : System.Web.UI.Page
 {
     clsCart MyCart = new clsCart();
     Int32 InventoryId;
@@ -50,7 +50,7 @@ public partial class CartItemDetails : System.Web.UI.Page
         //add the item to the cart's products collection
         MyCart.Products.Add(AnItem);
         //go back to shopping
-        Response.Redirect("BrowseProducts.aspx");
+        Response.Redirect("BrowseProducts1.aspx");
     }
 
     protected void btnBack_Click(object sender, EventArgs e)
