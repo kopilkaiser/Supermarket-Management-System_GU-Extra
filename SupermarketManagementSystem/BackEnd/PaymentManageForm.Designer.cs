@@ -63,7 +63,7 @@
             this.lstPayments.Location = new System.Drawing.Point(132, 118);
             this.lstPayments.Margin = new System.Windows.Forms.Padding(4);
             this.lstPayments.Name = "lstPayments";
-            this.lstPayments.Size = new System.Drawing.Size(1156, 304);
+            this.lstPayments.Size = new System.Drawing.Size(1302, 304);
             this.lstPayments.TabIndex = 0;
             // 
             // txtMethod
@@ -163,7 +163,7 @@
             this.btnMainMenu.FlatAppearance.BorderSize = 5;
             this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMainMenu.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnMainMenu.Location = new System.Drawing.Point(1015, 582);
+            this.btnMainMenu.Location = new System.Drawing.Point(1214, 617);
             this.btnMainMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(209, 53);

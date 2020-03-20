@@ -80,7 +80,7 @@
             this.lstInventories.Location = new System.Drawing.Point(53, 105);
             this.lstInventories.Margin = new System.Windows.Forms.Padding(4);
             this.lstInventories.Name = "lstInventories";
-            this.lstInventories.Size = new System.Drawing.Size(1151, 284);
+            this.lstInventories.Size = new System.Drawing.Size(1271, 284);
             this.lstInventories.TabIndex = 0;
             // 
             // btnUpdate
