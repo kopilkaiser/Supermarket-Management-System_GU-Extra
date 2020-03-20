@@ -65,27 +65,13 @@ namespace ClassLibrary
         }
 
 
-     /* public bool Active
-        {
-            get
-            {
-                return mActive;
-            }
-
-            set
-            {
-                mActive = value;
-            }
-        }
-        */
-
-       
+    
 
         public bool Find(int OrderId)
         {
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
-            //add the parameter for the Inventory id to search for
+            //add the parameter for the Order id to search for
             DB.AddParameter("@OrderId", OrderId);
             //execute the stored procedure
             DB.Execute("sproc_tblOrder_FilterByOrderId");
@@ -97,7 +83,7 @@ namespace ClassLibrary
                 mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
                 mCardNumber = Convert.ToString(DB.DataTable.Rows[0]["CardNumber"]);
                 mPurchasedDate = Convert.ToDateTime(DB.DataTable.Rows[0]["PurchasedDate"]);
-                //mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                
                 //return that everything worked ok
                 return true;
             }
@@ -116,7 +102,7 @@ namespace ClassLibrary
             string Error = "";
 
             string EmailTemp;
-            //Int32 PaymentIdTemp;
+            
             DateTime DateTemp;
 
             int OrderIdTemp;
@@ -129,7 +115,11 @@ namespace ClassLibrary
 
             if (email.Length > 50)
             {
-                Error = Error + "The Email cannot exceed 100 characters : ";
+                Error = Error + "The Email cannot exceed 50 characters : ";
+            }
+            if (email.Length < 5)
+            {
+                Error = Error + "The Email cannot be less than 5 character : ";
             }
 
 
@@ -147,7 +137,7 @@ namespace ClassLibrary
             try
             {
                 // convert the string value to DateTime
-                //& then copy the value of dateAdded to DateTemp variable
+                //& then copy the value of purchasedDate to PurchasedDateTemp variable
                 DateTemp = Convert.ToDateTime(purchasedDate);
                 //if date value is less than today's date
                 if (DateTemp < DateTime.Now.Date)
@@ -168,7 +158,7 @@ namespace ClassLibrary
                 //record the error
                 Error = Error + "The date entered was not a valid date : ";
             }
-
+            // return the error message 
             return Error;
         }
 

@@ -60,7 +60,7 @@ namespace BackEnd
         {
             //function to delete the selected record
 
-            //create an instance of the Staff List
+            //create an instance of the Order List
             clsOrderCollection AllOrders = new clsOrderCollection();
             //find the record to delete
             AllOrders.ThisOrder.Find(mOrderId);

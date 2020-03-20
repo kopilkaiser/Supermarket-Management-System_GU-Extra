@@ -16,5 +16,10 @@ namespace BackEnd
         {
             InitializeComponent();
         }
+
+        private void OrderSubform_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

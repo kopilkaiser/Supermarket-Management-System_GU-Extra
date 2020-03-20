@@ -105,7 +105,7 @@ namespace ClassLibrary
 
         public void Delete()
         {
-            //delete the record pointed to by thisAddress();
+            //delete the record pointed to by thisOrder();
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
             dBConnection = new clsDataConnection();
@@ -118,7 +118,7 @@ namespace ClassLibrary
         public void Update()
         {
             dBConnection = new clsDataConnection();
-            //update an existing record based on the values of thisInventory
+            //update an existing record based on the values of thisOrder
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
@@ -131,10 +131,7 @@ namespace ClassLibrary
             dBConnection.Execute("sproc_tblOrder_Update");
         }
 
-       /* public void ReportByCategory(string Category)
-        {
-            
-        }*/
+       
 
         void PopulateArray(clsDataConnection dBConnection)
         {
@@ -173,7 +170,7 @@ namespace ClassLibrary
             //filters the records based on a full or partial post code
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
-            //send the Category parameter to the database
+            //send the Email parameter to the database
             dBConnection = new clsDataConnection();
             dBConnection.AddParameter("@Email", Email);
             //execute the stored procedure

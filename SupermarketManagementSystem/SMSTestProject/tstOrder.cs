@@ -29,25 +29,44 @@ namespace SMSTestProject
             // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             DateTime PurchasedDate = DateTime.Now.Date;
+            //assign the data to the property
             AnOrder.PurchasedDate = PurchasedDate;
+            //test to see that it exist
             Assert.AreEqual(PurchasedDate, AnOrder.PurchasedDate);
         }
         [TestMethod]
         public void EmailPropertyOK()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
+            //test data to assign the property
             string Email = "S@gmail.com";
+
             AnOrder.Email = Email;
+            // test to see that it exist
             Assert.AreEqual(Email, AnOrder.Email);
         }
+
+        [TestMethod]
+        public void CardNumberPropertyOK()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string CardNumber = 450456012578.ToString();
+            AnOrder.CardNumber = CardNumber;
+            Assert.AreEqual(AnOrder.CardNumber, CardNumber);
+        }
+
+
         [TestMethod]
        
       
         public void OrderIdPropertyOK()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             int OrderId = 89063;
             AnOrder.OrderId = OrderId;
+            //// test to see that it exist
             Assert.AreEqual(OrderId, AnOrder.OrderId);
         }
 
@@ -95,6 +114,7 @@ namespace SMSTestProject
             TestDate = DateTime.Now.AddYears(-100);
             string PurchasedDate = TestDate.ToString();
             Error = AnOrder.Valid(Email, CardNumber, PurchasedDate);
+            // test to see that it exist
             Assert.AreNotEqual(Error, "");
         }
 
@@ -144,7 +164,7 @@ namespace SMSTestProject
         /// <summary>
         /// ////////////
         /// </summary>
-        /// // testing foremail
+        /// // testing for Email
          [TestMethod]
         public void EmailExtremeMin()
         {
@@ -160,7 +180,7 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string Email = "";
+            string Email = "aaaa";
             Error = AnOrder.Valid(Email,CardNumber, PurchasedDate);
             Assert.AreNotEqual(Error, "");
 
@@ -170,7 +190,7 @@ namespace SMSTestProject
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string Email = "aaaaaaaaaa";
+            string Email = "aaaaa";
             Error = AnOrder.Valid(Email,CardNumber, PurchasedDate);
             Assert.AreEqual(Error, "");
 
@@ -201,6 +221,7 @@ namespace SMSTestProject
         [TestMethod]
         public void EmailMaxBoundary()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string Email = "Anasaliaa535@gmail.com";
@@ -212,6 +233,7 @@ namespace SMSTestProject
         [TestMethod]
         public void EmailMaxPlusOne()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string Email = "Anasaliaa535@gmail.com";
@@ -223,6 +245,7 @@ namespace SMSTestProject
         [TestMethod]
         public void EmailMid()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string Email = "Anasaliaa535@gmail.com";
@@ -234,6 +257,7 @@ namespace SMSTestProject
         [TestMethod]
         public void EmailExtremeMax()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string Email = "Anasaliaa535@gmail.com";
@@ -249,6 +273,7 @@ namespace SMSTestProject
         [TestMethod]
         public void CardNumberExtremeMin()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string CardNumber = "";
@@ -259,6 +284,7 @@ namespace SMSTestProject
         [TestMethod]
         public void CardNumberMinMinusOne()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string CardNumber = "111111111111";
@@ -269,6 +295,7 @@ namespace SMSTestProject
         [TestMethod]
         public void CardNumberMinBoundary()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string CardNumber = "1111111111111";
@@ -280,6 +307,7 @@ namespace SMSTestProject
         [TestMethod]
         public void CardNumberMinPlusOne()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string CardNumber = "11111111111111";
@@ -291,6 +319,7 @@ namespace SMSTestProject
         [TestMethod]
         public void CardNumberMaxMinusOne()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string CardNumber = "111111111111111";
@@ -303,10 +332,11 @@ namespace SMSTestProject
         [TestMethod]
         public void CardNumberMaxBoundary()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string CardNumber = "1111111111111111";
-            
+            //invoke the method 
             Error = AnOrder.Valid(Email,CardNumber, PurchasedDate);
             Assert.AreEqual(Error, "");
         }
@@ -314,10 +344,11 @@ namespace SMSTestProject
         [TestMethod]
         public void CardNumberMaxPlusOne()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string CardNumber = "11111111111111111";
-            
+            //invoke the method
             Error = AnOrder.Valid(Email,CardNumber, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
@@ -325,10 +356,11 @@ namespace SMSTestProject
         [TestMethod]
         public void CardNumberMid()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string CardNumber = "11111111";
-           
+           // invoke the method 
             Error = AnOrder.Valid(Email,CardNumber, PurchasedDate);
             Assert.AreNotEqual(Error, "");
         }
@@ -336,11 +368,13 @@ namespace SMSTestProject
         [TestMethod]
         public void CardNumberExtremeMax()
         {
+            // create an instance for class Order
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string CardNumber = "111111111111111111111111111111111111";
-            
+            //invoke the method 
             Error = AnOrder.Valid(Email,CardNumber, PurchasedDate);
+
             Assert.AreNotEqual(Error, "");
         }
     }

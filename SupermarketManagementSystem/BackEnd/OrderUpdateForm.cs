@@ -35,7 +35,7 @@ namespace BackEnd
         }
         public void DisplayOrders()
         {
-            //create an instance of the staff collection
+            //create an instance of the Order collection
             clsOrderCollection AllOrders = new clsOrderCollection();
             //find the record to update
             AllOrders.ThisOrder.Find(mOrderId);
@@ -54,7 +54,7 @@ namespace BackEnd
         public void Update()
         {
 
-            //create an instance of the Staff Collenction
+            //create an instance of the Order Collenction
             clsOrderCollection AllOrders = new clsOrderCollection();
             //validate the data on the web form
             string Error = AllOrders.ThisOrder.Valid(txtEmail.Text, txtCardNumber.Text, txtPurchasedDate.Text);

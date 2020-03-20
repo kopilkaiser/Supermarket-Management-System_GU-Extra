@@ -203,16 +203,17 @@ namespace SMSTestProject
         }
         ////////////////////////////
         /// // testing for Inventory Id
-        /// <summary>
-        /// //////////////
-        /// </summary>
+        
         [TestMethod]
         public void InventoryIdExtremeMin()
         {
+            //create an instance of class Orderline
             clsOrderline AnOrderline = new clsOrderline();
+            // create an string variable to store the result of validation
             string Error = "";
             string InventoryId = "";
-           Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
+            // invoke the method
+            Error = AnOrderline.Valid(OrderId, InventoryId, Quantity);
             Assert.AreNotEqual(Error, "");
         }
 

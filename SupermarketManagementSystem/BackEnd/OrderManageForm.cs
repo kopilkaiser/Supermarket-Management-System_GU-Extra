@@ -23,7 +23,8 @@ namespace BackEnd
         }
 
         private void OrderManageForm_Load(object sender, EventArgs e)
-        {//update the list box with Order database list
+        {
+            //update the list box with Order database list
             lblError.Text = DisplayOrders("") + " records in the database";
 
             // Clear all selections in the ListBox.
@@ -117,7 +118,7 @@ namespace BackEnd
         {
             // declare var to storee the record count
             Int32 RecordCount;
-            //assign the results of the DisplayAddress function to the record count var
+            //assign the results of the DisplayOrder function to the record count var
             RecordCount = DisplayOrders(txtEmail.Text);
             //display the number oof records fount
             lblError.Text = RecordCount + " records found";
@@ -128,18 +129,18 @@ namespace BackEnd
         {
             //declare var to storee the record count
             Int32 RecordCount;
-            //assign the results of the DisplayAddress function to the record count var
+            //assign the results of the DisplayOrder function to the record count var
             RecordCount = DisplayOrders("");
             //display the number oof records fount
             lblError.Text = RecordCount + " records found";
-            //clear the Category filter text box
+            //clear the Email filter text box
             txtEmail.Text = "";
 
             listboxOrder.ClearSelected();
 
         }
         
-
+        // button for go back to main menu
         private void btnMainMenu_Click_1(object sender, EventArgs e)
         {
             mdiBackEndMenuForm PK = new mdiBackEndMenuForm();
