@@ -166,11 +166,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SMS_SSDBDataSet_OrderLineTable.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SMS_SSDBDataSet_OrderLineTable.xsd</DependentUpon>
-    </Compile>
     <Compile Include="StaffManageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,17 +271,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SMS_SSDBDataSet_OrderLineTable.xsc">
-      <DependentUpon>SMS_SSDBDataSet_OrderLineTable.xsd</DependentUpon>
-    </None>
-    <None Include="SMS_SSDBDataSet_OrderLineTable.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SMS_SSDBDataSet_OrderLineTable.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SMS_SSDBDataSet_OrderLineTable.xss">
-      <DependentUpon>SMS_SSDBDataSet_OrderLineTable.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
