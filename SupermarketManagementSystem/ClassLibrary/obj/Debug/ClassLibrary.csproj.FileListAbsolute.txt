@@ -1,0 +1,6 @@
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.pdb
