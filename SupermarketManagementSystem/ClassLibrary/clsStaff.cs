@@ -206,7 +206,7 @@ namespace ClassLibrary
         {
             get
             {
-                return ("StaffId:" + StaffId + "_" + "AccountNo:" + AccountNo + "_" + "Name:" + Name + "_" + "Phonenum:" + Phonenum + "_" + "DateJoined:" + DateJoined.ToString("MM.dd.yyyy")) ;
+                return ("StaffId:" + StaffId + "_" + "AccountNo:" + AccountNo + "_" + "Name:" + Name + "_" + "Phonenum:" + Phonenum + "_" + "DateJoined:" + DateJoined.ToString("dd/MM/yyyy")) ;
             }
         }
     }

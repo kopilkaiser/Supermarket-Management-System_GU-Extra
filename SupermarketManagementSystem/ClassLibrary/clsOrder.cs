@@ -176,7 +176,7 @@ namespace ClassLibrary
         {
             get
             {
-                return "OrderId:" + OrderId + "_" + "Email:" + Email + "_" + "PurchasedDate:" + PurchasedDate.ToString("dd/MM/yyyy") + "_" + "CardNumber:" + CardNumber; 
+                return "OrderId:" + OrderId + "_" + "Email:" + Email + "_" + "PurchasedDate:" + "_" + "CardNumber:" + CardNumber + "_" + PurchasedDate.ToString("dd/MM/yyyy"); 
             }
         }
 

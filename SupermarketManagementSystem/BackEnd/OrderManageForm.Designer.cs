@@ -43,22 +43,23 @@
             // 
             // listboxOrder
             // 
+            this.listboxOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.listboxOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listboxOrder.FormattingEnabled = true;
             this.listboxOrder.ItemHeight = 20;
-            this.listboxOrder.Location = new System.Drawing.Point(305, 155);
+            this.listboxOrder.Location = new System.Drawing.Point(305, 99);
             this.listboxOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listboxOrder.Name = "listboxOrder";
-            this.listboxOrder.Size = new System.Drawing.Size(1014, 244);
+            this.listboxOrder.Size = new System.Drawing.Size(1042, 284);
             this.listboxOrder.TabIndex = 0;
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(187, 155);
+            this.btnAdd.Location = new System.Drawing.Point(183, 111);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(77, 36);
+            this.btnAdd.Size = new System.Drawing.Size(94, 43);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -67,10 +68,10 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(187, 207);
+            this.btnUpdate.Location = new System.Drawing.Point(183, 163);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(77, 42);
+            this.btnUpdate.Size = new System.Drawing.Size(94, 49);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -79,10 +80,10 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(187, 266);
+            this.btnDelete.Location = new System.Drawing.Point(183, 222);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(77, 46);
+            this.btnDelete.Size = new System.Drawing.Size(94, 53);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -91,10 +92,10 @@
             // btnApply
             // 
             this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApply.Location = new System.Drawing.Point(425, 529);
+            this.btnApply.Location = new System.Drawing.Point(421, 539);
             this.btnApply.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(75, 34);
+            this.btnApply.Size = new System.Drawing.Size(83, 42);
             this.btnApply.TabIndex = 5;
             this.btnApply.Text = "&Apply";
             this.btnApply.UseVisualStyleBackColor = true;
@@ -103,10 +104,10 @@
             // btnDisplayAll
             // 
             this.btnDisplayAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayAll.Location = new System.Drawing.Point(507, 529);
+            this.btnDisplayAll.Location = new System.Drawing.Point(517, 539);
             this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDisplayAll.Name = "btnDisplayAll";
-            this.btnDisplayAll.Size = new System.Drawing.Size(157, 34);
+            this.btnDisplayAll.Size = new System.Drawing.Size(165, 42);
             this.btnDisplayAll.TabIndex = 6;
             this.btnDisplayAll.Text = "&Display All";
             this.btnDisplayAll.UseVisualStyleBackColor = true;
@@ -114,46 +115,50 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(425, 501);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(421, 492);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(235, 22);
+            this.txtEmail.Size = new System.Drawing.Size(261, 38);
             this.txtEmail.TabIndex = 4;
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(303, 428);
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(312, 400);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(40, 17);
+            this.lblError.Size = new System.Drawing.Size(0, 18);
             this.lblError.TabIndex = 7;
-            this.lblError.Text = "Error";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(423, 481);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(416, 456);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 17);
+            this.label2.Size = new System.Drawing.Size(154, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "Search by Email";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(441, 48);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(506, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(557, 54);
+            this.label1.Size = new System.Drawing.Size(499, 48);
             this.label1.TabIndex = 9;
             this.label1.Text = "ORDER MANAGEMENT";
             // 
             // btnMainMenu
             // 
             this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMainMenu.Location = new System.Drawing.Point(1340, 533);
-            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMainMenu.Location = new System.Drawing.Point(1331, 533);
+            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(180, 52);
             this.btnMainMenu.TabIndex = 10;

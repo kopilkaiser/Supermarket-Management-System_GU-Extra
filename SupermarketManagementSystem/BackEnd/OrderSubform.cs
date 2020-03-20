@@ -16,5 +16,32 @@ namespace BackEnd
         {
             InitializeComponent();
         }
+
+        private void btnOrdermanagement_Click(object sender, EventArgs e)
+        {
+            OrderManageForm OM = new OrderManageForm();
+
+            this.Hide();
+            OM.Show();
+            this.Close();
+        }
+
+        private void btnOrderlinemanagement_Click(object sender, EventArgs e)
+        {
+            OrderlineListForm OL = new OrderlineListForm();
+
+            this.Hide();
+            OL.Show();
+            this.Close();
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            mdiBackEndMenuForm mdiMF = new mdiBackEndMenuForm();
+
+            this.Hide();
+            mdiMF.Show();
+            this.Close();
+        }
     }
 }

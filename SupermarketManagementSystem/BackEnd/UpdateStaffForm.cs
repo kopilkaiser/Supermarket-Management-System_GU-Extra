@@ -31,7 +31,9 @@ namespace BackEnd
 
         private void UpdateStaffForm_Load(object sender, EventArgs e)
         {
+            
             DisplayStaffs();
+            txtDateJoined.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
         }
 
         public void DisplayStaffs()

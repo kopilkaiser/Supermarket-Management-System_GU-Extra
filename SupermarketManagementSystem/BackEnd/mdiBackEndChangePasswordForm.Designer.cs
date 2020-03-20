@@ -44,40 +44,44 @@
             // 
             // txtEMail
             // 
-            this.txtEMail.Location = new System.Drawing.Point(400, 156);
-            this.txtEMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEMail.Location = new System.Drawing.Point(403, 169);
+            this.txtEMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMail.Name = "txtEMail";
-            this.txtEMail.Size = new System.Drawing.Size(227, 22);
+            this.txtEMail.Size = new System.Drawing.Size(227, 26);
             this.txtEMail.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(400, 201);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(403, 214);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(227, 22);
+            this.txtPassword.Size = new System.Drawing.Size(227, 26);
             this.txtPassword.TabIndex = 1;
             // 
             // txtPassword1
             // 
-            this.txtPassword1.Location = new System.Drawing.Point(400, 246);
-            this.txtPassword1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword1.Location = new System.Drawing.Point(403, 259);
+            this.txtPassword1.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword1.Name = "txtPassword1";
-            this.txtPassword1.Size = new System.Drawing.Size(227, 22);
+            this.txtPassword1.Size = new System.Drawing.Size(227, 26);
             this.txtPassword1.TabIndex = 2;
             // 
             // txtPassword2
             // 
-            this.txtPassword2.Location = new System.Drawing.Point(400, 295);
-            this.txtPassword2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword2.Location = new System.Drawing.Point(403, 308);
+            this.txtPassword2.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword2.Name = "txtPassword2";
-            this.txtPassword2.Size = new System.Drawing.Size(227, 22);
+            this.txtPassword2.Size = new System.Drawing.Size(227, 26);
             this.txtPassword2.TabIndex = 3;
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(601, 416);
-            this.btnChange.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChange.Location = new System.Drawing.Point(542, 417);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(4);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(168, 28);
             this.btnChange.TabIndex = 4;
@@ -87,8 +91,8 @@
             // 
             // btnDone
             // 
-            this.btnDone.Location = new System.Drawing.Point(796, 416);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDone.Location = new System.Drawing.Point(737, 417);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(4);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(100, 28);
             this.btnDone.TabIndex = 5;
@@ -99,44 +103,48 @@
             // lblEMail
             // 
             this.lblEMail.AutoSize = true;
+            this.lblEMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEMail.ForeColor = System.Drawing.Color.White;
-            this.lblEMail.Location = new System.Drawing.Point(248, 160);
+            this.lblEMail.Location = new System.Drawing.Point(251, 173);
             this.lblEMail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEMail.Name = "lblEMail";
-            this.lblEMail.Size = new System.Drawing.Size(103, 17);
+            this.lblEMail.Size = new System.Drawing.Size(124, 20);
             this.lblEMail.TabIndex = 6;
             this.lblEMail.Text = "E-Mail Address";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(248, 204);
+            this.lblPassword.Location = new System.Drawing.Point(251, 217);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(69, 17);
+            this.lblPassword.Size = new System.Drawing.Size(83, 20);
             this.lblPassword.TabIndex = 7;
             this.lblPassword.Text = "Password";
             // 
             // lblPassword1
             // 
             this.lblPassword1.AutoSize = true;
+            this.lblPassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword1.ForeColor = System.Drawing.Color.White;
-            this.lblPassword1.Location = new System.Drawing.Point(248, 250);
+            this.lblPassword1.Location = new System.Drawing.Point(251, 263);
             this.lblPassword1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword1.Name = "lblPassword1";
-            this.lblPassword1.Size = new System.Drawing.Size(100, 17);
+            this.lblPassword1.Size = new System.Drawing.Size(121, 20);
             this.lblPassword1.TabIndex = 8;
             this.lblPassword1.Text = "New Password";
             // 
             // lblPassword2
             // 
             this.lblPassword2.AutoSize = true;
+            this.lblPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword2.ForeColor = System.Drawing.Color.White;
-            this.lblPassword2.Location = new System.Drawing.Point(248, 299);
+            this.lblPassword2.Location = new System.Drawing.Point(251, 312);
             this.lblPassword2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword2.Name = "lblPassword2";
-            this.lblPassword2.Size = new System.Drawing.Size(121, 17);
+            this.lblPassword2.Size = new System.Drawing.Size(147, 20);
             this.lblPassword2.TabIndex = 9;
             this.lblPassword2.Text = "Confirm Password";
             // 
@@ -181,7 +189,7 @@
             this.Controls.Add(this.txtPassword1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEMail);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "mdiBackEndChangePasswordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mdiBackEndChangePasswordForm";

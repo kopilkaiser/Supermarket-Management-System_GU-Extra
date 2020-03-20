@@ -64,12 +64,11 @@
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(172, 420);
+            this.lblError.Location = new System.Drawing.Point(117, 415);
             this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(54, 25);
+            this.lblError.Size = new System.Drawing.Size(0, 25);
             this.lblError.TabIndex = 7;
-            this.lblError.Text = "Error";
             // 
             // lblFilter
             // 
@@ -78,7 +77,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFilter.AutoSize = true;
             this.lblFilter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFilter.Location = new System.Drawing.Point(473, 457);
+            this.lblFilter.Location = new System.Drawing.Point(494, 445);
             this.lblFilter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(118, 17);
@@ -90,7 +89,7 @@
             this.txtCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCategory.Location = new System.Drawing.Point(477, 484);
+            this.txtCategory.Location = new System.Drawing.Point(498, 472);
             this.txtCategory.Margin = new System.Windows.Forms.Padding(4);
             this.txtCategory.Multiline = true;
             this.txtCategory.Name = "txtCategory";
@@ -147,7 +146,7 @@
             this.btnApply.BackColor = System.Drawing.Color.Navy;
             this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApply.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnApply.Location = new System.Drawing.Point(477, 567);
+            this.btnApply.Location = new System.Drawing.Point(498, 555);
             this.btnApply.Margin = new System.Windows.Forms.Padding(4);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(131, 50);
@@ -164,7 +163,7 @@
             this.btnDisplayAll.BackColor = System.Drawing.Color.Navy;
             this.btnDisplayAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnDisplayAll.Location = new System.Drawing.Point(639, 567);
+            this.btnDisplayAll.Location = new System.Drawing.Point(660, 555);
             this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplayAll.Name = "btnDisplayAll";
             this.btnDisplayAll.Size = new System.Drawing.Size(131, 50);

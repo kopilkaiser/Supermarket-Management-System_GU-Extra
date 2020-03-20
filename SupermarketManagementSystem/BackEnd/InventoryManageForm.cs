@@ -139,10 +139,10 @@ namespace BackEnd
 
         private void btnMainMenu_Click(object sender, EventArgs e)
         {
-            mdiBackEndMenuForm IM = new mdiBackEndMenuForm();
+            mdiBackEndMenuForm mdiMF = new mdiBackEndMenuForm();
 
             this.Hide();
-            IM.Show();
+            mdiMF.Show();
             this.Close();
         }
         

@@ -227,7 +227,7 @@ namespace ClassLibrary
         {
             get
             {
-                return ("PayeeName:" + PayeeName + "_" + "CardNumber:" + CardNumber + "_" + "Method:" + Method + "_" + "Amount:" + Amount + "_" + "PaymentDate:" + PaymentDate.ToString("MM/dd/yyyy"));
+                return ("PayeeName:" + PayeeName + "_" + "CardNumber:" + CardNumber + "_" + "Method:" + Method + "_" + "Amount:" + Amount + "_" + "PaymentDate:" + PaymentDate.ToString("dd/MM/yyyy"));
             }
         }
 
