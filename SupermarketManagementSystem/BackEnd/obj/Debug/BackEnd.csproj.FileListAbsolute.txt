@@ -31,3 +31,27 @@ C:\Users\syed_\Desktop\S A H\DMU-LIPC\2ND YEAR\PROJECT MANAGEMENT AND DEVELOPMEN
 C:\Users\syed_\Desktop\S A H\DMU-LIPC\2ND YEAR\PROJECT MANAGEMENT AND DEVELOPMENT\GU-EXTRA SUPERMARKET MAIN SYSTEM\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.csproj.CopyComplete
 C:\Users\syed_\Desktop\S A H\DMU-LIPC\2ND YEAR\PROJECT MANAGEMENT AND DEVELOPMENT\GU-EXTRA SUPERMARKET MAIN SYSTEM\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.exe
 C:\Users\syed_\Desktop\S A H\DMU-LIPC\2ND YEAR\PROJECT MANAGEMENT AND DEVELOPMENT\GU-EXTRA SUPERMARKET MAIN SYSTEM\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.pdb
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.csprojAssemblyReference.cache
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.AddPaymentForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.AddStaffForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.ConfirmDelete.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.ConfirmDeleteForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.ConfirmDeletePaymentForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.mdiBackEndAddUserForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.mdiBackEndChangePasswordForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.InventoryManageForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.mdiBackEndMenuForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.mdiBackEndSignInForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.MDIParent1.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.OrderAddForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.OrderDeleteForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.OrderManageForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.OrderUpdateForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.PaymentManageForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.StaffManageForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.UpdateInventoryForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.UpdatePaymentForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.UpdateStaffForm.resources
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.csproj.GenerateResource.cache
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.exe
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.pdb

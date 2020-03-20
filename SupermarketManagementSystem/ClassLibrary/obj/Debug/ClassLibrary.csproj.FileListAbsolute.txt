@@ -4,3 +4,7 @@ C:\Users\syed_\Desktop\S A H\DMU-LIPC\2ND YEAR\PROJECT MANAGEMENT AND DEVELOPMEN
 C:\Users\syed_\Desktop\S A H\DMU-LIPC\2ND YEAR\PROJECT MANAGEMENT AND DEVELOPMENT\GU-EXTRA SUPERMARKET MAIN SYSTEM\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\syed_\Desktop\S A H\DMU-LIPC\2ND YEAR\PROJECT MANAGEMENT AND DEVELOPMENT\GU-EXTRA SUPERMARKET MAIN SYSTEM\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.dll
 C:\Users\syed_\Desktop\S A H\DMU-LIPC\2ND YEAR\PROJECT MANAGEMENT AND DEVELOPMENT\GU-EXTRA SUPERMARKET MAIN SYSTEM\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.pdb
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.pdb
