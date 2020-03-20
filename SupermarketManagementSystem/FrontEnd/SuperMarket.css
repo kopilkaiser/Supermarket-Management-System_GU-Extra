@@ -1,0 +1,30 @@
+﻿body {
+    background-color:lightgrey;
+}
+
+article {
+ 
+    border-color: inherit;
+    border-width: medium;
+    position: fixed;
+    height: 90%;
+    width: 78%;
+    top: 12%;
+    left: 4%;
+    margin-left: 0px;
+}
+.h
+{
+    position:static;
+    top: 72px;
+    left: 1519px;
+    height: 587px;
+    width: 295px;
+    float:left;
+}
+
+div{
+    
+    float:left;
+    
+}
