@@ -46,10 +46,10 @@ namespace BackEnd
 
         private void btnOrderManagement_Click(object sender, EventArgs e)
         {
-            OrderSubform OS = new OrderSubform();
+            OrderManageForm OM = new OrderManageForm();
 
             this.Hide();
-            OS.Show();
+            OM.Show();
             this.Close();
         }
 

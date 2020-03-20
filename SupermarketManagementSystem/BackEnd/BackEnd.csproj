@@ -146,23 +146,11 @@
     <Compile Include="OrderDeleteForm.Designer.cs">
       <DependentUpon>OrderDeleteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderlineListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrderlineListForm.Designer.cs">
-      <DependentUpon>OrderlineListForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="OrderManageForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OrderManageForm.Designer.cs">
       <DependentUpon>OrderManageForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OrderSubform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrderSubform.Designer.cs">
-      <DependentUpon>OrderSubform.cs</DependentUpon>
     </Compile>
     <Compile Include="OrderUpdateForm.cs">
       <SubType>Form</SubType>
@@ -249,14 +237,8 @@
     <EmbeddedResource Include="OrderDeleteForm.resx">
       <DependentUpon>OrderDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderlineListForm.resx">
-      <DependentUpon>OrderlineListForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="OrderManageForm.resx">
       <DependentUpon>OrderManageForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OrderSubform.resx">
-      <DependentUpon>OrderSubform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderUpdateForm.resx">
       <DependentUpon>OrderUpdateForm.cs</DependentUpon>
