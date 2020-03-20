@@ -42,14 +42,14 @@
             
         &nbsp;</div>
     
-    <div> <%
+    <div> _____<%
                       clsInventoryCollection MyInventories = new clsInventoryCollection();
                       MyInventories.ReportByCategory("");
                       Int32 Index = 0;
                       Int32 RecordCount = MyInventories.Count;
 
 
-                  %><table border="1" class="auto-style8">
+                  %>____<table border="1" class="auto-style8">
                       <%
                    %> <tr><% 
 
