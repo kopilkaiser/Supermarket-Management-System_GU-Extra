@@ -31,7 +31,7 @@ namespace BackEnd
             txtAccountNo.Text = "";
             txtName.Text = "";
             txtPhonenum.Text = "";
-            txtDateJoined.Text = DateTime.Today.Date.ToString("MM.dd.yyyy");
+            txtDateJoined.Text = DateTime.Today.Date.ToString("dd/MM/yyyy");
             
             chkActive.Checked = false;
         }

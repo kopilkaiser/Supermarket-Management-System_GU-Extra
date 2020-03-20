@@ -23,6 +23,7 @@ namespace BackEnd
         private void mdiBackEndSignInForm_Load(object sender, EventArgs e)
         {
             mSec = new clsSecurity();
+            
         }
 
         public clsSecurity Sec
@@ -33,7 +34,7 @@ namespace BackEnd
             }
         }
 
-        private void btbSignIn_Click(object sender, EventArgs e)
+        private void btnSignIn_Click(object sender, EventArgs e)
         {
             //try to sign in and record any errors
             string Error = mSec.SignIn(txtEMail.Text, txtPassword.Text);
