@@ -1,0 +1,16 @@
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\obj\Debug\Test Framework.csprojAssemblyReference.cache
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\obj\Debug\Test Framework.csproj.CoreCompileInputs.cache
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\bin\Debug\SMSTestProject.dll
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\bin\Debug\SMSTestProject.pdb
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\bin\Debug\ClassLibrary.dll
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\bin\Debug\ClassLibrary.pdb
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\obj\Debug\Test Framework.csproj.CopyComplete
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\obj\Debug\SMSTestProject.dll
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\SMSTestProject\obj\Debug\SMSTestProject.pdb

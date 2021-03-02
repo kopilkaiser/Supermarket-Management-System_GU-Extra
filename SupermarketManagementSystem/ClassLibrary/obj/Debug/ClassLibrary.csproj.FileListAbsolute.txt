@@ -8,3 +8,9 @@ D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\
 D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.dll
 D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.pdb
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\ClassLibrary\obj\Debug\ClassLibrary.pdb

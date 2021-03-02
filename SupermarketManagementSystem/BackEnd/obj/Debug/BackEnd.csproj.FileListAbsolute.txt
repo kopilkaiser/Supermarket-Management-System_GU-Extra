@@ -55,3 +55,36 @@ D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\
 D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.csproj.GenerateResource.cache
 D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.exe
 D:\DMU 2nd Year\Project Management & Development\Supermarket_GUExtra_MainSystem\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.pdb
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.csprojAssemblyReference.cache
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.AddPaymentForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.AddStaffForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.ConfirmDelete.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.ConfirmDeleteForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.ConfirmDeletePaymentForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.mdiBackEndAddUserForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.mdiBackEndChangePasswordForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.InventoryManageForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.mdiBackEndMenuForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.mdiBackEndSignInForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.MDIParent1.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.OrderAddForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.OrderDeleteForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.OrderManageForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.OrderUpdateForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.PaymentManageForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.StaffManageForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.UpdateInventoryForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.UpdatePaymentForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.UpdateStaffForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.csproj.GenerateResource.cache
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.exe
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.pdb
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.AddInventoryForm.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.Properties.Resources.resources
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.csproj.CoreCompileInputs.cache
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\bin\Debug\BackEnd.exe.config
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\bin\Debug\BackEnd.exe
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\bin\Debug\BackEnd.pdb
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\bin\Debug\ClassLibrary.dll
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\bin\Debug\ClassLibrary.pdb
+D:\Users\Kopil\source\repos\kopilkaiser\Supermarket-Management-System_GU-Extra\SupermarketManagementSystem\BackEnd\obj\Debug\BackEnd.csproj.CopyComplete
