@@ -19,8 +19,6 @@ namespace SMSTestProject
         string PaymentDate = DateTime.Now.Date.ToString();
 
 
-
-
         [TestMethod]
         public void InstanceOK()
         {

@@ -6,7 +6,7 @@ namespace ClassLibrary
     {
         private int mPaymentId;
         private string mPayeeName;
-        private String mCardNumber;
+        private string mCardNumber;
         private string mMethod;
         private decimal mAmount;
         private DateTime mPaymentDate;
@@ -183,7 +183,7 @@ namespace ClassLibrary
                     Error = Error + "Date cannot be in the future: ";
                 }
             }
-            //if date entered is an indivalid date
+            //if date entered is an invalid date
             catch
             {
                 //record the error

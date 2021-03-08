@@ -62,7 +62,7 @@ namespace SMSTestProject
             TestInventory.DateAdded = DateTime.Now.Date;
             //assign the data to the property
             AllInventories.ThisInventory = TestInventory;
-            //test to see that the two values are the same;
+            //test to see that the two values are the same
             Assert.AreEqual(AllInventories.ThisInventory, TestInventory);
         }
 
