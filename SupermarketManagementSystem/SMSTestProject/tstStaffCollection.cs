@@ -85,7 +85,7 @@ namespace SMSTestProject
             //add the record
             PrimaryKey = AllStaffs.Add();
             //set the primary key of the test data
-            TestItem.AccountNo = PrimaryKey;
+            TestItem.StaffId = PrimaryKey;
             //find the record
             AllStaffs.ThisStaff.Find(PrimaryKey);
             //delete the record
@@ -117,12 +117,11 @@ namespace SMSTestProject
             //add the record
             PrimaryKey = AllStaffs.Add();
             //set the primary key of the test data
-            TestItem.AccountNo = PrimaryKey;
-            //modify the test data
-            TestItem.StaffId = 1;
+            TestItem.StaffId = PrimaryKey;
+            //modify the test data         
             TestItem.AccountNo = 1;
             TestItem.Name = "Syed";
-            TestItem.Phonenum = "123456789123456";
+            TestItem.Phonenum = "77777777777";
             TestItem.DateJoined = DateTime.Now.Date;
             TestItem.Active = true;
             //set the record based on the new test data
