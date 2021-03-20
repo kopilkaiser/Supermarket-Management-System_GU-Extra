@@ -8,18 +8,25 @@ using ClassLibrary;
 
 public partial class CustomerPayment1 : System.Web.UI.Page
 {
+    Int32 InventoryId;
+    decimal TotalPrice;
     clsSecurity Sec;
     clsCart MyCart = new clsCart();
     clsPaymentCollection AllPayments = new clsPaymentCollection();
-
+    clsCartItem MyCartList = new clsCartItem();
     protected void Page_Load(object sender, EventArgs e)
     {
         MyCart = (clsCart)Session["MyCart"];
+        MyCartList = (clsCartItem)Session["MyCartList"];
         Sec = (clsSecurity)Session["Sec"];
 
         MyCart.Email = Sec.UserEMail;
         txtPaymentDate.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
 
+        InventoryId = Convert.ToInt32(Request.QueryString["InventoryId"]);
+        TotalPrice = Convert.ToDecimal(Request.QueryString["TotalPrice"]);
+        //clsCartItem AnItem = new clsCartItem();
+        //txtMyPrice.Text = Convert.ToString(MyCartList.TotalPrice);
     }
 
 

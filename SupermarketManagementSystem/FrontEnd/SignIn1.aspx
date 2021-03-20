@@ -8,7 +8,7 @@
         <tr>
             <td class="auto-style2">EMail Address</td>
             <td>
-                <asp:TextBox ID="txtEMail" runat="server" Width="202px"></asp:TextBox>
+                <asp:TextBox ID="txtEMail" runat="server" Width="207px"></asp:TextBox>
             </td>
         </tr>
         <tr>

@@ -26,7 +26,7 @@
     <asp:Label ID="Label5" runat="server" Text="PaymentDate"></asp:Label>
     &nbsp;
     <asp:TextBox ID="txtPaymentDate" runat="server"></asp:TextBox>
-
+         <asp:TextBox ID="txtMyPrice" runat="server"> </asp:TextBox>
         <br />
 
         <br />

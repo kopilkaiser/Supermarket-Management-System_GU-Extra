@@ -56,7 +56,7 @@ namespace BackEnd
             AnPayment.PaymentId = -1;
             AddPaymentForm ZX = new AddPaymentForm();
             this.Hide();
-            ZX.Show();
+            ZX.ShowDialog();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace BackEnd
                 UpdatePaymentForm UpdateInv = new UpdatePaymentForm();
                 UpdateInv.PaymentID = PaymentId;
                 this.Hide();
-                UpdateInv.Show();
+                UpdateInv.ShowDialog();
             }
             else //if no record has been selected
             {
@@ -100,7 +100,7 @@ namespace BackEnd
                 ConfirmDeletePaymentForm ConfirmDeletePayment = new ConfirmDeletePaymentForm();
                 ConfirmDeletePayment.PaymentID = PaymentId;
                 this.Hide();
-                ConfirmDeletePayment.Show();
+                ConfirmDeletePayment.ShowDialog();
             }
             else //if no record has been selected
             {
@@ -138,7 +138,7 @@ namespace BackEnd
             mdiBackEndMenuForm IM = new mdiBackEndMenuForm();
 
             this.Hide();
-            IM.Show();
+            IM.ShowDialog();
             this.Close();
         }
     }

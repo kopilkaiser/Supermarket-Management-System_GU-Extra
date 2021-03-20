@@ -58,7 +58,7 @@ namespace BackEnd
             AnInventory.InventoryId = -1;
             AddInventoryForm ZX = new AddInventoryForm();
             this.Hide();
-            ZX.Show();
+            ZX.ShowDialog();
             
         }
 
@@ -78,7 +78,7 @@ namespace BackEnd
                 UpdateInventoryForm UpdateInv = new UpdateInventoryForm();
                 UpdateInv.InventoryID = InventoryId;
                 this.Hide();
-                UpdateInv.Show();
+                UpdateInv.ShowDialog();
             }
             else //if no record has been selected
             {
@@ -103,7 +103,7 @@ namespace BackEnd
                 ConfirmDelete ConfirmDelete = new ConfirmDelete();
                 ConfirmDelete.InventoryID = InventoryId;
                 this.Hide();
-                ConfirmDelete.Show();
+                ConfirmDelete.ShowDialog();
             }
             else //if no record has been selected
             {
@@ -142,9 +142,10 @@ namespace BackEnd
             mdiBackEndMenuForm mdiMF = new mdiBackEndMenuForm();
 
             this.Hide();
-            mdiMF.Show();
+            mdiMF.ShowDialog();
             this.Close();
         }
-        
+
+
     }
 }

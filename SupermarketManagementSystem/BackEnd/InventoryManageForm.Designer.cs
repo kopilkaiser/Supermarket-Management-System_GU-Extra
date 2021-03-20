@@ -101,7 +101,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(197, 70);
+            this.btnDelete.Location = new System.Drawing.Point(183, 69);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(121, 50);
@@ -205,7 +205,7 @@
             this.btnMainMenu.FlatAppearance.BorderSize = 5;
             this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMainMenu.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnMainMenu.Location = new System.Drawing.Point(1222, 636);
+            this.btnMainMenu.Location = new System.Drawing.Point(1220, 610);
             this.btnMainMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(209, 53);
@@ -219,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1463, 702);
+            this.ClientSize = new System.Drawing.Size(1456, 702);
             this.ControlBox = false;
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.label4);

@@ -57,7 +57,7 @@ namespace BackEnd
             AnOrder.OrderId = -1;
             OrderAddForm ZX = new OrderAddForm();
             this.Hide();
-            ZX.Show();
+            ZX.ShowDialog();
 
         }
 
@@ -77,7 +77,7 @@ namespace BackEnd
                 OrderUpdateForm UpdateOrder = new OrderUpdateForm();
                 UpdateOrder.OrderID = OrderId;
                 this.Hide();
-                UpdateOrder.Show();
+                UpdateOrder.ShowDialog();
             }
             else //if no record has been selected
             {
@@ -103,7 +103,7 @@ namespace BackEnd
                 OrderDeleteForm ConfirmDelete = new OrderDeleteForm();
                 ConfirmDelete.OrderID = OrderId;
                 this.Hide();
-                ConfirmDelete.Show();
+                ConfirmDelete.ShowDialog();
             }
             else //if no record has been selected
             {
@@ -146,7 +146,7 @@ namespace BackEnd
             mdiBackEndMenuForm PK = new mdiBackEndMenuForm();
 
             this.Hide();
-            PK.Show();
+            PK.ShowDialog();
             this.Close();
         }
     }

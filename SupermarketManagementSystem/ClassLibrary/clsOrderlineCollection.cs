@@ -25,20 +25,10 @@ namespace ClassLibrary
             }
 
 
-            //public property for the address list
+            //Public Property for the Orderline List
             public List<clsOrderline> OrderlineList
             {
-                /*get
-                {
-                    //return the private data
-                    return mInventoryList;
-                }
-                set
-                {
-                    //set the private data
-                    mInventoryList = value;
-                }*/
-
+                
                 get
                 {
                     List<clsOrderline> mOrderlineList = new List<clsOrderline>();
@@ -47,20 +37,20 @@ namespace ClassLibrary
                     {
                         clsOrderline NewOrderline = new clsOrderline();
 
-                //get the post code from the query results
-                NewOrderline.OrderlineId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["OrderlineId"]);
-                NewOrderline.OrderId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["OrderId"]);
-                NewOrderline.Quantity = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["Quantity"]);
-                NewOrderline.InventoryId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["InventoryId"]);
+                        //get the Orderline details from the query results
+                        NewOrderline.OrderlineId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["OrderlineId"]);
+                        NewOrderline.OrderId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["OrderId"]);
+                        NewOrderline.Quantity = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["Quantity"]);
+                        NewOrderline.InventoryId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["InventoryId"]);
 
 
 
-                //increment the index
-                Index++;
-                        //add the address to the list
+                        //increment the index
+                        Index++;
+                        //add the Order to the list
                         mOrderlineList.Add(NewOrderline);
                     }
-                    //return the list of addresses
+                    //return the list of Orders
                     return mOrderlineList;
                 }
 
@@ -128,16 +118,14 @@ namespace ClassLibrary
 
             public void Update()
             {
-                dBConnection = new clsDataConnection();
-            //set the parameters for the stored procedure
+               dBConnection = new clsDataConnection();
+               //set the parameters for the stored procedure
                dBConnection.AddParameter("@OrderlineId", mThisOrderline.OrderlineId);
                dBConnection.AddParameter("@OrderId", mThisOrderline.OrderId);
                dBConnection.AddParameter("@Quantity", mThisOrderline.Quantity);
                dBConnection.AddParameter("@InventoryId", mThisOrderline.InventoryId);
-
-
-             //execute the stored procedure
-             dBConnection.Execute("sproc_tblOrderline_Update");
+               //execute the stored procedure
+               dBConnection.Execute("sproc_tblOrderline_Update");
             }
 
            public void FilterByOrderlineId(string OrderlineId)

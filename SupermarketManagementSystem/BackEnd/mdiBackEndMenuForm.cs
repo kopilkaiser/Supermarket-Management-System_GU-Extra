@@ -22,7 +22,7 @@ namespace BackEnd
             InventoryManageForm IM = new InventoryManageForm();
 
             this.Hide();
-            IM.Show();
+            IM.ShowDialog();
             this.Close();
         }
 
@@ -31,7 +31,7 @@ namespace BackEnd
             StaffManageForm SM = new StaffManageForm();
 
             this.Hide();
-            SM.Show();
+            SM.ShowDialog();
             this.Close();
         }
 
@@ -40,7 +40,7 @@ namespace BackEnd
             PaymentManageForm PM = new PaymentManageForm();
 
             this.Hide();
-            PM.Show();
+            PM.ShowDialog();
             this.Close();
         }
 
@@ -49,7 +49,7 @@ namespace BackEnd
             OrderManageForm OM = new OrderManageForm();
 
             this.Hide();
-            OM.Show();
+            OM.ShowDialog();
             this.Close();
         }
 

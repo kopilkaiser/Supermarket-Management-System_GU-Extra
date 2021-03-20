@@ -292,7 +292,7 @@ namespace SMSTestProject
         }
 
         [TestMethod]
-        public void PaymentIdExtremeMax()
+        public void InventoryIdExtremeMax()
         {
             clsOrderline AnOrderline = new clsOrderline();
             string Error = "";

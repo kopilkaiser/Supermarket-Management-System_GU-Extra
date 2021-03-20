@@ -13,6 +13,7 @@ namespace BackEnd
     public partial class MDIParent1 : Form
     {
         clsSecurity Sec = new clsSecurity();
+
         //create an instance of the main menu form
         mdiBackEndMenuForm Menu = new mdiBackEndMenuForm();
 
@@ -25,7 +26,7 @@ namespace BackEnd
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
+             Form childForm = new Form();
             childForm.MdiParent = this;
             childForm.Text = "Window " + childFormNumber++;
             childForm.Show();
@@ -186,9 +187,24 @@ namespace BackEnd
 
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //display the adduser page
+             //display the adduser page
             mdiBackEndAddUserForm Add = new mdiBackEndAddUserForm();
             Add.ShowDialog();
+        }
+
+        private void securityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewMenu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -56,7 +56,7 @@ namespace BackEnd
             AnStaff.StaffId = -1;
             AddStaffForm ZX = new AddStaffForm();
             this.Hide();
-            ZX.Show();
+            ZX.ShowDialog();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace BackEnd
                 UpdateStaffForm UpdateStaff = new UpdateStaffForm();
                 UpdateStaff.StaffID = StaffId;
                 this.Hide();
-                UpdateStaff.Show();
+                UpdateStaff.ShowDialog();
             }
             else //if no record has been selected
             {
@@ -100,7 +100,7 @@ namespace BackEnd
                 ConfirmDeleteForm ConfirmDelete = new ConfirmDeleteForm();
                 ConfirmDelete.StaffID = StaffId;
                 this.Hide();
-                ConfirmDelete.Show();
+                ConfirmDelete.ShowDialog();
             }
             else //if no record has been selected
             {
@@ -137,8 +137,8 @@ namespace BackEnd
         {
             mdiBackEndMenuForm IM = new mdiBackEndMenuForm();
 
-            this.Hide();
-            IM.Show();
+            this.Close();
+            IM.ShowDialog();
             this.Close();
         }
     }

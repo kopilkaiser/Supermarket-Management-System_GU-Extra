@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SupermarketManagementSystem"
+    "\\SupermarketManagementSystem",
+    "\\SupermarketManagementSystem\\ClassLibrary",
+    "\\SupermarketManagementSystem\\FrontEnd",
+    "\\SupermarketManagementSystem\\SMSTestProject"
   ],
   "SelectedNode": "\\SupermarketManagementSystem\\SupermarketManagementSystem.sln",
   "PreviewInSolutionExplorer": false
